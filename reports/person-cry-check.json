@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-14",
+  "browser": "156.0.8078.4",
+  "seed": 1523972202,
+  "firstPerson": "person-1",
+  "mutedPerson": "person-15",
+  "personCryOnFall": true,
+  "mutedPersonStillCollected": true,
+  "muteSuppressesCry": true,
+  "voicesReleased": true,
+  "cryCount": 1,
+  "waveform": {
+    "rms": 0.07510546644536445,
+    "peak": 0.570443868637085,
+    "tail": 0
+  },
+  "iPhoneSafari": "未実施",
+  "errors": []
+}

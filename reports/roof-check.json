@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-14",
+  "browser": "156.0.8078.4",
+  "cases": [
+    {
+      "kind": "house",
+      "distance": 10,
+      "angle": 0,
+      "samples": 9,
+      "mismatches": 0
+    },
+    {
+      "kind": "house",
+      "distance": 10,
+      "angle": 0.5,
+      "samples": 9,
+      "mismatches": 0
+    },
+    {
+      "kind": "house",
+      "distance": 10,
+      "angle": 1.2,
+      "samples": 9,
+      "mismatches": 0
+    },
+    {
+      "kind": "house",
+      "distance": 25,
+      "angle": 0,
+      "samples": 9,
+      "mismatches": 0
+    },
+    {
+      "kind": "house",
+      "distance": 25,
+      "angle": 0.5,
+      "samples": 9,
+      "mismatches": 0
+    },
+    {
+      "kind": "house",
+      "distance": 25,
+      "angle": 1.2,
+      "samples": 9,
+      "mismatches": 0
+    },
+    {
+      "kind": "house",
+      "distance": 70,
+      "angle": 0,
+      "samples": 9,
+      "mismatches": 0
+    },
+    {
+      "kind": "house",
+      "distance": 70,
+      "angle": 0.5,
+      "samples": 9,
+      "mismatches": 0
+    },
+    {
+      "kind": "house",
+      "distance": 70,
+      "angle": 1.2,
+      "samples": 9,
+      "mismatches": 0
+    },
+    {
+      "kind": "kiosk",
+      "distance": 10,
+      "angle": 0,
+      "samples": 9,
+      "mismatches": 0
+    },
+    {
+      "kind": "kiosk",
+      "distance": 10,
+      "angle": 0.5,
+      "samples": 9,
+      "mismatches": 0
+    },
+    {
+      "kind": "kiosk",
+      "distance": 10,
+      "angle": 1.2,
+      "samples": 9,
+      "mismatches": 0
+    },
+    {
+      "kind": "kiosk",
+      "distance": 25,
+      "angle": 0,
+      "samples": 9,
+      "mismatches": 0
+    },
+    {
+      "kind": "kiosk",
+      "distance": 25,
+      "angle": 0.5,
+      "samples": 9,
+      "mismatches": 0
+    },
+    {
+      "kind": "kiosk",
+      "distance": 25,
+      "angle": 1.2,
+      "samples": 9,
+      "mismatches": 0
+    },
+    {
+      "kind": "kiosk",
+      "distance": 70,
+      "angle": 0,
+      "samples": 9,
+      "mismatches": 0
+    },
+    {
+      "kind": "kiosk",
+      "distance": 70,
+      "angle": 0.5,
+      "samples": 9,
+      "mismatches": 0
+    },
+    {
+      "kind": "kiosk",
+      "distance": 70,
+      "angle": 1.2,
+      "samples": 9,
+      "mismatches": 0
+    }
+  ],
+  "errors": [],
+  "iPhoneSafariAfterFix": "未確認"
+}

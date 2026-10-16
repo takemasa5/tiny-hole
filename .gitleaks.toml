@@ -1,0 +1,22 @@
+title = "HOLE secret and personal information checks"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "personal-email"
+description = "Email address in a committed file"
+regex = '''(?i)[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}'''
+[[rules.allowlists]]
+description = "Reserved example domains and GitHub private commit addresses"
+regexes = ['''(?i)@(?:example\.(?:com|org|net|invalid)|(?:[a-z0-9-]+\.)*users\.noreply\.github\.com)$''']
+
+[[rules]]
+id = "personal-home-path"
+description = "Local home path containing a user name"
+regex = '''(?:/Users/|/home/|[A-Za-z]:\\Users\\)[\p{L}\p{N}._-]+'''
+
+[[rules]]
+id = "personal-phone"
+description = "Japanese phone number with a contact label"
+regex = '''(?i)(?:電話(?:番号)?|携帯(?:番号)?|tel|phone)\s*[:：=]\s*['"]?(?:\+81[- ]?|0)\d{1,4}[- ]\d{1,4}[- ]\d{3,4}'''

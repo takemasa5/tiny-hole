@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-15",
+  "browser": "156.0.8078.4",
+  "results": [
+    {
+      "stageId": "mountain",
+      "seed": 1022376253,
+      "objects": 331,
+      "normalMouseClear": true,
+      "finalLevel": 8,
+      "observedLevels": [1, 2, 3, 4, 5, 6, 7, 8],
+      "growthEvents": 7,
+      "shotsFired": 0,
+      "sounds": {
+        "pickup": 155,
+        "growth": 7,
+        "clear": 1,
+        "personCry": 0,
+        "shot": 0
+      },
+      "collectedMoving": 0,
+      "physicsMilliseconds": 0.3999999910593033,
+      "elapsedSeconds": 157.021,
+      "restart": true,
+      "chromiumTouch": true
+    },
+    {
+      "stageId": "america",
+      "seed": 2350310078,
+      "objects": 313,
+      "normalMouseClear": true,
+      "finalLevel": 8,
+      "observedLevels": [1, 2, 3, 4, 5, 6, 7, 8],
+      "growthEvents": 7,
+      "shotsFired": 8161,
+      "sounds": {
+        "pickup": 94,
+        "growth": 7,
+        "clear": 1,
+        "personCry": 0,
+        "shot": 1191
+      },
+      "collectedMoving": 0,
+      "physicsMilliseconds": 0.20000000298023224,
+      "elapsedSeconds": 186.975,
+      "restart": true,
+      "chromiumTouch": true
+    },
+    {
+      "stageId": "egypt",
+      "seed": 1242072303,
+      "objects": 269,
+      "normalMouseClear": true,
+      "finalLevel": 8,
+      "observedLevels": [1, 2, 3, 4, 5, 6, 7, 8],
+      "growthEvents": 7,
+      "shotsFired": 0,
+      "sounds": {
+        "pickup": 70,
+        "growth": 7,
+        "clear": 1,
+        "personCry": 1,
+        "shot": 0
+      },
+      "collectedMoving": 1,
+      "physicsMilliseconds": 0.29999999701976776,
+      "elapsedSeconds": 151.655,
+      "restart": true,
+      "chromiumTouch": true
+    }
+  ],
+  "errors": [],
+  "iPhoneSafari": "新ステージは未実施"
+}

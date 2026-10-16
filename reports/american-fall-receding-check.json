@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-15",
+  "browser": "156.0.8078.4",
+  "seed": 3279644061,
+  "kind": "american",
+  "soundEvent": "americanCry",
+  "audioLoadFailureRecovered": true,
+  "firstActor": "american-16",
+  "mutedActor": "american-1",
+  "cryOnFall": true,
+  "mutedActorStillCollected": true,
+  "muteSuppressesCry": true,
+  "voicesReleased": true,
+  "cryCount": 1,
+  "waveform": {
+    "duration": 0.6960833333333334,
+    "earlyRms": 0.047897311921135055,
+    "lateRms": 0.007753810179721659,
+    "distanceRatio": 0.14737387119786097,
+    "sustainedRms": 0.000005068486114583322,
+    "rms": 0.01582779206872193,
+    "peak": 0.18918368220329285,
+    "tail": 0
+  },
+  "iPhoneSafari": "未実施",
+  "errors": []
+}

@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-14",
+  "browser": "156.0.8078.4",
+  "viewport": "390x844",
+  "seed": 1233251261,
+  "firstTouchUnlocksAudio": true,
+  "touchCollectionAndGrowth": true,
+  "growthLevel": 2,
+  "growthAge": 0.016700000000000728,
+  "sounds": {
+    "pickup": 3,
+    "growth": 1,
+    "clear": 0
+  },
+  "mutePersistsAcrossRestart": true,
+  "audioResumesFromButton": true,
+  "iPhoneSafari": "未実施",
+  "errors": []
+}

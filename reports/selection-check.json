@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-15",
+  "browser": "156.0.8078.4",
+  "viewport": "390x844",
+  "computedSelection": [
+    {
+      "selector": ".game-shell",
+      "userSelect": "none"
+    },
+    {
+      "selector": "canvas",
+      "userSelect": "none"
+    },
+    {
+      "selector": ".brand span",
+      "userSelect": "none"
+    },
+    {
+      "selector": ".stage-card h1",
+      "userSelect": "none"
+    },
+    {
+      "selector": ".growth-label span",
+      "userSelect": "none"
+    },
+    {
+      "selector": ".sound-toggle",
+      "userSelect": "none"
+    }
+  ],
+  "syntheticDefaultEventsCancelled": [true, true, true],
+  "suppressionScopedToGame": true,
+  "longPressThenTouchDrag": true,
+  "noSelectedText": true,
+  "touchReleaseStops": true,
+  "touchUnlocksAudio": true,
+  "soundAndRestartButtons": true,
+  "goalTouchReset": true,
+  "iPhoneSafari": "未実施",
+  "errors": []
+}

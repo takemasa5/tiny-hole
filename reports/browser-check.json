@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-14",
+  "browser": "156.0.8078.4",
+  "elapsedSeconds": 277.512,
+  "desktopClear": true,
+  "mouseDrag": true,
+  "holeDiameterStable": true,
+  "restart": true,
+  "mobileViewport": "390x844",
+  "chromiumTouchDrag": true,
+  "touchReleaseStops": true,
+  "iPhoneSafari": "未実施",
+  "observations": [
+    {
+      "level": 2,
+      "score": 17,
+      "holeDiameter": 194.1617871293331,
+      "physicsMilliseconds": 0.10000002384185791,
+      "floorMilliseconds": 0.10000002384185791,
+      "activeBodies": 0
+    },
+    {
+      "level": 3,
+      "score": 106,
+      "holeDiameter": 194.1617871293331,
+      "physicsMilliseconds": 0.5,
+      "floorMilliseconds": 0.10000002384185791,
+      "activeBodies": 57
+    },
+    {
+      "level": 4,
+      "score": 388,
+      "holeDiameter": 194.1617871293331,
+      "physicsMilliseconds": 0.10000002384185791,
+      "floorMilliseconds": 0.09999990463256836,
+      "activeBodies": 1
+    },
+    {
+      "level": 5,
+      "score": 1300,
+      "holeDiameter": 194.16178712933322,
+      "physicsMilliseconds": 0,
+      "floorMilliseconds": 0.10000002384185791,
+      "activeBodies": 0
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-14",
+  "browser": "156.0.8078.4",
+  "elapsedSeconds": 9.289,
+  "desktopClear": "全体プレイはbrowser-check.jsonを参照",
+  "mouseDrag": true,
+  "holeDiameterStable": "成長全段階はbrowser-check.jsonを参照",
+  "mouseCollection": true,
+  "restart": true,
+  "mobileViewport": "390x844",
+  "chromiumTouchDrag": true,
+  "touchReleaseStops": true,
+  "iPhoneSafari": "未実施",
+  "observations": [],
+  "errors": []
+}

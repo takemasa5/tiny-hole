@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-14",
+  "browser": "156.0.8078.4",
+  "seed": 1801131517,
+  "generatedObjects": 559,
+  "mapAreaRatio": 1.4999999999999998,
+  "movingPeople": 24,
+  "chasedPerson": "person-2",
+  "walkingAndFleeing": true,
+  "movingPersonSwallowed": true,
+  "collectedMoving": 1,
+  "audioUnlockedByKeyboard": true,
+  "muteToggle": true,
+  "waveform": {
+    "pickup": {
+      "rms": 0.007788949273697455,
+      "peak": 0.1167215034365654
+    },
+    "growth": {
+      "rms": 0.012599085482133884,
+      "peak": 0.0829354077577591
+    },
+    "clear": {
+      "rms": 0.019560609143152996,
+      "peak": 0.0971556007862091
+    }
+  },
+  "growthFrame": {
+    "level": 2,
+    "age": 0.8000000000000002,
+    "holeDiameter": 194.1617871293331
+  },
+  "growthSounds": {
+    "pickup": 15,
+    "growth": 2,
+    "clear": 0
+  },
+  "keyboardKeys": [
+    "w",
+    "s",
+    "a",
+    "d",
+    "ArrowUp",
+    "ArrowDown",
+    "ArrowLeft",
+    "ArrowRight"
+  ],
+  "keyboardReleaseStops": true,
+  "blurEventStopsKeyboard": true,
+  "stackLayers": 20,
+  "stackGroup": "parcel-6",
+  "stackSwallowed": true,
+  "ordinaryTapIgnored": true,
+  "mouseTargetReset": true,
+  "touchTargetReset": true,
+  "dragDoesNotReset": true,
+  "resetKeepsScoreAndHorizontalPosition": true,
+  "performanceSample": {
+    "frames": 120,
+    "averageFrameMs": 16.865833333308547,
+    "maxFrameMs": 33.30000000000291,
+    "maxPhysicsMs": 6.300000000745058,
+    "maxActiveBodies": 115
+  },
+  "iPhoneSafari": "未実施",
+  "errors": []
+}

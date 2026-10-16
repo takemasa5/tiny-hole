@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-15",
+  "browser": "156.0.8078.4",
+  "seed": 1513204208,
+  "kind": "egyptian",
+  "soundEvent": "personCry",
+  "firstActor": "egyptian-18",
+  "mutedActor": "egyptian-3",
+  "cryOnFall": true,
+  "mutedActorStillCollected": true,
+  "muteSuppressesCry": true,
+  "voicesReleased": true,
+  "cryCount": 1,
+  "waveform": {
+    "duration": 1.6,
+    "sustainedRms": 0.11375105597188173,
+    "rms": 0.10650123535058778,
+    "peak": 0.5705262422561646,
+    "tail": 0
+  },
+  "iPhoneSafari": "未実施",
+  "errors": []
+}

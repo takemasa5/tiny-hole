@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-14",
+  "browser": "156.0.8078.4",
+  "seed": 103510113,
+  "generatedObjects": 535,
+  "keyboardKeys": [
+    "w",
+    "s",
+    "a",
+    "d",
+    "ArrowUp",
+    "ArrowDown",
+    "ArrowLeft",
+    "ArrowRight"
+  ],
+  "keyboardReleaseStops": true,
+  "blurEventStopsKeyboard": true,
+  "stackLayers": 20,
+  "stackGroup": "parcel-12",
+  "stackSwallowed": true,
+  "ordinaryTapIgnored": true,
+  "mouseTargetReset": true,
+  "touchTargetReset": true,
+  "dragDoesNotReset": true,
+  "resetKeepsScoreAndHorizontalPosition": true,
+  "performanceSample": {
+    "frames": 120,
+    "averageFrameMs": 16.475833333324044,
+    "maxFrameMs": 16.80000000000291,
+    "maxPhysicsMs": 0.40000000037252903,
+    "maxActiveBodies": 1
+  },
+  "iPhoneSafari": "未実施",
+  "errors": []
+}

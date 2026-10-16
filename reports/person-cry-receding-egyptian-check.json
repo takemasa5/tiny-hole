@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-15",
+  "browser": "156.0.8078.4",
+  "seed": 2787582176,
+  "kind": "egyptian",
+  "soundEvent": "personCry",
+  "firstActor": "egyptian-15",
+  "mutedActor": "egyptian-3",
+  "cryOnFall": true,
+  "mutedActorStillCollected": true,
+  "muteSuppressesCry": true,
+  "voicesReleased": true,
+  "cryCount": 1,
+  "waveform": {
+    "duration": 1.6,
+    "earlyRms": 0.10168593997178545,
+    "lateRms": 0.016591850858185427,
+    "distanceRatio": 0.14737387119786097,
+    "sustainedRms": 0.04219770100275633,
+    "rms": 0.0648504362379598,
+    "peak": 0.32686370611190796,
+    "tail": 0
+  },
+  "iPhoneSafari": "未実施",
+  "errors": []
+}
