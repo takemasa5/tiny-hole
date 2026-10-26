@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "build": "tsc --noEmit && vite build && node scripts/build-offline.mjs",
     "test": "vitest run",
     "test:browser": "node checks/browser.mjs",
     "secrets:check": "node scripts/check-secrets.mjs staged",

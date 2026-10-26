@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-26",
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "initialCache": [
+    "/tiny-hole/",
+    "/tiny-hole/assets/index-C44eAQX3.js",
+    "/tiny-hole/assets/index-CEor82eR.css",
+    "/tiny-hole/audio/american-fall.wav",
+    "/tiny-hole/icons/apple-touch-icon.png",
+    "/tiny-hole/icons/hole-192.png",
+    "/tiny-hole/icons/hole-512.png",
+    "/tiny-hole/icons/hole.svg",
+    "/tiny-hole/index.html",
+    "/tiny-hole/manifest.webmanifest"
+  ],
+  "manifestAndIcons": true,
+  "updateWaitsForPlayerAndReplacesCache": true,
+  "serverStoppedAndHttpCacheCleared": true,
+  "coldOfflineLaunch": true,
+  "stages": ["plaza", "mountain", "america", "egypt"],
+  "audio": {
+    "decodes": 1,
+    "tones": 4
+  },
+  "resourcesFromServiceWorker": [
+    "/tiny-hole/",
+    "/tiny-hole/assets/index-CEor82eR.css",
+    "/tiny-hole/assets/index-C44eAQX3.js",
+    "/tiny-hole/audio/american-fall.wav"
+  ],
+  "incompleteDownloadRejectedAndRetrySucceeds": true,
+  "browser": "156.0.8078.4",
+  "errors": []
+}

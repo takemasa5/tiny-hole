@@ -11,6 +11,7 @@ import {
 } from "./game/stage";
 import "./style.css";
 import { nextStageId, STAGE_TRANSITION_DELAY } from "./game/stage-flow";
+import { OfflinePanel } from "./offline/OfflinePanel";
 
 function App() {
   const shell = useRef<HTMLElement>(null);
@@ -105,6 +106,7 @@ function App() {
       <header className="topbar">
         <div className="brand">
           HOLE<span>小さな穴、大きな世界。</span>
+          <OfflinePanel />
         </div>
         <div className="topbar-actions">
           <button
