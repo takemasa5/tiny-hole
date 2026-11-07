@@ -80,7 +80,7 @@ async function inspectPile(stageId, kind) {
   const collected = members.filter((object) => !remaining.has(object.id));
   if (collected.length < 2)
     throw new Error(`${kind}: 積み上げを複数飲み込めませんでした。`);
-  if (after.rigidBodies !== after.objects.length)
+  if (after.rigidBodies !== after.objects.length + after.factories.length)
     throw new Error(`${kind}: 回収後の剛体数が一致しません。`);
   await page.screenshot({ path: `reports/stack-${kind}-after.png` });
   const result = {

@@ -1,0 +1,16 @@
+{
+  "browser": "156.0.8078.4",
+  "fixture": "実際の床を使う描画確認。街の床だけの深度判定を止め、床が通過する場合を意図的に模擬。iPhoneの内部挙動の再現とは別。",
+  "errors": [],
+  "iPhoneAfterFix": "未実施",
+  "WebKit": "未実施",
+  "measurement": {
+    "normalBlue": 25874,
+    "depthBypassBlue": 0,
+    "belowGroundBlue": 0,
+    "cityOrder": 2,
+    "cubeOrder": 0,
+    "baseOrder": 0,
+    "normalDepthTest": true
+  }
+}

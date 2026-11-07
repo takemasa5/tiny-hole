@@ -1,0 +1,44 @@
+{
+  "directory": "reports/factory-sweeper-ui-2026-10-30/2026-10-30T03-21-59.471Z",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "seed": 1574023821,
+  "physicalPush": {
+    "carStart": {
+      "x": 7.999521255493164,
+      "y": 0.5499098300933838,
+      "z": 14.00114917755127
+    },
+    "carAfter": {
+      "x": 8.161534309387207,
+      "y": 0.5498631000518799,
+      "z": 20.01020622253418
+    },
+    "enemy": { "phase": "pushing", "targetId": "car-0", "targetKind": "car" }
+  },
+  "outOfBounds": { "lost": 6, "score": 0, "cleared": false, "spawned": 2 },
+  "collectedSupply": { "id": "supply-food-0", "kind": "burgerBox" },
+  "ateSweeper": true,
+  "playthrough": {
+    "elapsedSeconds": 228.153,
+    "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+    "districts": ["market", "diner", "residential"],
+    "score": 4424,
+    "lost": 28,
+    "supplied": 25,
+    "collectedEnemies": 1,
+    "cleared": true
+  },
+  "autoTransition": true,
+  "chromiumTouch": true,
+  "mobileLayout": {
+    "headerBottom": 58,
+    "width": 390,
+    "scrollWidth": 390,
+    "obsoletePanels": 0,
+    "menuOpen": false
+  },
+  "completed": true
+}

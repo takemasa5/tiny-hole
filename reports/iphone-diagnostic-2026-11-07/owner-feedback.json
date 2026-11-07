@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-07",
+  "source": "オーナーのiPhone実機による観測。エージェントによる実機計測ではない。",
+  "quote": "いずれのパターンでもあまり変わりませんでした。画面キャプチャ動画をとったのですが、大きすぎて添付できないようです。レベル1で激しく点滅、レベル2で収まり、レベル3でまた微振動する、といった具合です",
+  "testedModes": [
+    "normal",
+    "no-occlusion",
+    "precise-depth",
+    "no-antialias",
+    "plain-floor"
+  ],
+  "interpretation": "透過単独を主因とする見立てを見直す。原因は未確定。",
+  "status": "点滅は未解消。ユーザーがMacへ転送・指定した動画ファイルを確認してから次の変更を決める。",
+  "gameCodeChangedThisTurn": false
+}

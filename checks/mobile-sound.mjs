@@ -1,3 +1,4 @@
+import { gameControl } from "./ui.mjs";
 import { chromium } from "@playwright/test";
 import { mkdir, writeFile } from "node:fs/promises";
 
@@ -68,13 +69,13 @@ try {
     throw new Error("初回タッチによる音の有効化と成長を確認できませんでした。");
   await mkdir("reports", { recursive: true });
   await page.screenshot({ path: "reports/improved-mobile-growth.png" });
-  await page.getByRole("button", { name: "効果音を消す" }).tap();
-  await page.getByRole("button", { name: "最初から遊ぶ" }).tap();
+  await (await gameControl(page, "効果音を消す")).tap();
+  await (await gameControl(page, "最初から遊ぶ")).tap();
   await page.waitForFunction(() => window.__hole?.snapshot().score === 0);
   const mutedRestart = await snapshot();
   if (mutedRestart.audio.enabled || mutedRestart.audio.state !== "locked")
     throw new Error("再開で音OFFの選択が失われました。");
-  await page.getByRole("button", { name: "効果音をつける" }).tap();
+  await (await gameControl(page, "効果音をつける")).tap();
   await page.waitForFunction(
     () => window.__hole.snapshot().audio.state === "running",
   );

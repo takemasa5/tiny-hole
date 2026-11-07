@@ -1,0 +1,1360 @@
+{
+  "browser": "156.0.8078.4",
+  "fixture": "実ゲームを通常のキー入力で移動。120Hz相当のsetTimeout描画コールバックはタイミング検証用であり、実機の表示更新率の検証ではない。",
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "errors": [],
+  "cases": [
+    {
+      "hz": 60,
+      "axis": "z",
+      "level": 1,
+      "samples": 15,
+      "repeatedPhysicalFrames": 0,
+      "repeatedRenderedFrames": 0,
+      "renderSpeedVariation": 0.4555206449459517,
+      "stationaryRenderDrift": 0,
+      "frames": [
+        { "id": "notions", "falling": false, "collected": false },
+        { "id": "chest", "falling": false, "collected": false },
+        { "id": "bedroom", "falling": false, "collected": false },
+        { "id": "house", "falling": false, "collected": false }
+      ],
+      "apertureCenterError": 1.7053025658242404e-13,
+      "rawMoving": [
+        {
+          "time": 3049.5,
+          "physical": { "x": 0, "z": 0, "radius": 0.08 },
+          "render": { "x": 0, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 3068.7999999821186,
+          "physical": { "x": 0, "z": 0, "radius": 0.08 },
+          "render": { "x": 0, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 3087.199999988079,
+          "physical": { "x": 0, "z": 0, "radius": 0.08 },
+          "render": { "x": 0, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 4617.699999988079,
+          "physical": { "x": 0, "z": 0.04666666666666667, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.04666666666666667, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 4650.799999982119,
+          "physical": { "x": 0, "z": 0.056, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.056, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 4674,
+          "physical": { "x": 0, "z": 0.07466666666666666, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.07466666666666666, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 4695.799999982119,
+          "physical": { "x": 0, "z": 0.08399999999999999, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.08399999999999999, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 4715.799999982119,
+          "physical": { "x": 0, "z": 0.09333333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.09333333333333332, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 4735.5999999940395,
+          "physical": { "x": 0, "z": 0.11199999999999999, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.11199999999999999, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 4756.899999976158,
+          "physical": { "x": 0, "z": 0.12133333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.12133333333333332, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 4776.699999988079,
+          "physical": { "x": 0, "z": 0.13066666666666665, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.13066666666666665, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 4796.799999982119,
+          "physical": { "x": 0, "z": 0.13999999999999999, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.13999999999999999, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 4816.899999976158,
+          "physical": { "x": 0, "z": 0.14933333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.14933333333333332, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 4837.0999999940395,
+          "physical": { "x": 0, "z": 0.16799999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.16799999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 4857.799999982119,
+          "physical": { "x": 0, "z": 0.17733333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.17733333333333332, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 4876.799999982119,
+          "physical": { "x": 0, "z": 0.18666666666666665, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.18666666666666665, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.00000000000017 },
+            { "x": 242.32693561277495, "y": 422.00000000000017 }
+          ]
+        },
+        {
+          "time": 4896.799999982119,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 4917.899999976158,
+          "physical": { "x": 0, "z": 0.21466666666666664, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.21466666666666664, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 4939.199999988079,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        }
+      ],
+      "rawStopped": [
+        {
+          "time": 5213.5,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5233.5,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5253.199999988079,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5272.299999982119,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5291.299999982119,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5310.5,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5330.0999999940395,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5350.199999988079,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5369.899999976158,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5390,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5408.5999999940395,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        }
+      ]
+    },
+    {
+      "hz": 120,
+      "axis": "z",
+      "level": 1,
+      "samples": 25,
+      "repeatedPhysicalFrames": 8,
+      "repeatedRenderedFrames": 8,
+      "renderSpeedVariation": 0.7187300872377803,
+      "stationaryRenderDrift": 0,
+      "frames": [
+        { "id": "notions", "falling": false, "collected": false },
+        { "id": "chest", "falling": false, "collected": false },
+        { "id": "bedroom", "falling": false, "collected": false },
+        { "id": "house", "falling": false, "collected": false }
+      ],
+      "apertureCenterError": 1.7053025658242404e-13,
+      "rawMoving": [
+        {
+          "time": 1717.0999999940395,
+          "physical": { "x": 0, "z": 0.028000000000000004, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.028000000000000004, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1733.3999999761581,
+          "physical": { "x": 0, "z": 0.037333333333333336, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.037333333333333336, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1747.0999999940395,
+          "physical": { "x": 0, "z": 0.037333333333333336, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.037333333333333336, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1757.5,
+          "physical": { "x": 0, "z": 0.04666666666666667, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.04666666666666667, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1769.699999988079,
+          "physical": { "x": 0, "z": 0.056, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.056, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1781.0999999940395,
+          "physical": { "x": 0, "z": 0.056, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.056, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1791.199999988079,
+          "physical": { "x": 0, "z": 0.06533333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.06533333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1802.7999999821186,
+          "physical": { "x": 0, "z": 0.07466666666666666, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.07466666666666666, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1814.0999999940395,
+          "physical": { "x": 0, "z": 0.07466666666666666, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.07466666666666666, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1823.3999999761581,
+          "physical": { "x": 0, "z": 0.08399999999999999, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.08399999999999999, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1835.3999999761581,
+          "physical": { "x": 0, "z": 0.09333333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.09333333333333332, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1846.8999999761581,
+          "physical": { "x": 0, "z": 0.09333333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.09333333333333332, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1856.699999988079,
+          "physical": { "x": 0, "z": 0.10266666666666666, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.10266666666666666, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1868.0999999940395,
+          "physical": { "x": 0, "z": 0.11199999999999999, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.11199999999999999, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1879.8999999761581,
+          "physical": { "x": 0, "z": 0.11199999999999999, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.11199999999999999, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1889.2999999821186,
+          "physical": { "x": 0, "z": 0.12133333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.12133333333333332, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1901.3999999761581,
+          "physical": { "x": 0, "z": 0.13066666666666665, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.13066666666666665, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1913.0999999940395,
+          "physical": { "x": 0, "z": 0.13066666666666665, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.13066666666666665, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1922.699999988079,
+          "physical": { "x": 0, "z": 0.13999999999999999, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.13999999999999999, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1935,
+          "physical": { "x": 0, "z": 0.14933333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.14933333333333332, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1946.699999988079,
+          "physical": { "x": 0, "z": 0.14933333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.14933333333333332, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1957,
+          "physical": { "x": 0, "z": 0.15866666666666665, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.15866666666666665, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1968.7999999821186,
+          "physical": { "x": 0, "z": 0.16799999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.16799999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1980,
+          "physical": { "x": 0, "z": 0.16799999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.16799999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1989.3999999761581,
+          "physical": { "x": 0, "z": 0.17733333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.17733333333333332, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 2001.3999999761581,
+          "physical": { "x": 0, "z": 0.18666666666666665, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.18666666666666665, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.00000000000017 },
+            { "x": 242.32693561277495, "y": 422.00000000000017 }
+          ]
+        },
+        {
+          "time": 2013.2999999821186,
+          "physical": { "x": 0, "z": 0.18666666666666665, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.18666666666666665, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.00000000000017 },
+            { "x": 242.32693561277495, "y": 422.00000000000017 }
+          ]
+        },
+        {
+          "time": 2023.699999988079,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2034.7999999821186,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        }
+      ],
+      "rawStopped": [
+        {
+          "time": 2309.699999988079,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2319.399999976158,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2330.5999999940395,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2340,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2351.399999976158,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2363.2999999821186,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2373.199999988079,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2384.7999999821186,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2396.399999976158,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2406.399999976158,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2418.5,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2430.399999976158,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2440.699999988079,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2452.899999976158,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2464.899999976158,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2474.5,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2486.5999999940395,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2498.899999976158,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            { "id": "notions", "falling": false, "collected": false },
+            { "id": "chest", "falling": false, "collected": false },
+            { "id": "bedroom", "falling": false, "collected": false },
+            { "id": "house", "falling": false, "collected": false }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        }
+      ]
+    }
+  ]
+}

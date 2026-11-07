@@ -1,6 +1,10 @@
+import { gameControl } from "./ui.mjs";
 import { chromium } from "@playwright/test";
 import { mkdir, writeFile } from "node:fs/promises";
 
+const directory =
+  "reports/factory-sweeper-ui-2026-10-30/selection-" + Date.now();
+await mkdir(directory, { recursive: true });
 const browser = await chromium.launch({ headless: true });
 try {
   const page = await browser.newPage({
@@ -18,10 +22,10 @@ try {
     const elements = [
       ".game-shell",
       "canvas",
-      ".brand span",
-      ".stage-card h1",
-      ".growth-label span",
-      ".sound-toggle",
+      ".goal-label span",
+      ".goal-label",
+      ".goal-label span",
+      ".game-options summary",
     ];
     const selection = elements.map((selector) => ({
       selector,
@@ -30,7 +34,7 @@ try {
     const cancelled = ["selectstart", "contextmenu", "dragstart"].map(
       (type) =>
         !document
-          .querySelector(".stage-card h1")
+          .querySelector(".goal-label")
           .dispatchEvent(new Event(type, { bubbles: true, cancelable: true })),
     );
     const outside = document.createElement("div");
@@ -51,7 +55,7 @@ try {
     );
 
   const cdp = await page.context().newCDPSession(page);
-  for (const selector of [".stage-card h1", ".growth-label span"]) {
+  for (const selector of [".goal-label", ".goal-label span"]) {
     const bounds = await page.locator(selector).first().boundingBox();
     const x = Math.min(270, bounds.x + bounds.width / 2);
     const y = bounds.y + bounds.height / 2;
@@ -88,11 +92,11 @@ try {
     if (after.audio.state !== "running")
       throw new Error("タッチで効果音が有効になりません。");
   }
-  await page.getByRole("button", { name: "効果音を消す" }).tap();
+  await (await gameControl(page, "効果音を消す")).tap();
   if ((await snapshot()).audio.enabled)
     throw new Error("音ボタンをタップできません。");
   const beforeRestart = await snapshot();
-  await page.getByRole("button", { name: "最初から遊ぶ" }).tap();
+  await (await gameControl(page, "最初から遊ぶ")).tap();
   await page.waitForFunction((previousSeed) => {
     const state = window.__hole?.snapshot();
     return (
@@ -106,6 +110,8 @@ try {
   if ((await snapshot()).audio.enabled)
     throw new Error("音OFFでの再開ができません。");
 
+  if ((await page.locator(".game-options").getAttribute("open")) !== null)
+    await page.getByLabel("メニュー", { exact: true }).click();
   const goal = (await snapshot()).objects.find(
     (object) => object.id === "goal",
   );
@@ -143,7 +149,8 @@ try {
   if (errors.length) throw new Error(errors.join("\n"));
   await mkdir("reports", { recursive: true });
   const report = {
-    date: "2026-10-15",
+    date: "2026-10-30",
+    directory,
     browser: await browser.version(),
     viewport: "390x844",
     computedSelection: defaults.selection,
@@ -159,7 +166,7 @@ try {
     errors,
   };
   await writeFile(
-    "reports/selection-check.json",
+    directory + "/results.json",
     JSON.stringify(report, null, 2) + "\n",
   );
   console.log(JSON.stringify(report, null, 2));

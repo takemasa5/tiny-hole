@@ -1,0 +1,10 @@
+{
+  "directory": "reports/all-stages-random-2026-10-30/2026-10-30T11-38-31.517Z",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "stages": [],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "failure": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:5173/\", waiting until \"load\"\u001b[22m\n\n    at ./checks/stage-expansion.mjs:69:14",
+  "snapshot": null
+}

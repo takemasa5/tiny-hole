@@ -1,8 +1,10 @@
+import { gameControl } from "./ui.mjs";
 import assert from "node:assert/strict";
 import { createServer } from "node:http";
 import {
   cp,
   mkdtemp,
+  mkdir,
   readdir,
   readFile,
   rm,
@@ -72,15 +74,25 @@ async function serve(files, missingAudio = false) {
   };
 }
 
-const browser = await chromium.launch({ headless: true });
+const browser = await chromium.launch({ headless: true, channel: "chromium" });
 const fixture = await mkdtemp(join(tmpdir(), "hole-offline-"));
 const servers = [];
 const errors = [];
-const report = { date: "2026-10-26", iPhoneSafari: "未実施", WebKit: "未実施" };
+const directory =
+  (process.env.HOLE_REPORT_DIR || "reports/scale-growth-2026-11-06") +
+  "/offline-" +
+  Date.now();
+await mkdir(directory, { recursive: true });
+const report = {
+  date: "2026-11-06",
+  directory,
+  iPhoneSafari: "未実施",
+  WebKit: "未実施",
+};
 async function ready(page) {
   await page
     .locator('[data-testid="offline-status"][data-state="ready"]')
-    .waitFor({ timeout: 20000 });
+    .waitFor({ timeout: 20000, state: "attached" });
   await page.locator(".loading-overlay").waitFor({ state: "hidden" });
 }
 try {
@@ -145,7 +157,7 @@ try {
   await page.evaluate(async () =>
     (await navigator.serviceWorker.getRegistration()).update(),
   );
-  await page.getByRole("button", { name: "オフライン保存の案内" }).click();
+  await (await gameControl(page, "オフライン保存の案内")).click();
   await page
     .getByRole("button", { name: "新版に更新して再起動" })
     .waitFor({ timeout: 20000 });
@@ -180,18 +192,20 @@ try {
   report.serverStoppedAndHttpCacheCleared = true;
   report.coldOfflineLaunch = true;
   report.stages = [];
-  for (const [id, title] of [
-    ["plaza", "はじまりの広場"],
-    ["mountain", "花咲く山の森"],
-    ["america", "アメリカの街"],
-    ["egypt", "エジプトの砂漠"],
+  for (const [id, goal] of [
+    ["plaza", "記念塔"],
+    ["mountain", "森の大樹"],
+    ["america", "自由の女神"],
+    ["egypt", "ピラミッド"],
+    ["harbor", "タンカー"],
+    ["toys", "巨大ロボット"],
+    ["office", "本社ビル"],
+    ["hell", "閻魔大王"],
   ]) {
     await offlinePage
       .getByRole("combobox", { name: "ステージ", exact: true })
       .selectOption(id);
-    await offlinePage
-      .getByRole("heading", { name: title, exact: true })
-      .waitFor();
+    await offlinePage.getByText("目標：" + goal, { exact: false }).waitFor();
     await offlinePage.locator(".loading-overlay").waitFor({ state: "hidden" });
     await offlinePage.keyboard.down("ArrowRight");
     await offlinePage.waitForTimeout(350);
@@ -220,14 +234,12 @@ try {
     type: "touchEnd",
     touchPoints: [],
   });
-  await offlinePage
-    .getByRole("button", { name: "オフライン保存の案内" })
-    .click();
-  await offlinePage.screenshot({ path: "reports/offline-mobile.png" });
+  await (await gameControl(offlinePage, "オフライン保存の案内")).click();
+  await offlinePage.screenshot({ path: directory + "/mobile.png" });
   await offlinePage.getByRole("button", { name: "閉じて遊ぶ" }).click();
-  await offlinePage.getByRole("button", { name: "最初から遊ぶ" }).click();
+  await (await gameControl(offlinePage, "最初から遊ぶ")).click();
   await offlinePage.locator(".loading-overlay").waitFor({ state: "hidden" });
-  await offlinePage.screenshot({ path: "reports/offline-game.png" });
+  await offlinePage.screenshot({ path: directory + "/game.png" });
   report.audio = await offlinePage.evaluate(() => window.__offlineAudio);
   report.resourcesFromServiceWorker = [...new Set(fromWorker)];
   assert(report.audio.decodes > 0);
@@ -246,8 +258,8 @@ try {
   await recovery.goto(recoveryServer.url);
   await recovery
     .locator('[data-testid="offline-status"][data-state="failed"]')
-    .waitFor({ timeout: 20000 });
-  await recovery.getByRole("button", { name: "オフライン保存の案内" }).click();
+    .waitFor({ timeout: 20000, state: "attached" });
+  await (await gameControl(recovery, "オフライン保存の案内")).click();
   recoveryServer.state.missingAudio = false;
   await recovery.getByRole("button", { name: "保存を再試行" }).click();
   await ready(recovery);
@@ -256,13 +268,13 @@ try {
   report.errors = errors;
   assert.deepEqual(errors, []);
   await writeFile(
-    "reports/offline-check.json",
+    directory + "/results.json",
     JSON.stringify(report, null, 2) + "\n",
   );
   console.log(JSON.stringify(report, null, 2));
 } catch (error) {
   await writeFile(
-    "reports/offline-failure.json",
+    directory + "/failure.json",
     JSON.stringify({ ...report, error: String(error), errors }, null, 2) + "\n",
   );
   throw error;

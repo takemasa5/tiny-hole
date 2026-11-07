@@ -1,0 +1,54 @@
+{
+  "directory": "reports/additional-stages-2026-10-31/2026-10-30T23-02-05.095Z",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "stages": [
+    {
+      "stageId": "office",
+      "seed": 811821692,
+      "factorySites": [
+        {
+          "id": "food",
+          "label": "工場A",
+          "width": 0.8,
+          "height": 0.5599999999999999,
+          "depth": 0.52,
+          "x": -2.2729027706553784,
+          "z": -2.0553127547726033,
+          "outputX": -2.2729027706553784,
+          "outputZ": -0.6553127547726032,
+          "scale": 0.2
+        },
+        {
+          "id": "depot",
+          "label": "工場B",
+          "width": 0.9,
+          "height": 0.7000000000000001,
+          "depth": 0.8,
+          "x": 0.9570339290099663,
+          "z": 2.741858254559338,
+          "outputX": 0.9570339290099663,
+          "outputZ": 4.141858254559338,
+          "scale": 0.2
+        }
+      ],
+      "levels": [1, 2, 3],
+      "emittedKinds": [],
+      "emission": {
+        "kind": "officeChair",
+        "sourceId": "food",
+        "duration": 0.9,
+        "highestY": 1.8760812282562256,
+        "landed": {
+          "x": -2.2728829383850098,
+          "y": 0.4880547821521759,
+          "z": -0.6553069353103638
+        }
+      }
+    }
+  ],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "failure": "page.evaluate: Target page, context or browser has been closed\n    at snapshot (./checks/stage-expansion.mjs:19:29)\n    at moveTo (./checks/stage-expansion.mjs:52:25)\n    at ./checks/stage-expansion.mjs:285:13",
+  "snapshot": null
+}

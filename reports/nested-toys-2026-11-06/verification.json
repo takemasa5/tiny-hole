@@ -1,0 +1,524 @@
+{
+  "date": "2026-11-06",
+  "scope": "おもちゃの入れ子世界。ローカル実装、未公開。",
+  "specification": "docs/nested-toys-implementation.md",
+  "concept": "art/concepts/toys-nested-world-2026-11-06/README.md",
+  "sourceFiles": [
+    {
+      "path": "src/game/furniture-visuals.ts",
+      "before": null,
+      "after": "27e77c7c0de40d8390653f2f9f93f70ea5a7a5e8ace9ae2d3bcb1cb9b60aec98"
+    },
+    {
+      "path": "src/game/growth-stage.ts",
+      "before": "7e3e2ec11260aa9fa36bca231d1cdf548c19841ced8c2eb3e7a51f17bbb501b3",
+      "after": "49026bb589f20547fac4a051ea18b29fbe87320d013860c0a5a3acffbd8ed686"
+    },
+    {
+      "path": "src/game/growth-visuals.ts",
+      "before": "740d2ca0d21e1c0a16d3f133c5ce184ec469f04c13a35a21f1530a49f0153e86",
+      "after": "d9a66b737f735fa89078c87094283d74d20da2688a5a24f1f9e6a17771a90694"
+    },
+    {
+      "path": "src/game/runtime.ts",
+      "before": "b1f5c9a7b2dc3f10ab3c5b0fcde0530cc972a57d636860e0a37ec42757f4eab7",
+      "after": "4ba780da80f065c5de6a6aa3fc68360a784291df4d88d0525bca602145caad6f"
+    },
+    {
+      "path": "src/game/theme-behavior.ts",
+      "before": "c02214fbda3fba34d8d3e8b1a8f3015fc833974f5919f6444488fa132276e821",
+      "after": "e1bc234d8a4fda5102a7f3f5cf0e2390bd67d3e8ee9617d105939e2e07499db3"
+    },
+    {
+      "path": "src/game/toy-stage.ts",
+      "before": "ac6b415797ba73876acaece0ba7436624f703ab1692a5caa48bf79a5c69916a5",
+      "after": "f16a2dd8bc6854c97494bac2d7bccd063f3f5004b3ec3b33c0dad2524ee87675"
+    },
+    {
+      "path": "src/game/toy-visuals.ts",
+      "before": "0b7431461075c0b8ba02323b114e71e560417d4bf480ed8787e86e2169966429",
+      "after": "0b2b36f656f1e20f88502590cfe683ecb43c146d88fb003c649d7d3afdb41ff4"
+    },
+    {
+      "path": "src/game/toy-world-scene.ts",
+      "before": null,
+      "after": "29336bad2778c8ae101f59e233e63af4278e7f2f734fcf1636d2081ce3e79aea"
+    },
+    {
+      "path": "src/game/toy-world.ts",
+      "before": null,
+      "after": "2131c2f234e1430afe15c70e49c6690e25e85d11cb244f020eae32d24c7ed93d"
+    },
+    {
+      "path": "tests/growth-stage.test.ts",
+      "before": "32d2968df72c45720f6b13d0865ee2985382eece91f2c38d3403e5b6f9756b71",
+      "after": "bc3d001612dc1d1bbff24f72a30416fad6fefd8797e6b35f0246cbbe7869c092"
+    },
+    {
+      "path": "tests/nested-toys.test.ts",
+      "before": null,
+      "after": "64cf8e0799e51e32a0f1576ddf811b11cbb9c5612354c9a0dbf99adb795e6b82"
+    },
+    {
+      "path": "tests/toy-stage.test.ts",
+      "before": "b76ed8fb710cd38b16c317442a4d344a095c16d73bc815fea7dc9ff792daa51f",
+      "after": "d4fe205296a76a0d94ef4a136cd63a155ca7aa4fd68feecdbdbcb605460c96e3"
+    },
+    {
+      "path": "docs/README.md",
+      "before": "adc1f3af87e72e415faceadb38203cd5bd51b5bda82eba7d0ea1886fca4fb0a4",
+      "after": "ec68bb0f6eecd2d2de48c023a178ab1f5fe663792326531c80c0b1a8f025d9a0"
+    },
+    {
+      "path": "docs/game-spec.md",
+      "before": "ac2c89e130a7e5782842e70b0d966d41de3f9aeda9922423f877e8fde6444e62",
+      "after": "581bf8bba2ef5b11ecc20b73c6995882460f5797f1c9267658b2e5e319276626"
+    },
+    {
+      "path": "docs/nested-toys-implementation.md",
+      "before": null,
+      "after": "0fffb20c270b7abd22c3fae62dcdedd0694ef5aa2ba657a5d5f3853838a501fa"
+    },
+    {
+      "path": "docs/scale-growth-implementation.md",
+      "before": "cea1628b668d374c134a8589f6ea8b940c97bdea45689a52d49ebd3456b0a41c",
+      "after": "c2c07c97128232f1243fb5ff0d7c622be14ad3e2d715082f4d7c5e98ac2af1d3"
+    },
+    {
+      "path": "docs/toy-stage-trial.md",
+      "before": "09b6dbafdfd78d70be066b7e996687ccdb9afaeb08359bbfce46696776c88cbe",
+      "after": "93bfabff517e3253139fbc6bfda31160bfd729854b5f6f6df3da9a809dd82af7"
+    },
+    {
+      "path": "checks/growth-flow.mjs",
+      "before": "7609e2caa7162cbd91a56b90b7b028ad29a5c6ea4af96c7e7f0d352e93e1072e",
+      "after": "8a2a5210104e6b86aec6c6942320915b0bca255f714c7e9bb22d4331916aa770"
+    },
+    {
+      "path": "checks/growth-interactions.mjs",
+      "before": "6734967288d64c64b947e06e530da7021a58129f8d321039c996ac6a3ffac6db",
+      "after": "b053c0934d3e9f1573d1a99111ca86593429f5e16e3c05a8aed8a27ed657baf5"
+    },
+    {
+      "path": "checks/nested-toys-mobile.mjs",
+      "before": null,
+      "after": "8ee7a6a1e22036f0b703e6459ddc3f8d705a0818542c62f47f5c27c6bb0e003b"
+    },
+    {
+      "path": "checks/nested-toys.mjs",
+      "before": null,
+      "after": "d0467b1ee8231d7a565f586da341fc276fdfb28fa379ab5c57267ac792ffed1e"
+    },
+    {
+      "path": "checks/toy-visuals.mjs",
+      "before": "37ef7d87cb4af129f44f009ba43357f8227751a2332a2e7e8510af5158eb8598",
+      "after": "5f4a9d6219a7c270c597e00ef662ee61271053b4646879bdef493cd2ce6e049b"
+    }
+  ],
+  "automated": {
+    "tests": 304,
+    "files": 23,
+    "command": "npm test -- --maxWorkers=2",
+    "passed": true,
+    "lint": true,
+    "typescriptAndBuild": true,
+    "seededLayouts": 1000,
+    "format": "changed source/test/docs/check files: Prettier"
+  },
+  "build": {
+    "cache": "e0d986d40250ba6771da",
+    "js": "index-Bq14REXd.js",
+    "css": "index-B7g_aRMj.css",
+    "offlineResources": 10
+  },
+  "browser": {
+    "flow": {
+      "browser": "156.0.8078.4",
+      "errors": [],
+      "levels": [
+        {
+          "level": 1,
+          "area": 0,
+          "space": "小物箱",
+          "bodies": 54,
+          "frame": {
+            "median": 16.699999999999818,
+            "p95": 16.799999999999955
+          },
+          "score": 0
+        },
+        {
+          "level": 2,
+          "area": 0,
+          "space": "小物箱",
+          "bodies": 45,
+          "frame": {
+            "median": 16.69999999999891,
+            "p95": 16.700000000000728
+          },
+          "score": 12
+        },
+        {
+          "level": 3,
+          "area": 1,
+          "space": "おもちゃ箱",
+          "bodies": 56,
+          "frame": {
+            "median": 16.700000000000728,
+            "p95": 16.700000000000728
+          },
+          "score": 61
+        },
+        {
+          "level": 4,
+          "area": 1,
+          "space": "おもちゃ箱",
+          "bodies": 61,
+          "frame": {
+            "median": 16.69999999999709,
+            "p95": 16.700000000004366
+          },
+          "score": 265
+        },
+        {
+          "level": 5,
+          "area": 2,
+          "space": "子供部屋",
+          "bodies": 47,
+          "frame": {
+            "median": 16.69999999999709,
+            "p95": 16.799999999995634
+          },
+          "score": 1065
+        },
+        {
+          "level": 6,
+          "area": 2,
+          "space": "子供部屋",
+          "bodies": 58,
+          "frame": {
+            "median": 16.69999999999709,
+            "p95": 16.70000000001164
+          },
+          "score": 4234
+        },
+        {
+          "level": 7,
+          "area": 3,
+          "space": "家の中",
+          "bodies": 67,
+          "frame": {
+            "median": 16.69999999999709,
+            "p95": 16.79999999998836
+          },
+          "score": 16778
+        },
+        {
+          "level": 8,
+          "area": 3,
+          "space": "家の中",
+          "bodies": 97,
+          "frame": {
+            "median": 16.69999999999709,
+            "p95": 16.70000000001164
+          },
+          "score": 66186
+        },
+        {
+          "level": 9,
+          "area": 4,
+          "space": "街",
+          "bodies": 90,
+          "frame": {
+            "median": 16.699999999982538,
+            "p95": 16.70000000001164
+          },
+          "score": 269450
+        },
+        {
+          "level": 10,
+          "area": 4,
+          "space": "街",
+          "bodies": 61,
+          "frame": {
+            "median": 16.699999999982538,
+            "p95": 16.70000000001164
+          },
+          "score": 1103108
+        },
+        {
+          "level": 11,
+          "area": 4,
+          "space": "街",
+          "bodies": 76,
+          "frame": {
+            "median": 16.699999999982538,
+            "p95": 16.70000000001164
+          },
+          "score": 4248836
+        },
+        {
+          "level": 12,
+          "area": 4,
+          "space": "街",
+          "bodies": 67,
+          "frame": {
+            "median": 16.699999999982538,
+            "p95": 16.70000000001164
+          },
+          "score": 16831748
+        }
+      ],
+      "entered": ["notions", "chest", "bedroom", "house", "city"],
+      "iPhone": "未実施",
+      "WebKit": "未実施",
+      "seed": 618062528,
+      "initialBodies": 54,
+      "closedSideBlocks": true,
+      "traffic": [
+        {
+          "behavior": "route",
+          "moved": true
+        },
+        {
+          "behavior": "train",
+          "moved": true
+        }
+      ],
+      "giants": [
+        {
+          "id": "hero",
+          "size": [48, 180, 42],
+          "phase": "fighting"
+        },
+        {
+          "id": "monster",
+          "size": [56, 220, 48],
+          "phase": "fighting"
+        },
+        {
+          "id": "goal",
+          "size": [196, 700, 196],
+          "phase": "working"
+        }
+      ],
+      "final": {
+        "level": 12,
+        "score": 23385348,
+        "cleared": true,
+        "bodies": 63,
+        "collected": 219,
+        "doors": [
+          {
+            "id": "notions-door",
+            "requiredLevel": 3,
+            "open": true,
+            "amount": 1,
+            "x": 0.75,
+            "z": 0,
+            "side": "east",
+            "width": 1.1
+          },
+          {
+            "id": "chest-door",
+            "requiredLevel": 5,
+            "open": true,
+            "amount": 1,
+            "x": 0,
+            "z": 2.6,
+            "side": "south",
+            "width": 2.7
+          },
+          {
+            "id": "bedroom-door",
+            "requiredLevel": 7,
+            "open": true,
+            "amount": 1,
+            "x": 31.6,
+            "z": 23,
+            "side": "east",
+            "width": 8.5
+          },
+          {
+            "id": "house-door",
+            "requiredLevel": 9,
+            "open": true,
+            "amount": 1,
+            "x": 95,
+            "z": 80,
+            "side": "east",
+            "width": 33
+          }
+        ]
+      },
+      "autoTransition": "office"
+    },
+    "mobile": {
+      "browser": "156.0.8078.4",
+      "viewport": "390x844",
+      "errors": [],
+      "iPhone": "未実施",
+      "WebKit": "未実施",
+      "touchMovesAndStops": true,
+      "gate": {
+        "text": "レベル3になると箱の側面が開きます",
+        "font": 16,
+        "bounds": {
+          "x": 53.7265625,
+          "y": 774,
+          "width": 282.546875,
+          "height": 46
+        },
+        "blocks": true
+      },
+      "restart": true,
+      "stageSwitch": true
+    },
+    "companyRegression": {
+      "browser": "156.0.8078.4",
+      "errors": [],
+      "iPhone": "未実施",
+      "WebKit": "未実施",
+      "deskOcclusion": [
+        {
+          "id": "landmark",
+          "opacity": 0.3
+        }
+      ],
+      "occlusionRestored": true,
+      "dragReleaseStops": true,
+      "closedGateBlocks": true,
+      "restartResets": true,
+      "touch390": {
+        "moved": true,
+        "releaseStops": true,
+        "audioUnlocked": true
+      }
+    },
+    "modelGallery": {
+      "browser": "156.0.8078.4",
+      "fixture": "個々の実モデルを並べた描画確認。ゲームの配置・操作確認とは別。",
+      "models": [
+        "街の住宅",
+        "市庁舎",
+        "街の高層ビル",
+        "電波塔",
+        "ガレージ",
+        "路線バス",
+        "自動販売機",
+        "街のごみ箱",
+        "小さなテーブル",
+        "靴箱",
+        "大きなクッション",
+        "街灯",
+        "リビングの椅子",
+        "本の束",
+        "フロアライト",
+        "マグカップ",
+        "積み木",
+        "大きなぬいぐるみ",
+        "床の道路を走る車",
+        "着せ替え人形",
+        "ボタン",
+        "パズルのピース",
+        "サイコロ",
+        "ぜんまいロボット",
+        "木馬",
+        "線路の駅",
+        "青いベッド",
+        "黄色い机",
+        "子供部屋の棚",
+        "キッチンのカウンター",
+        "キッチンの冷蔵庫",
+        "リビングのソファ",
+        "巨大ヒーロー",
+        "怪獣",
+        "巨大ロボット",
+        "補充箱：上面と帯",
+        "兵隊：帽子と顔"
+      ],
+      "errors": []
+    },
+    "offline": {
+      "date": "2026-11-06",
+      "directory": "reports/nested-toys-2026-11-06/offline-1793957668874",
+      "iPhoneSafari": "未実施",
+      "WebKit": "未実施",
+      "initialCache": [
+        "/tiny-hole/",
+        "/tiny-hole/assets/index-B7g_aRMj.css",
+        "/tiny-hole/assets/index-Bq14REXd.js",
+        "/tiny-hole/audio/american-fall.wav",
+        "/tiny-hole/icons/apple-touch-icon.png",
+        "/tiny-hole/icons/hole-192.png",
+        "/tiny-hole/icons/hole-512.png",
+        "/tiny-hole/icons/hole.svg",
+        "/tiny-hole/index.html",
+        "/tiny-hole/manifest.webmanifest"
+      ],
+      "manifestAndIcons": true,
+      "updateWaitsForPlayerAndReplacesCache": true,
+      "serverStoppedAndHttpCacheCleared": true,
+      "coldOfflineLaunch": true,
+      "stages": [
+        "plaza",
+        "mountain",
+        "america",
+        "egypt",
+        "harbor",
+        "toys",
+        "office",
+        "hell"
+      ],
+      "audio": {
+        "decodes": 1,
+        "tones": 2
+      },
+      "resourcesFromServiceWorker": [
+        "/tiny-hole/",
+        "/tiny-hole/assets/index-B7g_aRMj.css",
+        "/tiny-hole/assets/index-Bq14REXd.js",
+        "/tiny-hole/icons/hole.svg",
+        "/tiny-hole/audio/american-fall.wav"
+      ],
+      "incompleteDownloadRejectedAndRetrySucceeds": true,
+      "browser": "156.0.8078.4",
+      "errors": []
+    }
+  },
+  "observations": {
+    "maxBodiesAtLevelSamples": 97,
+    "frameMilliseconds": "level samples median approx 16.7ms; not full-run peak or mobile guarantee"
+  },
+  "retainedTrials": {
+    "flow-a": "test navigation start inflation at wall corrected",
+    "flow-b": "test repeatedly chose supported stacked objects; floor-target selection corrected",
+    "flow-c": "earlier completed run before furniture refinement",
+    "flow-d": "product train queue deadlock discovered; heading and same-lane vehicle filtering fixed with regression test",
+    "flow-e": "completed run before final road and wall refinements",
+    "flow-f": "final product completed run"
+  },
+  "limits": [
+    "iPhone実機・WebKit未実施",
+    "他7ステージの全通し再検証は未実施。会社の共通機能と全8ステージのオフライン起動は確認",
+    "既存の簡素な3D表現。新家具は主に箱型の物理形状",
+    "公開・push・設定変更・依存追加は行っていない"
+  ],
+  "projectDelivery": {
+    "files": 22,
+    "sha256PreflightAndCopyVerified": true,
+    "buildCacheMatches": "e0d986d40250ba6771da",
+    "smoke": {
+      "url": "http://127.0.0.1:5175/",
+      "browser": "156.0.8078.4",
+      "stage": "toys",
+      "level": 1,
+      "space": "小物箱",
+      "spaces": 5,
+      "bedPreview": true,
+      "goalSize": [196, 700, 196],
+      "errors": []
+    },
+    "gitDiffCheck": true
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "mode": "stage-flow",
+  "directory": "reports/supply-collision-2026-10-31/2026-10-31T03-50-50.083Z",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "stages": [
+    {
+      "stageId": "office",
+      "seed": 1576694159,
+      "factorySites": [
+        {
+          "id": "food",
+          "label": "工場A",
+          "width": 0.8,
+          "height": 0.5599999999999999,
+          "depth": 0.52,
+          "x": -7.026658103615045,
+          "z": -2.5741268375312534,
+          "outputX": -7.026658103615045,
+          "outputZ": -1.1741268375312532,
+          "scale": 0.2
+        },
+        {
+          "id": "depot",
+          "label": "工場B",
+          "width": 0.9,
+          "height": 0.7000000000000001,
+          "depth": 0.8,
+          "x": 1.6775046198768988,
+          "z": -7.446322887390852,
+          "outputX": 1.6775046198768988,
+          "outputZ": -6.046322887390851,
+          "scale": 0.2
+        },
+        {
+          "id": "stationeryA",
+          "label": "小型工場A",
+          "width": 0.2,
+          "height": 0.13999999999999999,
+          "depth": 0.13,
+          "x": 0.6917336693960612,
+          "z": 1.7549997691065073,
+          "outputX": 0.6917336693960612,
+          "outputZ": 2.4049997691065075,
+          "scale": 0.05,
+          "profile": "stationery"
+        },
+        {
+          "id": "stationeryB",
+          "label": "小型工場B",
+          "width": 0.2,
+          "height": 0.13999999999999999,
+          "depth": 0.13,
+          "x": 1.4916957400739193,
+          "z": -1.1580036530965379,
+          "outputX": 1.4916957400739193,
+          "outputZ": -0.5080036530965378,
+          "scale": 0.05,
+          "profile": "stationery"
+        }
+      ],
+      "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+      "emittedKinds": [
+        "eraser",
+        "copier",
+        "stapler",
+        "officeChair",
+        "pencil",
+        "filingCabinet",
+        "officeDesk",
+        "documents"
+      ],
+      "collisionFit": [],
+      "emission": {
+        "kind": "eraser",
+        "sourceId": "stationeryA",
+        "duration": 0.9,
+        "highestY": 0.3550202548503876,
+        "landed": {
+          "x": 0.6852564811706543,
+          "y": 0.12775789201259613,
+          "z": 2.320742130279541
+        }
+      },
+      "supplyStopped": true,
+      "stationerySupply": {
+        "stationeryA": ["eraser", "stapler", "pencil", "documents"],
+        "stationeryB": ["eraser", "stapler", "pencil", "documents"]
+      },
+      "cleared": true,
+      "elapsedSeconds": 204.417,
+      "score": 6121,
+      "supplied": 58,
+      "lost": 87,
+      "collectedEnemies": 1,
+      "collectedFactories": 4,
+      "autoTransition": true,
+      "randomRestart": true,
+      "chromiumTouch": true,
+      "menuRestart": true
+    }
+  ],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "completed": true
+}

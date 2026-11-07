@@ -1,0 +1,158 @@
+{
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "levels": [
+    {
+      "level": 1,
+      "area": 0,
+      "space": "小物箱",
+      "bodies": 54,
+      "frame": { "median": 16.699999999999818, "p95": 16.799999999999955 },
+      "score": 0
+    },
+    {
+      "level": 2,
+      "area": 0,
+      "space": "小物箱",
+      "bodies": 48,
+      "frame": { "median": 16.699999999999818, "p95": 16.700000000000728 },
+      "score": 12
+    },
+    {
+      "level": 3,
+      "area": 1,
+      "space": "おもちゃ箱",
+      "bodies": 79,
+      "frame": { "median": 16.69999999999891, "p95": 16.799999999999272 },
+      "score": 60
+    },
+    {
+      "level": 4,
+      "area": 1,
+      "space": "おもちゃ箱",
+      "bodies": 59,
+      "frame": { "median": 16.69999999999709, "p95": 16.799999999999272 },
+      "score": 252
+    },
+    {
+      "level": 5,
+      "area": 2,
+      "space": "子供部屋",
+      "bodies": 51,
+      "frame": { "median": 16.69999999999709, "p95": 16.799999999995634 },
+      "score": 1052
+    },
+    {
+      "level": 6,
+      "area": 2,
+      "space": "子供部屋",
+      "bodies": 69,
+      "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 },
+      "score": 4204
+    },
+    {
+      "level": 7,
+      "area": 3,
+      "space": "家の中",
+      "bodies": 82,
+      "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 },
+      "score": 16748
+    },
+    {
+      "level": 8,
+      "area": 3,
+      "space": "家の中",
+      "bodies": 64,
+      "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 },
+      "score": 67180
+    },
+    {
+      "level": 9,
+      "area": 4,
+      "space": "街",
+      "bodies": 91,
+      "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 },
+      "score": 271980
+    },
+    {
+      "level": 10,
+      "area": 4,
+      "space": "街",
+      "bodies": 108,
+      "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 },
+      "score": 1050220
+    },
+    {
+      "level": 11,
+      "area": 4,
+      "space": "街",
+      "bodies": 116,
+      "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 },
+      "score": 4261484
+    },
+    {
+      "level": 12,
+      "area": 4,
+      "space": "街",
+      "bodies": 106,
+      "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+      "score": 17368684
+    }
+  ],
+  "entered": ["notions", "chest", "bedroom", "house", "city"],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "seed": 3294134605,
+  "initialBodies": 54,
+  "closedSideBlocks": true,
+  "final": {
+    "level": 12,
+    "score": 22611564,
+    "cleared": true,
+    "bodies": 89,
+    "collected": 165,
+    "doors": [
+      {
+        "id": "notions-door",
+        "requiredLevel": 3,
+        "open": true,
+        "amount": 1,
+        "x": 0.75,
+        "z": 0,
+        "side": "east",
+        "width": 0.85
+      },
+      {
+        "id": "chest-door",
+        "requiredLevel": 5,
+        "open": true,
+        "amount": 1,
+        "x": 0,
+        "z": 2.6,
+        "side": "south",
+        "width": 2.7
+      },
+      {
+        "id": "bedroom-door",
+        "requiredLevel": 7,
+        "open": true,
+        "amount": 1,
+        "x": 31.6,
+        "z": 23,
+        "side": "east",
+        "width": 8.5
+      },
+      {
+        "id": "house-door",
+        "requiredLevel": 9,
+        "open": true,
+        "amount": 1,
+        "x": 95,
+        "z": 80,
+        "side": "east",
+        "width": 33
+      }
+    ]
+  },
+  "autoTransition": "office"
+}

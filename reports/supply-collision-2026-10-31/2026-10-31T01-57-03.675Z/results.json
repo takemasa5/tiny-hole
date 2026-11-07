@@ -1,0 +1,78 @@
+{
+  "mode": "collision-fit",
+  "directory": "reports/supply-collision-2026-10-31/2026-10-31T01-57-03.675Z",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "stages": [
+    {
+      "stageId": "hell",
+      "seed": 3859400634,
+      "factorySites": [
+        {
+          "id": "food",
+          "label": "工場A",
+          "width": 4,
+          "height": 2.8,
+          "depth": 2.6,
+          "x": 15.66616212017834,
+          "z": -19.424238849896938,
+          "outputX": 15.66616212017834,
+          "outputZ": -12.424238849896938,
+          "scale": 1
+        },
+        {
+          "id": "depot",
+          "label": "工場B",
+          "width": 4.5,
+          "height": 3.5,
+          "depth": 4,
+          "x": -25.387090452946723,
+          "z": -24.98125490313396,
+          "outputX": -25.387090452946723,
+          "outputZ": -17.98125490313396,
+          "scale": 1
+        }
+      ],
+      "levels": [1, 2, 3, 4, 5],
+      "emittedKinds": [
+        "giantOni",
+        "ironCauldron",
+        "oni",
+        "hungryGhost",
+        "spikedPillar"
+      ],
+      "collisionFit": [
+        {
+          "kind": "spikedPillar",
+          "id": "spikedPillar-5",
+          "holeRadius": 1.85,
+          "collisionFootprint": 1.6100171569942194,
+          "boxFootprint": 2.4748737341529163
+        },
+        {
+          "kind": "giantOni",
+          "id": "giantOni-12",
+          "holeRadius": 2.3,
+          "collisionFootprint": 1.9120823601138701,
+          "boxFootprint": 2.4748737341529163
+        }
+      ],
+      "emission": {
+        "kind": "giantOni",
+        "sourceId": "food",
+        "duration": 0.9,
+        "highestY": 8.880410194396973,
+        "landed": {
+          "x": 15.666261672973633,
+          "y": 1.9464343786239624,
+          "z": -12.424161911010742
+        }
+      },
+      "score": 668,
+      "level": 5
+    }
+  ],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "completed": true
+}

@@ -1,0 +1,123 @@
+{
+  "directory": "reports/factory-retirement-walker-2026-10-31/walkers-1793429699602",
+  "browser": "156.0.8078.4",
+  "stages": [
+    {
+      "stageId": "plaza",
+      "seed": 1128803452,
+      "holeRadius": 0.9,
+      "tooLargeWalking": [],
+      "nearbyTooLarge": [],
+      "edibleFleeing": ["person-7"],
+      "failures": []
+    },
+    {
+      "stageId": "mountain",
+      "seed": 3950778152,
+      "holeRadius": 0.9,
+      "tooLargeWalking": [],
+      "nearbyTooLarge": [],
+      "edibleFleeing": [],
+      "failures": []
+    },
+    {
+      "stageId": "america",
+      "seed": 2551952256,
+      "holeRadius": 0.9,
+      "tooLargeWalking": [],
+      "nearbyTooLarge": [],
+      "edibleFleeing": [],
+      "failures": []
+    },
+    {
+      "stageId": "egypt",
+      "seed": 1119134031,
+      "holeRadius": 0.9,
+      "tooLargeWalking": [],
+      "nearbyTooLarge": [],
+      "edibleFleeing": [],
+      "failures": []
+    },
+    {
+      "stageId": "harbor",
+      "seed": 2793676604,
+      "holeRadius": 0.9,
+      "tooLargeWalking": [],
+      "nearbyTooLarge": [],
+      "edibleFleeing": [],
+      "failures": []
+    },
+    {
+      "stageId": "toys",
+      "seed": 2174377267,
+      "holeRadius": 0.9,
+      "tooLargeWalking": [],
+      "nearbyTooLarge": [],
+      "edibleFleeing": [],
+      "failures": []
+    },
+    {
+      "stageId": "office",
+      "seed": 1444455791,
+      "holeRadius": 0.08,
+      "tooLargeWalking": [
+        "officeWorker-0",
+        "officeWorker-1",
+        "officeWorker-2",
+        "officeWorker-3",
+        "officeWorker-4",
+        "officeWorker-5",
+        "officeWorker-6",
+        "officeWorker-7",
+        "officeWorker-8",
+        "officeWorker-9",
+        "officeWorker-10",
+        "officeWorker-11",
+        "officeWorker-12",
+        "officeWorker-13",
+        "officeWorker-14",
+        "officeWorker-15"
+      ],
+      "nearbyTooLarge": [
+        "officeWorker-0",
+        "officeWorker-5",
+        "officeWorker-7",
+        "officeWorker-8",
+        "officeWorker-9",
+        "officeWorker-10",
+        "officeWorker-11",
+        "officeWorker-15"
+      ],
+      "edibleFleeing": [],
+      "failures": []
+    },
+    {
+      "stageId": "hell",
+      "seed": 289471687,
+      "holeRadius": 0.9,
+      "tooLargeWalking": [
+        "giantOni-0",
+        "giantOni-1",
+        "giantOni-2",
+        "giantOni-3",
+        "giantOni-4",
+        "giantOni-5",
+        "giantOni-6",
+        "giantOni-7",
+        "giantOni-8",
+        "giantOni-9",
+        "giantOni-10",
+        "giantOni-11",
+        "giantOni-12",
+        "giantOni-13"
+      ],
+      "nearbyTooLarge": [],
+      "edibleFleeing": [],
+      "failures": []
+    }
+  ],
+  "errors": [],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "completed": true
+}

@@ -1,0 +1,35 @@
+{
+  "directory": "reports/america-trial-2026-10-30/2026-10-30T01-11-15.615Z",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "seed": 1229117456,
+  "mudHit": {
+    "hits": 3,
+    "slowSpeed": 0.7058333333333338,
+    "normalSpeed": 1.3999999999999966,
+    "recovered": true
+  },
+  "evaded": true,
+  "playthrough": {
+    "elapsedSeconds": 272.218,
+    "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+    "districts": ["diner", "market", "residential"],
+    "collectedEnemies": 2,
+    "collected": 58,
+    "score": 4876,
+    "mudThrows": 25,
+    "mudHits": 12,
+    "cleared": true
+  },
+  "autoTransition": true,
+  "chromiumTouch": true,
+  "mobileLayout": {
+    "guideBottom": 717,
+    "growthTop": 727,
+    "width": 390,
+    "scrollWidth": 390
+  },
+  "completed": true
+}

@@ -1,12 +1,22 @@
 import * as THREE from "three";
 import {
-  MAP_HALF_SIZE,
   OBJECT_TYPES,
   ROADS,
   isHuman,
   type ObjectKind,
   type StageId,
+  mapHalfSizeForStage,
+  stageScaleForStage,
 } from "./stage";
+import { americaObjectVisual } from "./america-visuals";
+import {
+  expansionObjectVisual,
+  drawExpansionGround,
+} from "./expansion-visuals";
+import {
+  officeHellObjectVisual,
+  drawOfficeHellGround,
+} from "./office-hell-visuals";
 
 import { themedObject, drawThemedGround } from "./themed-visuals";
 import {
@@ -33,6 +43,16 @@ function box(
 }
 
 export function objectVisual(kind: ObjectKind, stageId: StageId = "plaza") {
+  const officeHell = officeHellObjectVisual(kind);
+  if (officeHell) return officeHell;
+  const expansion = expansionObjectVisual(kind);
+  if (expansion) return expansion;
+  const americanObject = americaObjectVisual(kind);
+  if (americanObject) {
+    if (kind === "streetSweeper")
+      americanObject.scale.setScalar(stageScaleForStage(stageId));
+    return americanObject;
+  }
   const stack = stackObjectVisual(kind);
   if (stack) return stack;
   if (kind === "american") return americanVisual();
@@ -149,11 +169,16 @@ export function animateWalker(
 }
 
 export function groundTexture(stageId: StageId = "plaza", seed = 0) {
+  const mapHalfSize = mapHalfSizeForStage(stageId);
   const canvas = document.createElement("canvas");
   canvas.width = canvas.height = 1024;
   const context = canvas.getContext("2d");
   if (!context) throw new Error("地面の描画を初期化できませんでした。");
-  if (drawThemedGround(context, stageId, seed)) {
+  if (
+    drawOfficeHellGround(context, stageId, seed) ||
+    drawExpansionGround(context, stageId) ||
+    drawThemedGround(context, stageId, seed)
+  ) {
     const texture = new THREE.CanvasTexture(canvas);
     texture.colorSpace = THREE.SRGBColorSpace;
     return texture;
@@ -182,10 +207,10 @@ export function groundTexture(stageId: StageId = "plaza", seed = 0) {
   }
   context.fillStyle = "#aab3b4";
   const toPixel = (value: number) =>
-    ((value + MAP_HALF_SIZE) / (MAP_HALF_SIZE * 2)) * canvas.width;
+    ((value + mapHalfSize) / (mapHalfSize * 2)) * canvas.width;
   for (const road of ROADS) {
     const edge = toPixel(road.position - road.width / 2);
-    const thickness = (road.width / (MAP_HALF_SIZE * 2)) * canvas.width;
+    const thickness = (road.width / (mapHalfSize * 2)) * canvas.width;
     if (road.axis === "x") context.fillRect(0, edge, canvas.width, thickness);
     else context.fillRect(edge, 0, thickness, canvas.height);
   }
@@ -204,6 +229,12 @@ export function groundTexture(stageId: StageId = "plaza", seed = 0) {
     }
     context.stroke();
   }
+  {
+    context.setLineDash([10, 8]);
+    context.strokeStyle = "#d59952";
+    context.lineWidth = 4;
+    context.strokeRect(2, 2, 1020, 1020);
+  }
   const texture = new THREE.CanvasTexture(canvas);
   texture.colorSpace = THREE.SRGBColorSpace;
   return texture;
@@ -214,10 +245,14 @@ export function disposeScene(scene: THREE.Object3D) {
   const materials = new Set<THREE.Material>();
   const textures = new Set<THREE.Texture>();
   scene.traverse((object) => {
-    if (!(object instanceof THREE.Mesh) && !(object instanceof THREE.Line))
+    if (
+      !(object instanceof THREE.Mesh) &&
+      !(object instanceof THREE.Line) &&
+      !(object instanceof THREE.Sprite)
+    )
       return;
     if (object instanceof THREE.InstancedMesh) object.dispose();
-    geometries.add(object.geometry);
+    if (!(object instanceof THREE.Sprite)) geometries.add(object.geometry);
     for (const material of Array.isArray(object.material)
       ? object.material
       : [object.material]) {

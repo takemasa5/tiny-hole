@@ -1,0 +1,241 @@
+{
+  "completed": true,
+  "browser": "156.0.8078.4",
+  "mode": "Per-stage completed results from normal browser input; read-only snapshots for observation",
+  "unitTests": 94,
+  "stages": [
+    {
+      "stageId": "plaza",
+      "seed": 4005150438,
+      "factorySites": [
+        {
+          "id": "food",
+          "label": "工場A",
+          "width": 4,
+          "height": 2.8,
+          "depth": 2.6,
+          "x": -7.455725483774019,
+          "z": 6.211933931335807,
+          "outputX": -7.455725483774019,
+          "outputZ": 13.211933931335807
+        },
+        {
+          "id": "depot",
+          "label": "工場B",
+          "width": 4.5,
+          "height": 3.5,
+          "depth": 4,
+          "x": 7.596077862498571,
+          "z": -29.861279720440507,
+          "outputX": 7.596077862498571,
+          "outputZ": -22.861279720440507
+        }
+      ],
+      "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+      "emittedKinds": ["planter", "kiosk", "bench", "house", "parcel"],
+      "emission": {
+        "kind": "planter",
+        "sourceId": "food",
+        "duration": 0.9,
+        "highestY": 7.4304094314575195,
+        "landed": {
+          "x": -7.436345100402832,
+          "y": 0.5889699459075928,
+          "z": 13.267038345336914
+        }
+      },
+      "supplyStopped": true,
+      "cleared": true,
+      "elapsedSeconds": 270.121,
+      "score": 4885,
+      "supplied": 27,
+      "lost": 44,
+      "collectedEnemies": 1,
+      "collectedFactories": 2,
+      "autoTransition": true,
+      "randomRestart": true,
+      "chromiumTouch": true,
+      "menuRestart": true,
+      "source": "2026-10-30T11-39-00.086Z/results.json"
+    },
+    {
+      "stageId": "mountain",
+      "seed": 1333576657,
+      "factorySites": [
+        {
+          "id": "food",
+          "label": "工場A",
+          "width": 4,
+          "height": 2.8,
+          "depth": 2.6,
+          "x": -22.404221361037344,
+          "z": -6.306712748948485,
+          "outputX": -22.404221361037344,
+          "outputZ": 0.6932872510515153
+        },
+        {
+          "id": "depot",
+          "label": "工場B",
+          "width": 4.5,
+          "height": 3.5,
+          "depth": 4,
+          "x": 12.774865952320397,
+          "z": 0.30921140033751726,
+          "outputX": 12.774865952320397,
+          "outputZ": 7.309211400337517
+        }
+      ],
+      "levels": [1, 3, 4, 5, 6, 7, 8],
+      "emittedKinds": ["tree", "flower", "firewood", "sapling", "log", "shrub"],
+      "emission": {
+        "kind": "tree",
+        "sourceId": "food",
+        "duration": 0.9,
+        "highestY": 10.115788459777832,
+        "landed": {
+          "x": -28.683507919311523,
+          "y": 3.260084867477417,
+          "z": 0.9894319772720337
+        }
+      },
+      "supplyStopped": true,
+      "cleared": true,
+      "elapsedSeconds": 634.938,
+      "score": 5185,
+      "supplied": 34,
+      "lost": 24,
+      "collectedEnemies": 1,
+      "collectedFactories": 2,
+      "autoTransition": true,
+      "randomRestart": true,
+      "chromiumTouch": true,
+      "menuRestart": true,
+      "source": "2026-10-30T12-04-44.783Z/results.json"
+    },
+    {
+      "stageId": "america",
+      "seed": 1446732914,
+      "factorySites": [
+        {
+          "id": "food",
+          "label": "工場A",
+          "width": 4,
+          "height": 2.8,
+          "depth": 2.6,
+          "x": -8.609068679801,
+          "z": 37.646763059310615,
+          "outputX": -8.609068679801,
+          "outputZ": 44.646763059310615
+        },
+        {
+          "id": "depot",
+          "label": "工場B",
+          "width": 4.5,
+          "height": 3.5,
+          "depth": 4,
+          "x": -13.034704276663472,
+          "z": -14.292991943657398,
+          "outputX": -13.034704276663472,
+          "outputZ": -7.292991943657398
+        }
+      ],
+      "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+      "emittedKinds": [
+        "tire",
+        "burgerBox",
+        "burger",
+        "car",
+        "kiosk",
+        "house",
+        "hotdog"
+      ],
+      "emission": {
+        "kind": "tire",
+        "sourceId": "food",
+        "duration": 0.9,
+        "highestY": 7.040409564971924,
+        "landed": {
+          "x": -8.609512329101562,
+          "y": 0.2363634705543518,
+          "z": 44.59737014770508
+        }
+      },
+      "supplyStopped": true,
+      "cleared": true,
+      "elapsedSeconds": 517.031,
+      "score": 5323,
+      "supplied": 26,
+      "lost": 88,
+      "collectedEnemies": 1,
+      "collectedFactories": 2,
+      "autoTransition": true,
+      "randomRestart": true,
+      "chromiumTouch": true,
+      "menuRestart": true,
+      "source": "2026-10-30T12-04-42.806Z/results.json"
+    },
+    {
+      "stageId": "egypt",
+      "seed": 2078351263,
+      "factorySites": [
+        {
+          "id": "food",
+          "label": "工場A",
+          "width": 4,
+          "height": 2.8,
+          "depth": 2.6,
+          "x": 29.70611285045743,
+          "z": -8.83546448033303,
+          "outputX": 29.70611285045743,
+          "outputZ": -1.8354644803330302
+        },
+        {
+          "id": "depot",
+          "label": "工場B",
+          "width": 4.5,
+          "height": 3.5,
+          "depth": 4,
+          "x": 30.908518104813993,
+          "z": 27.557521193753928,
+          "outputX": 30.908518104813993,
+          "outputZ": 34.55752119375393
+        }
+      ],
+      "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+      "emittedKinds": ["column", "house", "camel", "columnBlock", "stone"],
+      "emission": {
+        "kind": "column",
+        "sourceId": "food",
+        "duration": 0.9,
+        "highestY": 9.365788459777832,
+        "landed": {
+          "x": 29.742528915405273,
+          "y": 2.624229669570923,
+          "z": -1.6178539991378784
+        }
+      },
+      "supplyStopped": true,
+      "cleared": true,
+      "elapsedSeconds": 324.046,
+      "score": 3927,
+      "supplied": 24,
+      "lost": 26,
+      "collectedEnemies": 1,
+      "collectedFactories": 2,
+      "autoTransition": true,
+      "randomRestart": true,
+      "chromiumTouch": true,
+      "menuRestart": true,
+      "source": "2026-10-30T12-04-42.806Z/results.json"
+    }
+  ],
+  "errors": [],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "automationNotes": [
+    "The plaza completion is retained from the first run; its following mountain stage stopped while chasing a fallen tree.",
+    "Subsequent runs account for projected object size, predict moving targets, and collect the sweeper after reaching level 8.",
+    "Interrupted setup runs and failed automation attempts are retained separately.",
+    "Elapsed times and losses are not controlled comparisons of play duration or difficulty."
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "directory": "reports/additional-stages-2026-10-31/2026-10-30T23-06-14.424Z",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "stages": [
+    {
+      "stageId": "hell",
+      "seed": 2087534796,
+      "factorySites": [
+        {
+          "id": "food",
+          "label": "工場A",
+          "width": 4,
+          "height": 2.8,
+          "depth": 2.6,
+          "x": 29.12946021044627,
+          "z": -33.61480965698138,
+          "outputX": 29.12946021044627,
+          "outputZ": -26.61480965698138,
+          "scale": 1
+        },
+        {
+          "id": "depot",
+          "label": "工場B",
+          "width": 4.5,
+          "height": 3.5,
+          "depth": 4,
+          "x": -28.726318114902824,
+          "z": -12.21890224609524,
+          "outputX": -28.726318114902824,
+          "outputZ": -5.21890224609524,
+          "scale": 1
+        }
+      ],
+      "levels": [1, 2, 3, 4, 5, 6],
+      "emittedKinds": [],
+      "emission": {
+        "kind": "giantOni",
+        "sourceId": "food",
+        "duration": 0.9,
+        "highestY": 8.880410194396973,
+        "landed": {
+          "x": 33.91266632080078,
+          "y": 2.1177549362182617,
+          "z": -22.487468719482422
+        }
+      }
+    }
+  ],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "failure": "keyboard.up: Target page, context or browser has been closed\n    at interceptWalker (./checks/stage-expansion.mjs:76:49)\n    at async file://./checks/stage-expansion.mjs:318:7",
+  "snapshot": null
+}

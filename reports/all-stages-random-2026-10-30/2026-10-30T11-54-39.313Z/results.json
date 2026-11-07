@@ -1,0 +1,41 @@
+{
+  "directory": "reports/all-stages-random-2026-10-30/2026-10-30T11-54-39.313Z",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "stages": [
+    {
+      "stageId": "mountain",
+      "seed": 1256556615,
+      "factorySites": [
+        {
+          "id": "food",
+          "label": "工場A",
+          "width": 4,
+          "height": 2.8,
+          "depth": 2.6,
+          "x": 11.219695331063122,
+          "z": 16.560239812824875,
+          "outputX": 11.219695331063122,
+          "outputZ": 23.560239812824875
+        },
+        {
+          "id": "depot",
+          "label": "工場B",
+          "width": 4.5,
+          "height": 3.5,
+          "depth": 4,
+          "x": -30.260519656818357,
+          "z": -23.50526863709092,
+          "outputX": -30.260519656818357,
+          "outputZ": -16.50526863709092
+        }
+      ],
+      "levels": [1],
+      "emittedKinds": []
+    }
+  ],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "failure": "page.evaluate: Target page, context or browser has been closed\n    at ./checks/stage-expansion.mjs:123:32",
+  "snapshot": null
+}

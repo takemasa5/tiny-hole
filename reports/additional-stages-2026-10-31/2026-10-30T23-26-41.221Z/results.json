@@ -1,0 +1,73 @@
+{
+  "directory": "reports/additional-stages-2026-10-31/2026-10-30T23-26-41.221Z",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "stages": [
+    {
+      "stageId": "hell",
+      "seed": 803353383,
+      "factorySites": [
+        {
+          "id": "food",
+          "label": "工場A",
+          "width": 4,
+          "height": 2.8,
+          "depth": 2.6,
+          "x": -14.750203636474907,
+          "z": -31.7332564801909,
+          "outputX": -14.750203636474907,
+          "outputZ": -24.7332564801909,
+          "scale": 1
+        },
+        {
+          "id": "depot",
+          "label": "工場B",
+          "width": 4.5,
+          "height": 3.5,
+          "depth": 4,
+          "x": -32.15354036493227,
+          "z": -8.739126878324896,
+          "outputX": -32.15354036493227,
+          "outputZ": -1.739126878324896,
+          "scale": 1
+        }
+      ],
+      "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+      "emittedKinds": [
+        "hellStatue",
+        "oni",
+        "hungryGhost",
+        "ironCauldron",
+        "spikedPillar",
+        "skull",
+        "giantOni"
+      ],
+      "emission": {
+        "kind": "hellStatue",
+        "sourceId": "food",
+        "duration": 0.9,
+        "highestY": 7.951430797576904,
+        "landed": {
+          "x": -14.721109390258789,
+          "y": 1.2115418910980225,
+          "z": -24.625728607177734
+        }
+      },
+      "supplyStopped": true,
+      "cleared": true,
+      "elapsedSeconds": 317.232,
+      "score": 5007,
+      "supplied": 25,
+      "lost": 4,
+      "collectedEnemies": 1,
+      "collectedFactories": 2,
+      "autoTransition": true,
+      "randomRestart": true,
+      "chromiumTouch": true,
+      "menuRestart": true
+    }
+  ],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "completed": true
+}

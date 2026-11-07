@@ -1,0 +1,131 @@
+{
+  "date": "2026-11-06",
+  "scope": {
+    "toyTheme": "小さな玩具→汽車・ミニカーの街→特撮セット",
+    "newModels": 21,
+    "sharedFixes": ["補充箱・兵隊・地面の描画競合", "エリア固定のコーン・柵"],
+    "growthRadii": "変更なし",
+    "configChanges": false,
+    "newDependencies": false
+  },
+  "automated": {
+    "command": "npm test -- --maxWorkers=2",
+    "files": 22,
+    "tests": 284,
+    "passed": true,
+    "build": "passed",
+    "lint": "passed",
+    "format": "passed",
+    "placementSeeds": 100
+  },
+  "browser": {
+    "engine": "156.0.8078.4",
+    "normalInput": "flow-c/results.json",
+    "cleared": true,
+    "autoTransition": { "from": "toys", "to": "office" },
+    "fixedCones": { "anchorsUnchanged": true, "screenHint": true },
+    "duelSamples": 10,
+    "gateWidths": [1280, 390],
+    "gates": "boundaries/results.json",
+    "models": "models-final/results.json",
+    "offline": "final/offline-1793949752204/results.json",
+    "cacheVersion": "11cbc3a676401cd4d7ba",
+    "errors": 0
+  },
+  "limits": [
+    "iPhone実機は未実施",
+    "WebKitは未実施",
+    "他7ステージの通し直しは未実施",
+    "新モデルの基本衝突形状は外形を囲む箱。既存の球は球形。"
+  ],
+  "checkIssues": [
+    {
+      "run": "flow-a/results.json",
+      "reason": "検証側のドラッグ到着判定とタップ判定幅の差",
+      "resolution": "検証の停止距離を調整。flow-bとflow-cが成功"
+    },
+    {
+      "run": "既存の配置テスト2件",
+      "reason": "複数ブラウザと22ワーカーの並行実行で5000msを超過",
+      "resolution": "ワーカー2本で全284件が成功。上限・テスト内容は変更せず"
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/game/boundary-guide.ts",
+      "sha256": "732610bae45f07f373ad388837025a13c91f018ec0c8cb6614fed40dae9fe744"
+    },
+    {
+      "path": "src/game/expansion-visuals.ts",
+      "sha256": "ba398a09840deee63331432f35537c378b1d63a31e53b36b92fba965753f08cb"
+    },
+    {
+      "path": "src/game/growth-stage.ts",
+      "sha256": "7e3e2ec11260aa9fa36bca231d1cdf548c19841ced8c2eb3e7a51f17bbb501b3"
+    },
+    {
+      "path": "src/game/growth-visuals.ts",
+      "sha256": "740d2ca0d21e1c0a16d3f133c5ce184ec469f04c13a35a21f1530a49f0153e86"
+    },
+    {
+      "path": "src/game/runtime.ts",
+      "sha256": "b1f5c9a7b2dc3f10ab3c5b0fcde0530cc972a57d636860e0a37ec42757f4eab7"
+    },
+    {
+      "path": "src/game/theme-behavior.ts",
+      "sha256": "c02214fbda3fba34d8d3e8b1a8f3015fc833974f5919f6444488fa132276e821"
+    },
+    {
+      "path": "src/game/toy-stage.ts",
+      "sha256": "ac6b415797ba73876acaece0ba7436624f703ab1692a5caa48bf79a5c69916a5"
+    },
+    {
+      "path": "src/game/toy-visuals.ts",
+      "sha256": "0b7431461075c0b8ba02323b114e71e560417d4bf480ed8787e86e2169966429"
+    },
+    {
+      "path": "tests/boundary-guide.test.ts",
+      "sha256": "7e165522b270fa15a5be3e2e424bac2e814efa4db39d0307370670229203c953"
+    },
+    {
+      "path": "tests/toy-stage.test.ts",
+      "sha256": "b76ed8fb710cd38b16c317442a4d344a095c16d73bc815fea7dc9ff792daa51f"
+    },
+    {
+      "path": "tests/visuals.test.ts",
+      "sha256": "69df307d6139a6bd9cfae64ec2181272286a5cc17a30b3e9302bf9e58289ec5f"
+    },
+    {
+      "path": "docs/README.md",
+      "sha256": "adc1f3af87e72e415faceadb38203cd5bd51b5bda82eba7d0ea1886fca4fb0a4"
+    },
+    {
+      "path": "docs/feedback-review.md",
+      "sha256": "0f2616e89b401ff9567c870a7ce6bc45069a269d39c1d2273befcc9d8ff513f0"
+    },
+    {
+      "path": "docs/object-catalog-proposal.md",
+      "sha256": "96c749706d85cab6bda1129447ad883ca50fbd39dae2637a0b5c9347c98a114d"
+    },
+    {
+      "path": "docs/scale-growth-implementation.md",
+      "sha256": "cea1628b668d374c134a8589f6ea8b940c97bdea45689a52d49ebd3456b0a41c"
+    },
+    {
+      "path": "docs/toy-stage-trial.md",
+      "sha256": "09b6dbafdfd78d70be066b7e996687ccdb9afaeb08359bbfce46696776c88cbe"
+    },
+    {
+      "path": "checks/feedback.mjs",
+      "sha256": "9ff77642da3ede4f509a55a43deeb0b0da5fe0b7bbd26b19a04a36f1dcd7e6bb"
+    },
+    {
+      "path": "checks/growth-flow.mjs",
+      "sha256": "7609e2caa7162cbd91a56b90b7b028ad29a5c6ea4af96c7e7f0d352e93e1072e"
+    },
+    {
+      "path": "checks/toy-visuals.mjs",
+      "sha256": "37ef7d87cb4af129f44f009ba43357f8227751a2332a2e7e8510af5158eb8598"
+    }
+  ]
+}

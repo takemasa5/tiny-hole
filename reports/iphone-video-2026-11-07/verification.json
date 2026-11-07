@@ -1,0 +1,558 @@
+{
+  "date": "2026-11-07",
+  "documentation": "docs/iphone-video-ground-order.md",
+  "scope": "地面・塗装を背景として先に描き、後から物体を塗りつぶさない構造へ変更。物理・成長・配置は維持。",
+  "sourceFiles": [
+    {
+      "path": "src/game/ground-geometry.ts",
+      "before": "fecdb10256e82d5f9272b07a4091aaec25ea2df1930760f80c62c11179533a9c",
+      "after": "208d5f02f6cd7470f9e5e9c86d514879a68e2b6b81592546599ce15d02d71164"
+    },
+    {
+      "path": "src/game/growth-visuals.ts",
+      "before": "d9a66b737f735fa89078c87094283d74d20da2688a5a24f1f9e6a17771a90694",
+      "after": "75836c113e432b8fe2f8a58aaed985086f3d290079677d768fb28d30ec2a4076"
+    },
+    {
+      "path": "src/game/runtime.ts",
+      "before": "a36ca1051cd04737669871083f37bb80fab46dfa3ca49e6c20c1f79a801a5406",
+      "after": "5f2118944d00794cf13c50397d68612276e0e0259da26bd92a29fbf91130494a"
+    },
+    {
+      "path": "src/game/toy-world-scene.ts",
+      "before": "7e7c2564b97ffc0fed4245b3ff88f98ac6e5807d27854e0f891c9f8ccccdb0be",
+      "after": "e14da1b2bf4cb0ca7f0604610100467c8ac7db444dc729b622b256103a5562cf"
+    },
+    {
+      "path": "tests/ground-paint.test.ts",
+      "before": null,
+      "after": "3c9c2bd9f353364c84d3f9c4f948a96605f6eaf5a10bc480ea1d1d8cbf60f74e"
+    },
+    {
+      "path": "tests/nested-toys.test.ts",
+      "before": "e3f900765d1489c2016b45299555c5e0ca67e8b994dcd8beb956330b0bf88792",
+      "after": "52e8de6f1be06c692b7e08634f83e7dbc15ce5cb6da184d5c6a46e289ed8651c"
+    },
+    {
+      "path": "tests/toy-stage.test.ts",
+      "before": "d4fe205296a76a0d94ef4a136cd63a155ca7aa4fd68feecdbdbcb605460c96e3",
+      "after": "9fe5781a2b191505fd59c9dde2442a3c0b98234ec9e63c9a2091df4e5a1d5088"
+    },
+    {
+      "path": "checks/ground-before-objects.mjs",
+      "before": null,
+      "after": "1a3d1046287f2521fd4076fa0a0502f3d5871614121a0aa698eedf7883f03da9"
+    },
+    {
+      "path": "docs/README.md",
+      "before": "03d79dd902a567bf4919255c707f1d2ae8d6462c50bef6e2e7729841b09c077f",
+      "after": "78a0c781f94a469a2f727faf99f03e9d4043b363479ed7b07326bff364bba1a1"
+    },
+    {
+      "path": "docs/iphone-render-diagnostic.md",
+      "before": "4c4fa4ddd61a5636288afa28a5a4f1714358e24cfc843f1b79fa86a4a5beb15d",
+      "after": "af054c7aa9b586e7c7e5319fe663c3ff3dfc07898ae4029c9e00b1445fde3e83"
+    },
+    {
+      "path": "docs/iphone-video-ground-order.md",
+      "before": null,
+      "after": "b503ae0d1cb252ae4dca48ceeac9a90ee791efcd7594c362fb6e111affc1c980"
+    }
+  ],
+  "userVideo": {
+    "source": "./temp/ScreenRecording_11-07-2026 08-43-32_1.MP4",
+    "sourceBytes": 24176301,
+    "sha256": "ce2fb570ca4eb056fc6ef0bf587c41892fd0e201f6a722bbcb4733082d91978b",
+    "fpsAverage": 59.63523257457938,
+    "decodedFrames": 702,
+    "firstTimestamp": 0.0,
+    "lastTimestamp": 11.755,
+    "evidenceFrames": [
+      {
+        "index": 27,
+        "time": 0.4666666666666667,
+        "luma": 194.25809636650868,
+        "diff": 0.24695588771418156
+      },
+      {
+        "index": 28,
+        "time": 0.48333333333333334,
+        "luma": 188.00761331875077,
+        "diff": 9.399468343662656
+      },
+      {
+        "index": 150,
+        "time": 2.535,
+        "luma": 181.04800704824402,
+        "diff": 12.223626807631547
+      },
+      {
+        "index": 499,
+        "time": 8.370000000000001,
+        "luma": 186.9986845303196,
+        "diff": 17.753326649653665
+      }
+    ],
+    "observation": "フレーム27では玩具が黄緑色の平面シルエットとなり、直後の28では立体の色・面へ戻る。成長の視点変化は150付近、499付近。",
+    "limits": "動画で描画崩れを観測。GPU内部の原因を直接計測したものではない。修正後のiPhone動画は未確認。",
+    "sourceUnchangedAfterAnalysis": true,
+    "independentDecoder": "AVFoundationでもファイルを開き、緑の平面状の表示を確認。フレームの厳密な時刻合わせは未実施。"
+  },
+  "observed": "玩具が黄緑色のシルエットへ切り替わるフレームを原動画で観測。",
+  "hypothesis": "街の床などの深度判定が通過すると、物体より後に描く色が輪郭を塗りつぶす経路があった。GPU内部の原因を直接計測したものではない。",
+  "automated": {
+    "tests": 317,
+    "files": 25,
+    "passed": true,
+    "lint": true,
+    "typecheckAndBuild": true,
+    "prettier": "changed files"
+  },
+  "faultInjectionDrawing": {
+    "before": {
+      "browser": "156.0.8078.4",
+      "fixture": "実際の床を使う描画確認。街の床だけの深度判定を止め、床が通過する場合を意図的に模擬。iPhoneの内部挙動の再現とは別。",
+      "errors": [],
+      "iPhoneAfterFix": "未実施",
+      "WebKit": "未実施",
+      "measurement": {
+        "normalBlue": 25874,
+        "depthBypassBlue": 0,
+        "belowGroundBlue": 0,
+        "cityOrder": 2,
+        "cubeOrder": 0,
+        "baseOrder": 0,
+        "normalDepthTest": true
+      }
+    },
+    "after": {
+      "browser": "156.0.8078.4",
+      "fixture": "実際の床を使う描画確認。街の床だけの深度判定を止め、床が通過する場合を意図的に模擬。iPhoneの内部挙動の再現とは別。",
+      "errors": [],
+      "iPhoneAfterFix": "未実施",
+      "WebKit": "未実施",
+      "measurement": {
+        "normalBlue": 28497,
+        "depthBypassBlue": 28497,
+        "belowGroundBlue": 0,
+        "cityOrder": -98,
+        "cubeOrder": 0,
+        "baseOrder": -1000,
+        "normalDepthTest": false
+      }
+    },
+    "limits": "故意に街の床の深度判定を通過させた模擬。iPhone内部の不具合の直接再現・計測ではない。"
+  },
+  "browser": {
+    "toys": {
+      "browser": "156.0.8078.4",
+      "errors": [],
+      "levels": [
+        {
+          "level": 1,
+          "area": 0,
+          "space": "小物箱",
+          "bodies": 52,
+          "frame": {
+            "median": 16.699999999999818,
+            "p95": 16.700000000000728
+          },
+          "score": 2
+        },
+        {
+          "level": 2,
+          "area": 0,
+          "space": "小物箱",
+          "bodies": 40,
+          "frame": {
+            "median": 16.69999999999891,
+            "p95": 16.700000000000728
+          },
+          "score": 20
+        },
+        {
+          "level": 3,
+          "area": 1,
+          "space": "おもちゃ箱",
+          "bodies": 70,
+          "frame": {
+            "median": 16.700000000000728,
+            "p95": 16.700000000000728
+          },
+          "score": 65
+        },
+        {
+          "level": 4,
+          "area": 1,
+          "space": "おもちゃ箱",
+          "bodies": 54,
+          "frame": {
+            "median": 16.69999999999709,
+            "p95": 16.799999999995634
+          },
+          "score": 259
+        },
+        {
+          "level": 5,
+          "area": 2,
+          "space": "子供部屋",
+          "bodies": 48,
+          "frame": {
+            "median": 16.69999999999709,
+            "p95": 16.799999999995634
+          },
+          "score": 1043
+        },
+        {
+          "level": 6,
+          "area": 2,
+          "space": "子供部屋",
+          "bodies": 41,
+          "frame": {
+            "median": 16.69999999999709,
+            "p95": 16.70000000001164
+          },
+          "score": 4339
+        },
+        {
+          "level": 7,
+          "area": 3,
+          "space": "家の中",
+          "bodies": 65,
+          "frame": {
+            "median": 16.69999999999709,
+            "p95": 16.70000000001164
+          },
+          "score": 18163
+        },
+        {
+          "level": 8,
+          "area": 3,
+          "space": "家の中",
+          "bodies": 81,
+          "frame": {
+            "median": 16.69999999999709,
+            "p95": 16.70000000001164
+          },
+          "score": 68595
+        },
+        {
+          "level": 9,
+          "area": 4,
+          "space": "街",
+          "bodies": 92,
+          "frame": {
+            "median": 16.699999999982538,
+            "p95": 16.79999999998836
+          },
+          "score": 273395
+        },
+        {
+          "level": 10,
+          "area": 4,
+          "space": "街",
+          "bodies": 64,
+          "frame": {
+            "median": 16.699999999982538,
+            "p95": 16.79999999998836
+          },
+          "score": 1071076
+        },
+        {
+          "level": 11,
+          "area": 4,
+          "space": "街",
+          "bodies": 80,
+          "frame": {
+            "median": 16.699999999982538,
+            "p95": 16.79999999998836
+          },
+          "score": 4216804
+        },
+        {
+          "level": 12,
+          "area": 4,
+          "space": "街",
+          "bodies": 75,
+          "frame": {
+            "median": 16.699999999982538,
+            "p95": 16.70000000001164
+          },
+          "score": 17848292
+        }
+      ],
+      "entered": ["notions", "chest", "bedroom", "house", "city"],
+      "iPhone": "未実施",
+      "WebKit": "未実施",
+      "seed": 42,
+      "initialBodies": 54,
+      "closedSideBlocks": true,
+      "traffic": [
+        {
+          "behavior": "route",
+          "moved": true
+        },
+        {
+          "behavior": "train",
+          "moved": true
+        }
+      ],
+      "giants": [
+        {
+          "id": "hero",
+          "size": [48, 180, 42],
+          "phase": "fighting"
+        },
+        {
+          "id": "monster",
+          "size": [56, 220, 48],
+          "phase": "fighting"
+        },
+        {
+          "id": "goal",
+          "size": [196, 700, 196],
+          "phase": "working"
+        }
+      ],
+      "final": {
+        "level": 12,
+        "score": 26499044,
+        "cleared": true,
+        "bodies": 69,
+        "collected": 218,
+        "doors": [
+          {
+            "id": "notions-door",
+            "requiredLevel": 3,
+            "open": true,
+            "amount": 1,
+            "x": 0.75,
+            "z": 0,
+            "side": "east",
+            "width": 1.1
+          },
+          {
+            "id": "chest-door",
+            "requiredLevel": 5,
+            "open": true,
+            "amount": 1,
+            "x": 0,
+            "z": 2.6,
+            "side": "south",
+            "width": 2.7
+          },
+          {
+            "id": "bedroom-door",
+            "requiredLevel": 7,
+            "open": true,
+            "amount": 1,
+            "x": 31.6,
+            "z": 23,
+            "side": "east",
+            "width": 8.5
+          },
+          {
+            "id": "house-door",
+            "requiredLevel": 9,
+            "open": true,
+            "amount": 1,
+            "x": 95,
+            "z": 80,
+            "side": "east",
+            "width": 33
+          }
+        ]
+      },
+      "autoTransition": "office"
+    },
+    "office": {
+      "browser": "156.0.8078.4",
+      "errors": [],
+      "iPhone": "未実施",
+      "WebKit": "未実施",
+      "deskOcclusion": [
+        {
+          "id": "landmark",
+          "opacity": 0.25
+        }
+      ],
+      "occlusionRendering": {
+        "samples": 4,
+        "mode": "coverage"
+      },
+      "occlusionRestored": true,
+      "dragReleaseStops": true,
+      "closedGateBlocks": true,
+      "restartResets": true,
+      "touch390": {
+        "moved": true,
+        "releaseStops": true,
+        "audioUnlocked": true
+      }
+    },
+    "diagnosticModes": {
+      "browser": "156.0.8078.4",
+      "viewport": "390x844 DPR2",
+      "errors": [],
+      "modes": [
+        {
+          "mode": "normal",
+          "seed": 42,
+          "level": 1,
+          "renderDiagnostics": {
+            "mode": "normal",
+            "cameraNear": 0.0012,
+            "cameraFar": 16000
+          },
+          "occlusionRendering": {
+            "samples": 4,
+            "mode": "coverage"
+          },
+          "antialias": true
+        },
+        {
+          "mode": "no-occlusion",
+          "seed": 42,
+          "level": 1,
+          "renderDiagnostics": {
+            "mode": "no-occlusion",
+            "cameraNear": 0.0012,
+            "cameraFar": 16000
+          },
+          "occlusionRendering": {
+            "samples": 4,
+            "mode": "coverage"
+          },
+          "antialias": true
+        },
+        {
+          "mode": "precise-depth",
+          "seed": 42,
+          "level": 1,
+          "renderDiagnostics": {
+            "mode": "precise-depth",
+            "cameraNear": 0.032,
+            "cameraFar": 16000
+          },
+          "occlusionRendering": {
+            "samples": 4,
+            "mode": "coverage"
+          },
+          "antialias": true
+        },
+        {
+          "mode": "no-antialias",
+          "seed": 42,
+          "level": 1,
+          "renderDiagnostics": {
+            "mode": "no-antialias",
+            "cameraNear": 0.0012,
+            "cameraFar": 16000
+          },
+          "occlusionRendering": {
+            "samples": 0,
+            "mode": "blend"
+          },
+          "antialias": false
+        },
+        {
+          "mode": "plain-floor",
+          "seed": 42,
+          "level": 1,
+          "renderDiagnostics": {
+            "mode": "plain-floor",
+            "cameraNear": 0.0012,
+            "cameraFar": 16000
+          },
+          "occlusionRendering": {
+            "samples": 4,
+            "mode": "coverage"
+          },
+          "antialias": true
+        },
+        {
+          "mode": "normal",
+          "seed": 42,
+          "level": 1,
+          "renderDiagnostics": {
+            "mode": "normal",
+            "cameraNear": 0.0012,
+            "cameraFar": 16000
+          },
+          "occlusionRendering": {
+            "samples": 4,
+            "mode": "coverage"
+          },
+          "antialias": true
+        }
+      ],
+      "iPhone": "未実施",
+      "WebKit": "未実施",
+      "touchMovesAndStops": true,
+      "defaultGameUnchanged": {
+        "mode": "normal",
+        "occlusionRendering": {
+          "samples": 4,
+          "mode": "coverage"
+        }
+      }
+    }
+  },
+  "build": {
+    "cache": "16a048693674a8efcd00",
+    "js": "index-Cs09bUJd.js",
+    "css": "index-B7g_aRMj.css",
+    "offlineResources": 10
+  },
+  "limits": [
+    "修正後のiPhone実機・WebKitは未確認",
+    "提出動画はA通常。先のEで差が乏しいという実機観測との対応は未確定",
+    "全8ステージのオフライン起動や他7ステージの通し直しは未実施",
+    "元動画の内容は変更せず、派生画像とメタデータのみ保存",
+    "設定・依存・配信設定の変更、commit・push・公開なし"
+  ],
+  "projectDelivery": {
+    "files": 11,
+    "hashPreflightAndCopyVerified": true,
+    "gitDiffCheck": true,
+    "buildCacheMatches": "16a048693674a8efcd00",
+    "drawing": {
+      "browser": "156.0.8078.4",
+      "fixture": "実際の床を使う描画確認。街の床だけの深度判定を止め、床が通過する場合を意図的に模擬。iPhoneの内部挙動の再現とは別。",
+      "errors": [],
+      "iPhoneAfterFix": "未実施",
+      "WebKit": "未実施",
+      "measurement": {
+        "normalBlue": 28497,
+        "depthBypassBlue": 28497,
+        "belowGroundBlue": 0,
+        "cityOrder": -98,
+        "cubeOrder": 0,
+        "baseOrder": -1000,
+        "normalDepthTest": false
+      }
+    },
+    "lanMobile": {
+      "browser": "156.0.8078.4",
+      "viewport": "390x844",
+      "errors": [],
+      "iPhone": "未実施",
+      "WebKit": "未実施",
+      "touchMovesAndStops": true,
+      "gate": {
+        "text": "レベル3になると箱の側面が開きます",
+        "font": 16,
+        "bounds": {
+          "x": 53.7265625,
+          "y": 774,
+          "width": 282.546875,
+          "height": 46
+        },
+        "blocks": true
+      },
+      "restart": true,
+      "stageSwitch": true
+    },
+    "iPhoneAfterFix": "未確認"
+  }
+}

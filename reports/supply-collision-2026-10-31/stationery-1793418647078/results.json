@@ -1,0 +1,167 @@
+{
+  "directory": "reports/supply-collision-2026-10-31/stationery-1793418647078",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "seed": 918949214,
+  "sites": [
+    {
+      "id": "food",
+      "label": "工場A",
+      "width": 0.8,
+      "height": 0.5599999999999999,
+      "depth": 0.52,
+      "x": -2.4557308681664614,
+      "z": -5.611973149888217,
+      "outputX": -2.4557308681664614,
+      "outputZ": -4.211973149888217,
+      "scale": 0.2
+    },
+    {
+      "id": "depot",
+      "label": "工場B",
+      "width": 0.9,
+      "height": 0.7000000000000001,
+      "depth": 0.8,
+      "x": -2.092693392559886,
+      "z": 1.774658793970056,
+      "outputX": -2.092693392559886,
+      "outputZ": 3.174658793970056,
+      "scale": 0.2
+    },
+    {
+      "id": "stationeryA",
+      "label": "小型工場A",
+      "width": 0.2,
+      "height": 0.13999999999999999,
+      "depth": 0.13,
+      "x": 1.5130537401884794,
+      "z": 0.4320358281019514,
+      "outputX": 1.5130537401884794,
+      "outputZ": 1.0820358281019513,
+      "scale": 0.05,
+      "profile": "stationery"
+    },
+    {
+      "id": "stationeryB",
+      "label": "小型工場B",
+      "width": 0.2,
+      "height": 0.13999999999999999,
+      "depth": 0.13,
+      "x": 2.397392351925373,
+      "z": -1.07032900680745,
+      "outputX": 2.397392351925373,
+      "outputZ": -0.42032900680745,
+      "scale": 0.05,
+      "profile": "stationery"
+    }
+  ],
+  "emissions": [
+    {
+      "id": "supply-stationeryA-0",
+      "siteId": "stationeryA",
+      "firstSeenTick": 2.0000000000000027
+    },
+    {
+      "id": "supply-stationeryB-1",
+      "siteId": "stationeryB",
+      "firstSeenTick": 2.0000000000000027
+    },
+    {
+      "id": "supply-stationeryA-2",
+      "siteId": "stationeryA",
+      "firstSeenTick": 4.000000000000005
+    },
+    {
+      "id": "supply-stationeryB-3",
+      "siteId": "stationeryB",
+      "firstSeenTick": 4.000000000000005
+    },
+    {
+      "id": "supply-stationeryA-4",
+      "siteId": "stationeryA",
+      "firstSeenTick": 6.000000000000009
+    },
+    {
+      "id": "supply-stationeryB-5",
+      "siteId": "stationeryB",
+      "firstSeenTick": 6.000000000000009
+    },
+    {
+      "id": "supply-stationeryA-7",
+      "siteId": "stationeryA",
+      "firstSeenTick": 8.000000000000012
+    },
+    {
+      "id": "supply-stationeryB-8",
+      "siteId": "stationeryB",
+      "firstSeenTick": 8.000000000000012
+    },
+    {
+      "id": "supply-stationeryA-9",
+      "siteId": "stationeryA",
+      "firstSeenTick": 10.000000000000016
+    },
+    {
+      "id": "supply-stationeryB-10",
+      "siteId": "stationeryB",
+      "firstSeenTick": 10.000000000000016
+    },
+    {
+      "id": "supply-stationeryA-11",
+      "siteId": "stationeryA",
+      "firstSeenTick": 12.00000000000002
+    },
+    {
+      "id": "supply-stationeryB-12",
+      "siteId": "stationeryB",
+      "firstSeenTick": 12.00000000000002
+    }
+  ],
+  "completed": true,
+  "collected": [
+    {
+      "id": "supply-stationeryA-0",
+      "sourceId": "stationeryA",
+      "kind": "eraser"
+    },
+    {
+      "id": "supply-stationeryB-18",
+      "sourceId": "stationeryB",
+      "kind": "eraser"
+    },
+    {
+      "id": "supply-stationeryA-21",
+      "sourceId": "stationeryA",
+      "kind": "eraser"
+    },
+    {
+      "id": "supply-stationeryB-8",
+      "sourceId": "stationeryB",
+      "kind": "eraser"
+    },
+    {
+      "id": "supply-stationeryB-3",
+      "sourceId": "stationeryB",
+      "kind": "eraser"
+    },
+    {
+      "id": "supply-stationeryA-17",
+      "sourceId": "stationeryA",
+      "kind": "eraser"
+    },
+    {
+      "id": "supply-stationeryB-12",
+      "sourceId": "stationeryB",
+      "kind": "eraser"
+    },
+    {
+      "id": "supply-stationeryB-5",
+      "sourceId": "stationeryB",
+      "kind": "eraser"
+    }
+  ],
+  "level": 2,
+  "score": 16
+}

@@ -43,17 +43,17 @@ describe("成長とクリア", () => {
       expect(levelForScore(level.threshold - 1)).toBe(index);
       expect(levelForScore(level.threshold)).toBe(index + 1);
     });
-    expect(levelForScore(600)).toBe(6);
+    expect(levelForScore(1500)).toBe(6);
     expect(levelForScore(100000)).toBe(7);
   });
-  it("面積を1.5倍にして、開始・最大半径を維持した8段階へ進む", () => {
-    expect((MAP_HALF_SIZE * 2) ** 2 / 56 ** 2).toBeCloseTo(1.5);
+  it("マップを100四方にして、開始・最大半径を維持した8段階へ進む", () => {
+    expect(MAP_HALF_SIZE * 2).toBe(100);
     expect(LEVELS).toHaveLength(8);
     expect(LEVELS[0].radius).toBe(0.9);
     expect(LEVELS.at(-1)?.radius).toBe(5.1);
     const progress = new Progress();
     progress.collect({ id: "house", kind: "house" });
-    expect(progress.level).toBe(4);
+    expect(progress.level).toBe(3);
   });
   it("回収は一度だけ加算し、目標物だけでクリアする", () => {
     const progress = new Progress();
@@ -105,7 +105,7 @@ describe("ランダム配置", () => {
   });
   it("道路の両側へ生成し、20か所の小箱を20段ずつ積む", () => {
     const objects = createStage(20261014);
-    expect(objects).toHaveLength(535 + MOVING_OBJECTS.count);
+    expect(objects).toHaveLength(536 + MOVING_OBJECTS.count);
     expect(
       objects.filter((object) => object.kind === MOVING_OBJECTS.kind),
     ).toHaveLength(MOVING_OBJECTS.count);

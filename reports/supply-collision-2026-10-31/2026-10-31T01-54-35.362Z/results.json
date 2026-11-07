@@ -1,0 +1,72 @@
+{
+  "mode": "collision-fit",
+  "directory": "reports/supply-collision-2026-10-31/2026-10-31T01-54-35.362Z",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "stages": [
+    {
+      "stageId": "mountain",
+      "seed": 573093509,
+      "factorySites": [
+        {
+          "id": "food",
+          "label": "工場A",
+          "width": 4,
+          "height": 2.8,
+          "depth": 2.6,
+          "x": 19.738888540305197,
+          "z": 12.954865753185002,
+          "outputX": 19.738888540305197,
+          "outputZ": 19.954865753185004,
+          "scale": 1
+        },
+        {
+          "id": "depot",
+          "label": "工場B",
+          "width": 4.5,
+          "height": 3.5,
+          "depth": 4,
+          "x": 25.110140327829868,
+          "z": 32.03194914245978,
+          "outputX": 25.110140327829868,
+          "outputZ": 39.03194914245978,
+          "scale": 1
+        }
+      ],
+      "levels": [1, 2, 3, 4],
+      "emittedKinds": ["firewood", "tree", "shrub", "flower", "sapling"],
+      "collisionFit": [
+        {
+          "kind": "sapling",
+          "id": "sapling-2",
+          "holeRadius": 0.9,
+          "collisionFootprint": 0.850000580281123,
+          "boxFootprint": 1.2020815280171309
+        },
+        {
+          "kind": "tree",
+          "id": "tree-0",
+          "holeRadius": 1.85,
+          "collisionFootprint": 1.7500004853130087,
+          "boxFootprint": 2.4748737341529163
+        }
+      ],
+      "emission": {
+        "kind": "firewood",
+        "sourceId": "food",
+        "duration": 0.9,
+        "highestY": 7.041369915008545,
+        "landed": {
+          "x": 19.735950469970703,
+          "y": 0.17500001192092896,
+          "z": 19.935136795043945
+        }
+      },
+      "score": 316,
+      "level": 4
+    }
+  ],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "completed": true
+}

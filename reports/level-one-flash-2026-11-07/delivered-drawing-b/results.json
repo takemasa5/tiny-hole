@@ -1,0 +1,38 @@
+{
+  "browser": "156.0.8078.4",
+  "fixture": "実際の箱・透過処理を使う描画用の比較シーン。通常プレイ・iPhone実機とは別。",
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "errors": [],
+  "cases": [
+    {
+      "level": 1,
+      "radius": 0.08,
+      "viewport": "390x844 DPR2",
+      "samples": 4,
+      "mode": "coverage",
+      "occlusion": [
+        { "id": "world-notions", "opacity": 0.25, "surface": "notions-south" },
+        {
+          "id": "world-notions",
+          "opacity": 0.25,
+          "surface": "notions-south-rim"
+        }
+      ],
+      "frontChanged": true,
+      "backChanged": false,
+      "lidChanged": false
+    },
+    {
+      "level": 2,
+      "radius": 0.14,
+      "viewport": "390x844 DPR2",
+      "samples": 4,
+      "mode": "coverage",
+      "occlusion": [],
+      "frontChanged": false,
+      "backChanged": false,
+      "lidChanged": false
+    }
+  ]
+}

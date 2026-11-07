@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { STAGE_IDS } from "../game/stage";
 import { prepareOffline, type OfflineState } from "./register";
 
 interface InstallPrompt extends Event {
@@ -53,7 +54,8 @@ export function OfflinePanel() {
         <h2 id="offline-title">どこでも、ひと飲み。</h2>
         <p role="status">{state.message}</p>
         <p>
-          「オフライン準備完了」と表示されたら、サーバーに接続せず、4ステージと効果音で遊べます。
+          「オフライン準備完了」と表示されたら、サーバーに接続せず、
+          {STAGE_IDS.length}ステージと効果音で遊べます。
         </p>
         <p>
           <strong>iPhone</strong>

@@ -1,3 +1,4 @@
+import { gameControl } from "./ui.mjs";
 import { chromium } from "@playwright/test";
 import { mkdir, writeFile } from "node:fs/promises";
 
@@ -55,8 +56,8 @@ try {
     await page.keyboard.press("ArrowRight", { delay: 50 });
     await page.waitForFunction(() => !!window.__hole?.snapshot().audio.error);
     await page.unroute("**/audio/american-fall.wav");
-    await page.getByRole("button", { name: "効果音を消す" }).click();
-    await page.getByRole("button", { name: "効果音をつける" }).click();
+    await (await gameControl(page, "効果音を消す")).click();
+    await (await gameControl(page, "効果音をつける")).click();
     await page.waitForFunction(
       () => window.__hole?.snapshot().audio.error === "",
     );
@@ -134,7 +135,7 @@ try {
     undefined,
     { timeout: 1200 },
   );
-  await page.getByRole("button", { name: "効果音を消す" }).click();
+  await (await gameControl(page, "効果音を消す")).click();
   const beforeMute = await snapshot();
   const mutedActor = await catchActor();
   const muted = await snapshot();

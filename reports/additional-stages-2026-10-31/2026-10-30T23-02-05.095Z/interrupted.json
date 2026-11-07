@@ -1,0 +1,9 @@
+{
+  "completed": false,
+  "reason": "追いかける対象はキーを押し続ける操作へ変更し、小物への到着許容距離を物の大きさに合わせるため、自動操作を中断した。",
+  "lastObserved": {
+    "stage": "office",
+    "level": 3,
+    "score": 33
+  }
+}

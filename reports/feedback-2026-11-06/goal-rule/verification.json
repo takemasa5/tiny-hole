@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-06",
+  "rule": "飲み込める小物は透過せず、穴全体を覆う大物だけ透過する。穴へ実際に落ちきった物はレベル不足でも加点し、最終目標はその時点でクリアする。",
+  "automated": {
+    "files": 21,
+    "tests": 249,
+    "passed": true,
+    "build": "passed",
+    "lint": "passed",
+    "format": "passed",
+    "earlyGoal": { "levels": [1, 7, 11], "doubleCountPrevented": true },
+    "physics": {
+      "fixture": "長さ120・幅24・高さ24の箱形の最終目標",
+      "holeRadius": 48,
+      "initialLevel": 11,
+      "targetLevel": 12,
+      "cleared": true,
+      "finalLevel": 11
+    }
+  },
+  "browser": {
+    "report": "results.json",
+    "scope": "港の通常入力でのレベル1から12・目標回収・クリア・おもちゃへの自動移行",
+    "errors": 0
+  },
+  "notRepeated": ["全8ステージ通し", "オフライン"],
+  "notVerified": ["iPhone実機", "WebKit"],
+  "sources": [
+    {
+      "path": "src/game/growth-stage.ts",
+      "sha256": "80bf58ab4589e4136abe3de328c387dda920eb2c9dc9e19ec10f16f57b5edfb5"
+    },
+    {
+      "path": "src/game/runtime.ts",
+      "sha256": "a2e6420fd38ad936cdc6175c44c3e14a53fad48fc8b9279f70d2abef16d7cbee"
+    },
+    {
+      "path": "tests/growth-stage.test.ts",
+      "sha256": "32d2968df72c45720f6b13d0865ee2985382eece91f2c38d3403e5b6f9756b71"
+    },
+    {
+      "path": "tests/growth-physics.test.ts",
+      "sha256": "8b194a35b7d41562ea3d83efe7390461913e322075a36ebed37c6c777cc444b4"
+    },
+    {
+      "path": "checks/growth-flow.mjs",
+      "sha256": "4a61157227509f2da00ebf2004b9135650a2ed587123bf31c4c79b116c601189"
+    },
+    {
+      "path": "docs/feedback-review.md",
+      "sha256": "4cdf9638b0bf5014c2329709f6e4190e7c9be80387439f81e5e1c15b8e474cdb"
+    },
+    {
+      "path": "docs/scale-growth-implementation.md",
+      "sha256": "c36a11794c4f8da0d3b6523d22522cee420be4f9351d7acb76e06527dcd70b74"
+    },
+    {
+      "path": "docs/README.md",
+      "sha256": "5e6cbc193ee06a96a5cf87f97be716c00c7ac273e3a1e515d7bf13d1b6566b2a"
+    }
+  ]
+}

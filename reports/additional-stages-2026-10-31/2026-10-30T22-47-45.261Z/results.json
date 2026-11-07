@@ -1,0 +1,134 @@
+{
+  "directory": "reports/additional-stages-2026-10-31/2026-10-30T22-47-45.261Z",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "stages": [
+    {
+      "stageId": "harbor",
+      "seed": 1988676943,
+      "factorySites": [
+        {
+          "id": "food",
+          "label": "工場A",
+          "width": 4,
+          "height": 2.8,
+          "depth": 2.6,
+          "x": -26.136128891259432,
+          "z": -10.01114091294892,
+          "outputX": -26.136128891259432,
+          "outputZ": -3.0111409129489193,
+          "scale": 1
+        },
+        {
+          "id": "depot",
+          "label": "工場B",
+          "width": 4.5,
+          "height": 3.5,
+          "depth": 4,
+          "x": -11.052872493933176,
+          "z": 25.161277590319514,
+          "outputX": -11.052872493933176,
+          "outputZ": 32.161277590319514,
+          "scale": 1
+        }
+      ],
+      "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+      "emittedKinds": [
+        "dinghy",
+        "buoy",
+        "barrel",
+        "timber",
+        "container",
+        "cargoCrate"
+      ],
+      "emission": {
+        "kind": "dinghy",
+        "sourceId": "food",
+        "duration": 0.9,
+        "highestY": 7.371370315551758,
+        "landed": {
+          "x": -26.13906478881836,
+          "y": 0.5049999952316284,
+          "z": -3.0309340953826904
+        }
+      },
+      "supplyStopped": true,
+      "cleared": true,
+      "elapsedSeconds": 187.426,
+      "score": 4961,
+      "supplied": 23,
+      "lost": 68,
+      "collectedEnemies": 1,
+      "collectedFactories": 2,
+      "autoTransition": true,
+      "randomRestart": true,
+      "chromiumTouch": true,
+      "menuRestart": true
+    },
+    {
+      "stageId": "toys",
+      "seed": 723242062,
+      "factorySites": [
+        {
+          "id": "food",
+          "label": "工場A",
+          "width": 4,
+          "height": 2.8,
+          "depth": 2.6,
+          "x": 8.782007368281484,
+          "z": 6.8759344114836285,
+          "outputX": 8.782007368281484,
+          "outputZ": 13.875934411483628,
+          "scale": 1
+        },
+        {
+          "id": "depot",
+          "label": "工場B",
+          "width": 4.5,
+          "height": 3.5,
+          "depth": 4,
+          "x": 10.764953126968106,
+          "z": 35.20565940160304,
+          "outputX": 10.764953126968106,
+          "outputZ": 42.20565940160304,
+          "scale": 1
+        }
+      ],
+      "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+      "emittedKinds": [
+        "toyHouse",
+        "toyBall",
+        "toyTrain",
+        "toyTower",
+        "toyBlock",
+        "toyCar"
+      ],
+      "emission": {
+        "kind": "toyHouse",
+        "sourceId": "food",
+        "duration": 0.9,
+        "highestY": 8.871371269226074,
+        "landed": {
+          "x": 8.782544136047363,
+          "y": 2.0096795558929443,
+          "z": 13.926187515258789
+        }
+      },
+      "supplyStopped": true,
+      "cleared": true,
+      "elapsedSeconds": 246.408,
+      "score": 5022,
+      "supplied": 31,
+      "lost": 98,
+      "collectedEnemies": 1,
+      "collectedFactories": 2,
+      "autoTransition": true,
+      "randomRestart": true,
+      "chromiumTouch": true,
+      "menuRestart": true
+    }
+  ],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "completed": true
+}

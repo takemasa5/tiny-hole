@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-31",
+  "directory": "reports/additional-stages-2026-10-31/offline-1793402841227",
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "initialCache": [
+    "/tiny-hole/",
+    "/tiny-hole/assets/index-DRGpnA8Q.js",
+    "/tiny-hole/assets/index-FrEJMTWU.css",
+    "/tiny-hole/audio/american-fall.wav",
+    "/tiny-hole/icons/apple-touch-icon.png",
+    "/tiny-hole/icons/hole-192.png",
+    "/tiny-hole/icons/hole-512.png",
+    "/tiny-hole/icons/hole.svg",
+    "/tiny-hole/index.html",
+    "/tiny-hole/manifest.webmanifest"
+  ],
+  "manifestAndIcons": true,
+  "updateWaitsForPlayerAndReplacesCache": true,
+  "serverStoppedAndHttpCacheCleared": true,
+  "coldOfflineLaunch": true,
+  "stages": [
+    "plaza",
+    "mountain",
+    "america",
+    "egypt",
+    "harbor",
+    "toys",
+    "office",
+    "hell"
+  ],
+  "audio": {
+    "decodes": 1,
+    "tones": 10
+  },
+  "resourcesFromServiceWorker": [
+    "/tiny-hole/",
+    "/tiny-hole/assets/index-FrEJMTWU.css",
+    "/tiny-hole/assets/index-DRGpnA8Q.js",
+    "/tiny-hole/audio/american-fall.wav"
+  ],
+  "incompleteDownloadRejectedAndRetrySucceeds": true,
+  "browser": "156.0.8078.4",
+  "errors": []
+}

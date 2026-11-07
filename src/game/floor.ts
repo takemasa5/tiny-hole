@@ -3,7 +3,7 @@ import RAPIER from "@dimforge/rapier3d-compat";
 export const FLOOR_SEGMENTS = 64;
 
 // One connected surface keeps the support at the rim while leaving the aperture empty.
-export function floorShape(x: number, z: number, radius: number) {
+export function floorShape(x: number, z: number, radius: number, extent = 120) {
   const vertices = new Float32Array(FLOOR_SEGMENTS * 6);
   const indices = new Uint32Array(FLOOR_SEGMENTS * 6);
   for (let index = 0; index < FLOOR_SEGMENTS; index++) {
@@ -15,9 +15,9 @@ export function floorShape(x: number, z: number, radius: number) {
         x + cosine * radius,
         0,
         z + sine * radius,
-        x + cosine * 120,
+        x + cosine * extent,
         0,
-        z + sine * 120,
+        z + sine * extent,
       ],
       index * 6,
     );
@@ -45,8 +45,9 @@ export function updateFloor(
   x: number,
   z: number,
   radius: number,
+  extent = 120,
 ) {
-  const shape = floorShape(x, z, radius);
+  const shape = floorShape(x, z, radius, extent);
   collider.setShape(new RAPIER.TriMesh(shape.vertices, shape.indices));
   return shape;
 }

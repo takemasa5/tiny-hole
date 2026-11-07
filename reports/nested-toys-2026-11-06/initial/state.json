@@ -1,0 +1,4144 @@
+{
+  "seed": 2995027153,
+  "boundaryGuide": {
+    "visible": false,
+    "label": "レベル3になると箱の側面が開きます",
+    "level": 3,
+    "posts": 0,
+    "radius": 0.08,
+    "anchors": []
+  },
+  "toyWorld": {
+    "label": "小物箱",
+    "level": 1,
+    "openedArea": 0,
+    "spaces": [
+      {
+        "id": "notions",
+        "label": "小物箱",
+        "level": 1,
+        "extent": 0.85,
+        "bounds": {
+          "minX": -0.75,
+          "maxX": 0.75,
+          "minZ": -0.55,
+          "maxZ": 0.55
+        },
+        "height": 0.27,
+        "thickness": 0.035,
+        "color": "#d1a77f",
+        "floor": "#d7b48e",
+        "gate": {
+          "side": "east",
+          "along": 0,
+          "width": 0.85,
+          "level": 3
+        }
+      },
+      {
+        "id": "chest",
+        "label": "おもちゃ箱",
+        "level": 3,
+        "extent": 3.5,
+        "bounds": {
+          "minX": -3.3,
+          "maxX": 3.3,
+          "minZ": -2.6,
+          "maxZ": 2.6
+        },
+        "height": 1.3,
+        "thickness": 0.14,
+        "color": "#659d9c",
+        "floor": "#d4b793",
+        "gate": {
+          "side": "south",
+          "along": 0,
+          "width": 2.7,
+          "level": 5
+        }
+      },
+      {
+        "id": "bedroom",
+        "label": "子供部屋",
+        "level": 5,
+        "extent": 36,
+        "bounds": {
+          "minX": -4.4,
+          "maxX": 31.6,
+          "minZ": -4,
+          "maxZ": 32
+        },
+        "height": 8,
+        "thickness": 0.35,
+        "color": "#a9bacb",
+        "floor": "#cfa77c",
+        "gate": {
+          "side": "east",
+          "along": 23,
+          "width": 8.5,
+          "level": 7
+        }
+      },
+      {
+        "id": "house",
+        "label": "家の中",
+        "level": 7,
+        "extent": 110,
+        "bounds": {
+          "minX": -25,
+          "maxX": 95,
+          "minZ": -25,
+          "maxZ": 105
+        },
+        "height": 24,
+        "thickness": 1,
+        "color": "#e4d3af",
+        "floor": "#d7b58c",
+        "gate": {
+          "side": "east",
+          "along": 80,
+          "width": 33,
+          "level": 9
+        }
+      },
+      {
+        "id": "city",
+        "label": "街",
+        "level": 9,
+        "extent": 1600,
+        "bounds": {
+          "minX": -1600,
+          "maxX": 1600,
+          "minZ": -1600,
+          "maxZ": 1600
+        },
+        "height": 0,
+        "thickness": 0,
+        "color": "#a8b3ad",
+        "floor": "#d8dfce"
+      }
+    ],
+    "walls": [
+      {
+        "minX": -0.7675,
+        "maxX": -0.7325,
+        "minZ": -0.55,
+        "maxZ": 0.55,
+        "id": "notions-west",
+        "space": 0,
+        "height": 0.27,
+        "color": "#d1a77f",
+        "door": false
+      },
+      {
+        "minX": 0.7325,
+        "maxX": 0.7675,
+        "minZ": -0.55,
+        "maxZ": -0.425,
+        "id": "notions-east-a",
+        "space": 0,
+        "height": 0.27,
+        "color": "#d1a77f",
+        "door": false
+      },
+      {
+        "minX": 0.7325,
+        "maxX": 0.7675,
+        "minZ": 0.425,
+        "maxZ": 0.55,
+        "id": "notions-east-b",
+        "space": 0,
+        "height": 0.27,
+        "color": "#d1a77f",
+        "door": false
+      },
+      {
+        "minX": 0.7325,
+        "maxX": 0.7675,
+        "minZ": -0.425,
+        "maxZ": 0.425,
+        "id": "notions-door",
+        "space": 0,
+        "height": 0.27,
+        "color": "#aa7953",
+        "door": true
+      },
+      {
+        "minX": -0.75,
+        "maxX": 0.75,
+        "minZ": -0.5675,
+        "maxZ": -0.5325000000000001,
+        "id": "notions-north",
+        "space": 0,
+        "height": 0.27,
+        "color": "#d1a77f",
+        "door": false
+      },
+      {
+        "minX": -0.75,
+        "maxX": 0.75,
+        "minZ": 0.5325000000000001,
+        "maxZ": 0.5675,
+        "id": "notions-south",
+        "space": 0,
+        "height": 0.27,
+        "color": "#d1a77f",
+        "door": false
+      },
+      {
+        "minX": -3.3699999999999997,
+        "maxX": -3.23,
+        "minZ": -2.6,
+        "maxZ": 2.6,
+        "id": "chest-west",
+        "space": 1,
+        "height": 1.3,
+        "color": "#659d9c",
+        "door": false
+      },
+      {
+        "minX": 3.23,
+        "maxX": 3.3699999999999997,
+        "minZ": -2.6,
+        "maxZ": 2.6,
+        "id": "chest-east",
+        "space": 1,
+        "height": 1.3,
+        "color": "#659d9c",
+        "door": false
+      },
+      {
+        "minX": -3.3,
+        "maxX": 3.3,
+        "minZ": -2.67,
+        "maxZ": -2.5300000000000002,
+        "id": "chest-north",
+        "space": 1,
+        "height": 1.3,
+        "color": "#659d9c",
+        "door": false
+      },
+      {
+        "minX": -3.3,
+        "maxX": -1.35,
+        "minZ": 2.5300000000000002,
+        "maxZ": 2.67,
+        "id": "chest-south-a",
+        "space": 1,
+        "height": 1.3,
+        "color": "#659d9c",
+        "door": false
+      },
+      {
+        "minX": 1.35,
+        "maxX": 3.3,
+        "minZ": 2.5300000000000002,
+        "maxZ": 2.67,
+        "id": "chest-south-b",
+        "space": 1,
+        "height": 1.3,
+        "color": "#659d9c",
+        "door": false
+      },
+      {
+        "minX": -1.35,
+        "maxX": 1.35,
+        "minZ": 2.5300000000000002,
+        "maxZ": 2.67,
+        "id": "chest-door",
+        "space": 1,
+        "height": 1.3,
+        "color": "#aa7953",
+        "door": true
+      },
+      {
+        "minX": -4.575,
+        "maxX": -4.2250000000000005,
+        "minZ": -4,
+        "maxZ": 32,
+        "id": "bedroom-west",
+        "space": 2,
+        "height": 8,
+        "color": "#a9bacb",
+        "door": false
+      },
+      {
+        "minX": 31.425,
+        "maxX": 31.775000000000002,
+        "minZ": -4,
+        "maxZ": 18.75,
+        "id": "bedroom-east-a",
+        "space": 2,
+        "height": 8,
+        "color": "#a9bacb",
+        "door": false
+      },
+      {
+        "minX": 31.425,
+        "maxX": 31.775000000000002,
+        "minZ": 27.25,
+        "maxZ": 32,
+        "id": "bedroom-east-b",
+        "space": 2,
+        "height": 8,
+        "color": "#a9bacb",
+        "door": false
+      },
+      {
+        "minX": 31.425,
+        "maxX": 31.775000000000002,
+        "minZ": 18.75,
+        "maxZ": 27.25,
+        "id": "bedroom-door",
+        "space": 2,
+        "height": 8,
+        "color": "#aa7953",
+        "door": true
+      },
+      {
+        "minX": -4.4,
+        "maxX": 31.6,
+        "minZ": -4.175,
+        "maxZ": -3.825,
+        "id": "bedroom-north",
+        "space": 2,
+        "height": 8,
+        "color": "#a9bacb",
+        "door": false
+      },
+      {
+        "minX": -4.4,
+        "maxX": 31.6,
+        "minZ": 31.825,
+        "maxZ": 32.175,
+        "id": "bedroom-south",
+        "space": 2,
+        "height": 8,
+        "color": "#a9bacb",
+        "door": false
+      },
+      {
+        "minX": -25.5,
+        "maxX": -24.5,
+        "minZ": -25,
+        "maxZ": 105,
+        "id": "house-west",
+        "space": 3,
+        "height": 24,
+        "color": "#e4d3af",
+        "door": false
+      },
+      {
+        "minX": 94.5,
+        "maxX": 95.5,
+        "minZ": -25,
+        "maxZ": 63.5,
+        "id": "house-east-a",
+        "space": 3,
+        "height": 24,
+        "color": "#e4d3af",
+        "door": false
+      },
+      {
+        "minX": 94.5,
+        "maxX": 95.5,
+        "minZ": 96.5,
+        "maxZ": 105,
+        "id": "house-east-b",
+        "space": 3,
+        "height": 24,
+        "color": "#e4d3af",
+        "door": false
+      },
+      {
+        "minX": 94.5,
+        "maxX": 95.5,
+        "minZ": 63.5,
+        "maxZ": 96.5,
+        "id": "house-door",
+        "space": 3,
+        "height": 24,
+        "color": "#aa7953",
+        "door": true
+      },
+      {
+        "minX": -25,
+        "maxX": 95,
+        "minZ": -25.5,
+        "maxZ": -24.5,
+        "id": "house-north",
+        "space": 3,
+        "height": 24,
+        "color": "#e4d3af",
+        "door": false
+      },
+      {
+        "minX": -25,
+        "maxX": 95,
+        "minZ": 104.5,
+        "maxZ": 105.5,
+        "id": "house-south",
+        "space": 3,
+        "height": 24,
+        "color": "#e4d3af",
+        "door": false
+      },
+      {
+        "id": "kitchen-a",
+        "minX": 38,
+        "maxX": 54,
+        "minZ": 35,
+        "maxZ": 35.7,
+        "space": 3,
+        "height": 12,
+        "color": "#e4d3af",
+        "door": false
+      },
+      {
+        "id": "kitchen-b",
+        "minX": 83,
+        "maxX": 95,
+        "minZ": 35,
+        "maxZ": 35.7,
+        "space": 3,
+        "height": 12,
+        "color": "#e4d3af",
+        "door": false
+      },
+      {
+        "id": "entry-a",
+        "minX": 36,
+        "maxX": 56,
+        "minZ": 87,
+        "maxZ": 87.7,
+        "space": 3,
+        "height": 12,
+        "color": "#e4d3af",
+        "door": false
+      }
+    ],
+    "doors": [
+      {
+        "id": "notions-door",
+        "requiredLevel": 3,
+        "open": false,
+        "amount": 0,
+        "x": 0.75,
+        "z": 0,
+        "side": "east",
+        "width": 0.85
+      },
+      {
+        "id": "chest-door",
+        "requiredLevel": 5,
+        "open": false,
+        "amount": 0,
+        "x": 0,
+        "z": 2.6,
+        "side": "south",
+        "width": 2.7
+      },
+      {
+        "id": "bedroom-door",
+        "requiredLevel": 7,
+        "open": false,
+        "amount": 0,
+        "x": 31.6,
+        "z": 23,
+        "side": "east",
+        "width": 8.5
+      },
+      {
+        "id": "house-door",
+        "requiredLevel": 9,
+        "open": false,
+        "amount": 0,
+        "x": 95,
+        "z": 80,
+        "side": "east",
+        "width": 33
+      }
+    ],
+    "frames": [
+      {
+        "id": "notions",
+        "falling": false,
+        "collected": false
+      },
+      {
+        "id": "chest",
+        "falling": false,
+        "collected": false
+      },
+      {
+        "id": "bedroom",
+        "falling": false,
+        "collected": false
+      },
+      {
+        "id": "house",
+        "falling": false,
+        "collected": false
+      }
+    ]
+  },
+  "stageId": "toys",
+  "levels": [
+    {
+      "radius": 0.08,
+      "threshold": 0
+    },
+    {
+      "radius": 0.14,
+      "threshold": 12
+    },
+    {
+      "radius": 0.25,
+      "threshold": 60
+    },
+    {
+      "radius": 0.45,
+      "threshold": 252
+    },
+    {
+      "radius": 0.8,
+      "threshold": 1020
+    },
+    {
+      "radius": 1.5,
+      "threshold": 4092
+    },
+    {
+      "radius": 3,
+      "threshold": 16380
+    },
+    {
+      "radius": 6,
+      "threshold": 65532
+    },
+    {
+      "radius": 12,
+      "threshold": 262140
+    },
+    {
+      "radius": 24,
+      "threshold": 1048572
+    },
+    {
+      "radius": 48,
+      "threshold": 4194300
+    },
+    {
+      "radius": 160,
+      "threshold": 16777212
+    }
+  ],
+  "hole": {
+    "x": 0,
+    "z": 0,
+    "radius": 0.08
+  },
+  "level": 1,
+  "score": 0,
+  "cleared": false,
+  "mapHalfSize": 1600,
+  "playableHalfSize": 0.85,
+  "openedArea": 0,
+  "areas": [
+    {
+      "id": "notions",
+      "label": "小物箱",
+      "level": 1,
+      "extent": 0.85,
+      "bounds": {
+        "minX": -0.75,
+        "maxX": 0.75,
+        "minZ": -0.55,
+        "maxZ": 0.55
+      },
+      "height": 0.27,
+      "thickness": 0.035,
+      "color": "#d1a77f",
+      "floor": "#d7b48e",
+      "gate": {
+        "side": "east",
+        "along": 0,
+        "width": 0.85,
+        "level": 3
+      }
+    },
+    {
+      "id": "chest",
+      "label": "おもちゃ箱",
+      "level": 3,
+      "extent": 3.5,
+      "bounds": {
+        "minX": -3.3,
+        "maxX": 3.3,
+        "minZ": -2.6,
+        "maxZ": 2.6
+      },
+      "height": 1.3,
+      "thickness": 0.14,
+      "color": "#659d9c",
+      "floor": "#d4b793",
+      "gate": {
+        "side": "south",
+        "along": 0,
+        "width": 2.7,
+        "level": 5
+      }
+    },
+    {
+      "id": "bedroom",
+      "label": "子供部屋",
+      "level": 5,
+      "extent": 36,
+      "bounds": {
+        "minX": -4.4,
+        "maxX": 31.6,
+        "minZ": -4,
+        "maxZ": 32
+      },
+      "height": 8,
+      "thickness": 0.35,
+      "color": "#a9bacb",
+      "floor": "#cfa77c",
+      "gate": {
+        "side": "east",
+        "along": 23,
+        "width": 8.5,
+        "level": 7
+      }
+    },
+    {
+      "id": "house",
+      "label": "家の中",
+      "level": 7,
+      "extent": 110,
+      "bounds": {
+        "minX": -25,
+        "maxX": 95,
+        "minZ": -25,
+        "maxZ": 105
+      },
+      "height": 24,
+      "thickness": 1,
+      "color": "#e4d3af",
+      "floor": "#d7b58c",
+      "gate": {
+        "side": "east",
+        "along": 80,
+        "width": 33,
+        "level": 9
+      }
+    },
+    {
+      "id": "city",
+      "label": "街",
+      "level": 9,
+      "extent": 1600,
+      "bounds": {
+        "minX": -1600,
+        "maxX": 1600,
+        "minZ": -1600,
+        "maxZ": 1600
+      },
+      "height": 0,
+      "thickness": 0,
+      "color": "#a8b3ad",
+      "floor": "#d8dfce"
+    }
+  ],
+  "collectedIds": [],
+  "retiredIds": [],
+  "pending": 216,
+  "previews": 20,
+  "rigidBodies": 56,
+  "activeBodies": 25,
+  "physicsMilliseconds": 0.5999999940395355,
+  "floorMilliseconds": 0.20000001788139343,
+  "lifecycleMilliseconds": 0,
+  "occlusionMilliseconds": 0.09999999403953552,
+  "frameMilliseconds": {
+    "median": 16.699999999999818,
+    "p95": 16.799999999999955
+  },
+  "drawCalls": 243,
+  "triangles": 12776,
+  "memory": {
+    "geometries": 257,
+    "textures": 1
+  },
+  "occlusion": [],
+  "growthEvents": 0,
+  "growthEffect": {
+    "active": false,
+    "triggers": 0,
+    "age": 2.8285999999940343
+  },
+  "audio": {
+    "enabled": true,
+    "state": "locked",
+    "voices": 0,
+    "error": "",
+    "played": {
+      "pickup": 0,
+      "growth": 0,
+      "clear": 0,
+      "personCry": 0,
+      "americanCry": 0,
+      "shot": 0,
+      "tanukiCry": 0
+    }
+  },
+  "resets": 0,
+  "collectedMoving": 0,
+  "supply": {
+    "serial": 0
+  },
+  "objects": [
+    {
+      "id": "growth-3-23",
+      "kind": "toyBall",
+      "label": "ゴムボール",
+      "model": "original",
+      "size": [
+        0.22097086912079608,
+        0.22097086912079608,
+        0.22097086912079608
+      ],
+      "scale": 0.22097086912079608,
+      "level": 3,
+      "area": 1,
+      "value": 16,
+      "x": 1.368956237773527,
+      "z": -0.7985199149214897,
+      "yaw": 1.0104989072441055,
+      "behavior": "still",
+      "stackY": 0.252,
+      "position": {
+        "x": 1.368956237773527,
+        "y": 0.36298543456039806,
+        "z": -0.7985199149214897
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0.4840257407113005,
+        "z": 0,
+        "w": 0.8750537596792993
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 0.11048543456039804,
+      "top": 0.4734708691207961,
+      "screen": {
+        "x": 1897.505046402673,
+        "y": -368.9736252681083
+      }
+    },
+    {
+      "id": "growth-4-23",
+      "kind": "toySoldier",
+      "label": "おもちゃの兵隊",
+      "model": "original",
+      "size": [
+        0.43535098080186807,
+        1.0290114091680518,
+        0.3561962570197102
+      ],
+      "scale": 0.7915472378215782,
+      "level": 4,
+      "area": 1,
+      "value": 64,
+      "x": 0.4561257990880403,
+      "z": 0.9882886245480043,
+      "yaw": 5.743128169712072,
+      "behavior": "still",
+      "stackY": 0,
+      "position": {
+        "x": 0.4562032222747803,
+        "y": 0.5144981741905212,
+        "z": 0.9882587194442749
+      },
+      "rotation": {
+        "x": -3.232555627619149e-7,
+        "y": 0.2667590379714966,
+        "z": -7.205042038549436e-7,
+        "w": -0.9637632966041565
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.3840430125631809,
+      "top": 1.0290043229700903,
+      "screen": {
+        "x": -1353.6482572595685,
+        "y": -1319.3084018479194
+      }
+    },
+    {
+      "id": "growth-5-23",
+      "kind": "toyBlock",
+      "label": "床に置いた車",
+      "model": "toy",
+      "size": [
+        0.8,
+        0.32000000000000006,
+        0.4
+      ],
+      "scale": 1.0878565864408423,
+      "level": 5,
+      "area": 2,
+      "value": 256,
+      "x": 8.468905127369005,
+      "z": 1.2393986567786577,
+      "yaw": 6.019556854362061,
+      "behavior": "still",
+      "toyKind": "miniCar",
+      "stackY": 0,
+      "position": {
+        "x": 8.468905127369005,
+        "y": 0.16050000000000003,
+        "z": 1.2393986567786577
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0.1314328460663819,
+        "z": 0,
+        "w": -0.9913250763371674
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 0.4472135954999579,
+      "top": 0.32050000000000006,
+      "screen": {
+        "x": -63760.74071890938,
+        "y": -5809.965611706335
+      }
+    },
+    {
+      "id": "growth-6-23",
+      "kind": "toyBlock",
+      "label": "積み木",
+      "model": "toy",
+      "size": [
+        1.2000000000000002,
+        0.8999999999999999,
+        1.2000000000000002
+      ],
+      "scale": 2.039731099576579,
+      "level": 6,
+      "area": 2,
+      "value": 1024,
+      "x": 10.216671060727652,
+      "z": 5.128916938075794,
+      "yaw": 4.610558733169014,
+      "behavior": "still",
+      "toyKind": "brick",
+      "stackY": 0,
+      "position": {
+        "x": 10.216671060727652,
+        "y": 0.45049999999999996,
+        "z": 5.128916938075794
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0.7421773211376124,
+        "z": 0,
+        "w": -0.6702035690661439
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 0.8485281374238572,
+      "top": 0.9004999999999999,
+      "screen": {
+        "x": -2800.6348403855823,
+        "y": -786.0552594920243
+      }
+    },
+    {
+      "id": "growth-7-23",
+      "kind": "toyBlock",
+      "label": "マグカップ",
+      "model": "toy",
+      "size": [
+        1.7999999999999998,
+        2.4000000000000004,
+        1.7999999999999998
+      ],
+      "scale": 4.079462199153158,
+      "level": 7,
+      "area": 3,
+      "value": 4096,
+      "x": 69.20915929826299,
+      "z": 68.68003944399246,
+      "yaw": 5.341230090895337,
+      "behavior": "still",
+      "toyKind": "mug",
+      "stackY": 0,
+      "position": {
+        "x": 69.20915929826299,
+        "y": 1.2005000000000001,
+        "z": 68.68003944399246
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0.453757673242336,
+        "z": 0,
+        "w": -0.8911251169020551
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 1.2727922061357853,
+      "top": 2.4005,
+      "screen": {
+        "x": -853.6347310745009,
+        "y": -687.3325813846934
+      }
+    },
+    {
+      "id": "growth-8-23",
+      "kind": "toyBlock",
+      "label": "靴箱",
+      "model": "toy",
+      "size": [
+        6,
+        9,
+        4.199999999999999
+      ],
+      "scale": 8.158924398306317,
+      "level": 8,
+      "area": 3,
+      "value": 16384,
+      "x": -11.725811603142617,
+      "z": -2.7998626887901317,
+      "yaw": 1.5242973951848955,
+      "behavior": "still",
+      "toyKind": "shoeRack",
+      "stackY": 0,
+      "position": {
+        "x": -11.725811603142617,
+        "y": 4.5005,
+        "z": -2.7998626887901317
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0.6904773069627542,
+        "z": 0,
+        "w": 0.723354054781932
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 3.6619666847201104,
+      "top": 9.000499999999999,
+      "screen": {
+        "x": 17936.30995177344,
+        "y": 7904.358454828364
+      }
+    },
+    {
+      "id": "growth-9-23",
+      "kind": "toyBlock",
+      "label": "自動販売機",
+      "model": "toy",
+      "size": [
+        8.399999999999999,
+        18,
+        7.199999999999999
+      ],
+      "scale": 16.317848796612633,
+      "level": 9,
+      "area": 4,
+      "value": 65536,
+      "x": 260.17819072715025,
+      "z": 116.6187622717364,
+      "yaw": 4.916960433904002,
+      "behavior": "still",
+      "toyKind": "vendingMachine",
+      "stackY": 0,
+      "position": {
+        "x": 260.17819072715025,
+        "y": 9.0005,
+        "z": 116.6187622717364
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0.6312101202905577,
+        "z": 0,
+        "w": -0.7756118771929551
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 5.531726674375732,
+      "top": 18.000500000000002,
+      "screen": {
+        "x": -2439.232190265151,
+        "y": -557.5490765181419
+      }
+    },
+    {
+      "id": "growth-10-23",
+      "kind": "toyBlock",
+      "label": "路線バス",
+      "model": "toy",
+      "size": [
+        31.200000000000003,
+        14.399999999999999,
+        14.399999999999999
+      ],
+      "scale": 32.63569759322527,
+      "level": 10,
+      "area": 4,
+      "value": 262144,
+      "x": 674.9432698974331,
+      "z": 85.6170595231219,
+      "yaw": 2.767360162355828,
+      "behavior": "still",
+      "toyKind": "bus",
+      "stackY": 0,
+      "position": {
+        "x": 674.9432698974331,
+        "y": 7.200499999999999,
+        "z": 85.6170595231219
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0.9825447738384836,
+        "z": 0,
+        "w": 0.18602625460585698
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 17.18138527593163,
+      "top": 14.400499999999997,
+      "screen": {
+        "x": -10200.770083169691,
+        "y": -547.7093217907113
+      }
+    },
+    {
+      "id": "growth-11-23",
+      "kind": "toyBlock",
+      "label": "電波塔",
+      "model": "toy",
+      "size": [
+        36,
+        192,
+        36
+      ],
+      "scale": 65.27139518645053,
+      "level": 11,
+      "area": 4,
+      "value": 1048576,
+      "x": 921.2481609208559,
+      "z": -275.41532189873146,
+      "yaw": 3.0513476101329267,
+      "behavior": "still",
+      "toyKind": "radioTower",
+      "stackY": 0,
+      "position": {
+        "x": 921.2481609208559,
+        "y": 96.0005,
+        "z": -275.41532189873146
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0.9989821517324984,
+        "z": 0,
+        "w": 0.0451072113958234
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 25.455844122715707,
+      "top": 192.0005,
+      "screen": {
+        "x": 8717.269311518794,
+        "y": -1960.8339512377781
+      }
+    },
+    {
+      "id": "hero",
+      "kind": "giantRobot",
+      "model": "hero",
+      "label": "巨大ヒーロー",
+      "size": [
+        48,
+        180,
+        42
+      ],
+      "scale": 1,
+      "level": 11,
+      "area": 4,
+      "value": 1048576,
+      "x": 470,
+      "z": -320,
+      "yaw": 2.0420352248333655,
+      "behavior": "battle",
+      "partnerId": "monster",
+      "position": {
+        "x": 470,
+        "y": 90.0005,
+        "z": -320
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0.8526401643540922,
+        "z": 0,
+        "w": 0.5224985647159489
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "fighting",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 31.89043743820395,
+      "top": 180.0005,
+      "screen": {
+        "x": 3802.875984036502,
+        "y": -1608.6893141844391
+      }
+    },
+    {
+      "id": "monster",
+      "kind": "giantRobot",
+      "model": "monster",
+      "label": "怪獣",
+      "size": [
+        56,
+        220,
+        48
+      ],
+      "scale": 1,
+      "level": 11,
+      "area": 4,
+      "value": 1048576,
+      "x": 590,
+      "z": -390,
+      "yaw": -1.0995574287564276,
+      "behavior": "battle",
+      "partnerId": "hero",
+      "position": {
+        "x": 590,
+        "y": 110.0005,
+        "z": -390
+      },
+      "rotation": {
+        "x": 0,
+        "y": -0.5224985647159488,
+        "z": 0,
+        "w": 0.8526401643540922
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "fighting",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 36.87817782917155,
+      "top": 220.0005,
+      "screen": {
+        "x": 3905.2692713729903,
+        "y": -1614.4601720198714
+      }
+    },
+    {
+      "kind": "giantRobot",
+      "model": "colossalRobot",
+      "label": "巨大ロボット",
+      "size": [
+        196,
+        700,
+        196
+      ],
+      "id": "goal",
+      "level": 12,
+      "area": 4,
+      "value": 4194304,
+      "x": 1100,
+      "z": 850,
+      "yaw": 0,
+      "behavior": "still",
+      "scale": 1,
+      "position": {
+        "x": 1100,
+        "y": 350.0005,
+        "z": 850
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 138.59292911256333,
+      "top": 700.0005,
+      "screen": {
+        "x": -677.1810621975482,
+        "y": -79.06663419437949
+      }
+    },
+    {
+      "id": "room-bed",
+      "kind": "toyBlock",
+      "model": "toy",
+      "toyKind": "bed",
+      "label": "青いベッド",
+      "size": [
+        8,
+        3.5,
+        10
+      ],
+      "scale": 1,
+      "level": 9,
+      "area": 2,
+      "value": 65536,
+      "x": 2,
+      "z": 12,
+      "yaw": 0,
+      "behavior": "still",
+      "position": {
+        "x": 2,
+        "y": -1.6642735004425049,
+        "z": 12
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "velocity": {
+        "x": 0,
+        "y": -4.087518692016602,
+        "z": 0
+      },
+      "motion": "falling",
+      "behaviorActive": false,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 6.4031242374328485,
+      "top": 0.08572649955749512,
+      "screen": {
+        "x": 306.9582851244322,
+        "y": -1273.9716973910145
+      }
+    },
+    {
+      "id": "room-desk",
+      "kind": "toyBlock",
+      "model": "toy",
+      "toyKind": "desk",
+      "label": "黄色い机",
+      "size": [
+        11,
+        7,
+        5
+      ],
+      "scale": 1,
+      "level": 9,
+      "area": 2,
+      "value": 65536,
+      "x": 20,
+      "z": 0,
+      "yaw": 0,
+      "behavior": "still",
+      "position": {
+        "x": 20,
+        "y": 3.5005,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 6.041522986797285,
+      "top": 7.000500000000001,
+      "screen": {
+        "x": -10404.107823018545,
+        "y": 1688.9111105264647
+      }
+    },
+    {
+      "id": "room-desk-chair",
+      "kind": "toyBlock",
+      "model": "toy",
+      "toyKind": "chair",
+      "label": "机の椅子",
+      "size": [
+        4,
+        6,
+        4
+      ],
+      "scale": 1,
+      "level": 7,
+      "area": 2,
+      "value": 4096,
+      "x": 22,
+      "z": 5,
+      "yaw": 0,
+      "behavior": "still",
+      "position": {
+        "x": 22,
+        "y": 3.0005,
+        "z": 5
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 2.8284271247461903,
+      "top": 6.000500000000001,
+      "screen": {
+        "x": -3941.346438933358,
+        "y": 40.67904475453492
+      }
+    },
+    {
+      "id": "room-wardrobe",
+      "kind": "toyBlock",
+      "model": "toy",
+      "toyKind": "wardrobe",
+      "label": "子供部屋の棚",
+      "size": [
+        5,
+        11,
+        4
+      ],
+      "scale": 1,
+      "level": 8,
+      "area": 2,
+      "value": 16384,
+      "x": 28,
+      "z": 3,
+      "yaw": 0,
+      "behavior": "still",
+      "position": {
+        "x": 28,
+        "y": 5.5005,
+        "z": 3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 3.2015621187164243,
+      "top": 11.000499999999999,
+      "screen": {
+        "x": -4606.466694262637,
+        "y": 668.3157710122858
+      }
+    },
+    {
+      "id": "room-kitchen-counter",
+      "kind": "toyBlock",
+      "model": "toy",
+      "toyKind": "counter",
+      "label": "キッチンのカウンター",
+      "size": [
+        25,
+        8,
+        8
+      ],
+      "scale": 1,
+      "level": 10,
+      "area": 3,
+      "value": 262144,
+      "x": 60,
+      "z": -15,
+      "yaw": 0,
+      "behavior": "still",
+      "position": {
+        "x": 60,
+        "y": 4.0005,
+        "z": -15
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 13.124404748406688,
+      "top": 8.000499999999999,
+      "screen": {
+        "x": 8220.250009929397,
+        "y": -1349.2857718344105
+      }
+    },
+    {
+      "id": "room-kitchen-fridge",
+      "kind": "toyBlock",
+      "model": "toy",
+      "toyKind": "fridge",
+      "label": "キッチンの冷蔵庫",
+      "size": [
+        8,
+        16,
+        7
+      ],
+      "scale": 1,
+      "level": 8,
+      "area": 3,
+      "value": 16384,
+      "x": 85,
+      "z": -12,
+      "yaw": 0,
+      "behavior": "still",
+      "position": {
+        "x": 85,
+        "y": 8.0005,
+        "z": -12
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 5.315072906367325,
+      "top": 16.000500000000002,
+      "screen": {
+        "x": 30114.831850023467,
+        "y": -4550.935371411306
+      }
+    },
+    {
+      "id": "room-dining-table",
+      "kind": "toyBlock",
+      "model": "toy",
+      "toyKind": "table",
+      "label": "ダイニングテーブル",
+      "size": [
+        13,
+        8,
+        10
+      ],
+      "scale": 1,
+      "level": 9,
+      "area": 3,
+      "value": 65536,
+      "x": 65,
+      "z": 12,
+      "yaw": 0,
+      "behavior": "still",
+      "position": {
+        "x": 65,
+        "y": 4.0005,
+        "z": 12
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 8.200609733428362,
+      "top": 8.000499999999999,
+      "screen": {
+        "x": -5689.502202823836,
+        "y": -211.07769323015316
+      }
+    },
+    {
+      "id": "room-living-sofa",
+      "kind": "toyBlock",
+      "model": "toy",
+      "toyKind": "sofa",
+      "label": "リビングのソファ",
+      "size": [
+        25,
+        10,
+        10
+      ],
+      "scale": 1,
+      "level": 10,
+      "area": 3,
+      "value": 262144,
+      "x": 60,
+      "z": 60,
+      "yaw": 0,
+      "behavior": "still",
+      "position": {
+        "x": 60,
+        "y": 5.0005,
+        "z": 60
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 13.462912017836262,
+      "top": 10.000499999999999,
+      "screen": {
+        "x": -744.0694488658698,
+        "y": -554.5505105250646
+      }
+    },
+    {
+      "id": "room-coffee-table",
+      "kind": "toyBlock",
+      "model": "toy",
+      "toyKind": "table",
+      "label": "リビングのテーブル",
+      "size": [
+        10,
+        5,
+        8
+      ],
+      "scale": 1,
+      "level": 9,
+      "area": 3,
+      "value": 65536,
+      "x": 64,
+      "z": 77,
+      "yaw": 0,
+      "behavior": "still",
+      "position": {
+        "x": 64,
+        "y": 2.5005,
+        "z": 77
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 6.4031242374328485,
+      "top": 5.000500000000001,
+      "screen": {
+        "x": -569.4142243624472,
+        "y": -652.8755951917974
+      }
+    },
+    {
+      "id": "room-entry-shoes",
+      "kind": "toyBlock",
+      "model": "toy",
+      "toyKind": "shoeRack",
+      "label": "玄関の靴箱",
+      "size": [
+        10,
+        12,
+        5
+      ],
+      "scale": 1,
+      "level": 8,
+      "area": 3,
+      "value": 16384,
+      "x": 86,
+      "z": 98,
+      "yaw": 0,
+      "behavior": "still",
+      "position": {
+        "x": 86,
+        "y": 6.0005,
+        "z": 98
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": false,
+      "detailed": false,
+      "physical": false,
+      "visible": true,
+      "collisionFootprint": 5.5901699437494745,
+      "top": 12.000499999999999,
+      "screen": {
+        "x": -593.9228386988273,
+        "y": -590.4748294673097
+      }
+    },
+    {
+      "id": "stock-1",
+      "kind": "cargoCrate",
+      "model": "depot",
+      "label": "予備の小物箱",
+      "size": [
+        0.14400000000000002,
+        0.052000000000000005,
+        0.12
+      ],
+      "scale": 1,
+      "level": 2,
+      "area": 0,
+      "value": 1,
+      "sourceLevel": 1,
+      "x": 0.46575493198269946,
+      "z": 0.24035500605451615,
+      "yaw": 0,
+      "behavior": "still",
+      "stackY": 0,
+      "position": {
+        "x": 0.46565917134284973,
+        "y": 0.02593996189534664,
+        "z": 0.24036528170108795
+      },
+      "rotation": {
+        "x": 0.00018001248827204108,
+        "y": 0.00001112700192607008,
+        "z": -0.00007919902418507263,
+        "w": 1
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.09373214670419037,
+      "top": 0.051972965859536736,
+      "screen": {
+        "x": 1364.6019506642642,
+        "y": 651.8255424410088
+      }
+    },
+    {
+      "id": "stock-2",
+      "kind": "cargoCrate",
+      "model": "depot",
+      "label": "予備の小物箱",
+      "size": [
+        0.25200000000000006,
+        0.09100000000000001,
+        0.21000000000000002
+      ],
+      "scale": 1,
+      "level": 3,
+      "area": 0,
+      "value": 4,
+      "sourceLevel": 2,
+      "x": -0.2557770354954595,
+      "z": 0.24035398159139065,
+      "yaw": 0,
+      "behavior": "still",
+      "stackY": 0,
+      "position": {
+        "x": -0.2558520436286926,
+        "y": 0.04546923562884331,
+        "z": 0.24034136533737183
+      },
+      "rotation": {
+        "x": -0.000009510080417385325,
+        "y": 0.000004374383024696726,
+        "z": 0.000010353825928177685,
+        "w": 1
+      },
+      "velocity": {
+        "x": 4.088879279606772e-8,
+        "y": 8.154466968335328e-8,
+        "z": 1.2642924041017523e-8
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.1640165209724411,
+      "top": 0.09097384189090717,
+      "screen": {
+        "x": 232.56434779521328,
+        "y": 636.9488316354635
+      }
+    },
+    {
+      "id": "growth-1-0",
+      "kind": "toyBlock",
+      "label": "ボタン",
+      "model": "toy",
+      "size": [
+        0.044000000000000004,
+        0.012,
+        0.044000000000000004
+      ],
+      "scale": 0.10878565864408424,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": -0.3930472392200181,
+      "z": -0.06574558591006668,
+      "yaw": 3.1513753155226434,
+      "behavior": "still",
+      "toyKind": "button",
+      "stackY": 0,
+      "position": {
+        "x": -0.39307767152786255,
+        "y": 0.005972106475383043,
+        "z": -0.06574003398418427
+      },
+      "rotation": {
+        "x": 0.000013500190107151866,
+        "y": 0.9999880790710449,
+        "z": -0.0000061784530771547,
+        "w": -0.004891178570687771
+      },
+      "velocity": {
+        "x": 0.0000017330744412902277,
+        "y": 0.000001265421246898768,
+        "z": -6.373193173203617e-7
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.031112870143828457,
+      "top": 0.011972970746991529,
+      "screen": {
+        "x": 184.96257991843981,
+        "y": 338.67543878536577
+      }
+    },
+    {
+      "id": "growth-1-1",
+      "kind": "toyBlock",
+      "label": "パズルのピース",
+      "model": "toy",
+      "size": [
+        0.06,
+        0.0096,
+        0.052000000000000005
+      ],
+      "scale": 0.10878565864408424,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": -0.37897600216653643,
+      "z": 0.3030325332961349,
+      "yaw": 3.8052295178489652,
+      "behavior": "still",
+      "toyKind": "puzzle",
+      "stackY": 0.09300000000000001,
+      "position": {
+        "x": -0.4256179630756378,
+        "y": 0.00477320421487093,
+        "z": 0.3064875304698944
+      },
+      "rotation": {
+        "x": -0.9629956483840942,
+        "y": 0.00009289979061577469,
+        "z": -0.2695172131061554,
+        "w": -0.000058851626818068326
+      },
+      "velocity": {
+        "x": -8.702882041689008e-7,
+        "y": -0.0000029426989840430906,
+        "z": -0.0000017290622054133564
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.03969991553410672,
+      "top": 0.009581870681381208,
+      "screen": {
+        "x": -53.142921363424875,
+        "y": 766.7907071590431
+      }
+    },
+    {
+      "id": "growth-1-2",
+      "kind": "toyBall",
+      "label": "ビー玉",
+      "model": "original",
+      "size": [
+        0.07071067811865475,
+        0.07071067811865475,
+        0.07071067811865475
+      ],
+      "scale": 0.07071067811865475,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": -0.3329140154086053,
+      "z": -0.241099811650347,
+      "yaw": 5.820484035917256,
+      "behavior": "still",
+      "stackY": 0,
+      "position": {
+        "x": -0.26085469126701355,
+        "y": 0.035337895154953,
+        "z": -0.1909555345773697
+      },
+      "rotation": {
+        "x": -0.5806736946105957,
+        "y": -0.2567407488822937,
+        "z": 0.7640119791030884,
+        "w": -0.1148393452167511
+      },
+      "velocity": {
+        "x": 0.00594665203243494,
+        "y": -1.2231930668349378e-7,
+        "z": -0.015243496745824814
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.035355339059327376,
+      "top": 0.08802282351271366,
+      "screen": {
+        "x": 358.3190909855232,
+        "y": 220.886040284398
+      }
+    },
+    {
+      "id": "growth-1-3",
+      "kind": "toyBlock",
+      "label": "ボタン",
+      "model": "toy",
+      "size": [
+        0.044000000000000004,
+        0.012,
+        0.044000000000000004
+      ],
+      "scale": 0.10878565864408424,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": -0.2654159482154703,
+      "z": 0.29851585172042855,
+      "yaw": 2.806066517030864,
+      "behavior": "still",
+      "toyKind": "button",
+      "stackY": 0.09300000000000001,
+      "position": {
+        "x": -0.26712656021118164,
+        "y": 0.09685614705085754,
+        "z": 0.2942175567150116
+      },
+      "rotation": {
+        "x": -0.00001260179760720348,
+        "y": 0.985787570476532,
+        "z": -0.000006821513579780003,
+        "w": 0.16799698770046234
+      },
+      "velocity": {
+        "x": 7.9707014322139e-8,
+        "y": 4.4703199364448665e-7,
+        "z": 2.4214696026092497e-8
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.031112859980697752,
+      "top": 0.10285694680068488,
+      "screen": {
+        "x": 156.94129823225765,
+        "y": 679.715616451039
+      }
+    },
+    {
+      "id": "growth-1-4",
+      "kind": "toyBlock",
+      "label": "パズルのピース",
+      "model": "toy",
+      "size": [
+        0.06,
+        0.0096,
+        0.052000000000000005
+      ],
+      "scale": 0.10878565864408424,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": 0.061166764170939136,
+      "z": 0.37006356558865716,
+      "yaw": 2.153387030607603,
+      "behavior": "still",
+      "toyKind": "puzzle",
+      "stackY": 0,
+      "position": {
+        "x": 0.061158984899520874,
+        "y": 0.004770589992403984,
+        "z": 0.37004590034484863
+      },
+      "rotation": {
+        "x": 4.52704881581667e-7,
+        "y": 0.8803942203521729,
+        "z": -6.075738951949461e-7,
+        "w": 0.4742427170276642
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.03969888048202943,
+      "top": 0.009570635596694476,
+      "screen": {
+        "x": 747.064362593493,
+        "y": 877.1979296013143
+      }
+    },
+    {
+      "id": "growth-1-5",
+      "kind": "toyBall",
+      "label": "ビー玉",
+      "model": "original",
+      "size": [
+        0.07071067811865475,
+        0.07071067811865475,
+        0.07071067811865475
+      ],
+      "scale": 0.07071067811865475,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": 0.4600626616575756,
+      "z": -0.17940807072445752,
+      "yaw": 6.279667319818435,
+      "behavior": "still",
+      "stackY": 0,
+      "position": {
+        "x": 0.4600583612918854,
+        "y": 0.035338107496500015,
+        "z": -0.17940674722194672
+      },
+      "rotation": {
+        "x": -0.000019415105271036737,
+        "y": 0.0017589927883818746,
+        "z": -0.0000638947676634416,
+        "w": -0.9999984502792358
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.035355339059327376,
+      "top": 0.07069934266133533,
+      "screen": {
+        "x": 1140.9967275159538,
+        "y": 228.74119729119244
+      }
+    },
+    {
+      "id": "growth-1-6",
+      "kind": "toyBlock",
+      "label": "ボタン",
+      "model": "toy",
+      "size": [
+        0.044000000000000004,
+        0.012,
+        0.044000000000000004
+      ],
+      "scale": 0.10878565864408424,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": 0.11650395079982001,
+      "z": -0.4010437227238282,
+      "yaw": 6.282781181911861,
+      "behavior": "still",
+      "toyKind": "button",
+      "stackY": 0,
+      "position": {
+        "x": 0.1154739111661911,
+        "y": 0.005537143908441067,
+        "z": -0.4001508057117462
+      },
+      "rotation": {
+        "x": -0.008890315890312195,
+        "y": -0.017816493287682533,
+        "z": 0.006299776025116444,
+        "w": -0.9997819662094116
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.031234046181181266,
+      "top": 0.012201906737249439,
+      "screen": {
+        "x": 745.998573702549,
+        "y": 122.87176819312427
+      }
+    },
+    {
+      "id": "growth-1-7",
+      "kind": "toyBlock",
+      "label": "パズルのピース",
+      "model": "toy",
+      "size": [
+        0.06,
+        0.0096,
+        0.052000000000000005
+      ],
+      "scale": 0.10878565864408424,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": -0.4630885852056172,
+      "z": -0.03594511909233172,
+      "yaw": 6.053029969245939,
+      "behavior": "still",
+      "toyKind": "puzzle",
+      "stackY": 0.014,
+      "position": {
+        "x": -0.4636799097061157,
+        "y": 0.004336449783295393,
+        "z": -0.035384103655815125
+      },
+      "rotation": {
+        "x": -0.004242845810949802,
+        "y": 0.12047268450260162,
+        "z": 0.0019288889598101377,
+        "w": -0.992705762386322
+      },
+      "velocity": {
+        "x": -0.00000419583375332877,
+        "y": -0.00003877773997373879,
+        "z": -0.0000028299837140366435
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.03973992384414316,
+      "top": 0.009488734212141922,
+      "screen": {
+        "x": 91.02095495421281,
+        "y": 365.3558514212931
+      }
+    },
+    {
+      "id": "growth-1-8",
+      "kind": "toyBall",
+      "label": "ビー玉",
+      "model": "original",
+      "size": [
+        0.07071067811865475,
+        0.07071067811865475,
+        0.07071067811865475
+      ],
+      "scale": 0.07071067811865475,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": 0.17570112304529173,
+      "z": 0.10785329906037078,
+      "yaw": 0.11777748647648804,
+      "behavior": "still",
+      "stackY": 0,
+      "position": {
+        "x": 0.18776655197143555,
+        "y": 0.03533768281340599,
+        "z": 0.09738682210445404
+      },
+      "rotation": {
+        "x": -0.13889957964420319,
+        "y": 0.08779174089431763,
+        "z": -0.17194509506225586,
+        "w": 0.9713054895401001
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.035355339059327376,
+      "top": 0.08838241570433394,
+      "screen": {
+        "x": 896.5592780114571,
+        "y": 466.97102776980125
+      }
+    },
+    {
+      "id": "growth-1-9",
+      "kind": "toyBlock",
+      "label": "ボタン",
+      "model": "toy",
+      "size": [
+        0.044000000000000004,
+        0.012,
+        0.044000000000000004
+      ],
+      "scale": 0.10878565864408424,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": -0.4213533831727863,
+      "z": 0.4511274050842024,
+      "yaw": 6.030649835926412,
+      "behavior": "still",
+      "toyKind": "button",
+      "stackY": 0,
+      "position": {
+        "x": -0.4213763177394867,
+        "y": 0.005972396116703749,
+        "z": 0.45111724734306335
+      },
+      "rotation": {
+        "x": -0.000016183032130356878,
+        "y": 0.1259317249059677,
+        "z": -0.000006209649654920213,
+        "w": -0.992038905620575
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.031112876187078906,
+      "top": 0.011973318284734398,
+      "screen": {
+        "x": -177.04994887816312,
+        "y": 1044.1539545002745
+      }
+    },
+    {
+      "id": "growth-1-10",
+      "kind": "toyBlock",
+      "label": "パズルのピース",
+      "model": "toy",
+      "size": [
+        0.06,
+        0.0096,
+        0.052000000000000005
+      ],
+      "scale": 0.10878565864408424,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": -0.5759499192455585,
+      "z": 0.3824182956557993,
+      "yaw": 5.201521746407727,
+      "behavior": "still",
+      "toyKind": "puzzle",
+      "stackY": 0,
+      "position": {
+        "x": -0.5759645700454712,
+        "y": 0.004769537132233381,
+        "z": 0.3824053108692169
+      },
+      "rotation": {
+        "x": 5.542364078792161e-8,
+        "y": 0.5149454474449158,
+        "z": -0.00004611067924997769,
+        "w": -0.8572230339050293
+      },
+      "velocity": {
+        "x": 6.244272299227305e-7,
+        "y": 0.0000033169349080708344,
+        "z": -5.09013943883474e-7
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.0396993053411184,
+      "top": 0.009573142695057414,
+      "screen": {
+        "x": -383.1869717655627,
+        "y": 900.617795209336
+      }
+    },
+    {
+      "id": "growth-1-11",
+      "kind": "toyBall",
+      "label": "ビー玉",
+      "model": "original",
+      "size": [
+        0.07071067811865475,
+        0.07071067811865475,
+        0.07071067811865475
+      ],
+      "scale": 0.07071067811865475,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": 0.28330533795291557,
+      "z": 0.3103768067155034,
+      "yaw": 5.610122357028958,
+      "behavior": "still",
+      "stackY": 0,
+      "position": {
+        "x": 0.283304899930954,
+        "y": 0.035338107496500015,
+        "z": 0.31037652492523193
+      },
+      "rotation": {
+        "x": 3.8832459381410445e-7,
+        "y": 0.33021512627601624,
+        "z": -0.000011407051715650596,
+        "w": -0.9439057111740112
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.035355339059327376,
+      "top": 0.07069445740180189,
+      "screen": {
+        "x": 1121.472115781694,
+        "y": 753.0544231480013
+      }
+    },
+    {
+      "id": "growth-1-12",
+      "kind": "toyBlock",
+      "label": "ボタン",
+      "model": "toy",
+      "size": [
+        0.044000000000000004,
+        0.012,
+        0.044000000000000004
+      ],
+      "scale": 0.10878565864408424,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": -0.03538859907436631,
+      "z": -0.4327593940575615,
+      "yaw": 5.133167289753096,
+      "behavior": "still",
+      "toyKind": "button",
+      "stackY": 0,
+      "position": {
+        "x": -0.035414643585681915,
+        "y": 0.005971620324999094,
+        "z": -0.432742178440094
+      },
+      "rotation": {
+        "x": -1.2684969874499075e-7,
+        "y": 0.543842613697052,
+        "z": 0.000001823265392886242,
+        "w": -0.8391873240470886
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.031112722272534532,
+      "top": 0.011971729628273363,
+      "screen": {
+        "x": 608.1240529523269,
+        "y": 106.14320842663392
+      }
+    },
+    {
+      "id": "growth-1-13",
+      "kind": "toyBlock",
+      "label": "パズルのピース",
+      "model": "toy",
+      "size": [
+        0.06,
+        0.0096,
+        0.052000000000000005
+      ],
+      "scale": 0.10878565864408424,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": 0.5819029890795125,
+      "z": 0.31711357183552435,
+      "yaw": 2.020668014236421,
+      "behavior": "still",
+      "toyKind": "puzzle",
+      "stackY": 0.054000000000000006,
+      "position": {
+        "x": 0.581570565700531,
+        "y": 0.004770573694258928,
+        "z": 0.31726351380348206
+      },
+      "rotation": {
+        "x": 0.0000024356081667065155,
+        "y": 0.8470061421394348,
+        "z": 0.0000018533498860051623,
+        "w": 0.5315830111503601
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.03969888477546431,
+      "top": 0.00957077088891473,
+      "screen": {
+        "x": 1598.4458782413863,
+        "y": 784.4143978074198
+      }
+    },
+    {
+      "id": "growth-1-14",
+      "kind": "toyBall",
+      "label": "ビー玉",
+      "model": "original",
+      "size": [
+        0.07071067811865475,
+        0.07071067811865475,
+        0.07071067811865475
+      ],
+      "scale": 0.07071067811865475,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": 0.16373192444676532,
+      "z": 0.12086715044919405,
+      "yaw": 3.0932293528470485,
+      "behavior": "still",
+      "stackY": 0.07271067811865475,
+      "position": {
+        "x": 0.0016957531915977597,
+        "y": 0.035308290272951126,
+        "z": 0.3148926794528961
+      },
+      "rotation": {
+        "x": 0.5520620942115784,
+        "y": -0.5531845092773438,
+        "z": -0.6204583048820496,
+        "w": -0.06516028195619583
+      },
+      "velocity": {
+        "x": -0.029052341356873512,
+        "y": -0.004140143748372793,
+        "z": 0.12134428322315216
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.035355339059327376,
+      "top": 0.09427424077489105,
+      "screen": {
+        "x": 642.896768875991,
+        "y": 760.6586155765523
+      }
+    },
+    {
+      "id": "growth-1-15",
+      "kind": "toyBlock",
+      "label": "ボタン",
+      "model": "toy",
+      "size": [
+        0.044000000000000004,
+        0.012,
+        0.044000000000000004
+      ],
+      "scale": 0.10878565864408424,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": 0.615168922594133,
+      "z": -0.2431725525845919,
+      "yaw": 2.22666262079577,
+      "behavior": "still",
+      "toyKind": "button",
+      "stackY": 0,
+      "position": {
+        "x": 0.6151471734046936,
+        "y": 0.005971732083708048,
+        "z": -0.24314551055431366
+      },
+      "rotation": {
+        "x": 1.1545105138566214e-7,
+        "y": 0.8971784710884094,
+        "z": -0.000003538161763572134,
+        "w": 0.441668301820755
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.031112743020580765,
+      "top": 0.01197193820012024,
+      "screen": {
+        "x": 1265.581907826072,
+        "y": 211.6747260222935
+      }
+    },
+    {
+      "id": "growth-1-16",
+      "kind": "toyBlock",
+      "label": "パズルのピース",
+      "model": "toy",
+      "size": [
+        0.06,
+        0.0096,
+        0.052000000000000005
+      ],
+      "scale": 0.10878565864408424,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": -0.27506088015543456,
+      "z": -0.11784947054981937,
+      "yaw": 5.238995111300933,
+      "behavior": "still",
+      "toyKind": "puzzle",
+      "stackY": 0,
+      "position": {
+        "x": -0.27433598041534424,
+        "y": 0.004582216963171959,
+        "z": -0.11709066480398178
+      },
+      "rotation": {
+        "x": -0.009213166311383247,
+        "y": 0.48740753531455994,
+        "z": 0.0009757737279869616,
+        "w": -0.8731254935264587
+      },
+      "velocity": {
+        "x": 0.000041292718378826976,
+        "y": -0.00019067070388700813,
+        "z": -0.00010633701458573341
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.039778793812287,
+      "top": 0.010095515175015016,
+      "screen": {
+        "x": 335.0016649269936,
+        "y": 299.5892173785727
+      }
+    },
+    {
+      "id": "growth-1-17",
+      "kind": "toyBall",
+      "label": "ビー玉",
+      "model": "original",
+      "size": [
+        0.07071067811865475,
+        0.07071067811865475,
+        0.07071067811865475
+      ],
+      "scale": 0.07071067811865475,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": 0.3904440125566908,
+      "z": -0.12702471824828537,
+      "yaw": 5.371842699153347,
+      "behavior": "still",
+      "stackY": 0.07271067811865475,
+      "position": {
+        "x": 0.3845243752002716,
+        "y": 0.03533659130334854,
+        "z": -0.14652858674526215
+      },
+      "rotation": {
+        "x": 0.20988376438617706,
+        "y": 0.42155808210372925,
+        "z": -0.19563980400562286,
+        "w": -0.8602108359336853
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.035355339059327376,
+      "top": 0.08996160109438285,
+      "screen": {
+        "x": 1069.0878776933234,
+        "y": 251.85253003847697
+      }
+    },
+    {
+      "id": "growth-1-18",
+      "kind": "toyBlock",
+      "label": "ボタン",
+      "model": "toy",
+      "size": [
+        0.044000000000000004,
+        0.012,
+        0.044000000000000004
+      ],
+      "scale": 0.10878565864408424,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": 0.14887029811877017,
+      "z": 0.3585812542388906,
+      "yaw": 6.209827572678351,
+      "behavior": "still",
+      "toyKind": "button",
+      "stackY": 0,
+      "position": {
+        "x": 0.14886446297168732,
+        "y": 0.005971688311547041,
+        "z": 0.358593225479126
+      },
+      "rotation": {
+        "x": -0.000006082840172894066,
+        "y": 0.03667423501610756,
+        "z": -0.0000023072313979355386,
+        "w": -0.9993273615837097
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.031112768354066823,
+      "top": 0.011972051133302155,
+      "screen": {
+        "x": 897.5309141723311,
+        "y": 855.4257631296284
+      }
+    },
+    {
+      "id": "growth-1-19",
+      "kind": "toyBlock",
+      "label": "パズルのピース",
+      "model": "toy",
+      "size": [
+        0.06,
+        0.0096,
+        0.052000000000000005
+      ],
+      "scale": 0.10878565864408424,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": -0.29577861064377914,
+      "z": -0.26464121409974706,
+      "yaw": 5.342848625422368,
+      "behavior": "still",
+      "toyKind": "puzzle",
+      "stackY": 0.07271067811865475,
+      "position": {
+        "x": -0.3109050393104553,
+        "y": 0.004694786854088306,
+        "z": -0.26249781250953674
+      },
+      "rotation": {
+        "x": -0.008754405193030834,
+        "y": 0.4629521667957306,
+        "z": 0.001868208171799779,
+        "w": -0.8863381743431091
+      },
+      "velocity": {
+        "x": 0.00006752481567673385,
+        "y": 0.0003165483649354428,
+        "z": -0.000053914496675133705
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.03977744427964567,
+      "top": 0.010195054282041706,
+      "screen": {
+        "x": 328.25795438472244,
+        "y": 200.7102461591205
+      }
+    },
+    {
+      "id": "growth-1-20",
+      "kind": "toyBall",
+      "label": "ビー玉",
+      "model": "original",
+      "size": [
+        0.07071067811865475,
+        0.07071067811865475,
+        0.07071067811865475
+      ],
+      "scale": 0.07071067811865475,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": -0.5631766008050181,
+      "z": -0.38784661101875834,
+      "yaw": 3.2409229771536148,
+      "behavior": "still",
+      "stackY": 0,
+      "position": {
+        "x": -0.5631815195083618,
+        "y": 0.035338107496500015,
+        "z": -0.3878495991230011
+      },
+      "rotation": {
+        "x": -0.00005032136323279701,
+        "y": 0.9987669587135315,
+        "z": -0.00004865400478593074,
+        "w": -0.049644745886325836
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.035355339059327376,
+      "top": 0.0707004420483096,
+      "screen": {
+        "x": 108.03110708494593,
+        "y": 104.72035996146798
+      }
+    },
+    {
+      "id": "growth-1-21",
+      "kind": "toyBlock",
+      "label": "ボタン",
+      "model": "toy",
+      "size": [
+        0.044000000000000004,
+        0.012,
+        0.044000000000000004
+      ],
+      "scale": 0.10878565864408424,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": -0.37924984475611634,
+      "z": 0.0016406051053451387,
+      "yaw": 0.07381207443203194,
+      "behavior": "still",
+      "toyKind": "button",
+      "stackY": 0.014,
+      "position": {
+        "x": -0.3794618844985962,
+        "y": 0.005971596576273441,
+        "z": 0.0016868013190105557
+      },
+      "rotation": {
+        "x": 3.665840964117706e-8,
+        "y": 0.036897361278533936,
+        "z": -2.2498447549423872e-8,
+        "w": 0.9993190765380859
+      },
+      "velocity": {
+        "x": -5.12050224443783e-9,
+        "y": -1.4599849329499648e-8,
+        "z": 1.6853133333327719e-9
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.031112698872106565,
+      "top": 0.011971599154414288,
+      "screen": {
+        "x": 176.3504342143852,
+        "y": 396.6707278721297
+      }
+    },
+    {
+      "id": "growth-1-22",
+      "kind": "toyBlock",
+      "label": "パズルのピース",
+      "model": "toy",
+      "size": [
+        0.06,
+        0.0096,
+        0.052000000000000005
+      ],
+      "scale": 0.10878565864408424,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": -0.3912708092910334,
+      "z": 0.06724310859812099,
+      "yaw": 0.6247641099672101,
+      "behavior": "still",
+      "toyKind": "puzzle",
+      "stackY": 0.028000000000000004,
+      "position": {
+        "x": -0.3914162814617157,
+        "y": 0.004770959727466106,
+        "z": 0.06739868968725204
+      },
+      "rotation": {
+        "x": 0.000008768598490860313,
+        "y": 0.30732443928718567,
+        "z": 0.000003506957455101656,
+        "w": 0.9516047835350037
+      },
+      "velocity": {
+        "x": 5.947786263504895e-8,
+        "y": 4.2461516613911954e-7,
+        "z": -9.062790695679723e-8
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.0396989557359269,
+      "top": 0.009571699505396016,
+      "screen": {
+        "x": 134.9925308552509,
+        "y": 460.7003490022178
+      }
+    },
+    {
+      "id": "growth-1-23",
+      "kind": "toyBall",
+      "label": "ビー玉",
+      "model": "original",
+      "size": [
+        0.07071067811865475,
+        0.07071067811865475,
+        0.07071067811865475
+      ],
+      "scale": 0.07071067811865475,
+      "level": 1,
+      "area": 0,
+      "value": 1,
+      "x": -0.41556518173543733,
+      "z": -0.19866270285565407,
+      "yaw": 5.099699303860004,
+      "behavior": "still",
+      "stackY": 0.07271067811865475,
+      "position": {
+        "x": -0.41849449276924133,
+        "y": 0.03533770516514778,
+        "z": -0.20405830442905426
+      },
+      "rotation": {
+        "x": 0.02714693360030651,
+        "y": 0.04869071766734123,
+        "z": 0.06288723647594452,
+        "w": -0.9964625239372253
+      },
+      "velocity": {
+        "x": 0.011486503295600414,
+        "y": -5.122182500372219e-8,
+        "z": -0.016368739306926727
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.035355339059327376,
+      "top": 0.0768281951765254,
+      "screen": {
+        "x": 192.35937928639976,
+        "y": 212.13214100641457
+      }
+    },
+    {
+      "id": "growth-2-0",
+      "kind": "toyBlock",
+      "label": "小さなブロック",
+      "model": "toy",
+      "size": [
+        0.11900000000000001,
+        0.05600000000000001,
+        0.07
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": 0.23757136716335836,
+      "z": 0.011924539025135017,
+      "yaw": 1.3189891810108303,
+      "behavior": "still",
+      "toyKind": "brick",
+      "stackY": 0.1454213562373095,
+      "position": {
+        "x": 0.23438245058059692,
+        "y": 0.027977481484413147,
+        "z": 0.010813836008310318
+      },
+      "rotation": {
+        "x": 0.000002682857939362293,
+        "y": 0.6126257181167603,
+        "z": -0.0000024660232611495303,
+        "w": 0.7903732657432556
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.06903091687190895,
+      "top": 0.05597777202170119,
+      "screen": {
+        "x": 934.5568833824369,
+        "y": 386.68321790764753
+      }
+    },
+    {
+      "id": "growth-2-1",
+      "kind": "toyBlock",
+      "label": "サイコロ",
+      "model": "toy",
+      "size": [
+        0.07,
+        0.07,
+        0.07
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": 0.46206094297823397,
+      "z": -0.06432042332336307,
+      "yaw": 3.2255703248540226,
+      "behavior": "still",
+      "toyKind": "dice",
+      "stackY": 0.1454213562373095,
+      "position": {
+        "x": 0.4579455554485321,
+        "y": 0.034984808415174484,
+        "z": -0.061975061893463135
+      },
+      "rotation": {
+        "x": 0.00002012446384469513,
+        "y": 0.9991178512573242,
+        "z": 0.000022980550056672655,
+        "w": -0.04199647903442383
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.0494996187317579,
+      "top": 0.06998781464288871,
+      "screen": {
+        "x": 1185.523261243775,
+        "y": 317.1920328751567
+      }
+    },
+    {
+      "id": "growth-2-2",
+      "kind": "toyBlock",
+      "label": "ミニカー",
+      "model": "toy",
+      "size": [
+        0.14700000000000002,
+        0.06300000000000001,
+        0.07700000000000001
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": -0.5374028388030524,
+      "z": 0.30490006088419097,
+      "yaw": 3.106922447470831,
+      "behavior": "still",
+      "toyKind": "miniCar",
+      "stackY": 0.0116,
+      "position": {
+        "x": -0.5379753708839417,
+        "y": 0.03145982697606087,
+        "z": 0.30443084239959717
+      },
+      "rotation": {
+        "x": -0.000016956933905021288,
+        "y": 0.999846875667572,
+        "z": -0.00007833034032955766,
+        "w": 0.01750047504901886
+      },
+      "velocity": {
+        "x": -0.0000010539206414250657,
+        "y": -3.4184193253850026e-8,
+        "z": -1.2495092960307375e-7
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.08297619814520561,
+      "top": 0.06296852803182379,
+      "screen": {
+        "x": -263.6473600935642,
+        "y": 745.8493868451802
+      }
+    },
+    {
+      "id": "growth-2-3",
+      "kind": "toyBlock",
+      "label": "小さなブロック",
+      "model": "toy",
+      "size": [
+        0.11900000000000001,
+        0.05600000000000001,
+        0.07
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": -0.34895810190601734,
+      "z": 0.3504647886170142,
+      "yaw": 6.235879282202335,
+      "behavior": "still",
+      "toyKind": "brick",
+      "stackY": 0.10700000000000001,
+      "position": {
+        "x": -0.35042449831962585,
+        "y": 0.03498178720474243,
+        "z": 0.38102278113365173
+      },
+      "rotation": {
+        "x": -0.7069408893585205,
+        "y": 0.015041633509099483,
+        "z": -0.01502213440835476,
+        "w": -0.7069531679153442
+      },
+      "velocity": {
+        "x": 1.6749149267525354e-7,
+        "y": -3.628234708230593e-7,
+        "z": 9.883025313683902e-7
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.06576015831495012,
+      "top": 0.06998390895306819,
+      "screen": {
+        "x": -7.613325177999997,
+        "y": 881.6624501253677
+      }
+    },
+    {
+      "id": "growth-2-4",
+      "kind": "toyBlock",
+      "label": "サイコロ",
+      "model": "toy",
+      "size": [
+        0.07,
+        0.07,
+        0.07
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": 0.6336763659784391,
+      "z": 0.00435712329013932,
+      "yaw": 4.876629814451818,
+      "behavior": "still",
+      "toyKind": "dice",
+      "stackY": 0,
+      "position": {
+        "x": 0.6336259841918945,
+        "y": 0.03498277813196182,
+        "z": 0.004401567857712507
+      },
+      "rotation": {
+        "x": -2.280998643300336e-7,
+        "y": 0.6467212438583374,
+        "z": 7.633042287125136e-7,
+        "w": -0.7627265453338623
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.04949753284408868,
+      "top": 0.06998285158828389,
+      "screen": {
+        "x": 1437.2569727628204,
+        "y": 374.7770790402571
+      }
+    },
+    {
+      "id": "growth-2-5",
+      "kind": "toyBlock",
+      "label": "ミニカー",
+      "model": "toy",
+      "size": [
+        0.14700000000000002,
+        0.06300000000000001,
+        0.07700000000000001
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": -0.5514586711738205,
+      "z": 0.25405119479181715,
+      "yaw": 4.079272270886754,
+      "behavior": "still",
+      "toyKind": "miniCar",
+      "stackY": 0.07660000000000002,
+      "position": {
+        "x": -0.550786018371582,
+        "y": 0.07654201984405518,
+        "z": 0.23226402699947357
+      },
+      "rotation": {
+        "x": 0.16880324482917786,
+        "y": 0.8290815949440002,
+        "z": -0.28750601410865784,
+        "w": -0.4488534927368164
+      },
+      "velocity": {
+        "x": -0.000023225260520121083,
+        "y": -0.000007183097750385059,
+        "z": -0.000025952511350624263
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.08871511154097773,
+      "top": 0.1531023120211111,
+      "screen": {
+        "x": -262.9171413567411,
+        "y": 600.0876541316801
+      }
+    },
+    {
+      "id": "growth-2-6",
+      "kind": "toyBlock",
+      "label": "小さなブロック",
+      "model": "toy",
+      "size": [
+        0.11900000000000001,
+        0.05600000000000001,
+        0.07
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": -0.4038956994194375,
+      "z": -0.2023204615637126,
+      "yaw": 2.7984496380201365,
+      "behavior": "still",
+      "toyKind": "brick",
+      "stackY": 0.1454213562373095,
+      "position": {
+        "x": -0.3488846719264984,
+        "y": 0.03908636420965195,
+        "z": -0.1725318431854248
+      },
+      "rotation": {
+        "x": 0.560870349407196,
+        "y": 0.4611635208129883,
+        "z": -0.4183869957923889,
+        "w": 0.5456234216690063
+      },
+      "velocity": {
+        "x": 0.0015464710304513574,
+        "y": -0.0035957423970103264,
+        "z": -0.0017791588325053453
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.06785838159733856,
+      "top": 0.07820945373467242,
+      "screen": {
+        "x": 256.9614654906491,
+        "y": 230.22111924846226
+      }
+    },
+    {
+      "id": "growth-2-7",
+      "kind": "toyBlock",
+      "label": "サイコロ",
+      "model": "toy",
+      "size": [
+        0.07,
+        0.07,
+        0.07
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": -0.5833719651214253,
+      "z": -0.14061302512291257,
+      "yaw": 5.021522265163975,
+      "behavior": "still",
+      "toyKind": "dice",
+      "stackY": 0,
+      "position": {
+        "x": -0.583428680896759,
+        "y": 0.034982774406671524,
+        "z": -0.14055199921131134
+      },
+      "rotation": {
+        "x": -1.5283794141396356e-7,
+        "y": 0.5898293852806091,
+        "z": 6.562445378222037e-7,
+        "w": -0.8075279593467712
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.04949752217512867,
+      "top": 0.06998283626812633,
+      "screen": {
+        "x": -13.786058187803718,
+        "y": 256.4839923313583
+      }
+    },
+    {
+      "id": "growth-2-8",
+      "kind": "toyBlock",
+      "label": "ミニカー",
+      "model": "toy",
+      "size": [
+        0.14700000000000002,
+        0.06300000000000001,
+        0.07700000000000001
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": -0.337051678146036,
+      "z": 0.18611435206382165,
+      "yaw": 4.691678220921284,
+      "behavior": "still",
+      "toyKind": "miniCar",
+      "stackY": 0.16500000000000004,
+      "position": {
+        "x": -0.33861449360847473,
+        "y": 0.122376948595047,
+        "z": 0.1854148656129837
+      },
+      "rotation": {
+        "x": 0.000025449986424064264,
+        "y": 0.7143027782440186,
+        "z": -0.0000832097211969085,
+        "w": -0.6998368501663208
+      },
+      "velocity": {
+        "x": -1.3486788930094917e-7,
+        "y": 6.843512778687e-8,
+        "z": -1.7790053163935227e-7
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.08297837414480573,
+      "top": 0.15389138592458768,
+      "screen": {
+        "x": 82.20458397334852,
+        "y": 493.2010510167498
+      }
+    },
+    {
+      "id": "growth-2-9",
+      "kind": "toyBlock",
+      "label": "小さなブロック",
+      "model": "toy",
+      "size": [
+        0.11900000000000001,
+        0.05600000000000001,
+        0.07
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": 0.4726216694645511,
+      "z": 0.2935564849680506,
+      "yaw": 0.44805884520936895,
+      "behavior": "still",
+      "toyKind": "brick",
+      "stackY": 0.0656,
+      "position": {
+        "x": 0.4728027284145355,
+        "y": 0.07962916046380997,
+        "z": 0.29376915097236633
+      },
+      "rotation": {
+        "x": 0.0004703878075815737,
+        "y": 0.21972660720348358,
+        "z": -0.000578980369027704,
+        "w": 0.9755612015724182
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.06906964125538048,
+      "top": 0.10772507237887531,
+      "screen": {
+        "x": 1474.9579290339302,
+        "y": 692.8562594190497
+      }
+    },
+    {
+      "id": "growth-2-10",
+      "kind": "toyBlock",
+      "label": "サイコロ",
+      "model": "toy",
+      "size": [
+        0.07,
+        0.07,
+        0.07
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": -0.1898878361385511,
+      "z": -0.14781645580296632,
+      "yaw": 0.48838200670518433,
+      "behavior": "still",
+      "toyKind": "dice",
+      "stackY": 0.0116,
+      "position": {
+        "x": -0.18941417336463928,
+        "y": 0.0349828377366066,
+        "z": -0.14759871363639832
+      },
+      "rotation": {
+        "x": 0.000011039117453037761,
+        "y": 0.23991988599300385,
+        "z": 0.0000020634256543416996,
+        "w": 0.9707927703857422
+      },
+      "velocity": {
+        "x": -0.0000013676341268364922,
+        "y": -0.0000014238892163120909,
+        "z": 9.560096714267274e-7
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.04949821174614621,
+      "top": 0.06998387885885349,
+      "screen": {
+        "x": 428.86668360246983,
+        "y": 251.38950186328216
+      }
+    },
+    {
+      "id": "growth-2-11",
+      "kind": "toyBlock",
+      "label": "ミニカー",
+      "model": "toy",
+      "size": [
+        0.14700000000000002,
+        0.06300000000000001,
+        0.07700000000000001
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": -0.10467225179090156,
+      "z": 0.24823335707822014,
+      "yaw": 4.216898634251493,
+      "behavior": "still",
+      "toyKind": "miniCar",
+      "stackY": 0.09300000000000001,
+      "position": {
+        "x": -0.059483226388692856,
+        "y": 0.03847843036055565,
+        "z": 0.2847866714000702
+      },
+      "rotation": {
+        "x": 0.42852261662483215,
+        "y": 0.5624694228172302,
+        "z": 0.562447190284729,
+        "w": -0.42854371666908264
+      },
+      "velocity": {
+        "x": 0.0002691246336326003,
+        "y": 0.000002007803459491697,
+        "z": 0.00007400771573884413
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.07996644097780368,
+      "top": 0.07698013214241173,
+      "screen": {
+        "x": 541.4011196677603,
+        "y": 709.2693681806095
+      }
+    },
+    {
+      "id": "growth-2-12",
+      "kind": "toyBlock",
+      "label": "小さなブロック",
+      "model": "toy",
+      "size": [
+        0.11900000000000001,
+        0.05600000000000001,
+        0.07
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": -0.45434428452164577,
+      "z": -0.02491668398893454,
+      "yaw": 4.789311468812235,
+      "behavior": "still",
+      "toyKind": "brick",
+      "stackY": 0.0396,
+      "position": {
+        "x": -0.45547816157341003,
+        "y": 0.034777846187353134,
+        "z": -0.021541018038988113
+      },
+      "rotation": {
+        "x": -0.007485873531550169,
+        "y": 0.6812530755996704,
+        "z": 0.020209891721606255,
+        "w": -0.7317306995391846
+      },
+      "velocity": {
+        "x": 0.00013687719183508307,
+        "y": -0.0001463102817069739,
+        "z": 0.00011853077012347057
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.07016338149755348,
+      "top": 0.06569883267339323,
+      "screen": {
+        "x": 79.33165020185946,
+        "y": 351.6941108729669
+      }
+    },
+    {
+      "id": "growth-2-13",
+      "kind": "toyBlock",
+      "label": "サイコロ",
+      "model": "toy",
+      "size": [
+        0.07,
+        0.07,
+        0.07
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": 0.23059348079319475,
+      "z": -0.28991893645601113,
+      "yaw": 1.0836578150862701,
+      "behavior": "still",
+      "toyKind": "dice",
+      "stackY": 0,
+      "position": {
+        "x": 0.23056311905384064,
+        "y": 0.034982893615961075,
+        "z": -0.2899710536003113
+      },
+      "rotation": {
+        "x": 0.000002861872872017557,
+        "y": 0.5157039761543274,
+        "z": 0.000008426875865552574,
+        "w": 0.8567668199539185
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.04949799817375105,
+      "top": 0.06998363487979382,
+      "screen": {
+        "x": 872.1839190821994,
+        "y": 158.89208195062872
+      }
+    },
+    {
+      "id": "growth-2-14",
+      "kind": "toyBlock",
+      "label": "ミニカー",
+      "model": "toy",
+      "size": [
+        0.14700000000000002,
+        0.06300000000000001,
+        0.07700000000000001
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": 0.49179585176514096,
+      "z": 0.26584983106738647,
+      "yaw": 4.9993399739596525,
+      "behavior": "still",
+      "toyKind": "miniCar",
+      "stackY": 0.12360000000000002,
+      "position": {
+        "x": 0.4928041398525238,
+        "y": 0.13891997933387756,
+        "z": 0.26551586389541626
+      },
+      "rotation": {
+        "x": 0.0011448034783825278,
+        "y": 0.6019143462181091,
+        "z": 0.0002429007727187127,
+        "w": -0.798559844493866
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.0830313883730408,
+      "top": 0.1705743239323493,
+      "screen": {
+        "x": 1551.490617245629,
+        "y": 594.6561069029764
+      }
+    },
+    {
+      "id": "growth-2-15",
+      "kind": "toyBlock",
+      "label": "小さなブロック",
+      "model": "toy",
+      "size": [
+        0.11900000000000001,
+        0.05600000000000001,
+        0.07
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": -0.020957940721655022,
+      "z": -0.29964237352937995,
+      "yaw": 2.1799672675640203,
+      "behavior": "still",
+      "toyKind": "brick",
+      "stackY": 0,
+      "position": {
+        "x": -0.020961297675967216,
+        "y": 0.027977244928479195,
+        "z": -0.2997034788131714
+      },
+      "rotation": {
+        "x": 4.843464012083132e-7,
+        "y": 0.8866202235221863,
+        "z": -5.401356020229287e-7,
+        "w": 0.46249818801879883
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.06903081828176005,
+      "top": 0.055977315506493104,
+      "screen": {
+        "x": 619.1398247139277,
+        "y": 159.1610007888453
+      }
+    },
+    {
+      "id": "growth-2-16",
+      "kind": "toyBlock",
+      "label": "サイコロ",
+      "model": "toy",
+      "size": [
+        0.07,
+        0.07,
+        0.07
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": 0.2522820740521168,
+      "z": 0.1660273131535474,
+      "yaw": 1.7188371878738398,
+      "behavior": "still",
+      "toyKind": "dice",
+      "stackY": 0.1454213562373095,
+      "position": {
+        "x": 0.2516002357006073,
+        "y": 0.034983132034540176,
+        "z": 0.16743387281894684
+      },
+      "rotation": {
+        "x": -3.4468163789824757e-7,
+        "y": 0.7574043273925781,
+        "z": 7.514501021432807e-9,
+        "w": 0.6529461145401001
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.04949749558339429,
+      "top": 0.06998316611801148,
+      "screen": {
+        "x": 1007.3243110010203,
+        "y": 548.1151652986983
+      }
+    },
+    {
+      "id": "growth-2-17",
+      "kind": "toyBlock",
+      "label": "ミニカー",
+      "model": "toy",
+      "size": [
+        0.14700000000000002,
+        0.06300000000000001,
+        0.07700000000000001
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": 0.17566430551892442,
+      "z": -0.39301940693515675,
+      "yaw": 0.6049974183537342,
+      "behavior": "still",
+      "toyKind": "miniCar",
+      "stackY": 0.07200000000000001,
+      "position": {
+        "x": 0.17639310657978058,
+        "y": 0.03656435385346413,
+        "z": -0.3895021975040436
+      },
+      "rotation": {
+        "x": 0.06661529093980789,
+        "y": 0.3054446876049042,
+        "z": -0.0215973611921072,
+        "w": 0.9496312737464905
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.08492183224036866,
+      "top": 0.07315821958690252,
+      "screen": {
+        "x": 806.5871584893066,
+        "y": 102.83802170141657
+      }
+    },
+    {
+      "id": "growth-2-18",
+      "kind": "toyBlock",
+      "label": "小さなブロック",
+      "model": "toy",
+      "size": [
+        0.11900000000000001,
+        0.05600000000000001,
+        0.07
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": -0.48667216291298593,
+      "z": 0.3822581822822407,
+      "yaw": 4.332852735245228,
+      "behavior": "still",
+      "toyKind": "brick",
+      "stackY": 0.16500000000000004,
+      "position": {
+        "x": -0.5077292323112488,
+        "y": 0.05950305610895157,
+        "z": 0.39739739894866943
+      },
+      "rotation": {
+        "x": -0.26350095868110657,
+        "y": 0.731904149055481,
+        "z": 0.21309179067611694,
+        "w": -0.5911645293235779
+      },
+      "velocity": {
+        "x": 0.000004096264092368074,
+        "y": -0.000008947202331910376,
+        "z": 0.0000048458405217388645
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.07267496141075906,
+      "top": 0.11902603238794925,
+      "screen": {
+        "x": -352.4052524884603,
+        "y": 901.3158704306211
+      }
+    },
+    {
+      "id": "growth-2-19",
+      "kind": "toyBlock",
+      "label": "サイコロ",
+      "model": "toy",
+      "size": [
+        0.07,
+        0.07,
+        0.07
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": 0.6239534196519542,
+      "z": 0.14219563307106803,
+      "yaw": 6.0673427398760005,
+      "behavior": "still",
+      "toyKind": "dice",
+      "stackY": 0,
+      "position": {
+        "x": 0.6239038109779358,
+        "y": 0.03498276323080063,
+        "z": 0.14210861921310425
+      },
+      "rotation": {
+        "x": -2.2447483161158743e-7,
+        "y": 0.1076996698975563,
+        "z": -2.2025497870004074e-8,
+        "w": -0.9941834807395935
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.049497485973652215,
+      "top": 0.06998277917818219,
+      "screen": {
+        "x": 1528.738010250292,
+        "y": 517.6319085469063
+      }
+    },
+    {
+      "id": "growth-2-20",
+      "kind": "toyBlock",
+      "label": "ミニカー",
+      "model": "toy",
+      "size": [
+        0.14700000000000002,
+        0.06300000000000001,
+        0.07700000000000001
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": -0.20276609159461473,
+      "z": 0.372491296009519,
+      "yaw": 6.032274561522755,
+      "behavior": "still",
+      "toyKind": "miniCar",
+      "stackY": 0.16500000000000004,
+      "position": {
+        "x": -0.20985305309295654,
+        "y": 0.038480356335639954,
+        "z": 0.41587379574775696
+      },
+      "rotation": {
+        "x": -0.7068383097648621,
+        "y": 0.01946730725467205,
+        "z": -0.019467230886220932,
+        "w": -0.7068392038345337
+      },
+      "velocity": {
+        "x": -5.225789578844342e-8,
+        "y": -1.4564191985755315e-7,
+        "z": 6.126558815822136e-8
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.07996563940159775,
+      "top": 0.07698040165699446,
+      "screen": {
+        "x": 232.5148029657737,
+        "y": 951.981164983184
+      }
+    },
+    {
+      "id": "growth-2-21",
+      "kind": "toyBlock",
+      "label": "小さなブロック",
+      "model": "toy",
+      "size": [
+        0.11900000000000001,
+        0.05600000000000001,
+        0.07
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": 0.5991596787257658,
+      "z": -0.4046559858794463,
+      "yaw": 0.05986061969794245,
+      "behavior": "still",
+      "toyKind": "brick",
+      "stackY": 0,
+      "position": {
+        "x": 0.5991068482398987,
+        "y": 0.027977893128991127,
+        "z": -0.4046246111392975
+      },
+      "rotation": {
+        "x": -0.000001790955820979434,
+        "y": 0.029925761744379997,
+        "z": -0.0000017836638335211319,
+        "w": 0.9995521306991577
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.0690309281877817,
+      "top": 0.05597823324179149,
+      "screen": {
+        "x": 1197.0432799971197,
+        "y": 102.28279185614863
+      }
+    },
+    {
+      "id": "growth-2-22",
+      "kind": "toyBlock",
+      "label": "サイコロ",
+      "model": "toy",
+      "size": [
+        0.07,
+        0.07,
+        0.07
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": 0.5168596332723855,
+      "z": -0.3275825312999832,
+      "yaw": 6.136098218949111,
+      "behavior": "still",
+      "toyKind": "dice",
+      "stackY": 0.05800000000000001,
+      "position": {
+        "x": 0.5161594748497009,
+        "y": 0.03498309850692749,
+        "z": -0.3280765116214752
+      },
+      "rotation": {
+        "x": -3.4254185266036075e-7,
+        "y": 0.07347073405981064,
+        "z": -0.000004242224804329453,
+        "w": -0.9972973465919495
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.049497715156200627,
+      "top": 0.06998343862783289,
+      "screen": {
+        "x": 1146.6927082998589,
+        "y": 137.08935646209545
+      }
+    },
+    {
+      "id": "growth-2-23",
+      "kind": "toyBlock",
+      "label": "ミニカー",
+      "model": "toy",
+      "size": [
+        0.14700000000000002,
+        0.06300000000000001,
+        0.07700000000000001
+      ],
+      "scale": 0.1903749026271474,
+      "level": 2,
+      "area": 0,
+      "value": 4,
+      "x": -0.24752473901793443,
+      "z": -0.09772297919886674,
+      "yaw": 2.4602799382719036,
+      "behavior": "still",
+      "toyKind": "miniCar",
+      "stackY": 0.08360000000000001,
+      "position": {
+        "x": -0.28466615080833435,
+        "y": 0.04223644360899925,
+        "z": -0.05293091759085655
+      },
+      "rotation": {
+        "x": -0.24351653456687927,
+        "y": 0.6241557002067566,
+        "z": 0.7108989357948303,
+        "w": 0.21389740705490112
+      },
+      "velocity": {
+        "x": 0.0013730828650295734,
+        "y": -0.0012661584187299013,
+        "z": -0.0017530147451907396
+      },
+      "motion": "working",
+      "behaviorActive": true,
+      "detailed": true,
+      "physical": true,
+      "visible": true,
+      "collisionFootprint": 0.08194198055270313,
+      "top": 0.08449754838036908,
+      "screen": {
+        "x": 296.163422562696,
+        "y": 318.3374368471817
+      }
+    }
+  ],
+  "aperture": [
+    {
+      "x": 542.9191064353334,
+      "y": 399.9999999999998
+    },
+    {
+      "x": 737.0808935646666,
+      "y": 399.9999999999998
+    }
+  ]
+}

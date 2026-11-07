@@ -1,0 +1,13 @@
+{
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "deskOcclusion": [{ "id": "landmark", "opacity": 0.25 }],
+  "occlusionRendering": { "samples": 4, "mode": "coverage" },
+  "occlusionRestored": true,
+  "dragReleaseStops": true,
+  "closedGateBlocks": true,
+  "restartResets": true,
+  "touch390": { "moved": true, "releaseStops": true, "audioUnlocked": true }
+}

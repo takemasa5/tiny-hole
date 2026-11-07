@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-31",
+  "completed": true,
+  "unitTests": 198,
+  "testFiles": 17,
+  "buildVersion": "3cffdce5887c299031e0",
+  "companyReport": "reports/factory-retirement-walker-2026-10-31/2026-10-31T06-54-59.725Z/results.json",
+  "walkersReport": "reports/factory-retirement-walker-2026-10-31/walkers-1793429699602/results.json",
+  "retirementLevel": 6,
+  "observedStop": {
+    "observedLevel": 6,
+    "before": { "food": 9, "depot": 9, "stationeryA": 22, "stationeryB": 40 },
+    "after": { "food": 9, "depot": 9, "stationeryA": 22, "stationeryB": 40 }
+  },
+  "collectedLevels": { "factory-stationeryA": 6, "factory-stationeryB": 6 },
+  "companyCleared": true,
+  "iPhoneSafari": "今回の変更は未実施",
+  "WebKit": "未実施",
+  "published": false
+}

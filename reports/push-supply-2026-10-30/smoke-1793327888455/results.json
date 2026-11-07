@@ -1,0 +1,18 @@
+{
+  "browser": "156.0.8078.4",
+  "seed": 4051009086,
+  "viewport": { "width": 390, "height": 844 },
+  "frames": {
+    "meanMs": 17.085714285714285,
+    "maxMs": 33.40000000000009,
+    "physicsMaxMs": 3.4000000059604645,
+    "activeMax": 452,
+    "objectsMax": 452
+  },
+  "spawnedBeforeRestart": 1,
+  "restartReset": { "lost": 0, "supplied": 0, "score": 0, "objects": 452 },
+  "keyboardMovement": true,
+  "errors": [],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施"
+}

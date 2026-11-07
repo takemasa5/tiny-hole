@@ -1,0 +1,9 @@
+{
+  "completed": false,
+  "reason": "会社の半径0.20への調整時のHMRで再読込となり、確認スクリプトが終了した。調整後の初期状態で再実行する。",
+  "lastObserved": {
+    "stage": "office",
+    "level": 5,
+    "score": 432
+  }
+}

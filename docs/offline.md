@@ -1,10 +1,12 @@
 # 端末に保存して遊ぶ
 
-更新日: 2026-10-26
+更新日: 2026-10-31
 
 公開URL: [HOLE](https://takemasa5.github.io/tiny-hole/)
 
-オーナー確認により、iPhoneの「ホーム画面に追加」とPCのアプリとしてのインストールで保存するPWA方式を採用した。4ステージ、物理演算、モデル、効果音・英語の声を保存し、準備完了後はサーバー停止中や機内モードでも起動・プレイできる。プレイ途中の進行を保存する機能は今回の範囲に含めない。
+港・おもちゃ・会社・地獄の追加はローカル実装。今回の作業では公開版へ反映していない。
+
+オーナー確認により、iPhoneの「ホーム画面に追加」とPCのアプリとしてのインストールで保存するPWA方式を採用した。ローカルの最新実装では全8ステージ、物理演算、モデル、効果音・英語の声を保存し、準備完了後はサーバー停止中や機内モードでも起動・プレイできる。プレイ途中の進行を保存する機能は今回の範囲に含めない。
 
 ## iPhoneで保存する
 
@@ -55,5 +57,7 @@ node checks/offline.mjs
 自動テストでは保存成功・失敗、通信不要のHTML・JavaScript・音声の取得、更新の待機、キャッシュの削除範囲を確認する。ブラウザ確認では本番ビルドをサブディレクトリに配信し、通常のHTTPキャッシュを削除したうえでサーバーを停止し、通信を遮断して別のページから起動する。iPhone実機でのホーム画面からの起動・機内モード確認は別途必要。
 
 2026-10-26のChromium 156.0.8078.4確認では、10リソースを保存し、サーバー停止後の別ページからの起動、4ステージの切り替えとキー操作、390×844でのタッチ入力・案内表示、音声の取得・デコードと効果音の再生に成功した。新版の待機から手動更新、音声ダウンロード失敗の検知と再試行も確認し、実行時エラー0件。結果は [offline-check.json](../reports/offline-check.json)、案内の見た目は [offline-mobile.png](../reports/offline-mobile.png)。WebKit・iPhone実機は未確認。
+
+2026-10-31の追加ステージ実装後も、Chromium 156.0.8078.4で本番ビルド10リソースの保存、HTTPキャッシュ削除・サーバー停止・通信遮断後の全8ステージの切替とキー操作、音声のデコード・再生、保存版の更新、保存失敗後の再試行に成功した。実行時エラーは0件。[今回の結果](../reports/additional-stages-2026-10-31/offline-1793402841227/results.json)を参照。WebKit・iPhone実機は未確認。
 
 参考: [MDN: PWAのインストール条件](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)、[MDN: Service Workerによるオフライン動作](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)。

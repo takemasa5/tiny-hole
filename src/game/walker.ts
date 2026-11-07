@@ -1,10 +1,16 @@
 import type RAPIER from "@dimforge/rapier3d-compat";
 import { MAP_HALF_SIZE, OBJECT_TYPES, type ObjectKind } from "./stage";
+import { objectCollisionFootprint } from "./object-shape";
 
 export const WALK_SPEED = 1.1;
 export const RUN_SPEED = 3.4;
 export const NOTICE_DISTANCE = 3.2;
 export const SAFE_DISTANCE = 5.2;
+const UPRIGHT_ROTATION = { x: 0, y: 0, z: 0, w: 1 };
+export interface WalkerSpeeds {
+  walk: number;
+  run: number;
+}
 
 export interface Walker {
   heading: number;
@@ -29,6 +35,8 @@ export function walkerVelocity(
   footprint: number,
   delta: number,
   random: () => number,
+  mapHalfSize = MAP_HALF_SIZE,
+  speeds?: WalkerSpeeds,
 ) {
   if (walker.mode === "falling") return { x: 0, z: 0 };
   const dx = position.x - hole.x;
@@ -36,7 +44,7 @@ export function walkerVelocity(
   const distance = Math.hypot(dx, dz);
   const alertRange =
     hole.radius + (walker.mode === "fleeing" ? SAFE_DISTANCE : NOTICE_DISTANCE);
-  if (distance < alertRange) {
+  if (footprint < hole.radius && distance < alertRange) {
     walker.mode = "fleeing";
     if (distance > 0.001) walker.heading = Math.atan2(dx, dz);
   } else {
@@ -48,10 +56,13 @@ export function walkerVelocity(
       walker.turnIn = 3 + random() * 3;
     }
   }
-  const speed = walker.mode === "fleeing" ? RUN_SPEED : WALK_SPEED;
+  const speed =
+    walker.mode === "fleeing"
+      ? (speeds?.run ?? RUN_SPEED)
+      : (speeds?.walk ?? WALK_SPEED);
   let x = Math.sin(walker.heading) * speed;
   let z = Math.cos(walker.heading) * speed;
-  const boundary = MAP_HALF_SIZE - footprint - 0.15;
+  const boundary = mapHalfSize - footprint - 0.15;
   if (Math.abs(position.x + x * delta) > boundary) {
     x = -Math.sign(position.x) * Math.abs(x);
     walker.turnIn = Math.min(walker.turnIn, 0.5);
@@ -72,10 +83,12 @@ export function driveWalker(
   hole: { x: number; z: number; radius: number },
   delta: number,
   random: () => number,
+  mapHalfSize = MAP_HALF_SIZE,
+  speeds?: WalkerSpeeds,
 ) {
   const position = body.translation();
-  const [width, height, depth] = OBJECT_TYPES[kind].size;
-  const footprint = Math.hypot(width, depth) / 2;
+  const height = OBJECT_TYPES[kind].size[1];
+  const footprint = objectCollisionFootprint(kind, UPRIGHT_ROTATION);
   // Stop steering once support is lost so vertical motion and tipping remain physical.
   if (
     walker.mode !== "falling" &&
@@ -94,6 +107,8 @@ export function driveWalker(
     footprint,
     delta,
     random,
+    mapHalfSize,
+    speeds,
   );
   body.setLinvel({ ...velocity, y: body.linvel().y }, true);
   body.setAngvel({ x: 0, y: 0, z: 0 }, true);

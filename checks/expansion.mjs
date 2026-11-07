@@ -1,3 +1,4 @@
+import { gameControl } from "./ui.mjs";
 import { chromium } from "@playwright/test";
 import { mkdir, writeFile } from "node:fs/promises";
 
@@ -96,10 +97,10 @@ try {
     throw new Error("人が歩いていません。");
   if (walked.audio.state !== "running")
     throw new Error("キー操作で音が有効になりません。");
-  await page.getByRole("button", { name: "効果音を消す" }).click();
+  await (await gameControl(page, "効果音を消す")).click();
   if ((await snapshot()).audio.enabled)
     throw new Error("効果音をOFFにできません。");
-  await page.getByRole("button", { name: "効果音をつける" }).click();
+  await (await gameControl(page, "効果音をつける")).click();
   await page.waitForFunction(
     () => window.__hole.snapshot().audio.state === "running",
   );

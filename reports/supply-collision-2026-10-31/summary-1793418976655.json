@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-31",
+  "completed": true,
+  "unitTests": 185,
+  "testFiles": 16,
+  "buildVersion": "268da1e3f62259bbf710",
+  "colliderReports": [
+    "reports/supply-collision-2026-10-31/2026-10-31T01-54-35.362Z/results.json",
+    "reports/supply-collision-2026-10-31/2026-10-31T01-57-03.675Z/results.json"
+  ],
+  "stationeryReport": "reports/supply-collision-2026-10-31/stationery-1793418647078/results.json",
+  "officeReport": "reports/supply-collision-2026-10-31/2026-10-31T03-50-50.083Z/results.json",
+  "office": {
+    "seed": 1576694159,
+    "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+    "collectedFactories": 4,
+    "collectedEnemies": 1,
+    "stationerySupply": {
+      "stationeryA": ["eraser", "stapler", "pencil", "documents"],
+      "stationeryB": ["eraser", "stapler", "pencil", "documents"]
+    },
+    "cleared": true,
+    "supplied": 58
+  },
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "published": false
+}

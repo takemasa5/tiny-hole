@@ -5,6 +5,16 @@ import { disposeScene, objectVisual } from "../src/game/visuals";
 import { animateWalker } from "../src/game/visuals";
 import { createWalker, walkerVelocity } from "../src/game/walker";
 
+it("兵隊の帽子は顔と重ならず、全高を維持する", () => {
+  const visual = objectVisual("toySoldier");
+  visual.updateMatrixWorld(true);
+  const head = new THREE.Box3().setFromObject(visual.children[1]);
+  const hat = new THREE.Box3().setFromObject(visual.children[2]);
+  expect(hat.min.y).toBeCloseTo(head.max.y);
+  expect(hat.max.y).toBeCloseTo(OBJECT_TYPES.toySoldier.size[1] / 2);
+  disposeScene(visual);
+});
+
 it.each(["house", "kiosk"] as const)(
   "%s の本体と屋根は重ならず、建物の全高を維持する",
   (kind) => {
@@ -120,4 +130,21 @@ it("エジプトの人は薄い板で、壁画のポーズを歩行アニメー�
   visual.updateMatrixWorld(true);
   expect(new THREE.Box3().setFromObject(visual).equals(before)).toBe(true);
   disposeScene(visual);
+});
+
+it("ゲートのSprite看板の材質とテクスチャをステージ終了時に解放する", () => {
+  const texture = new THREE.Texture();
+  const material = new THREE.SpriteMaterial({ map: texture });
+  const sign = new THREE.Sprite(material);
+  let materialDisposed = false;
+  let textureDisposed = false;
+  material.addEventListener("dispose", () => {
+    materialDisposed = true;
+  });
+  texture.addEventListener("dispose", () => {
+    textureDisposed = true;
+  });
+  disposeScene(sign);
+  expect(materialDisposed).toBe(true);
+  expect(textureDisposed).toBe(true);
 });

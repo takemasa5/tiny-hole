@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-07",
+  "automated": {
+    "command": "npm test -- --maxWorkers=2",
+    "files": 26,
+    "passed": 336,
+    "failed": 0,
+    "focusedRetest": {
+      "command": "npx vitest run tests/growth-shape.test.ts --maxWorkers=2",
+      "passed": 19
+    }
+  },
+  "build": {
+    "command": "npm run build",
+    "passed": true,
+    "bundle": "index-Dbu2cWqK.js",
+    "offlineCache": "ed2ae97d6ba6bc77cc2a",
+    "resources": 10
+  },
+  "lint": {
+    "command": "npm run lint",
+    "passed": true
+  },
+  "format": {
+    "command": "npx prettier --check (changed files)",
+    "passed": true
+  },
+  "browser": {
+    "engine": "Chromium 156.0.8078.4",
+    "gameFlow": "toys-flow/results.json",
+    "interactions": "interactions/results.json",
+    "mobileViewport": "mobile/results.json",
+    "collisionComparison": "models/results.json"
+  },
+  "iPhone": "今回の物理修正後は未実施",
+  "WebKit": "未実施",
+  "files": {
+    "src/game/growth-physics.ts": "cb8a457a3a334430e15646c8d9dac43427b3cc89e86f8a4352e4523e04df6e48",
+    "src/game/runtime.ts": "70e2978d7f65cced45aa5d4fdd91e63b14c295c5f09873ae869c6aa49261c9aa",
+    "src/game/growth-shape.ts": "6b006f1634cd430592ca63944c41dd905adb75f626061f6eb9c64119e746f442",
+    "tests/growth-physics.test.ts": "4760e30b2e4bf944cc99e8bb34d93c4bbe37536b0df03b0c66ab5b897347bbe8",
+    "tests/growth-shape.test.ts": "9878cafd1d94fb213adaffe33f3c1f5535d2669f99f149c25bd7f637bd82542d",
+    "docs/supply-collision-review.md": "902c6cb3fd783f0937a848243d6c39f543418ce74ab52bdafc4d49ee7c145796",
+    "docs/nested-toys-implementation.md": "6c0459c313bc938d532b1a8bb806a50518fb6ad796691634c6c02e5e13bde489",
+    "docs/shape-collision-fix.md": "f63d2ceceef69e134dd93dc14645c2052cb1242d8f313df8affbd82ac33f49b9",
+    "docs/README.md": "5145396dab1e4dbb10a8088e903d42c9b07efc68abf545482b2f77aeb1084de3",
+    "docs/toy-stage-trial.md": "f0a4de9005c09dde71395c0f0d49bf078ced467520b6a92162041aa8df3e0c06",
+    "checks/shape-collision.mjs": "a8faf8a090d0d27cd1b7d11359b9ab2f19c77ac651df42a6fdc4833d4096434f",
+    "checks/nested-toys.mjs": "e2b00d0bbaccd26902c6a53c5d38306a0b1ee23e3d53f21df5b258d8415a839b"
+  },
+  "projectDelivery": {
+    "filesHashMatched": true,
+    "buildPassed": true,
+    "bundle": "index-Dbu2cWqK.js",
+    "offlineCache": "ed2ae97d6ba6bc77cc2a",
+    "gitDiffCheckPassed": true,
+    "existingServer": "http://192.168.40.191:5177/",
+    "serverHttp": 200,
+    "browserSmoke": "delivery-mobile/results.json",
+    "iPhone": "未実施"
+  }
+}

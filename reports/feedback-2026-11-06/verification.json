@@ -1,0 +1,1035 @@
+{
+  "date": "2026-11-06",
+  "tests": { "passed": 245, "files": 21 },
+  "build": "passed",
+  "lint": "passed",
+  "sourceHashes": {
+    "src/game/runtime.ts": "ab4d7d17e1ed8eac4ffb7932fe9dbb4a7161dde002453d490138826826c10c95",
+    "src/game/growth-physics.ts": "01081e008865705498d15ffdbafc507aa1bcafbcfcaf384b11cef5ab93b19b6e",
+    "src/game/occlusion.ts": "8a3ddccf91114525dd325612db475acd7fc3bcba091375b2f5027409aaba7f4d",
+    "src/game/boundary-guide.ts": "58f1259d5d82f222c0ff7e475c4acae4c5e0ffea0006dfc09b3cc5d0f4fb48bb",
+    "src/game/growth-visuals.ts": "72214b56c911f1bdd928487798d575ff91349c04cc71f7450597a6d4f8050f52",
+    "src/style.css": "ac9bc83d9c1120b439dc36f8502bdd8a21014f97c4d2e66c98573d210e9c55f8"
+  },
+  "stages": [
+    {
+      "stage": "harbor",
+      "seed": 3314509552,
+      "observations": [
+        {
+          "level": 1,
+          "area": 0,
+          "score": 0,
+          "bodies": 33,
+          "frame": { "median": 16.699999999999818, "p95": 50 },
+          "drawCalls": 28,
+          "retired": 0
+        },
+        {
+          "level": 2,
+          "area": 0,
+          "score": 12,
+          "bodies": 62,
+          "frame": { "median": 16.699999999999818, "p95": 16.700000000000728 },
+          "drawCalls": 89,
+          "retired": 0
+        },
+        {
+          "level": 3,
+          "area": 0,
+          "score": 62,
+          "bodies": 63,
+          "frame": { "median": 16.69999999999891, "p95": 16.799999999999272 },
+          "drawCalls": 67,
+          "retired": 0
+        },
+        {
+          "level": 4,
+          "area": 1,
+          "score": 254,
+          "bodies": 66,
+          "frame": { "median": 16.700000000000728, "p95": 16.700000000000728 },
+          "drawCalls": 159,
+          "retired": 0
+        },
+        {
+          "level": 5,
+          "area": 1,
+          "score": 1022,
+          "bodies": 88,
+          "frame": { "median": 16.69999999999709, "p95": 16.700000000004366 },
+          "drawCalls": 289,
+          "retired": 0
+        },
+        {
+          "level": 6,
+          "area": 1,
+          "score": 4286,
+          "bodies": 92,
+          "frame": { "median": 16.69999999999709, "p95": 16.799999999995634 },
+          "drawCalls": 153,
+          "retired": 0
+        },
+        {
+          "level": 7,
+          "area": 2,
+          "score": 16830,
+          "bodies": 96,
+          "frame": { "median": 16.69999999999709, "p95": 16.799999999995634 },
+          "drawCalls": 479,
+          "retired": 0
+        },
+        {
+          "level": 8,
+          "area": 2,
+          "score": 68030,
+          "bodies": 106,
+          "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 },
+          "drawCalls": 474,
+          "retired": 0
+        },
+        {
+          "level": 9,
+          "area": 2,
+          "score": 276926,
+          "bodies": 104,
+          "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 },
+          "drawCalls": 220,
+          "retired": 1
+        },
+        {
+          "level": 10,
+          "area": 3,
+          "score": 1079758,
+          "bodies": 125,
+          "frame": { "median": 16.69999999999709, "p95": 16.79999999998836 },
+          "drawCalls": 694,
+          "retired": 1
+        },
+        {
+          "level": 11,
+          "area": 3,
+          "score": 4291022,
+          "bodies": 129,
+          "frame": { "median": 16.69999999999709, "p95": 16.79999999998836 },
+          "drawCalls": 695,
+          "retired": 7
+        },
+        {
+          "level": 12,
+          "area": 3,
+          "score": 17136078,
+          "bodies": 99,
+          "frame": { "median": 16.69999999999709, "p95": 16.79999999998836 },
+          "drawCalls": 381,
+          "retired": 22
+        }
+      ],
+      "final": {
+        "level": 12,
+        "score": 32864720,
+        "collected": 170,
+        "retired": 22,
+        "bodies": 75,
+        "frame": { "median": 16.69999999999709, "p95": 16.80000000000291 }
+      },
+      "milliseconds": 124103,
+      "source": "flow-a/results.json"
+    },
+    {
+      "stage": "office",
+      "seed": 1481834658,
+      "observations": [
+        {
+          "level": 1,
+          "area": 0,
+          "score": 0,
+          "bodies": 33,
+          "frame": { "median": 16.69999999999709, "p95": 16.79999999998836 },
+          "drawCalls": 52,
+          "retired": 0
+        },
+        {
+          "level": 2,
+          "area": 0,
+          "score": 12,
+          "bodies": 55,
+          "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+          "drawCalls": 118,
+          "retired": 0
+        },
+        {
+          "level": 3,
+          "area": 0,
+          "score": 61,
+          "bodies": 66,
+          "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+          "drawCalls": 124,
+          "retired": 0
+        },
+        {
+          "level": 4,
+          "area": 1,
+          "score": 253,
+          "bodies": 60,
+          "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 },
+          "drawCalls": 194,
+          "retired": 0
+        },
+        {
+          "level": 5,
+          "area": 1,
+          "score": 1060,
+          "bodies": 81,
+          "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 },
+          "drawCalls": 300,
+          "retired": 0
+        },
+        {
+          "level": 6,
+          "area": 1,
+          "score": 5348,
+          "bodies": 83,
+          "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 },
+          "drawCalls": 116,
+          "retired": 0
+        },
+        {
+          "level": 7,
+          "area": 2,
+          "score": 16868,
+          "bodies": 84,
+          "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 },
+          "drawCalls": 405,
+          "retired": 0
+        },
+        {
+          "level": 8,
+          "area": 2,
+          "score": 69092,
+          "bodies": 100,
+          "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+          "drawCalls": 343,
+          "retired": 1
+        },
+        {
+          "level": 9,
+          "area": 2,
+          "score": 269796,
+          "bodies": 103,
+          "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+          "drawCalls": 460,
+          "retired": 1
+        },
+        {
+          "level": 10,
+          "area": 3,
+          "score": 1072612,
+          "bodies": 116,
+          "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 },
+          "drawCalls": 469,
+          "retired": 7
+        },
+        {
+          "level": 11,
+          "area": 3,
+          "score": 4283876,
+          "bodies": 114,
+          "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+          "drawCalls": 327,
+          "retired": 19
+        },
+        {
+          "level": 12,
+          "area": 3,
+          "score": 17391076,
+          "bodies": 89,
+          "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 },
+          "drawCalls": 194,
+          "retired": 31
+        }
+      ],
+      "final": {
+        "level": 12,
+        "score": 31022564,
+        "collected": 167,
+        "retired": 31,
+        "bodies": 62,
+        "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 }
+      },
+      "milliseconds": 116332,
+      "source": "flow-a/results.json"
+    },
+    {
+      "stage": "toys",
+      "seed": 3471263450,
+      "observations": [
+        {
+          "level": 1,
+          "area": 0,
+          "score": 0,
+          "bodies": 33,
+          "frame": { "median": 16.699999999982538, "p95": 16.800000000017462 },
+          "drawCalls": 29,
+          "retired": 0
+        },
+        {
+          "level": 2,
+          "area": 0,
+          "score": 12,
+          "bodies": 62,
+          "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 },
+          "drawCalls": 66,
+          "retired": 0
+        },
+        {
+          "level": 3,
+          "area": 0,
+          "score": 63,
+          "bodies": 60,
+          "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 },
+          "drawCalls": 61,
+          "retired": 0
+        },
+        {
+          "level": 4,
+          "area": 1,
+          "score": 261,
+          "bodies": 62,
+          "frame": { "median": 16.70000000001164, "p95": 16.70000000001164 },
+          "drawCalls": 192,
+          "retired": 0
+        },
+        {
+          "level": 5,
+          "area": 1,
+          "score": 1077,
+          "bodies": 64,
+          "frame": { "median": 16.699999999953434, "p95": 16.79999999998836 },
+          "drawCalls": 232,
+          "retired": 0
+        },
+        {
+          "level": 6,
+          "area": 1,
+          "score": 5173,
+          "bodies": 80,
+          "frame": { "median": 16.70000000001164, "p95": 16.79999999998836 },
+          "drawCalls": 233,
+          "retired": 0
+        },
+        {
+          "level": 7,
+          "area": 2,
+          "score": 16445,
+          "bodies": 62,
+          "frame": { "median": 16.699999999953434, "p95": 16.70000000001164 },
+          "drawCalls": 325,
+          "retired": 0
+        },
+        {
+          "level": 8,
+          "area": 2,
+          "score": 68669,
+          "bodies": 74,
+          "frame": { "median": 16.699999999953434, "p95": 16.79999999998836 },
+          "drawCalls": 355,
+          "retired": 0
+        },
+        {
+          "level": 9,
+          "area": 2,
+          "score": 265277,
+          "bodies": 70,
+          "frame": { "median": 16.699999999953434, "p95": 16.70000000001164 },
+          "drawCalls": 128,
+          "retired": 0
+        },
+        {
+          "level": 10,
+          "area": 3,
+          "score": 1092669,
+          "bodies": 95,
+          "frame": { "median": 16.70000000001164, "p95": 16.79999999998836 },
+          "drawCalls": 414,
+          "retired": 0
+        },
+        {
+          "level": 11,
+          "area": 3,
+          "score": 4303933,
+          "bodies": 106,
+          "frame": { "median": 16.70000000001164, "p95": 16.70000000001164 },
+          "drawCalls": 426,
+          "retired": 0
+        },
+        { "encounter": "hero-collected-partner-recovers" },
+        {
+          "level": 12,
+          "area": 3,
+          "score": 17411133,
+          "bodies": 75,
+          "frame": { "median": 16.70000000001164, "p95": 16.70000000001164 },
+          "drawCalls": 263,
+          "retired": 18
+        }
+      ],
+      "final": {
+        "level": 12,
+        "score": 27110461,
+        "collected": 193,
+        "retired": 18,
+        "bodies": 68,
+        "frame": { "median": 16.699999999953434, "p95": 16.79999999998836 }
+      },
+      "milliseconds": 120945,
+      "source": "flow-a/results.json"
+    },
+    {
+      "stage": "plaza",
+      "seed": 3306293700,
+      "observations": [
+        {
+          "level": 1,
+          "area": 0,
+          "score": 0,
+          "bodies": 33,
+          "frame": { "median": 16.699999999953434, "p95": 16.79999999998836 },
+          "drawCalls": 53,
+          "retired": 0
+        },
+        {
+          "level": 2,
+          "area": 0,
+          "score": 12,
+          "bodies": 58,
+          "frame": { "median": 16.70000000001164, "p95": 16.70000000001164 },
+          "drawCalls": 124,
+          "retired": 0
+        },
+        {
+          "level": 3,
+          "area": 0,
+          "score": 62,
+          "bodies": 61,
+          "frame": { "median": 16.699999999953434, "p95": 16.70000000001164 },
+          "drawCalls": 60,
+          "retired": 0
+        },
+        {
+          "level": 4,
+          "area": 1,
+          "score": 258,
+          "bodies": 60,
+          "frame": { "median": 16.70000000001164, "p95": 16.70000000001164 },
+          "drawCalls": 180,
+          "retired": 0
+        },
+        {
+          "level": 5,
+          "area": 1,
+          "score": 1074,
+          "bodies": 76,
+          "frame": { "median": 16.70000000001164, "p95": 16.79999999998836 },
+          "drawCalls": 207,
+          "retired": 0
+        },
+        {
+          "level": 6,
+          "area": 1,
+          "score": 4210,
+          "bodies": 74,
+          "frame": { "median": 16.70000000001164, "p95": 16.70000000001164 },
+          "drawCalls": 91,
+          "retired": 0
+        },
+        {
+          "level": 7,
+          "area": 2,
+          "score": 17217,
+          "bodies": 57,
+          "frame": { "median": 16.70000000001164, "p95": 16.79999999998836 },
+          "drawCalls": 246,
+          "retired": 0
+        },
+        {
+          "level": 8,
+          "area": 2,
+          "score": 69441,
+          "bodies": 75,
+          "frame": { "median": 16.70000000001164, "p95": 16.79999999998836 },
+          "drawCalls": 364,
+          "retired": 0
+        },
+        {
+          "level": 9,
+          "area": 2,
+          "score": 274241,
+          "bodies": 70,
+          "frame": { "median": 16.699999999953434, "p95": 16.70000000001164 },
+          "drawCalls": 214,
+          "retired": 0
+        },
+        {
+          "level": 10,
+          "area": 3,
+          "score": 1052481,
+          "bodies": 85,
+          "frame": { "median": 16.70000000001164, "p95": 16.70000000001164 },
+          "drawCalls": 330,
+          "retired": 0
+        },
+        {
+          "level": 11,
+          "area": 3,
+          "score": 4198209,
+          "bodies": 96,
+          "frame": { "median": 16.70000000001164, "p95": 16.79999999998836 },
+          "drawCalls": 208,
+          "retired": 0
+        },
+        {
+          "level": 12,
+          "area": 3,
+          "score": 17567553,
+          "bodies": 67,
+          "frame": { "median": 16.699999999953434, "p95": 16.79999999998836 },
+          "drawCalls": 175,
+          "retired": 15
+        }
+      ],
+      "final": {
+        "level": 12,
+        "score": 31199041,
+        "collected": 205,
+        "retired": 15,
+        "bodies": 54,
+        "frame": { "median": 16.699999999953434, "p95": 16.79999999998836 }
+      },
+      "milliseconds": 122687,
+      "source": "flow-a/results.json"
+    },
+    {
+      "stage": "mountain",
+      "seed": 1863635791,
+      "observations": [
+        {
+          "level": 1,
+          "area": 0,
+          "score": 0,
+          "bodies": 33,
+          "frame": { "median": 16.699999999999818, "p95": 50.09999999999991 },
+          "drawCalls": 47,
+          "retired": 0
+        },
+        {
+          "level": 2,
+          "area": 0,
+          "score": 12,
+          "bodies": 62,
+          "frame": { "median": 16.69999999999891, "p95": 16.700000000000728 },
+          "drawCalls": 119,
+          "retired": 0
+        },
+        {
+          "level": 3,
+          "area": 0,
+          "score": 63,
+          "bodies": 52,
+          "frame": { "median": 16.69999999999891, "p95": 16.700000000000728 },
+          "drawCalls": 103,
+          "retired": 0
+        },
+        {
+          "level": 4,
+          "area": 1,
+          "score": 259,
+          "bodies": 65,
+          "frame": { "median": 16.69999999999709, "p95": 16.700000000000728 },
+          "drawCalls": 333,
+          "retired": 0
+        },
+        {
+          "level": 5,
+          "area": 1,
+          "score": 1027,
+          "bodies": 72,
+          "frame": { "median": 16.69999999999709, "p95": 16.799999999995634 },
+          "drawCalls": 557,
+          "retired": 0
+        },
+        {
+          "level": 6,
+          "area": 1,
+          "score": 4099,
+          "bodies": 86,
+          "frame": { "median": 16.69999999999709, "p95": 16.799999999995634 },
+          "drawCalls": 256,
+          "retired": 0
+        },
+        {
+          "level": 7,
+          "area": 2,
+          "score": 17212,
+          "bodies": 65,
+          "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 },
+          "drawCalls": 448,
+          "retired": 0
+        },
+        {
+          "level": 8,
+          "area": 2,
+          "score": 67388,
+          "bodies": 78,
+          "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 },
+          "drawCalls": 461,
+          "retired": 0
+        },
+        {
+          "level": 9,
+          "area": 2,
+          "score": 276284,
+          "bodies": 78,
+          "frame": { "median": 16.69999999999709, "p95": 16.79999999998836 },
+          "drawCalls": 482,
+          "retired": 0
+        },
+        {
+          "level": 10,
+          "area": 3,
+          "score": 1091388,
+          "bodies": 92,
+          "frame": { "median": 16.69999999999709, "p95": 16.79999999998836 },
+          "drawCalls": 411,
+          "retired": 0
+        },
+        {
+          "level": 11,
+          "area": 3,
+          "score": 4433724,
+          "bodies": 99,
+          "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 },
+          "drawCalls": 313,
+          "retired": 0
+        },
+        {
+          "level": 12,
+          "area": 3,
+          "score": 17278780,
+          "bodies": 68,
+          "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 },
+          "drawCalls": 239,
+          "retired": 19
+        }
+      ],
+      "final": {
+        "level": 12,
+        "score": 28813116,
+        "collected": 195,
+        "retired": 19,
+        "bodies": 60,
+        "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 }
+      },
+      "milliseconds": 126629,
+      "source": "flow-b/results.json"
+    },
+    {
+      "stage": "america",
+      "seed": 1748748301,
+      "observations": [
+        {
+          "level": 1,
+          "area": 0,
+          "score": 0,
+          "bodies": 33,
+          "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 },
+          "drawCalls": 28,
+          "retired": 0
+        },
+        {
+          "level": 2,
+          "area": 0,
+          "score": 12,
+          "bodies": 63,
+          "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+          "drawCalls": 101,
+          "retired": 0
+        },
+        {
+          "level": 3,
+          "area": 0,
+          "score": 63,
+          "bodies": 64,
+          "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+          "drawCalls": 53,
+          "retired": 0
+        },
+        {
+          "level": 4,
+          "area": 1,
+          "score": 263,
+          "bodies": 57,
+          "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+          "drawCalls": 187,
+          "retired": 0
+        },
+        {
+          "level": 5,
+          "area": 1,
+          "score": 1063,
+          "bodies": 80,
+          "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+          "drawCalls": 446,
+          "retired": 0
+        },
+        {
+          "level": 6,
+          "area": 1,
+          "score": 4135,
+          "bodies": 83,
+          "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+          "drawCalls": 372,
+          "retired": 0
+        },
+        {
+          "level": 7,
+          "area": 2,
+          "score": 16904,
+          "bodies": 65,
+          "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+          "drawCalls": 529,
+          "retired": 0
+        },
+        {
+          "level": 8,
+          "area": 2,
+          "score": 68104,
+          "bodies": 74,
+          "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+          "drawCalls": 854,
+          "retired": 0
+        },
+        {
+          "level": 9,
+          "area": 2,
+          "score": 268808,
+          "bodies": 83,
+          "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+          "drawCalls": 797,
+          "retired": 0
+        },
+        {
+          "level": 10,
+          "area": 3,
+          "score": 1071624,
+          "bodies": 99,
+          "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 },
+          "drawCalls": 813,
+          "retired": 1
+        },
+        {
+          "level": 11,
+          "area": 3,
+          "score": 4348424,
+          "bodies": 109,
+          "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+          "drawCalls": 715,
+          "retired": 1
+        },
+        {
+          "level": 12,
+          "area": 3,
+          "score": 17455624,
+          "bodies": 78,
+          "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 },
+          "drawCalls": 388,
+          "retired": 19
+        }
+      ],
+      "final": {
+        "level": 12,
+        "score": 24795656,
+        "collected": 182,
+        "retired": 19,
+        "bodies": 74,
+        "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 }
+      },
+      "milliseconds": 122844,
+      "source": "flow-b/results.json"
+    },
+    {
+      "stage": "egypt",
+      "seed": 458323064,
+      "observations": [
+        {
+          "level": 1,
+          "area": 0,
+          "score": 0,
+          "bodies": 33,
+          "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+          "drawCalls": 28,
+          "retired": 0
+        },
+        {
+          "level": 2,
+          "area": 0,
+          "score": 12,
+          "bodies": 54,
+          "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 },
+          "drawCalls": 74,
+          "retired": 0
+        },
+        {
+          "level": 3,
+          "area": 0,
+          "score": 62,
+          "bodies": 58,
+          "frame": { "median": 16.70000000001164, "p95": 16.79999999998836 },
+          "drawCalls": 57,
+          "retired": 0
+        },
+        {
+          "level": 4,
+          "area": 1,
+          "score": 261,
+          "bodies": 62,
+          "frame": { "median": 16.699999999953434, "p95": 16.70000000001164 },
+          "drawCalls": 125,
+          "retired": 0
+        },
+        {
+          "level": 5,
+          "area": 1,
+          "score": 1077,
+          "bodies": 82,
+          "frame": { "median": 16.699999999953434, "p95": 16.79999999998836 },
+          "drawCalls": 193,
+          "retired": 0
+        },
+        {
+          "level": 6,
+          "area": 1,
+          "score": 4405,
+          "bodies": 86,
+          "frame": { "median": 16.699999999953434, "p95": 16.70000000001164 },
+          "drawCalls": 122,
+          "retired": 0
+        },
+        {
+          "level": 7,
+          "area": 2,
+          "score": 16909,
+          "bodies": 59,
+          "frame": { "median": 16.70000000001164, "p95": 16.79999999998836 },
+          "drawCalls": 394,
+          "retired": 0
+        },
+        {
+          "level": 8,
+          "area": 2,
+          "score": 66061,
+          "bodies": 71,
+          "frame": { "median": 16.70000000001164, "p95": 16.79999999998836 },
+          "drawCalls": 466,
+          "retired": 0
+        },
+        {
+          "level": 9,
+          "area": 2,
+          "score": 266765,
+          "bodies": 80,
+          "frame": { "median": 16.70000000001164, "p95": 16.70000000001164 },
+          "drawCalls": 228,
+          "retired": 0
+        },
+        {
+          "level": 10,
+          "area": 3,
+          "score": 1053197,
+          "bodies": 93,
+          "frame": { "median": 16.70000000001164, "p95": 16.79999999998836 },
+          "drawCalls": 609,
+          "retired": 0
+        },
+        {
+          "level": 11,
+          "area": 3,
+          "score": 4329997,
+          "bodies": 101,
+          "frame": { "median": 16.70000000001164, "p95": 16.70000000001164 },
+          "drawCalls": 609,
+          "retired": 0
+        },
+        {
+          "level": 12,
+          "area": 3,
+          "score": 17437197,
+          "bodies": 71,
+          "frame": { "median": 16.70000000001164, "p95": 16.70000000001164 },
+          "drawCalls": 366,
+          "retired": 14
+        }
+      ],
+      "final": {
+        "level": 12,
+        "score": 32117261,
+        "collected": 203,
+        "retired": 14,
+        "bodies": 60,
+        "frame": { "median": 16.70000000001164, "p95": 16.79999999998836 }
+      },
+      "milliseconds": 126166,
+      "source": "flow-b/results.json"
+    },
+    {
+      "stage": "hell",
+      "seed": 36163093,
+      "observations": [
+        {
+          "level": 1,
+          "area": 0,
+          "score": 0,
+          "bodies": 33,
+          "frame": { "median": 16.70000000001164, "p95": 16.800000000046566 },
+          "drawCalls": 71,
+          "retired": 0
+        },
+        {
+          "level": 2,
+          "area": 0,
+          "score": 12,
+          "bodies": 62,
+          "frame": { "median": 16.70000000001164, "p95": 16.70000000001164 },
+          "drawCalls": 152,
+          "retired": 0
+        },
+        {
+          "level": 3,
+          "area": 0,
+          "score": 63,
+          "bodies": 55,
+          "frame": { "median": 16.70000000001164, "p95": 16.70000000001164 },
+          "drawCalls": 74,
+          "retired": 0
+        },
+        {
+          "level": 4,
+          "area": 1,
+          "score": 263,
+          "bodies": 62,
+          "frame": { "median": 16.699999999953434, "p95": 16.79999999998836 },
+          "drawCalls": 284,
+          "retired": 0
+        },
+        {
+          "level": 5,
+          "area": 1,
+          "score": 1079,
+          "bodies": 77,
+          "frame": { "median": 16.70000000001164, "p95": 16.70000000001164 },
+          "drawCalls": 446,
+          "retired": 0
+        },
+        {
+          "level": 6,
+          "area": 1,
+          "score": 4215,
+          "bodies": 83,
+          "frame": { "median": 16.699999999953434, "p95": 16.70000000001164 },
+          "drawCalls": 401,
+          "retired": 0
+        },
+        {
+          "level": 7,
+          "area": 2,
+          "score": 17015,
+          "bodies": 84,
+          "frame": { "median": 16.699999999953434, "p95": 16.79999999998836 },
+          "drawCalls": 571,
+          "retired": 0
+        },
+        {
+          "level": 8,
+          "area": 2,
+          "score": 67191,
+          "bodies": 98,
+          "frame": { "median": 16.70000000001164, "p95": 16.70000000001164 },
+          "drawCalls": 649,
+          "retired": 0
+        },
+        {
+          "level": 9,
+          "area": 2,
+          "score": 267895,
+          "bodies": 90,
+          "frame": { "median": 16.699999999953434, "p95": 16.79999999998836 },
+          "drawCalls": 244,
+          "retired": 1
+        },
+        {
+          "level": 10,
+          "area": 3,
+          "score": 1087095,
+          "bodies": 110,
+          "frame": { "median": 16.699999999953434, "p95": 16.79999999998836 },
+          "drawCalls": 689,
+          "retired": 2
+        },
+        {
+          "level": 11,
+          "area": 3,
+          "score": 4429431,
+          "bodies": 116,
+          "frame": { "median": 16.699999999953434, "p95": 16.79999999998836 },
+          "drawCalls": 706,
+          "retired": 7
+        },
+        {
+          "level": 12,
+          "area": 3,
+          "score": 17012345,
+          "bodies": 87,
+          "frame": { "median": 16.699999999953434, "p95": 16.79999999998836 },
+          "drawCalls": 546,
+          "retired": 23
+        }
+      ],
+      "final": {
+        "level": 12,
+        "score": 30647929,
+        "collected": 175,
+        "retired": 23,
+        "bodies": 70,
+        "frame": { "median": 16.70000000001164, "p95": 16.79999999998836 }
+      },
+      "milliseconds": 131023,
+      "source": "flow-b/results.json"
+    }
+  ],
+  "boundary": {
+    "checks": 8,
+    "desktopWidth": 1280,
+    "mobileWidth": 390,
+    "fontPixels": 16,
+    "source": "results.json"
+  },
+  "physics": {
+    "holeRadius": 0.14,
+    "objectFootprint": 0.5857266853284393,
+    "tiltDegrees": 26.04794197722808,
+    "source": "results.json"
+  },
+  "occlusion": "6 unit cases plus interactions/results.json",
+  "offline": "offline-1793936262222/results.json",
+  "preserved": [
+    "12段階の成長寸法",
+    "レベル4/7/10のエリア開放",
+    "現在の種類・配置",
+    "最終目標のレベル12条件"
+  ],
+  "limitations": [
+    "iPhone実機・WebKitは未実施",
+    "種類の追加は検討案のみ",
+    "高低差や門番による進行条件は未導入"
+  ]
+}

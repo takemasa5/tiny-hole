@@ -1,0 +1,133 @@
+{
+  "browser": "156.0.8078.4",
+  "channel": "chromium",
+  "errors": [],
+  "stages": [
+    {
+      "stage": "harbor",
+      "seed": 3609183576,
+      "observations": [
+        {
+          "level": 1,
+          "area": 0,
+          "score": 0,
+          "bodies": 33,
+          "frame": { "median": 16.700000000000045, "p95": 33.299999999999955 },
+          "drawCalls": 29,
+          "retired": 0
+        },
+        {
+          "level": 2,
+          "area": 0,
+          "score": 12,
+          "bodies": 62,
+          "frame": { "median": 16.699999999999818, "p95": 16.799999999999272 },
+          "drawCalls": 83,
+          "retired": 0
+        },
+        {
+          "level": 3,
+          "area": 0,
+          "score": 62,
+          "bodies": 65,
+          "frame": { "median": 16.69999999999891, "p95": 16.700000000000728 },
+          "drawCalls": 41,
+          "retired": 0
+        },
+        {
+          "level": 4,
+          "area": 1,
+          "score": 262,
+          "bodies": 66,
+          "frame": { "median": 16.69999999999709, "p95": 16.700000000000728 },
+          "drawCalls": 180,
+          "retired": 0
+        },
+        {
+          "level": 5,
+          "area": 1,
+          "score": 1046,
+          "bodies": 79,
+          "frame": { "median": 16.69999999999709, "p95": 16.700000000004366 },
+          "drawCalls": 285,
+          "retired": 0
+        },
+        {
+          "level": 6,
+          "area": 1,
+          "score": 4246,
+          "bodies": 84,
+          "frame": { "median": 16.69999999999709, "p95": 16.799999999995634 },
+          "drawCalls": 255,
+          "retired": 0
+        },
+        {
+          "level": 7,
+          "area": 2,
+          "score": 16982,
+          "bodies": 89,
+          "frame": { "median": 16.69999999999709, "p95": 16.700000000004366 },
+          "drawCalls": 603,
+          "retired": 0
+        },
+        {
+          "level": 8,
+          "area": 2,
+          "score": 68182,
+          "bodies": 104,
+          "frame": { "median": 16.69999999999709, "p95": 16.80000000000291 },
+          "drawCalls": 535,
+          "retired": 0
+        },
+        {
+          "level": 9,
+          "area": 2,
+          "score": 277078,
+          "bodies": 96,
+          "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 },
+          "drawCalls": 204,
+          "retired": 0
+        },
+        {
+          "level": 10,
+          "area": 3,
+          "score": 1088086,
+          "bodies": 117,
+          "frame": { "median": 16.69999999999709, "p95": 16.79999999998836 },
+          "drawCalls": 746,
+          "retired": 2
+        },
+        {
+          "level": 11,
+          "area": 3,
+          "score": 4299350,
+          "bodies": 117,
+          "frame": { "median": 16.69999999999709, "p95": 16.79999999998836 },
+          "drawCalls": 431,
+          "retired": 11
+        },
+        {
+          "level": 12,
+          "area": 3,
+          "score": 17668694,
+          "bodies": 87,
+          "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 },
+          "drawCalls": 401,
+          "retired": 27
+        }
+      ],
+      "final": {
+        "level": 12,
+        "score": 26057302,
+        "collected": 163,
+        "retired": 27,
+        "bodies": 75,
+        "frame": { "median": 16.69999999999709, "p95": 16.79999999998836 }
+      },
+      "milliseconds": 128413
+    }
+  ],
+  "WebKit": "未実施",
+  "iPhone": "未実施",
+  "autoTransition": { "from": "harbor", "to": "toys" }
+}

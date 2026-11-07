@@ -1,0 +1,31 @@
+{
+  "browser": "156.0.8078.4",
+  "fixture": "実モデルと部品ごとの当たり判定の重ね描き、および同一の穴で旧箱型が残り修正版が落下する比較。通常ゲームの操作確認とは別。",
+  "summaries": [
+    { "kind": "desk", "parts": 9 },
+    { "kind": "chair", "parts": 6 },
+    { "kind": "floorLamp", "parts": 3 },
+    { "kind": "puzzle", "parts": 10 },
+    { "kind": "hero", "parts": 8 },
+    { "kind": "monster", "parts": 10 }
+  ],
+  "falls": [
+    {
+      "oldBox": true,
+      "position": {
+        "x": 0.00014858193753752857,
+        "y": 1.499971866607666,
+        "z": -0.00012019628775306046
+      },
+      "actualTop": 2.969972042360891
+    },
+    {
+      "oldBox": false,
+      "position": { "x": 0, "y": -42.7058219909668, "z": 0 },
+      "actualTop": -41.23582196235657
+    }
+  ],
+  "errors": [],
+  "iPhone": "未実施",
+  "WebKit": "未実施"
+}

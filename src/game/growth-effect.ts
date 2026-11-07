@@ -53,7 +53,7 @@ export class GrowthEffect {
     this.group.visible = this.age < DURATION;
     if (!this.group.visible) return;
     const progress = this.age / DURATION;
-    this.group.position.set(x, 0.06, z);
+    this.group.position.set(x, 0.06 * Math.min(1, radius / 0.9), z);
     this.group.scale.setScalar(radius);
     this.rings.forEach((ring, index) => {
       ring.position.y = index * 0.01;

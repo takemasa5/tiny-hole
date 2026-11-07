@@ -1,0 +1,289 @@
+{
+  "date": "2026-11-07",
+  "status": "iPhoneの点滅は未解消。実機で原因を切り分けるための比較画面を準備。",
+  "sourceFiles": [
+    {
+      "path": "src/game/runtime.ts",
+      "before": "f91d370c24d805ee753335b4168d6a006ec5a4bd4b31c3e25c38c0fe78a45527",
+      "after": "a36ca1051cd04737669871083f37bb80fab46dfa3ca49e6c20c1f79a801a5406"
+    },
+    {
+      "path": "docs/README.md",
+      "before": "6691aa705c906aecdd70995ceef9168e8ecbd6e5b22daa27e8a36f89ae810c65",
+      "after": "81d045d8836832dc111f4b794144b2fa7820698971928cccddba0299e738a559"
+    },
+    {
+      "path": "docs/container-occlusion-fix.md",
+      "before": "a0b0160f1eda8f61b633f1164df5b64e14fb9ccdd52b8aca9366cd76786c2856",
+      "after": "0b59d85ca821293f283a48ca85c27dad977c4b782a1b7bd6d6545b0c3b25a9b7"
+    },
+    {
+      "path": "docs/iphone-render-diagnostic.md",
+      "before": null,
+      "after": "15bcc14cfa41c72c68ac6e7d4e3095013962433ce79b02282cf36842b7d0c669"
+    },
+    {
+      "path": "checks/iphone-render.html",
+      "before": null,
+      "after": "dfcbc64774c10adc9e70429dd03416ccb062a9f70c09b44d53afd2029a71c79c"
+    },
+    {
+      "path": "checks/iphone-render.mjs",
+      "before": null,
+      "after": "a48c293eb39f5c8a89b4556af1fb8124aed617b3e26e95e744d0c2bf219b3e1f"
+    },
+    {
+      "path": "checks/iphone-render.ts",
+      "before": null,
+      "after": "8b5d79bc543d51caa2e8e0b2a2cb51b4402ae719b192cce234560ef912a42a9f"
+    }
+  ],
+  "page": "checks/iphone-render.html",
+  "documentation": "docs/iphone-render-diagnostic.md",
+  "automated": {
+    "existingTests": 316,
+    "files": 24,
+    "passed": true,
+    "lint": true,
+    "typecheckAndBuild": true,
+    "diagnosticTypecheck": "npx tsc --ignoreConfig --noEmit --target ES2023 --module ESNext --moduleResolution bundler --lib ES2023,DOM,DOM.Iterable --types vite/client --skipLibCheck checks/iphone-render.ts",
+    "diagnosticTypecheckPassed": true,
+    "prettier": "changed files"
+  },
+  "browser": {
+    "browser": "156.0.8078.4",
+    "viewport": "390x844 DPR2",
+    "errors": [],
+    "modes": [
+      {
+        "mode": "normal",
+        "seed": 42,
+        "level": 1,
+        "renderDiagnostics": {
+          "mode": "normal",
+          "cameraNear": 0.0012,
+          "cameraFar": 16000
+        },
+        "occlusionRendering": {
+          "samples": 4,
+          "mode": "coverage"
+        },
+        "antialias": true
+      },
+      {
+        "mode": "no-occlusion",
+        "seed": 42,
+        "level": 1,
+        "renderDiagnostics": {
+          "mode": "no-occlusion",
+          "cameraNear": 0.0012,
+          "cameraFar": 16000
+        },
+        "occlusionRendering": {
+          "samples": 4,
+          "mode": "coverage"
+        },
+        "antialias": true
+      },
+      {
+        "mode": "precise-depth",
+        "seed": 42,
+        "level": 1,
+        "renderDiagnostics": {
+          "mode": "precise-depth",
+          "cameraNear": 0.032,
+          "cameraFar": 16000
+        },
+        "occlusionRendering": {
+          "samples": 4,
+          "mode": "coverage"
+        },
+        "antialias": true
+      },
+      {
+        "mode": "no-antialias",
+        "seed": 42,
+        "level": 1,
+        "renderDiagnostics": {
+          "mode": "no-antialias",
+          "cameraNear": 0.0012,
+          "cameraFar": 16000
+        },
+        "occlusionRendering": {
+          "samples": 0,
+          "mode": "blend"
+        },
+        "antialias": false
+      },
+      {
+        "mode": "plain-floor",
+        "seed": 42,
+        "level": 1,
+        "renderDiagnostics": {
+          "mode": "plain-floor",
+          "cameraNear": 0.0012,
+          "cameraFar": 16000
+        },
+        "occlusionRendering": {
+          "samples": 4,
+          "mode": "coverage"
+        },
+        "antialias": true
+      },
+      {
+        "mode": "normal",
+        "seed": 42,
+        "level": 1,
+        "renderDiagnostics": {
+          "mode": "normal",
+          "cameraNear": 0.0012,
+          "cameraFar": 16000
+        },
+        "occlusionRendering": {
+          "samples": 4,
+          "mode": "coverage"
+        },
+        "antialias": true
+      }
+    ],
+    "iPhone": "未実施",
+    "WebKit": "未実施",
+    "touchMovesAndStops": true,
+    "defaultGameUnchanged": {
+      "mode": "normal",
+      "occlusionRendering": {
+        "samples": 4,
+        "mode": "coverage"
+      }
+    }
+  },
+  "production": {
+    "diagnosticPageIncluded": false,
+    "diagnosticArgumentAccepted": false,
+    "buildCache": "9469c28871ea92d51e36",
+    "js": "index-BaZ63KG0.js",
+    "css": "index-B7g_aRMj.css",
+    "offlineResources": 10
+  },
+  "limits": [
+    "iPhone・WebKitで点滅が止まる条件は未確認。オーナーのA/B比較結果待ち",
+    "PCで診断スイッチの実動作を確認した結果を、iPhoneの点滅解消と扱わない",
+    "全ステージの通しプレイ・オフライン起動は今回再実行していない",
+    "設定・依存・配信設定変更、push・公開なし"
+  ],
+  "projectDelivery": {
+    "files": 7,
+    "hashPreflightAndCopyVerified": true,
+    "gitDiffCheck": true,
+    "buildCacheMatches": "9469c28871ea92d51e36",
+    "diagnosticURL": "http://192.168.40.191:5177/checks/iphone-render.html",
+    "lanBrowserCheck": {
+      "browser": "156.0.8078.4",
+      "viewport": "390x844 DPR2",
+      "errors": [],
+      "modes": [
+        {
+          "mode": "normal",
+          "seed": 42,
+          "level": 1,
+          "renderDiagnostics": {
+            "mode": "normal",
+            "cameraNear": 0.0012,
+            "cameraFar": 16000
+          },
+          "occlusionRendering": {
+            "samples": 4,
+            "mode": "coverage"
+          },
+          "antialias": true
+        },
+        {
+          "mode": "no-occlusion",
+          "seed": 42,
+          "level": 1,
+          "renderDiagnostics": {
+            "mode": "no-occlusion",
+            "cameraNear": 0.0012,
+            "cameraFar": 16000
+          },
+          "occlusionRendering": {
+            "samples": 4,
+            "mode": "coverage"
+          },
+          "antialias": true
+        },
+        {
+          "mode": "precise-depth",
+          "seed": 42,
+          "level": 1,
+          "renderDiagnostics": {
+            "mode": "precise-depth",
+            "cameraNear": 0.032,
+            "cameraFar": 16000
+          },
+          "occlusionRendering": {
+            "samples": 4,
+            "mode": "coverage"
+          },
+          "antialias": true
+        },
+        {
+          "mode": "no-antialias",
+          "seed": 42,
+          "level": 1,
+          "renderDiagnostics": {
+            "mode": "no-antialias",
+            "cameraNear": 0.0012,
+            "cameraFar": 16000
+          },
+          "occlusionRendering": {
+            "samples": 0,
+            "mode": "blend"
+          },
+          "antialias": false
+        },
+        {
+          "mode": "plain-floor",
+          "seed": 42,
+          "level": 1,
+          "renderDiagnostics": {
+            "mode": "plain-floor",
+            "cameraNear": 0.0012,
+            "cameraFar": 16000
+          },
+          "occlusionRendering": {
+            "samples": 4,
+            "mode": "coverage"
+          },
+          "antialias": true
+        },
+        {
+          "mode": "normal",
+          "seed": 42,
+          "level": 1,
+          "renderDiagnostics": {
+            "mode": "normal",
+            "cameraNear": 0.0012,
+            "cameraFar": 16000
+          },
+          "occlusionRendering": {
+            "samples": 4,
+            "mode": "coverage"
+          },
+          "antialias": true
+        }
+      ],
+      "iPhone": "未実施",
+      "WebKit": "未実施",
+      "touchMovesAndStops": true,
+      "defaultGameUnchanged": {
+        "mode": "normal",
+        "occlusionRendering": {
+          "samples": 4,
+          "mode": "coverage"
+        }
+      }
+    },
+    "ownerResult": "A/B比較の実機結果待ち。点滅解消は未確認。"
+  }
+}

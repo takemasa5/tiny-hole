@@ -5,8 +5,9 @@ import {
   createStage,
   STAGES,
   STAGE_IDS,
-  LEVELS,
-  MAP_HALF_SIZE,
+  objectSizeForStage,
+  levelsForStage,
+  mapHalfSizeForStage,
   OBJECT_TYPES,
   objectFootprint,
 } from "../src/game/stage";
@@ -19,6 +20,12 @@ it.each(STAGE_IDS)(
   "%s: 3シードで重なり・境界・目標・各段階の成長量を検証する",
   (id) => {
     for (const seed of [42, 43, 20261015]) {
+      const stage = STAGES[id];
+      const movingCount =
+        stage.moving.count +
+        stage.groups
+          .filter((group) => group.kind === stage.moving.kind)
+          .reduce((sum, group) => sum + group.count, 0);
       const objects = createStage(seed, id);
       expect(createStage(seed, id)).toEqual(objects);
       expect(
@@ -28,19 +35,19 @@ it.each(STAGE_IDS)(
       ).toEqual([STAGES[id].goal]);
       expect(
         objects.filter((object) => object.kind === STAGES[id].moving.kind),
-      ).toHaveLength(24);
+      ).toHaveLength(movingCount);
       expect(new Set(objects.map((object) => object.id)).size).toBe(
         objects.length,
       );
       objects.forEach((object, index) => {
         expect(
           Math.max(Math.abs(object.x), Math.abs(object.z)) +
-            objectFootprint(object.kind),
-        ).toBeLessThan(MAP_HALF_SIZE);
+            objectFootprint(object.kind, id),
+        ).toBeLessThan(mapHalfSizeForStage(id));
         for (const other of objects.slice(index + 1)) {
           let horizontal =
             Math.hypot(object.x - other.x, object.z - other.z) <
-            objectFootprint(object.kind) + objectFootprint(other.kind);
+            objectFootprint(object.kind, id) + objectFootprint(other.kind, id);
           if (object.kind === "log" && object.stackId === other.stackId) {
             const perpendicular = Math.abs(
               (other.x - object.x) * Math.sin(object.yaw) +
@@ -50,23 +57,25 @@ it.each(STAGE_IDS)(
           }
           const vertical =
             Math.abs(object.y - other.y) <
-            (OBJECT_TYPES[object.kind].size[1] +
-              OBJECT_TYPES[other.kind].size[1]) /
+            (objectSizeForStage(object.kind, id)[1] +
+              objectSizeForStage(other.kind, id)[1]) /
               2;
           expect(horizontal && vertical).toBe(false);
         }
       });
-      LEVELS.slice(0, -1).forEach((level, index) => {
+      const levels = levelsForStage(id);
+      levels.slice(0, -1).forEach((level, index) => {
         const points = objects
           .filter(
             (object) =>
               object.id !== "goal" &&
-              objectFootprint(object.kind) < level.radius,
+              object.kind !== "streetSweeper" &&
+              objectFootprint(object.kind, id) < level.radius,
           )
           .reduce((sum, object) => sum + OBJECT_TYPES[object.kind].value, 0);
-        expect(points).toBeGreaterThanOrEqual(LEVELS[index + 1].threshold);
+        expect(points).toBeGreaterThanOrEqual(levels[index + 1].threshold);
       });
-      expect(objectFootprint(STAGES[id].goal)).toBeLessThan(LEVELS[7].radius);
+      expect(objectFootprint(STAGES[id].goal)).toBeLessThan(levels[7].radius);
     }
   },
 );
@@ -83,7 +92,7 @@ it("ピラミッドは小さな穴に支えられ、最大穴に移動すると�
   world.createCollider(objectCollider("pyramid"), body);
   for (let step = 0; step < 120; step++) world.step();
   expect(body.translation().y).toBeGreaterThan(2.9);
-  updateFloor(floor, 0, 0, LEVELS[7].radius);
+  updateFloor(floor, 0, 0, levelsForStage("egypt")[7].radius);
   body.wakeUp();
   for (let step = 0; step < 180; step++) world.step();
   expect(body.translation().y + 3).toBeLessThan(-1.2);

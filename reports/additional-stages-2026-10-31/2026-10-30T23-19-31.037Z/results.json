@@ -1,0 +1,54 @@
+{
+  "directory": "reports/additional-stages-2026-10-31/2026-10-30T23-19-31.037Z",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "stages": [
+    {
+      "stageId": "office",
+      "seed": 1958092985,
+      "factorySites": [
+        {
+          "id": "food",
+          "label": "工場A",
+          "width": 0.8,
+          "height": 0.5599999999999999,
+          "depth": 0.52,
+          "x": -1.9172880580538507,
+          "z": -1.4625086691230536,
+          "outputX": -1.9172880580538507,
+          "outputZ": -0.06250866912305342,
+          "scale": 0.2
+        },
+        {
+          "id": "depot",
+          "label": "工場B",
+          "width": 0.9,
+          "height": 0.7000000000000001,
+          "depth": 0.8,
+          "x": 6.095671264827251,
+          "z": -2.9159814992128386,
+          "outputX": 6.095671264827251,
+          "outputZ": -1.5159814992128384,
+          "scale": 0.2
+        }
+      ],
+      "levels": [1, 2, 3, 4, 5],
+      "emittedKinds": [],
+      "emission": {
+        "kind": "copier",
+        "sourceId": "food",
+        "duration": 0.9,
+        "highestY": 1.9760812520980835,
+        "landed": {
+          "x": -1.9209825992584229,
+          "y": 0.6656128168106079,
+          "z": -0.08843271434307098
+        }
+      }
+    }
+  ],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "failure": "page.evaluate: Execution context was destroyed, most likely because of a navigation\n    at snapshot (./checks/stage-expansion.mjs:19:29)\n    at moveTo (./checks/stage-expansion.mjs:84:25)\n    at async file://./checks/stage-expansion.mjs:323:7",
+  "snapshot": null
+}

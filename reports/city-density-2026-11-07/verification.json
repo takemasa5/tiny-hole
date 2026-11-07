@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-07",
+  "automated": {
+    "passed": 338,
+    "failed": 0,
+    "files": 26,
+    "command": "npm test -- --maxWorkers=2"
+  },
+  "build": {
+    "passed": true,
+    "bundle": "index-D2Z328L9.js",
+    "offlineCache": "b8b55e484fede5c3b9ca",
+    "resources": 10
+  },
+  "lint": true,
+  "prettier": true,
+  "browser": {
+    "engine": "Chromium 156.0.8078.4",
+    "flow": "flow-final/results.json",
+    "baseline": "flow-b/results.json",
+    "mobile": "mobile/results.json"
+  },
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "files": {
+    "src/game/toy-world.ts": "af0cec898f26ddf5a1816370a48831f14b4aefbd763018b936af5d563e1dd696",
+    "src/game/runtime.ts": "7c2971e73c7e47638287d4b917831896919f8b5904b132b838039d81622f52e0",
+    "src/game/toy-stage.ts": "641f6fa6bcb9e005c6bd3ebfd54be0fdf92c8093e0850a707cc7c6b39efe8a34",
+    "tests/nested-toys.test.ts": "bb3ee07192843dc1f816862cd9f265908d7e5b62135706d862c0c20cbb4dd2c3",
+    "tests/toy-stage.test.ts": "2534a1cd14ac9fb7830e44b12a5068b2624159f99f401ba29d541621adc27f79",
+    "docs/toy-city-density.md": "c54af2a332d002a6be71f88f358babe9682b58169f12274b88dd6bebadd89ce1",
+    "docs/README.md": "144602724d34f6a30821e809e86e66252e57b424f6baba1140744cbb9ce8e77d",
+    "checks/nested-toys.mjs": "e4ee0b98c7474f7f61310e5bd09d1d8e51eb5e8a0abbc86aab9b4e6e26957748"
+  },
+  "projectDelivery": {
+    "sourceHashesVerified": true,
+    "buildPassed": true,
+    "bundle": "index-D2Z328L9.js",
+    "offlineCache": "b8b55e484fede5c3b9ca",
+    "gitDiffCheckPassed": true,
+    "server": "http://192.168.40.191:5177/",
+    "httpStatus": 200,
+    "browserSmoke": "delivery-mobile/results.json",
+    "iPhone": "未実施"
+  }
+}

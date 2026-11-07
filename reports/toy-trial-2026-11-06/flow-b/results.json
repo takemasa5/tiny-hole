@@ -1,0 +1,468 @@
+{
+  "browser": "156.0.8078.4",
+  "channel": "chromium",
+  "errors": [],
+  "stages": [
+    {
+      "stage": "toys",
+      "seed": 2650652946,
+      "observations": [
+        {
+          "level": 1,
+          "area": 0,
+          "score": 6,
+          "bodies": 46,
+          "frame": { "median": 16.699999999999818, "p95": 16.700000000000728 },
+          "drawCalls": 25,
+          "retired": 0
+        },
+        {
+          "display": 1,
+          "labels": ["カラーボタン", "パズルのピース", "ビー玉"]
+        },
+        {
+          "level": 2,
+          "area": 0,
+          "score": 12,
+          "bodies": 60,
+          "frame": { "median": 16.69999999999891, "p95": 16.799999999999272 },
+          "drawCalls": 220,
+          "retired": 0
+        },
+        {
+          "themedMotion": 2,
+          "movements": [
+            {
+              "id": "growth-2-0",
+              "label": "ミニカー",
+              "behavior": "route",
+              "phase": "driving",
+              "distance": 0.09059913501297208
+            },
+            {
+              "id": "growth-2-1",
+              "label": "ミニカー",
+              "behavior": "route",
+              "phase": "driving",
+              "distance": 0.08439899076891658
+            },
+            {
+              "id": "growth-2-2",
+              "label": "ミニカー",
+              "behavior": "route",
+              "phase": "falling",
+              "distance": 0
+            },
+            {
+              "id": "growth-2-3",
+              "label": "ミニカー",
+              "behavior": "route",
+              "phase": "driving",
+              "distance": 0.09225231679863735
+            }
+          ]
+        },
+        {
+          "display": 2,
+          "labels": [
+            "おもちゃの補充箱",
+            "ミニカー",
+            "小さなブロック",
+            "サイコロ"
+          ]
+        },
+        {
+          "level": 3,
+          "area": 0,
+          "score": 63,
+          "bodies": 56,
+          "frame": { "median": 16.69999999999709, "p95": 16.799999999999272 },
+          "drawCalls": 261,
+          "retired": 0
+        },
+        {
+          "themedMotion": 3,
+          "movements": [
+            {
+              "id": "growth-3-0",
+              "label": "ぜんまいロボット",
+              "behavior": "march",
+              "phase": "falling",
+              "distance": 2.980232238769531e-7
+            },
+            {
+              "id": "growth-3-1",
+              "label": "ぜんまいロボット",
+              "behavior": "march",
+              "phase": "fleeing",
+              "distance": 0.013877918048392085
+            },
+            {
+              "id": "growth-3-2",
+              "label": "ぜんまいロボット",
+              "behavior": "march",
+              "phase": "falling",
+              "distance": 0.022793890050513684
+            },
+            {
+              "id": "growth-3-3",
+              "label": "ぜんまいロボット",
+              "behavior": "march",
+              "phase": "falling",
+              "distance": 1.6858739404357614e-7
+            }
+          ]
+        },
+        {
+          "display": 3,
+          "labels": [
+            "手のひらの汽車",
+            "おもちゃの補充箱",
+            "ぜんまいロボット",
+            "ゴムボール"
+          ]
+        },
+        {
+          "level": 4,
+          "area": 1,
+          "score": 255,
+          "bodies": 70,
+          "frame": { "median": 16.69999999999709, "p95": 16.700000000004366 },
+          "drawCalls": 513,
+          "retired": 0
+        },
+        {
+          "themedMotion": 4,
+          "movements": [
+            {
+              "id": "growth-4-0",
+              "label": "おもちゃの兵隊",
+              "behavior": "march",
+              "phase": "fleeing",
+              "distance": 0.144385470003899
+            },
+            {
+              "id": "growth-4-1",
+              "label": "おもちゃの兵隊",
+              "behavior": "march",
+              "phase": "working",
+              "distance": 0.24566388993539
+            },
+            {
+              "id": "growth-4-2",
+              "label": "おもちゃの兵隊",
+              "behavior": "march",
+              "phase": "fleeing",
+              "distance": 0.2028100628712627
+            },
+            {
+              "id": "growth-4-3",
+              "label": "おもちゃの兵隊",
+              "behavior": "march",
+              "phase": "fleeing",
+              "distance": 0.010977666610857206
+            }
+          ]
+        },
+        {
+          "display": 4,
+          "labels": [
+            "木馬",
+            "ミニカーの車庫",
+            "おもちゃの補充箱",
+            "おもちゃの兵隊",
+            "くまのぬいぐるみ"
+          ]
+        },
+        {
+          "level": 5,
+          "area": 1,
+          "score": 1055,
+          "bodies": 89,
+          "frame": { "median": 16.69999999999709, "p95": 16.700000000004366 },
+          "drawCalls": 545,
+          "retired": 0
+        },
+        {
+          "themedMotion": 5,
+          "movements": [
+            {
+              "id": "growth-5-0",
+              "label": "レールの機関車",
+              "behavior": "train",
+              "phase": "driving",
+              "distance": 0.4485555898400585
+            },
+            {
+              "id": "growth-5-1",
+              "label": "レールの機関車",
+              "behavior": "train",
+              "phase": "driving",
+              "distance": 0.4486163430867264
+            },
+            {
+              "id": "growth-5-2",
+              "label": "レールの機関車",
+              "behavior": "train",
+              "phase": "falling",
+              "distance": 0.000003198720899820027
+            },
+            {
+              "id": "growth-5-3",
+              "label": "レールの機関車",
+              "behavior": "train",
+              "phase": "driving",
+              "distance": 0.2960948893179488
+            }
+          ]
+        },
+        {
+          "display": 5,
+          "labels": [
+            "レールの機関車",
+            "おもちゃの補充箱",
+            "おもちゃ駅",
+            "乗用おもちゃ",
+            "着せ替え人形"
+          ]
+        },
+        {
+          "level": 6,
+          "area": 1,
+          "score": 4255,
+          "bodies": 83,
+          "frame": { "median": 16.69999999999709, "p95": 16.799999999995634 },
+          "drawCalls": 425,
+          "retired": 0
+        },
+        {
+          "themedMotion": 6,
+          "movements": [
+            {
+              "id": "growth-6-0",
+              "label": "工房の配達トラック",
+              "behavior": "route",
+              "phase": "driving",
+              "distance": 0.9089013813929344
+            },
+            {
+              "id": "growth-6-1",
+              "label": "工房の配達トラック",
+              "behavior": "route",
+              "phase": "driving",
+              "distance": 0.3451598969190096
+            },
+            {
+              "id": "growth-6-2",
+              "label": "工房の配達トラック",
+              "behavior": "route",
+              "phase": "driving",
+              "distance": 0.9565966217790003
+            },
+            {
+              "id": "growth-6-3",
+              "label": "工房の配達トラック",
+              "behavior": "route",
+              "phase": "falling",
+              "distance": 0.0000030532475649990313
+            }
+          ]
+        },
+        {
+          "display": 6,
+          "labels": [
+            "おもちゃ駅",
+            "おもちゃの補充箱",
+            "工房の配達トラック",
+            "車庫",
+            "ドールハウス"
+          ]
+        },
+        {
+          "level": 7,
+          "area": 2,
+          "score": 16799,
+          "bodies": 89,
+          "frame": { "median": 16.69999999999709, "p95": 16.79999999998836 },
+          "drawCalls": 780,
+          "retired": 0
+        },
+        {
+          "themedMotion": 7,
+          "movements": [
+            {
+              "id": "growth-7-0",
+              "label": "街を巡るバス",
+              "behavior": "route",
+              "phase": "driving",
+              "distance": 1.9859228987224375
+            },
+            {
+              "id": "growth-7-1",
+              "label": "街を巡るバス",
+              "behavior": "route",
+              "phase": "driving",
+              "distance": 0.9249855228450963
+            },
+            {
+              "id": "growth-7-2",
+              "label": "街を巡るバス",
+              "behavior": "route",
+              "phase": "driving",
+              "distance": 2.0023511109170133
+            },
+            {
+              "id": "growth-7-3",
+              "label": "街を巡るバス",
+              "behavior": "route",
+              "phase": "falling",
+              "distance": 0.0000019073486328125
+            }
+          ]
+        },
+        {
+          "display": 7,
+          "labels": [
+            "玩具を運ぶトラック",
+            "おもちゃの補充箱",
+            "街を巡るバス",
+            "積み木の住宅"
+          ]
+        },
+        {
+          "level": 8,
+          "area": 2,
+          "score": 65951,
+          "bodies": 105,
+          "frame": { "median": 16.69999999999709, "p95": 16.80000000000291 },
+          "drawCalls": 885,
+          "retired": 0
+        },
+        {
+          "themedMotion": 8,
+          "movements": [
+            {
+              "id": "growth-8-0",
+              "label": "街を巡る機関車",
+              "behavior": "train",
+              "phase": "driving",
+              "distance": 3.6764846259783095
+            },
+            {
+              "id": "growth-8-1",
+              "label": "街を巡る機関車",
+              "behavior": "train",
+              "phase": "driving",
+              "distance": 3.7882616624915912
+            },
+            {
+              "id": "growth-8-2",
+              "label": "街を巡る機関車",
+              "behavior": "train",
+              "phase": "falling",
+              "distance": 0.00004640779518354964
+            },
+            {
+              "id": "growth-8-3",
+              "label": "街を巡る機関車",
+              "behavior": "train",
+              "phase": "driving",
+              "distance": 3.7849044799804688
+            }
+          ]
+        },
+        {
+          "display": 8,
+          "labels": [
+            "ロボット工房",
+            "おもちゃの補充箱",
+            "街を巡る機関車",
+            "おもちゃ駅",
+            "駅前の時計塔",
+            "街のターミナル駅"
+          ]
+        },
+        {
+          "level": 9,
+          "area": 2,
+          "score": 270751,
+          "bodies": 112,
+          "frame": { "median": 16.69999999999709, "p95": 16.79999999998836 },
+          "drawCalls": 577,
+          "retired": 3
+        },
+        {
+          "display": 9,
+          "labels": [
+            "撮影用の電波塔",
+            "おもちゃの補充箱",
+            "撮影用の集合住宅",
+            "撮影用の格納庫"
+          ]
+        },
+        {
+          "level": 10,
+          "area": 3,
+          "score": 1106335,
+          "bodies": 118,
+          "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 },
+          "drawCalls": 1029,
+          "retired": 7
+        },
+        {
+          "display": 10,
+          "labels": [
+            "特撮セットの発電所",
+            "おもちゃの補充箱",
+            "特撮セットの工場",
+            "特撮セットの市庁舎"
+          ]
+        },
+        {
+          "level": 11,
+          "area": 3,
+          "score": 4448671,
+          "bodies": 123,
+          "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 },
+          "drawCalls": 508,
+          "retired": 14
+        },
+        {
+          "display": 11,
+          "labels": [
+            "巨大な撮影カメラ",
+            "巨大ヒーロー",
+            "怪獣",
+            "おもちゃの補充箱",
+            "特撮セットの高層ビル",
+            "特撮セットの大電波塔"
+          ]
+        },
+        { "encounter": "hero-collected-partner-recovers" },
+        {
+          "level": 12,
+          "area": 3,
+          "score": 17555871,
+          "bodies": 97,
+          "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+          "drawCalls": 1014,
+          "retired": 25
+        },
+        { "display": 12, "labels": ["巨大ロボット", "おもちゃの補充箱"] }
+      ],
+      "final": {
+        "level": 12,
+        "score": 26993055,
+        "collected": 162,
+        "retired": 25,
+        "bodies": 86,
+        "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 }
+      },
+      "milliseconds": 153544
+    }
+  ],
+  "WebKit": "未実施",
+  "iPhone": "未実施",
+  "fixedCones": { "anchorsUnchanged": true, "screenHint": true },
+  "autoTransition": { "from": "toys", "to": "office" }
+}

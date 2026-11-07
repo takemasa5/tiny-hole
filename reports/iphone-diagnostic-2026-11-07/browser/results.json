@@ -1,0 +1,86 @@
+{
+  "browser": "156.0.8078.4",
+  "viewport": "390x844 DPR2",
+  "errors": [],
+  "modes": [
+    {
+      "mode": "normal",
+      "seed": 42,
+      "level": 1,
+      "renderDiagnostics": {
+        "mode": "normal",
+        "cameraNear": 0.0012,
+        "cameraFar": 16000
+      },
+      "occlusionRendering": { "samples": 4, "mode": "coverage" },
+      "antialias": true
+    },
+    {
+      "mode": "no-occlusion",
+      "seed": 42,
+      "level": 1,
+      "renderDiagnostics": {
+        "mode": "no-occlusion",
+        "cameraNear": 0.0012,
+        "cameraFar": 16000
+      },
+      "occlusionRendering": { "samples": 4, "mode": "coverage" },
+      "antialias": true
+    },
+    {
+      "mode": "precise-depth",
+      "seed": 42,
+      "level": 1,
+      "renderDiagnostics": {
+        "mode": "precise-depth",
+        "cameraNear": 0.032,
+        "cameraFar": 16000
+      },
+      "occlusionRendering": { "samples": 4, "mode": "coverage" },
+      "antialias": true
+    },
+    {
+      "mode": "no-antialias",
+      "seed": 42,
+      "level": 1,
+      "renderDiagnostics": {
+        "mode": "no-antialias",
+        "cameraNear": 0.0012,
+        "cameraFar": 16000
+      },
+      "occlusionRendering": { "samples": 0, "mode": "blend" },
+      "antialias": false
+    },
+    {
+      "mode": "plain-floor",
+      "seed": 42,
+      "level": 1,
+      "renderDiagnostics": {
+        "mode": "plain-floor",
+        "cameraNear": 0.0012,
+        "cameraFar": 16000
+      },
+      "occlusionRendering": { "samples": 4, "mode": "coverage" },
+      "antialias": true
+    },
+    {
+      "mode": "normal",
+      "seed": 42,
+      "level": 1,
+      "renderDiagnostics": {
+        "mode": "normal",
+        "cameraNear": 0.0012,
+        "cameraFar": 16000
+      },
+      "occlusionRendering": { "samples": 4, "mode": "coverage" },
+      "antialias": true
+    }
+  ],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "touchMovesAndStops": true,
+  "defaultGameUnchanged": {
+    "mode": "normal",
+    "occlusionRendering": { "samples": 4, "mode": "coverage" }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-07",
+  "tool": "built-in image_gen",
+  "purpose": "design-review concept art, not implemented game screenshots",
+  "assets": [
+    {
+      "id": "01-plaza",
+      "name": "広場",
+      "source": "[local-home]/.codex/generated_images/01a1ae6b-840e-7210-9bdd-8e124aaf46d7/exec-2b9c920b-2ebd-4079-af36-06c943071359.png",
+      "file": "01-plaza.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "06019710014e8963dbb58cf50565d7891a9f006add1c484b1226b2c3f6fad7f6",
+      "bytes": 3371250
+    },
+    {
+      "id": "02-mountain",
+      "name": "山",
+      "source": "[local-home]/.codex/generated_images/01a1ae6b-840e-7210-9bdd-8e124aaf46d7/exec-52d59998-75b0-4a39-9804-68b1c2b81da4.png",
+      "file": "02-mountain.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "483503fd72dd20b9e39cda5dea4cbe6da2f2e0eeca7c596fe7c5495398794dab",
+      "bytes": 3575235
+    },
+    {
+      "id": "03-america",
+      "name": "アメリカ",
+      "source": "[local-home]/.codex/generated_images/01a1ae6b-840e-7210-9bdd-8e124aaf46d7/exec-60be9d77-90e8-4b83-a881-1864e9d063ef.png",
+      "file": "03-america.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "2616b0d881b216c115abfe5331d932c1581cec15fd073f7e4a3ab713c7901af7",
+      "bytes": 3223369
+    },
+    {
+      "id": "04-egypt",
+      "name": "エジプト",
+      "source": "[local-home]/.codex/generated_images/01a1ae6b-840e-7210-9bdd-8e124aaf46d7/exec-85e17365-6e3b-4d50-8e48-ecbb71ea0901.png",
+      "file": "04-egypt.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "a078a298b82f3adb46d7ef923fd7b59247c34171130733df9fc25a960e7bb4b0",
+      "bytes": 2971860
+    },
+    {
+      "id": "05-harbor",
+      "name": "港",
+      "source": "[local-home]/.codex/generated_images/01a1ae6b-840e-7210-9bdd-8e124aaf46d7/exec-4d6653c1-6997-48a1-ac80-f70b1a6a5491.png",
+      "file": "05-harbor.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "8ec4c22d8139478819855a57de6053fd292fa50b0024b6102d5c39403b769f81",
+      "bytes": 2942839
+    },
+    {
+      "id": "06-office",
+      "name": "会社",
+      "source": "[local-home]/.codex/generated_images/01a1ae6b-840e-7210-9bdd-8e124aaf46d7/exec-1e799ae5-191a-4613-b22c-9aa776bf2b5e.png",
+      "file": "06-office.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "a3c4cc52efaa3de4f3370e21e3c43e8e3bb34425c03d5c6721d7263b5c195c92",
+      "bytes": 2907061
+    },
+    {
+      "id": "07-hell",
+      "name": "地獄",
+      "source": "[local-home]/.codex/generated_images/01a1ae6b-840e-7210-9bdd-8e124aaf46d7/exec-66afbe33-57ab-45ca-9230-982b2a8af610.png",
+      "file": "07-hell.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "665435320ad593bb5b4faa3d9d936d924f4ea320f531529f9fdfd2d3a03fc37c",
+      "bytes": 2429955
+    }
+  ]
+}

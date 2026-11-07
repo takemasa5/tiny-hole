@@ -1,0 +1,3133 @@
+{
+  "browser": "156.0.8078.4",
+  "fixture": "実ゲームを通常のキー入力で移動。120Hz相当のsetTimeout描画コールバックはタイミング検証用であり、実機の表示更新率の検証ではない。",
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "errors": [],
+  "cases": [
+    {
+      "hz": 60,
+      "axis": "z",
+      "level": 1,
+      "samples": 12,
+      "repeatedPhysicalFrames": 0,
+      "repeatedRenderedFrames": 0,
+      "renderSpeedVariation": 7.907603492815353e-16,
+      "stationaryRenderDrift": 0,
+      "frames": [
+        {
+          "id": "notions",
+          "falling": false,
+          "collected": false,
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+        },
+        {
+          "id": "chest",
+          "falling": false,
+          "collected": false,
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+        },
+        {
+          "id": "bedroom",
+          "falling": false,
+          "collected": false,
+          "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+          "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+        },
+        {
+          "id": "house",
+          "falling": false,
+          "collected": false,
+          "position": { "x": 35, "y": 0, "z": 40 },
+          "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+        }
+      ],
+      "apertureCenterError": 1.1368683772161603e-13,
+      "rawMoving": [
+        {
+          "time": 4617.699999988079,
+          "physical": { "x": 0, "z": 0.04666666666666667, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.037333333333333336, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 4646.399999976158,
+          "physical": { "x": 0, "z": 0.056, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.05340533332665762, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 4669.199999988079,
+          "physical": { "x": 0, "z": 0.07466666666666666, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.06617333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 4692.799999982119,
+          "physical": { "x": 0, "z": 0.08399999999999999, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.07938933332999547, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 4713.399999976158,
+          "physical": { "x": 0, "z": 0.09333333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.0909253333266576, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 4733.299999982119,
+          "physical": { "x": 0, "z": 0.10266666666666666, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.10206933332999546, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 4753,
+          "physical": { "x": 0, "z": 0.12133333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.11310133334000905, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 4774.5,
+          "physical": { "x": 0, "z": 0.13066666666666665, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.12514133334000904, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 4794.5999999940395,
+          "physical": { "x": 0, "z": 0.13999999999999999, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.13639733333667117, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 4814.699999988079,
+          "physical": { "x": 0, "z": 0.14933333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.14765333333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 4834.899999976158,
+          "physical": { "x": 0, "z": 0.16799999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.1589653333266576, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 4856.199999988079,
+          "physical": { "x": 0, "z": 0.17733333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.1708933333333333, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 4875.5,
+          "physical": { "x": 0, "z": 0.18666666666666665, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.18170133334000904, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 4895.399999976158,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.1928453333266576, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 4916,
+          "physical": { "x": 0, "z": 0.2053333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.20438133334000905, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 4936.5,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.21586133334000904, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        }
+      ],
+      "rawStopped": [
+        {
+          "time": 5216.799999982119,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5236.5,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5256.899999976158,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5275.399999976158,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5294.399999976158,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5313.699999988079,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5333.299999982119,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5353,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5373.899999976158,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5393,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 5412.0999999940395,
+          "physical": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.22399999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        }
+      ]
+    },
+    {
+      "hz": 120,
+      "axis": "z",
+      "level": 1,
+      "samples": 25,
+      "repeatedPhysicalFrames": 8,
+      "repeatedRenderedFrames": 0,
+      "renderSpeedVariation": 1.5521115056641345e-15,
+      "stationaryRenderDrift": 0,
+      "frames": [
+        {
+          "id": "notions",
+          "falling": false,
+          "collected": false,
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+        },
+        {
+          "id": "chest",
+          "falling": false,
+          "collected": false,
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+        },
+        {
+          "id": "bedroom",
+          "falling": false,
+          "collected": false,
+          "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+          "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+        },
+        {
+          "id": "house",
+          "falling": false,
+          "collected": false,
+          "position": { "x": 35, "y": 0, "z": 40 },
+          "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+        }
+      ],
+      "apertureCenterError": 1.1368683772161603e-13,
+      "rawMoving": [
+        {
+          "time": 1694.5,
+          "physical": { "x": 0, "z": 0.018666666666666668, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.00974400000333788, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1710.300000011921,
+          "physical": { "x": 0, "z": 0.018666666666666668, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.0185920000100136, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1722.5999999940395,
+          "physical": { "x": 0, "z": 0.028000000000000004, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.02548000000000002, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1734,
+          "physical": { "x": 0, "z": 0.037333333333333336, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.03186400000333788, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1746.5,
+          "physical": { "x": 0, "z": 0.04666666666666667, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.03886400000333788, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1758.2000000178814,
+          "physical": { "x": 0, "z": 0.04666666666666667, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.04541600001335146, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1768,
+          "physical": { "x": 0, "z": 0.056, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.05090400000333788, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1779.5999999940395,
+          "physical": { "x": 0, "z": 0.06533333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.05740000000000002, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1791.0999999940395,
+          "physical": { "x": 0, "z": 0.06533333333333333, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.06384000000000001, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1801.0999999940395,
+          "physical": { "x": 0, "z": 0.07466666666666666, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.06944000000000002, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1813.5,
+          "physical": { "x": 0, "z": 0.08399999999999999, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.07638400000333788, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1825.2000000178814,
+          "physical": { "x": 0, "z": 0.08399999999999999, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.08293600001335145, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1834.5,
+          "physical": { "x": 0, "z": 0.09333333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.08814400000333787, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1846.0999999940395,
+          "physical": { "x": 0, "z": 0.10266666666666666, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.09464000000000002, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1857.5999999940395,
+          "physical": { "x": 0, "z": 0.10266666666666666, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.10108000000000002, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1868,
+          "physical": { "x": 0, "z": 0.11199999999999999, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.10690400000333787, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1880.2000000178814,
+          "physical": { "x": 0, "z": 0.12133333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.11373600001335145, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1891.7000000178814,
+          "physical": { "x": 0, "z": 0.12133333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.12017600001335145, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1901.5999999940395,
+          "physical": { "x": 0, "z": 0.13066666666666665, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.12572, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1913.5,
+          "physical": { "x": 0, "z": 0.13999999999999999, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.13238400000333786, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1925.300000011921,
+          "physical": { "x": 0, "z": 0.13999999999999999, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.13899200001001358, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1934.7000000178814,
+          "physical": { "x": 0, "z": 0.14933333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.14425600001335145, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1946.0999999940395,
+          "physical": { "x": 0, "z": 0.15866666666666665, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.15064, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722505, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1957.5999999940395,
+          "physical": { "x": 0, "z": 0.15866666666666665, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.15708, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 1967.9000000059605,
+          "physical": { "x": 0, "z": 0.16799999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.16284800000667574, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1980.2000000178814,
+          "physical": { "x": 0, "z": 0.17733333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.16973600001335146, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 1990.9000000059605,
+          "physical": { "x": 0, "z": 0.17733333333333332, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.1757280000066757, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2000.5,
+          "physical": { "x": 0, "z": 0.18666666666666665, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.18110400000333787, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422 },
+            { "x": 242.32693561277495, "y": 422 }
+          ]
+        },
+        {
+          "time": 2011.7000000178814,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.18737600001335145, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        }
+      ],
+      "rawStopped": [
+        {
+          "time": 2297,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2308.4000000059605,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2318,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2329.0999999940395,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2340.800000011921,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2350.5,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2362.4000000059605,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2374.0999999940395,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2383.7000000178814,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2395.7000000178814,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2407.800000011921,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2418.300000011921,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2430.7000000178814,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2442.300000011921,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2452.5999999940395,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2464.5999999940395,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2476.800000011921,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        },
+        {
+          "time": 2486.800000011921,
+          "physical": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "render": { "x": 0, "z": 0.19599999999999998, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": [],
+          "aperture": [
+            { "x": 147.67306438722503, "y": 422.0000000000001 },
+            { "x": 242.32693561277495, "y": 422.0000000000001 }
+          ]
+        }
+      ]
+    }
+  ]
+}

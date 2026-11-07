@@ -1,0 +1,30 @@
+{
+  "directory": "reports/factory-sweeper-ui-2026-10-30/details-1793330045182",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "seed": 2584397859,
+  "emission": {
+    "id": "supply-food-10",
+    "initial": { "x": -12.833328247070312, "y": 5.463443756103516, "z": 9 },
+    "velocity": { "x": 3.3333332538604736, "y": 5.544055938720703, "z": 0 },
+    "target": { "x": -7, "y": 0.145, "z": 9 },
+    "highestY": 7.0044145584106445,
+    "landed": {
+      "x": -7.003340244293213,
+      "y": 0.14837637543678284,
+      "z": 9.008472442626953
+    }
+  },
+  "minimalUI": {
+    "headerBottom": 58,
+    "obsolete": 0,
+    "menuOpen": false,
+    "width": 390,
+    "scrollWidth": 390
+  },
+  "menuControls": true,
+  "restart": true,
+  "completed": true
+}

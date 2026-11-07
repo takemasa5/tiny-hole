@@ -1,8 +1,23 @@
 import RAPIER from "@dimforge/rapier3d-compat";
 import { OBJECT_TYPES, type ObjectKind } from "./stage";
+import { objectHullVertices } from "./object-shape";
 
-export function objectCollider(kind: ObjectKind) {
-  const [width, height, depth] = OBJECT_TYPES[kind].size;
+export function objectCollider(kind: ObjectKind, scale = 1) {
+  const vertices = objectHullVertices(kind);
+  if (vertices) {
+    const collider = RAPIER.ColliderDesc.convexHull(
+      scale === 1 ? vertices : vertices.map((value) => value * scale),
+    );
+    if (!collider)
+      throw new Error(`${OBJECT_TYPES[kind].label}の衝突形状を作れません。`);
+    return collider;
+  }
+  const [width, height, depth] = OBJECT_TYPES[kind].size.map(
+    (value) => value * scale,
+  );
+  if (kind === "toyBall") return RAPIER.ColliderDesc.ball(width / 2);
+  if (kind === "buoy" || kind === "barrel")
+    return RAPIER.ColliderDesc.cylinder(height / 2, width / 2);
   if (kind === "log") {
     return RAPIER.ColliderDesc.cylinder(width / 2, height / 2).setRotation({
       x: 0,

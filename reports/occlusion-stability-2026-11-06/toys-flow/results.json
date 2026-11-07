@@ -1,0 +1,167 @@
+{
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "levels": [
+    {
+      "level": 1,
+      "area": 0,
+      "space": "小物箱",
+      "bodies": 52,
+      "frame": { "median": 16.699999999999818, "p95": 16.799999999999727 },
+      "score": 2
+    },
+    {
+      "level": 2,
+      "area": 0,
+      "space": "小物箱",
+      "bodies": 47,
+      "frame": { "median": 16.699999999999818, "p95": 16.799999999999272 },
+      "score": 13
+    },
+    {
+      "level": 3,
+      "area": 1,
+      "space": "おもちゃ箱",
+      "bodies": 77,
+      "frame": { "median": 16.69999999999891, "p95": 16.799999999999272 },
+      "score": 64
+    },
+    {
+      "level": 4,
+      "area": 1,
+      "space": "おもちゃ箱",
+      "bodies": 62,
+      "frame": { "median": 16.69999999999709, "p95": 16.700000000000728 },
+      "score": 256
+    },
+    {
+      "level": 5,
+      "area": 2,
+      "space": "子供部屋",
+      "bodies": 57,
+      "frame": { "median": 16.69999999999709, "p95": 16.799999999995634 },
+      "score": 1024
+    },
+    {
+      "level": 6,
+      "area": 2,
+      "space": "子供部屋",
+      "bodies": 49,
+      "frame": { "median": 16.69999999999709, "p95": 16.799999999995634 },
+      "score": 4208
+    },
+    {
+      "level": 7,
+      "area": 3,
+      "space": "家の中",
+      "bodies": 81,
+      "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 },
+      "score": 16752
+    },
+    {
+      "level": 8,
+      "area": 3,
+      "space": "家の中",
+      "bodies": 87,
+      "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 },
+      "score": 68464
+    },
+    {
+      "level": 9,
+      "area": 4,
+      "space": "街",
+      "bodies": 101,
+      "frame": { "median": 16.69999999999709, "p95": 16.80000000000291 },
+      "score": 265072
+    },
+    {
+      "level": 10,
+      "area": 4,
+      "space": "街",
+      "bodies": 62,
+      "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 },
+      "score": 1143657
+    },
+    {
+      "level": 11,
+      "area": 4,
+      "space": "街",
+      "bodies": 73,
+      "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+      "score": 4289385
+    },
+    {
+      "level": 12,
+      "area": 4,
+      "space": "街",
+      "bodies": 66,
+      "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 },
+      "score": 17134441
+    }
+  ],
+  "entered": ["notions", "chest", "bedroom", "house", "city"],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "seed": 3199601738,
+  "initialBodies": 54,
+  "closedSideBlocks": true,
+  "traffic": [
+    { "behavior": "route", "moved": true },
+    { "behavior": "train", "moved": true }
+  ],
+  "giants": [
+    { "id": "hero", "size": [48, 180, 42], "phase": "fighting" },
+    { "id": "monster", "size": [56, 220, 48], "phase": "fighting" },
+    { "id": "goal", "size": [196, 700, 196], "phase": "working" }
+  ],
+  "final": {
+    "level": 12,
+    "score": 22377321,
+    "cleared": true,
+    "bodies": 64,
+    "collected": 213,
+    "doors": [
+      {
+        "id": "notions-door",
+        "requiredLevel": 3,
+        "open": true,
+        "amount": 1,
+        "x": 0.75,
+        "z": 0,
+        "side": "east",
+        "width": 1.1
+      },
+      {
+        "id": "chest-door",
+        "requiredLevel": 5,
+        "open": true,
+        "amount": 1,
+        "x": 0,
+        "z": 2.6,
+        "side": "south",
+        "width": 2.7
+      },
+      {
+        "id": "bedroom-door",
+        "requiredLevel": 7,
+        "open": true,
+        "amount": 1,
+        "x": 31.6,
+        "z": 23,
+        "side": "east",
+        "width": 8.5
+      },
+      {
+        "id": "house-door",
+        "requiredLevel": 9,
+        "open": true,
+        "amount": 1,
+        "x": 95,
+        "z": 80,
+        "side": "east",
+        "width": 33
+      }
+    ]
+  },
+  "autoTransition": "office"
+}

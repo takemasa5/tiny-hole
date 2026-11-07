@@ -1,0 +1,29 @@
+{
+  "browser": "156.0.8078.4",
+  "fixture": "実際の透過処理で交差する部品を描く比較用シーン。ゲームやiPhone実機の検証とは別。",
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "cases": [
+    {
+      "viewport": "800x600",
+      "dpr": 1,
+      "samples": 4,
+      "opacity": [
+        { "id": "intersecting-parts", "opacity": 0.30000000000000004 }
+      ],
+      "changedFraction": 1,
+      "meanChannelDelta": 13
+    },
+    {
+      "viewport": "390x844",
+      "dpr": 2,
+      "samples": 4,
+      "opacity": [
+        { "id": "intersecting-parts", "opacity": 0.30000000000000004 }
+      ],
+      "changedFraction": 1,
+      "meanChannelDelta": 13
+    }
+  ],
+  "errors": []
+}

@@ -111,7 +111,7 @@ try {
         observedLevels.push(after.level);
         console.log(`${stageId}: level ${after.level}, score ${after.score}`);
       }
-      if (after.rigidBodies !== after.objects.length)
+      if (after.rigidBodies !== after.objects.length + after.factories.length)
         throw new Error("描画だけの弾が剛体を増やしています。");
     }
     const end = await snapshot();
@@ -133,7 +133,10 @@ try {
       throw new Error("アメリカの発砲演出・音が発生しません。");
     let automaticallyAdvancedTo;
     if (autoTransition) {
-      const order = ["plaza", "mountain", "america", "egypt"];
+      const order = await page
+        .getByRole("combobox", { name: "ステージ", exact: true })
+        .locator("option")
+        .evaluateAll((options) => options.map((option) => option.value));
       automaticallyAdvancedTo =
         order[(order.indexOf(stageId) + 1) % order.length];
       await page.waitForFunction(

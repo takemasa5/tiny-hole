@@ -1,0 +1,468 @@
+{
+  "date": "2026-11-07",
+  "scope": "囲いのグループ全体から、実際に穴を隠す面だけの透過へ変更。通常物の透過、カメラ補間、物理・進行は維持。",
+  "documentation": "docs/container-occlusion-fix.md",
+  "sourceFiles": [
+    {
+      "path": "src/game/occlusion.ts",
+      "before": "aac4d983a23bbeecc7f9d177b6d0dc6867035bf3c972bc8ad2670c3edf61f7dd",
+      "after": "ac83cad843f84905ba85a3d67b898b81bead53a86aff5dea0c83b8ccf26845df"
+    },
+    {
+      "path": "src/game/toy-world-scene.ts",
+      "before": "c1dc1ade6bba08dd9f1f0f3d66e1b91cc70d1f2932cd2180b2f7d5f039db286b",
+      "after": "7e7c2564b97ffc0fed4245b3ff88f98ac6e5807d27854e0f891c9f8ccccdb0be"
+    },
+    {
+      "path": "tests/container-occlusion.test.ts",
+      "before": null,
+      "after": "b94768e18ee41094dabf4d46685e98c60b16ac41d8523a1acd77ddb019d33498"
+    },
+    {
+      "path": "checks/container-occlusion.mjs",
+      "before": null,
+      "after": "b8937d18da0efe5176052bb54e7a349938f6f9ac323382b631a1b25e806c5212"
+    },
+    {
+      "path": "docs/README.md",
+      "before": "40e7b9a07b50121c9519aace361c96be8a4ffd3444640048e3e8975071c96235",
+      "after": "6691aa705c906aecdd70995ceef9168e8ecbd6e5b22daa27e8a36f89ae810c65"
+    },
+    {
+      "path": "docs/box-motion-stability.md",
+      "before": "9b533d3bd71317f12bf221faa9ba123072d423e3656ab0906739d0d8c0c2f4fc",
+      "after": "1e68e30578cfa4dfc658028b1e6531f37267edacd39dd48ea99d5fd4c1652ae9"
+    },
+    {
+      "path": "docs/container-occlusion-fix.md",
+      "before": null,
+      "after": "a0b0160f1eda8f61b633f1164df5b64e14fb9ccdd52b8aca9366cd76786c2856"
+    }
+  ],
+  "ownerObservation": "修正版でもiPhoneのレベル1で激しい点滅。レベル2で治る。",
+  "finding": "PCの条件比較ではレベル1の手前の壁による遮蔽で奥壁・蓋まで透過し、レベル2では透過なし。修正後は手前の壁と縁だけ。iPhoneの点滅そのものの直接計測ではない。",
+  "automated": {
+    "tests": 316,
+    "files": 24,
+    "passed": true,
+    "newRegressionTests": 5,
+    "lint": true,
+    "typescriptAndBuild": true,
+    "prettier": "changed files"
+  },
+  "drawingComparison": {
+    "before": {
+      "browser": "156.0.8078.4",
+      "fixture": "実際の箱・透過処理を使う描画用の比較シーン。通常プレイ・iPhone実機とは別。",
+      "iPhone": "未実施",
+      "WebKit": "未実施",
+      "errors": [],
+      "cases": [
+        {
+          "level": 1,
+          "radius": 0.08,
+          "viewport": "390x844 DPR2",
+          "samples": 4,
+          "mode": "coverage",
+          "occlusion": [
+            {
+              "id": "world-notions",
+              "opacity": 0.25
+            }
+          ],
+          "frontChanged": true,
+          "backChanged": true,
+          "lidChanged": true
+        },
+        {
+          "level": 2,
+          "radius": 0.14,
+          "viewport": "390x844 DPR2",
+          "samples": 4,
+          "mode": "coverage",
+          "occlusion": [],
+          "frontChanged": false,
+          "backChanged": false,
+          "lidChanged": false
+        }
+      ]
+    },
+    "after": {
+      "browser": "156.0.8078.4",
+      "fixture": "実際の箱・透過処理を使う描画用の比較シーン。通常プレイ・iPhone実機とは別。",
+      "iPhone": "未実施",
+      "WebKit": "未実施",
+      "errors": [],
+      "cases": [
+        {
+          "level": 1,
+          "radius": 0.08,
+          "viewport": "390x844 DPR2",
+          "samples": 4,
+          "mode": "coverage",
+          "occlusion": [
+            {
+              "id": "world-notions",
+              "opacity": 0.25,
+              "surface": "notions-south"
+            },
+            {
+              "id": "world-notions",
+              "opacity": 0.25,
+              "surface": "notions-south-rim"
+            }
+          ],
+          "frontChanged": true,
+          "backChanged": false,
+          "lidChanged": false
+        },
+        {
+          "level": 2,
+          "radius": 0.14,
+          "viewport": "390x844 DPR2",
+          "samples": 4,
+          "mode": "coverage",
+          "occlusion": [],
+          "frontChanged": false,
+          "backChanged": false,
+          "lidChanged": false
+        }
+      ]
+    },
+    "baselineUnit": "before-unit.txt"
+  },
+  "browser": {
+    "toys": {
+      "browser": "156.0.8078.4",
+      "errors": [],
+      "levels": [
+        {
+          "level": 1,
+          "area": 0,
+          "space": "小物箱",
+          "bodies": 52,
+          "frame": {
+            "median": 16.699999999999818,
+            "p95": 16.799999999999727
+          },
+          "score": 2
+        },
+        {
+          "level": 2,
+          "area": 0,
+          "space": "小物箱",
+          "bodies": 40,
+          "frame": {
+            "median": 16.69999999999891,
+            "p95": 16.700000000000728
+          },
+          "score": 20
+        },
+        {
+          "level": 3,
+          "area": 1,
+          "space": "おもちゃ箱",
+          "bodies": 70,
+          "frame": {
+            "median": 16.700000000000728,
+            "p95": 16.799999999999272
+          },
+          "score": 65
+        },
+        {
+          "level": 4,
+          "area": 1,
+          "space": "おもちゃ箱",
+          "bodies": 54,
+          "frame": {
+            "median": 16.69999999999709,
+            "p95": 16.700000000004366
+          },
+          "score": 259
+        },
+        {
+          "level": 5,
+          "area": 2,
+          "space": "子供部屋",
+          "bodies": 46,
+          "frame": {
+            "median": 16.69999999999709,
+            "p95": 16.700000000004366
+          },
+          "score": 1043
+        },
+        {
+          "level": 6,
+          "area": 2,
+          "space": "子供部屋",
+          "bodies": 41,
+          "frame": {
+            "median": 16.69999999999709,
+            "p95": 16.79999999998836
+          },
+          "score": 4339
+        },
+        {
+          "level": 7,
+          "area": 3,
+          "space": "家の中",
+          "bodies": 66,
+          "frame": {
+            "median": 16.69999999999709,
+            "p95": 16.80000000000291
+          },
+          "score": 17907
+        },
+        {
+          "level": 8,
+          "area": 3,
+          "space": "家の中",
+          "bodies": 83,
+          "frame": {
+            "median": 16.69999999999709,
+            "p95": 16.70000000001164
+          },
+          "score": 68339
+        },
+        {
+          "level": 9,
+          "area": 4,
+          "space": "街",
+          "bodies": 93,
+          "frame": {
+            "median": 16.69999999999709,
+            "p95": 16.70000000001164
+          },
+          "score": 273139
+        },
+        {
+          "level": 10,
+          "area": 4,
+          "space": "街",
+          "bodies": 64,
+          "frame": {
+            "median": 16.699999999982538,
+            "p95": 16.79999999998836
+          },
+          "score": 1071860
+        },
+        {
+          "level": 11,
+          "area": 4,
+          "space": "街",
+          "bodies": 80,
+          "frame": {
+            "median": 16.699999999982538,
+            "p95": 16.79999999998836
+          },
+          "score": 4217588
+        },
+        {
+          "level": 12,
+          "area": 4,
+          "space": "街",
+          "bodies": 76,
+          "frame": {
+            "median": 16.699999999982538,
+            "p95": 16.79999999998836
+          },
+          "score": 16800500
+        }
+      ],
+      "entered": ["notions", "chest", "bedroom", "house", "city"],
+      "iPhone": "未実施",
+      "WebKit": "未実施",
+      "seed": 42,
+      "initialBodies": 54,
+      "closedSideBlocks": true,
+      "traffic": [
+        {
+          "behavior": "route",
+          "moved": true
+        },
+        {
+          "behavior": "train",
+          "moved": true
+        }
+      ],
+      "giants": [
+        {
+          "id": "hero",
+          "size": [48, 180, 42],
+          "phase": "fighting"
+        },
+        {
+          "id": "monster",
+          "size": [56, 220, 48],
+          "phase": "fighting"
+        },
+        {
+          "id": "goal",
+          "size": [196, 700, 196],
+          "phase": "working"
+        }
+      ],
+      "final": {
+        "level": 12,
+        "score": 26499828,
+        "cleared": true,
+        "bodies": 69,
+        "collected": 219,
+        "doors": [
+          {
+            "id": "notions-door",
+            "requiredLevel": 3,
+            "open": true,
+            "amount": 1,
+            "x": 0.75,
+            "z": 0,
+            "side": "east",
+            "width": 1.1
+          },
+          {
+            "id": "chest-door",
+            "requiredLevel": 5,
+            "open": true,
+            "amount": 1,
+            "x": 0,
+            "z": 2.6,
+            "side": "south",
+            "width": 2.7
+          },
+          {
+            "id": "bedroom-door",
+            "requiredLevel": 7,
+            "open": true,
+            "amount": 1,
+            "x": 31.6,
+            "z": 23,
+            "side": "east",
+            "width": 8.5
+          },
+          {
+            "id": "house-door",
+            "requiredLevel": 9,
+            "open": true,
+            "amount": 1,
+            "x": 95,
+            "z": 80,
+            "side": "east",
+            "width": 33
+          }
+        ]
+      },
+      "autoTransition": "office"
+    },
+    "office": {
+      "browser": "156.0.8078.4",
+      "errors": [],
+      "iPhone": "未実施",
+      "WebKit": "未実施",
+      "deskOcclusion": [
+        {
+          "id": "landmark",
+          "opacity": 0.25
+        }
+      ],
+      "occlusionRendering": {
+        "samples": 4,
+        "mode": "coverage"
+      },
+      "occlusionRestored": true,
+      "dragReleaseStops": true,
+      "closedGateBlocks": true,
+      "restartResets": true,
+      "touch390": {
+        "moved": true,
+        "releaseStops": true,
+        "audioUnlocked": true
+      }
+    }
+  },
+  "build": {
+    "cache": "531ebc1334fa1854f7ad",
+    "js": "index-Dp9OwzjK.js",
+    "css": "index-B7g_aRMj.css",
+    "offlineResources": 10
+  },
+  "limits": [
+    "修正後のiPhone実機・WebKitでの点滅は未確認",
+    "PCの描画シーンで確認した不要な透過と、iPhoneの激しい点滅そのものは区別する",
+    "iOSシミュレーター一覧が応答せず中止。シミュレーター検証なし",
+    "全8ステージのオフライン起動は変更後に再実行していない",
+    "設定・依存・配信設定の変更、push・公開なし"
+  ],
+  "projectDelivery": {
+    "files": 7,
+    "hashPreflightAndCopyVerified": true,
+    "buildCacheMatches": "531ebc1334fa1854f7ad",
+    "gitDiffCheck": true,
+    "drawing": {
+      "browser": "156.0.8078.4",
+      "fixture": "実際の箱・透過処理を使う描画用の比較シーン。通常プレイ・iPhone実機とは別。",
+      "iPhone": "未実施",
+      "WebKit": "未実施",
+      "errors": [],
+      "cases": [
+        {
+          "level": 1,
+          "radius": 0.08,
+          "viewport": "390x844 DPR2",
+          "samples": 4,
+          "mode": "coverage",
+          "occlusion": [
+            {
+              "id": "world-notions",
+              "opacity": 0.25,
+              "surface": "notions-south"
+            },
+            {
+              "id": "world-notions",
+              "opacity": 0.25,
+              "surface": "notions-south-rim"
+            }
+          ],
+          "frontChanged": true,
+          "backChanged": false,
+          "lidChanged": false
+        },
+        {
+          "level": 2,
+          "radius": 0.14,
+          "viewport": "390x844 DPR2",
+          "samples": 4,
+          "mode": "coverage",
+          "occlusion": [],
+          "frontChanged": false,
+          "backChanged": false,
+          "lidChanged": false
+        }
+      ]
+    },
+    "realGameLAN390Touch": {
+      "browser": "156.0.8078.4",
+      "viewport": "390x844",
+      "errors": [],
+      "iPhone": "未実施",
+      "WebKit": "未実施",
+      "touchMovesAndStops": true,
+      "gate": {
+        "text": "レベル3になると箱の側面が開きます",
+        "font": 16,
+        "bounds": {
+          "x": 53.7265625,
+          "y": 774,
+          "width": 282.546875,
+          "height": 46
+        },
+        "blocks": true
+      },
+      "restart": true,
+      "stageSwitch": true
+    },
+    "retainedLANFixtureFailure": {
+      "path": "delivered-drawing/results.json",
+      "failure": "画面を差し替えたLAN URLの検証用ページでsource fetch失敗。同じ本体サーバーの127.0.0.1では描画比較成功。実ゲームのLANタッチ確認も成功。"
+    }
+  }
+}

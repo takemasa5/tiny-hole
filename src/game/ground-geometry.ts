@@ -1,10 +1,15 @@
 import * as THREE from "three";
 import { MAP_HALF_SIZE } from "./stage";
 
+// Paint is a background layer, so it must never overwrite solid objects via a depth comparison.
+export const BASE_GROUND_RENDER_ORDER = -1000;
+export const GROUND_PAINT_RENDER_ORDER = -100;
+
 export function writeGroundGeometry(
   geometry: THREE.BufferGeometry,
   vertices: Float32Array,
   indices: Uint32Array,
+  mapHalfSize = MAP_HALF_SIZE,
 ) {
   const position = geometry.getAttribute("position") as
     THREE.BufferAttribute | undefined;
@@ -23,8 +28,8 @@ export function writeGroundGeometry(
   for (let index = 0; index < vertices.length / 3; index++) {
     uv.setXY(
       index,
-      (vertices[index * 3] + MAP_HALF_SIZE) / (MAP_HALF_SIZE * 2),
-      1 - (vertices[index * 3 + 2] + MAP_HALF_SIZE) / (MAP_HALF_SIZE * 2),
+      (vertices[index * 3] + mapHalfSize) / (mapHalfSize * 2),
+      1 - (vertices[index * 3 + 2] + mapHalfSize) / (mapHalfSize * 2),
     );
   }
   // Keep the same attributes so movement doesn't orphan buffers owned by WebGL.

@@ -1,0 +1,124 @@
+{
+  "directory": "reports/all-stages-random-2026-10-30/2026-10-30T12-04-42.806Z",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "stages": [
+    {
+      "stageId": "america",
+      "seed": 1446732914,
+      "factorySites": [
+        {
+          "id": "food",
+          "label": "工場A",
+          "width": 4,
+          "height": 2.8,
+          "depth": 2.6,
+          "x": -8.609068679801,
+          "z": 37.646763059310615,
+          "outputX": -8.609068679801,
+          "outputZ": 44.646763059310615
+        },
+        {
+          "id": "depot",
+          "label": "工場B",
+          "width": 4.5,
+          "height": 3.5,
+          "depth": 4,
+          "x": -13.034704276663472,
+          "z": -14.292991943657398,
+          "outputX": -13.034704276663472,
+          "outputZ": -7.292991943657398
+        }
+      ],
+      "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+      "emittedKinds": [
+        "tire",
+        "burgerBox",
+        "burger",
+        "car",
+        "kiosk",
+        "house",
+        "hotdog"
+      ],
+      "emission": {
+        "kind": "tire",
+        "sourceId": "food",
+        "duration": 0.9,
+        "highestY": 7.040409564971924,
+        "landed": {
+          "x": -8.609512329101562,
+          "y": 0.2363634705543518,
+          "z": 44.59737014770508
+        }
+      },
+      "supplyStopped": true,
+      "cleared": true,
+      "elapsedSeconds": 517.031,
+      "score": 5323,
+      "supplied": 26,
+      "lost": 88,
+      "collectedEnemies": 1,
+      "collectedFactories": 2,
+      "autoTransition": true,
+      "randomRestart": true,
+      "chromiumTouch": true,
+      "menuRestart": true
+    },
+    {
+      "stageId": "egypt",
+      "seed": 2078351263,
+      "factorySites": [
+        {
+          "id": "food",
+          "label": "工場A",
+          "width": 4,
+          "height": 2.8,
+          "depth": 2.6,
+          "x": 29.70611285045743,
+          "z": -8.83546448033303,
+          "outputX": 29.70611285045743,
+          "outputZ": -1.8354644803330302
+        },
+        {
+          "id": "depot",
+          "label": "工場B",
+          "width": 4.5,
+          "height": 3.5,
+          "depth": 4,
+          "x": 30.908518104813993,
+          "z": 27.557521193753928,
+          "outputX": 30.908518104813993,
+          "outputZ": 34.55752119375393
+        }
+      ],
+      "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+      "emittedKinds": ["column", "house", "camel", "columnBlock", "stone"],
+      "emission": {
+        "kind": "column",
+        "sourceId": "food",
+        "duration": 0.9,
+        "highestY": 9.365788459777832,
+        "landed": {
+          "x": 29.742528915405273,
+          "y": 2.624229669570923,
+          "z": -1.6178539991378784
+        }
+      },
+      "supplyStopped": true,
+      "cleared": true,
+      "elapsedSeconds": 324.046,
+      "score": 3927,
+      "supplied": 24,
+      "lost": 26,
+      "collectedEnemies": 1,
+      "collectedFactories": 2,
+      "autoTransition": true,
+      "randomRestart": true,
+      "chromiumTouch": true,
+      "menuRestart": true
+    }
+  ],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "completed": true
+}

@@ -1,0 +1,2722 @@
+{
+  "browser": "156.0.8078.4",
+  "fixture": "実ゲームを通常のキー入力で移動。120Hz相当のsetTimeout描画コールバックはタイミング検証用であり、実機の表示更新率の検証ではない。",
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "errors": [],
+  "cases": [
+    {
+      "hz": 60,
+      "level": 1,
+      "samples": 12,
+      "repeatedPhysicalFrames": 0,
+      "repeatedRenderedFrames": 0,
+      "renderSpeedVariation": 0.04768777789900468,
+      "stationaryRenderDrift": 0,
+      "frames": [
+        {
+          "id": "notions",
+          "falling": false,
+          "collected": false,
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+        },
+        {
+          "id": "chest",
+          "falling": false,
+          "collected": false,
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+        },
+        {
+          "id": "bedroom",
+          "falling": false,
+          "collected": false,
+          "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+          "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+        },
+        {
+          "id": "house",
+          "falling": false,
+          "collected": false,
+          "position": { "x": 35, "y": 0, "z": 40 },
+          "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+        }
+      ],
+      "rawMoving": [
+        {
+          "time": 1844.199999988079,
+          "physical": { "x": 0.04666666666666667, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.037333333333333336, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1864.5999999940395,
+          "physical": { "x": 0.056, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.052789333329995476, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1883.7999999821186,
+          "physical": { "x": 0.06533333333333333, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.06342933332999547, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1903.9000000059605,
+          "physical": { "x": 0.07466666666666666, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.07451733331998188, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1925.2999999821186,
+          "physical": { "x": 0.09333333333333332, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.08605333333333333, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1945.5,
+          "physical": { "x": 0.10266666666666666, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.09803733331998189, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1966.2999999821186,
+          "physical": { "x": 0.11199999999999999, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.10962933332999547, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1985.699999988079,
+          "physical": { "x": 0.12133333333333332, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.12066133332331974, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2007.4000000059605,
+          "physical": { "x": 0.13999999999999999, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.13197333333333333, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2026.5999999940395,
+          "physical": { "x": 0.14933333333333332, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.1436773333199819, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2045.9000000059605,
+          "physical": { "x": 0.15866666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.1544853333266576, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2065.9000000059605,
+          "physical": { "x": 0.16799999999999998, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.1656853333266576, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2085.4000000059605,
+          "physical": { "x": 0.17733333333333332, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.1767733333333333, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2107.4000000059605,
+          "physical": { "x": 0.19599999999999998, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.1880853333266576, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2126.199999988079,
+          "physical": { "x": 0.2053333333333333, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.19950933332999546, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2146.4000000059605,
+          "physical": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.21070933332999545, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        }
+      ],
+      "rawStopped": [
+        {
+          "time": 2435.699999988079,
+          "physical": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2455.4000000059605,
+          "physical": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2473.5999999940395,
+          "physical": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2492.5999999940395,
+          "physical": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2511.0999999940395,
+          "physical": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2529.9000000059605,
+          "physical": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2552.5,
+          "physical": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2575.2999999821186,
+          "physical": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2594.7999999821186,
+          "physical": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2614.7999999821186,
+          "physical": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.21466666666666664, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        }
+      ]
+    },
+    {
+      "hz": 120,
+      "level": 1,
+      "samples": 23,
+      "repeatedPhysicalFrames": 7,
+      "repeatedRenderedFrames": 0,
+      "renderSpeedVariation": 0.14297791226491635,
+      "stationaryRenderDrift": 0,
+      "frames": [
+        {
+          "id": "notions",
+          "falling": false,
+          "collected": false,
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+        },
+        {
+          "id": "chest",
+          "falling": false,
+          "collected": false,
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+        },
+        {
+          "id": "bedroom",
+          "falling": false,
+          "collected": false,
+          "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+          "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+        },
+        {
+          "id": "house",
+          "falling": false,
+          "collected": false,
+          "position": { "x": 35, "y": 0, "z": 40 },
+          "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+        }
+      ],
+      "rawMoving": [
+        {
+          "time": 1261.800000011921,
+          "physical": { "x": 0.018666666666666668, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.009501333340009067, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1272.2000000178814,
+          "physical": { "x": 0.018666666666666668, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.01734133334000907, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1283,
+          "physical": { "x": 0.028000000000000004, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.02282933332999549, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1294.4000000059605,
+          "physical": { "x": 0.037333333333333336, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.02921333333333335, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1304.4000000059605,
+          "physical": { "x": 0.037333333333333336, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.035597333336671214, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1317.5,
+          "physical": { "x": 0.04666666666666667, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.04108533334334693, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1328.800000011921,
+          "physical": { "x": 0.056, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.04819733333667121, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1339.2000000178814,
+          "physical": { "x": 0.056, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.05486133334000907, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1352.800000011921,
+          "physical": { "x": 0.06533333333333333, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.06079733333667121, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1366.800000011921,
+          "physical": { "x": 0.07466666666666666, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.06852533334334693, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1378.5999999940395,
+          "physical": { "x": 0.08399999999999999, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.07569333333333333, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1388.5999999940395,
+          "physical": { "x": 0.08399999999999999, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.08274933332999548, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1402.2000000178814,
+          "physical": { "x": 0.09333333333333332, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.08834933332999548, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1413.800000011921,
+          "physical": { "x": 0.10266666666666666, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.09568533334334692, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1426.5,
+          "physical": { "x": 0.10266666666666666, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.1025173333366712, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1439.7000000178814,
+          "physical": { "x": 0.11199999999999999, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.1095173333366712, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1452.300000011921,
+          "physical": { "x": 0.12133333333333332, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.11746933332999547, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1463.2000000178814,
+          "physical": { "x": 0.13066666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.12357333333333334, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1473.5,
+          "physical": { "x": 0.13066666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.13018133334000906, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1486.2000000178814,
+          "physical": { "x": 0.13999999999999999, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.1358373333366712, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1498.2000000178814,
+          "physical": { "x": 0.14933333333333332, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.14317333333333332, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1507.9000000059605,
+          "physical": { "x": 0.14933333333333332, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.14922133334000906, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1519.5,
+          "physical": { "x": 0.15866666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.15510133334000906, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1530.9000000059605,
+          "physical": { "x": 0.16799999999999998, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.16148533334334692, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1540.300000011921,
+          "physical": { "x": 0.16799999999999998, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.16764533334334691, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1551.7000000178814,
+          "physical": { "x": 0.17733333333333332, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.17330133334000905, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1562.800000011921,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.1795173333366712, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        }
+      ],
+      "rawStopped": [
+        {
+          "time": 1847.5,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1857.2000000178814,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1868,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1881,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1892.4000000059605,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1904.7000000178814,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1916.7000000178814,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1927.4000000059605,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1937.800000011921,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1948.800000011921,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1959,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1969.2000000178814,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1980.4000000059605,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 1990.7000000178814,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2001.0999999940395,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2012,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2023.800000011921,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        },
+        {
+          "time": 2036.0999999940395,
+          "physical": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "render": { "x": 0.18666666666666665, "z": 0, "radius": 0.08 },
+          "level": 1,
+          "frames": [
+            {
+              "id": "notions",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "chest",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "bedroom",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 13.600000000000001, "y": 0, "z": 14 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "id": "house",
+              "falling": false,
+              "collected": false,
+              "position": { "x": 35, "y": 0, "z": 40 },
+              "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "occlusion": []
+        }
+      ]
+    }
+  ]
+}

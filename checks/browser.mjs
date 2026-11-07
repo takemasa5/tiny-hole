@@ -1,3 +1,4 @@
+import { gameControl } from "./ui.mjs";
 import { chromium } from "@playwright/test";
 import { mkdir, writeFile } from "node:fs/promises";
 
@@ -127,9 +128,9 @@ try {
   )
     throw new Error("成長で画面上の穴径が変わりました。");
 
-  await page
-    .getByRole("button", { name: smoke ? "最初から遊ぶ" : "もう一度遊ぶ" })
-    .click();
+  await (
+    await gameControl(page, smoke ? "最初から遊ぶ" : "もう一度遊ぶ")
+  ).click();
   await page.waitForFunction(() => window.__hole?.snapshot().score === 0);
   await page.setViewportSize({ width: 390, height: 844 });
   await wait(600);

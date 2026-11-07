@@ -1,0 +1,39 @@
+{
+  "source": "./temp/ScreenRecording_11-07-2026 08-43-32_1.MP4",
+  "sourceBytes": 24176301,
+  "sha256": "ce2fb570ca4eb056fc6ef0bf587c41892fd0e201f6a722bbcb4733082d91978b",
+  "fpsAverage": 59.63523257457938,
+  "decodedFrames": 702,
+  "firstTimestamp": 0.0,
+  "lastTimestamp": 11.755,
+  "evidenceFrames": [
+    {
+      "index": 27,
+      "time": 0.4666666666666667,
+      "luma": 194.25809636650868,
+      "diff": 0.24695588771418156
+    },
+    {
+      "index": 28,
+      "time": 0.48333333333333334,
+      "luma": 188.00761331875077,
+      "diff": 9.399468343662656
+    },
+    {
+      "index": 150,
+      "time": 2.535,
+      "luma": 181.04800704824402,
+      "diff": 12.223626807631547
+    },
+    {
+      "index": 499,
+      "time": 8.370000000000001,
+      "luma": 186.9986845303196,
+      "diff": 17.753326649653665
+    }
+  ],
+  "observation": "フレーム27では玩具が黄緑色の平面シルエットとなり、直後の28では立体の色・面へ戻る。成長の視点変化は150付近、499付近。",
+  "limits": "動画で描画崩れを観測。GPU内部の原因を直接計測したものではない。修正後のiPhone動画は未確認。",
+  "sourceUnchangedAfterAnalysis": true,
+  "independentDecoder": "AVFoundationでもファイルを開き、緑の平面状の表示を確認。フレームの厳密な時刻合わせは未実施。"
+}

@@ -1,0 +1,74 @@
+{
+  "directory": "reports/additional-stages-2026-10-31/2026-10-30T23-26-38.983Z",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "stages": [
+    {
+      "stageId": "office",
+      "seed": 1283106352,
+      "factorySites": [
+        {
+          "id": "food",
+          "label": "工場A",
+          "width": 0.8,
+          "height": 0.5599999999999999,
+          "depth": 0.52,
+          "x": 2.1442385299952322,
+          "z": 4.730526492930949,
+          "outputX": 2.1442385299952322,
+          "outputZ": 6.130526492930949,
+          "scale": 0.2
+        },
+        {
+          "id": "depot",
+          "label": "工場B",
+          "width": 0.9,
+          "height": 0.7000000000000001,
+          "depth": 0.8,
+          "x": 1.6163655819511487,
+          "z": -2.349531248770654,
+          "outputX": 1.6163655819511487,
+          "outputZ": -0.949531248770654,
+          "scale": 0.2
+        }
+      ],
+      "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+      "emittedKinds": [
+        "officeDesk",
+        "eraser",
+        "pencil",
+        "stapler",
+        "documents",
+        "copier",
+        "filingCabinet",
+        "officeChair"
+      ],
+      "emission": {
+        "kind": "officeDesk",
+        "sourceId": "food",
+        "duration": 0.9,
+        "highestY": 1.7492733001708984,
+        "landed": {
+          "x": 3.20261287689209,
+          "y": 0.5154457092285156,
+          "z": 5.84434175491333
+        }
+      },
+      "supplyStopped": true,
+      "cleared": true,
+      "elapsedSeconds": 615.635,
+      "score": 5280,
+      "supplied": 87,
+      "lost": 101,
+      "collectedEnemies": 1,
+      "collectedFactories": 2,
+      "autoTransition": true,
+      "randomRestart": true,
+      "chromiumTouch": true,
+      "menuRestart": true
+    }
+  ],
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "completed": true
+}
