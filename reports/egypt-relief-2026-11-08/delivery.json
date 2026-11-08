@@ -1,0 +1,59 @@
+{
+  "changedFiles": {
+    "src/game/growth-physics.ts": "b164d8c8aaa6721f67570aed12b8e9cb0ea24878579c94160e4cf3492e90fc32",
+    "src/game/egypt-visuals.ts": "cb89b29f50d2eda737e8c0b84945e36ead1c93d2f66594f7afca7c9e21afd996",
+    "src/game/theme-behavior.ts": "b1fd689d03b12488ab97dde2cf97cd16cd1ad2a05f6ac2e59b6c6fd15414029c",
+    "src/game/runtime.ts": "638746cead1f507ac3b34f76042b8a0471bde63d8490eebdd811aeb633066a87",
+    "src/game/egypt-stage.ts": "018fa1c49486a6e71bca8b6ef917f5891cb992e53aa5728682315f42bc5504e7",
+    "src/game/growth-stage.ts": "b2c3c2a4ff4ea6ab34c4a07e5b1b7b370b9ac48094cabf1a57ee14a6004fe6b8",
+    "tests/egypt-stage.test.ts": "91a9ebee1102d085cb4e5e867e1b0fa43bf60a85d42c9e27a75725cddab7eea0",
+    "docs/README.md": "e010b101076213f3d2b952652441b42680f7857faa8e1c2645010bfba63f3e5b",
+    "docs/egypt-stage-implementation.md": "35b91bf84991e8fe08908fbc09153c5771cdd50b3317e7994e3ec68b32e4513b",
+    "checks/egypt-gods.mjs": "a7b2e141b94e093635f194cab9fd64c1cf0051b9276c3791f56329ae8cf34fa1",
+    "checks/egypt-flow.mjs": "55aa58f88552a195e5b224b5151552574f4ec6cdf4aad53691ec1627a5bd2afe"
+  },
+  "unitTests": 383,
+  "reliefModels": true,
+  "uprightUntilSinking": true,
+  "fleeBurstRatio": 1.05,
+  "fleeRecoveryRatio": 0.78,
+  "iPhoneAfterThisChange": "未実施",
+  "WebKit": "未実施",
+  "newPush": false,
+  "sourceHashesVerified": true,
+  "checks": {
+    "unitTests": 383,
+    "lint": true,
+    "build": true,
+    "formatChangedFiles": true,
+    "diffWhitespace": true,
+    "nativeChromiumAll12LevelsAndClear": true,
+    "nativeFleeing": [
+      "egypt-god-anubis",
+      "egypt-god-horus"
+    ],
+    "pyramidAfterExit": {
+      "hole": {
+        "x": 95.00042888933478,
+        "z": 19.99999150753072,
+        "radius": 12
+      },
+      "goal": {
+        "x": 170.003173828125,
+        "y": 89.99858093261719,
+        "z": -99.99940490722656
+      },
+      "visible": true,
+      "detailed": true,
+      "motion": "working"
+    },
+    "mobileChromiumDelivery": true,
+    "lanHTTP": {
+      "/": 200,
+      "src/game/egypt-stage.ts": 200,
+      "src/game/egypt-visuals.ts": 200,
+      "src/game/theme-behavior.ts": 200
+    }
+  },
+  "serverURL": "http://192.168.40.191:5177/"
+}

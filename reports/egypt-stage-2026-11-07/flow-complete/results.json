@@ -1,0 +1,265 @@
+{
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "levels": [
+    {
+      "level": 1,
+      "area": 0,
+      "space": "壁画の物語",
+      "bodies": 41,
+      "colliders": 454,
+      "drawCalls": 108,
+      "triangles": 17648,
+      "physicsMilliseconds": 4.100000023841858,
+      "occlusionMilliseconds": 0.3999999761581421,
+      "frame": { "median": 16.699999999999818, "p95": 16.799999999999955 },
+      "score": 1
+    },
+    {
+      "level": 2,
+      "area": 0,
+      "space": "壁画の物語",
+      "bodies": 60,
+      "colliders": 800,
+      "drawCalls": 218,
+      "triangles": 21256,
+      "physicsMilliseconds": 4.600000023841858,
+      "occlusionMilliseconds": 0.30000001192092896,
+      "frame": { "median": 16.700000000000728, "p95": 16.700000000000728 },
+      "score": 12
+    },
+    {
+      "level": 3,
+      "area": 0,
+      "space": "壁画の物語",
+      "bodies": 53,
+      "colliders": 684,
+      "drawCalls": 477,
+      "triangles": 25912,
+      "physicsMilliseconds": 1.899999976158142,
+      "occlusionMilliseconds": 0.30000001192092896,
+      "frame": { "median": 16.700000000000728, "p95": 16.700000000000728 },
+      "score": 61
+    },
+    {
+      "level": 4,
+      "area": 1,
+      "space": "王家の墓",
+      "bodies": 49,
+      "colliders": 520,
+      "drawCalls": 287,
+      "triangles": 25768,
+      "physicsMilliseconds": 3.300000011920929,
+      "occlusionMilliseconds": 0.6000000238418579,
+      "frame": { "median": 16.69999999999709, "p95": 16.799999999995634 },
+      "score": 265
+    },
+    {
+      "level": 5,
+      "area": 1,
+      "space": "王家の墓",
+      "bodies": 73,
+      "colliders": 624,
+      "drawCalls": 150,
+      "triangles": 25700,
+      "physicsMilliseconds": 3,
+      "occlusionMilliseconds": 0.40000003576278687,
+      "frame": { "median": 16.69999999999709, "p95": 16.700000000004366 },
+      "score": 1062
+    },
+    {
+      "level": 6,
+      "area": 1,
+      "space": "王家の墓",
+      "bodies": 72,
+      "colliders": 628,
+      "drawCalls": 165,
+      "triangles": 26602,
+      "physicsMilliseconds": 3.399999976158142,
+      "occlusionMilliseconds": 0.40000003576278687,
+      "frame": { "median": 16.69999999999709, "p95": 16.79999999998836 },
+      "score": 4198
+    },
+    {
+      "level": 7,
+      "area": 2,
+      "space": "神殿",
+      "bodies": 81,
+      "colliders": 677,
+      "drawCalls": 480,
+      "triangles": 42628,
+      "physicsMilliseconds": 3.400000035762787,
+      "occlusionMilliseconds": 0.5,
+      "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 },
+      "score": 16614
+    },
+    {
+      "level": 8,
+      "area": 2,
+      "space": "神殿",
+      "bodies": 74,
+      "colliders": 569,
+      "drawCalls": 506,
+      "triangles": 44326,
+      "physicsMilliseconds": 2.300000011920929,
+      "occlusionMilliseconds": 0.40000003576278687,
+      "frame": { "median": 16.69999999999709, "p95": 16.79999999998836 },
+      "score": 69073
+    },
+    {
+      "level": 9,
+      "area": 3,
+      "space": "神殿の街とピラミッド",
+      "bodies": 55,
+      "colliders": 441,
+      "drawCalls": 386,
+      "triangles": 11114,
+      "physicsMilliseconds": 1.4000000357627869,
+      "occlusionMilliseconds": 0.8999999761581421,
+      "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+      "score": 272401
+    },
+    {
+      "level": 10,
+      "area": 3,
+      "space": "神殿の街とピラミッド",
+      "bodies": 61,
+      "colliders": 469,
+      "drawCalls": 240,
+      "triangles": 9648,
+      "physicsMilliseconds": 2.300000011920929,
+      "occlusionMilliseconds": 0.8999999761581421,
+      "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+      "score": 1112081
+    },
+    {
+      "level": 11,
+      "area": 3,
+      "space": "神殿の街とピラミッド",
+      "bodies": 28,
+      "colliders": 268,
+      "drawCalls": 144,
+      "triangles": 5564,
+      "physicsMilliseconds": 1.7000000476837158,
+      "occlusionMilliseconds": 0.699999988079071,
+      "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+      "score": 4405265
+    },
+    {
+      "level": 12,
+      "area": 3,
+      "space": "神殿の街とピラミッド",
+      "bodies": 134,
+      "colliders": 950,
+      "drawCalls": 774,
+      "triangles": 20440,
+      "physicsMilliseconds": 3.799999952316284,
+      "occlusionMilliseconds": 0.699999988079071,
+      "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 },
+      "score": 17513489
+    }
+  ],
+  "entered": ["mural", "tomb", "temple", "city"],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "seed": 42,
+  "initialBodies": 36,
+  "closedMuralBorderBlocks": true,
+  "peopleMove": true,
+  "cityPeopleMove": true,
+  "giants": [
+    { "id": "growth-7-23", "size": [3.5, 9, 3.5], "phase": "working" },
+    { "id": "goal", "size": [180, 180, 180], "phase": "working" },
+    { "id": "growth-7-2", "size": [3.5, 9, 3.5], "phase": "working" },
+    { "id": "growth-7-5", "size": [3.5, 9, 3.5], "phase": "working" },
+    { "id": "growth-7-11", "size": [3.5, 9, 3.5], "phase": "working" },
+    { "id": "growth-7-17", "size": [3.5, 9, 3.5], "phase": "falling" },
+    { "id": "growth-7-20", "size": [3.5, 9, 3.5], "phase": "working" }
+  ],
+  "cityTour": [
+    {
+      "id": "northwest",
+      "hole": {
+        "x": -850.1434520346413,
+        "z": -850.0494307410653,
+        "radius": 160
+      },
+      "buildingsOnScreen": 25,
+      "movingTraffic": 0,
+      "physicalCityObjects": 28,
+      "remainingCityObjects": 162,
+      "bodies": 106,
+      "colliders": 745,
+      "drawCalls": 223,
+      "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 }
+    },
+    {
+      "id": "southwest",
+      "hole": { "x": -849.927241638198, "z": 849.7139647349973, "radius": 160 },
+      "buildingsOnScreen": 47,
+      "movingTraffic": 0,
+      "physicalCityObjects": 35,
+      "remainingCityObjects": 151,
+      "bodies": 113,
+      "colliders": 756,
+      "drawCalls": 737,
+      "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 }
+    },
+    {
+      "id": "northeast",
+      "hole": {
+        "x": 850.1525370091724,
+        "z": -850.2164627776247,
+        "radius": 160
+      },
+      "buildingsOnScreen": 22,
+      "movingTraffic": 0,
+      "physicalCityObjects": 34,
+      "remainingCityObjects": 133,
+      "bodies": 78,
+      "colliders": 453,
+      "drawCalls": 245,
+      "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 }
+    }
+  ],
+  "final": {
+    "level": 12,
+    "score": 56805770,
+    "cleared": true,
+    "bodies": 72,
+    "collected": 332,
+    "doors": [
+      {
+        "id": "mural-door",
+        "requiredLevel": 4,
+        "open": true,
+        "amount": 1,
+        "x": 1.7,
+        "z": 0,
+        "side": "east",
+        "width": 1.05
+      },
+      {
+        "id": "tomb-door",
+        "requiredLevel": 7,
+        "open": true,
+        "amount": 1,
+        "x": 23,
+        "z": 0,
+        "side": "east",
+        "width": 8
+      },
+      {
+        "id": "temple-door",
+        "requiredLevel": 9,
+        "open": true,
+        "amount": 1,
+        "x": 70,
+        "z": 20,
+        "side": "east",
+        "width": 30
+      }
+    ]
+  },
+  "autoTransition": "harbor"
+}

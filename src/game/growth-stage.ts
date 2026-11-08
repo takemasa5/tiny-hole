@@ -7,6 +7,9 @@ import {
   type StageId,
 } from "./stage";
 import { createToyStage, type ToyKind } from "./toy-stage";
+import { createEgyptStage } from "./egypt-stage";
+import { EGYPT_SPACES, egyptAreaForLevel } from "./egypt-world";
+import type { EgyptKind } from "./egypt-visuals";
 import { TOY_SPACES, toyAreaForLevel, clampToyDestination } from "./toy-world";
 
 export const GROWTH_RADII = [
@@ -23,6 +26,7 @@ export const GROWTH_AREAS = [
   { level: 10, extent: 1600, label: "巨大な世界" },
 ] as const;
 export type GrowthModel =
+  | "egypt"
   | "colossalRobot"
   | "toy"
   | "original"
@@ -55,6 +59,7 @@ export interface GrowthObject {
   partnerId?: string;
   sourceLevel?: number;
   toyKind?: ToyKind;
+  egyptKind?: EgyptKind;
   stationStop?: number;
   speedMultiplier?: number;
   stackY?: number;
@@ -195,11 +200,16 @@ const WORKERS: readonly ObjectKind[] = [
 ];
 
 export function areasForStage(stageId: StageId) {
-  return stageId === "toys" ? TOY_SPACES : GROWTH_AREAS;
+  return stageId === "toys"
+    ? TOY_SPACES
+    : stageId === "egypt"
+      ? EGYPT_SPACES
+      : GROWTH_AREAS;
 }
 
 export function areaForLevel(level: number, stageId: StageId = "plaza") {
   if (stageId === "toys") return toyAreaForLevel(level);
+  if (stageId === "egypt") return egyptAreaForLevel(level);
   return Math.min(3, Math.max(0, Math.floor((level - 1) / 3)));
 }
 
@@ -403,7 +413,13 @@ export function createGrowthStage(
   });
   return stageId === "toys"
     ? createToyStage(definitions, GROWTH_RADII, random)
-    : definitions;
+    : stageId === "egypt"
+      ? createEgyptStage(definitions, random)
+      : definitions;
+}
+
+export function isEgyptGod(definition: Pick<GrowthObject, "egyptKind">) {
+  return ["anubis", "horus", "sobek"].includes(definition.egyptKind ?? "");
 }
 
 export function footprintOf(definition: Pick<GrowthObject, "size">) {
@@ -433,6 +449,8 @@ export function clampToArea(
   stageId: StageId = "plaza",
 ) {
   if (stageId === "toys") return clampToyDestination(point, area, radius);
+  if (stageId === "egypt")
+    return clampToyDestination(point, area, radius, EGYPT_SPACES);
   const limit = Math.max(0, GROWTH_AREAS[area].extent - radius);
   return {
     x: Math.max(-limit, Math.min(limit, point.x)),

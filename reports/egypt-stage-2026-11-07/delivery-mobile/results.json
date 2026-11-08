@@ -1,0 +1,16 @@
+{
+  "browser": "156.0.8078.4",
+  "viewport": "390x844",
+  "errors": [],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "touchMovesAndStops": true,
+  "gate": {
+    "text": "レベル4になると壁画の枠が開きます",
+    "font": 16,
+    "bounds": { "x": 53.5859375, "y": 774, "width": 282.828125, "height": 46 },
+    "blocks": true
+  },
+  "restart": true,
+  "stageSwitch": true
+}

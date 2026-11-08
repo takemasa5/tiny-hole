@@ -10,6 +10,7 @@ import {
   insideToyRect,
   constrainToyStep,
   type ToyWall,
+  type ToySpace,
 } from "./toy-world";
 
 interface Frame {
@@ -29,7 +30,15 @@ interface Door {
   collider: RAPIER.Collider;
   amount: number;
 }
-export class ToyWorldScene {
+export interface NestedWorldLayout {
+  spaces: readonly ToySpace[];
+  walls: readonly ToyWall[];
+  roads: readonly { x: number; z: number; width: number; depth: number }[];
+  style: "toys" | "egypt";
+  floorTextures?: readonly THREE.Texture[];
+  gateLabels?: readonly string[];
+}
+export class NestedWorldScene {
   readonly group = new THREE.Group();
   private frames: Frame[] = [];
   private doors: Door[] = [];
@@ -41,18 +50,29 @@ export class ToyWorldScene {
   constructor(
     private world: RAPIER.World,
     private belowFloor: Set<number>,
+    private layout: NestedWorldLayout = {
+      spaces: TOY_SPACES,
+      walls: toyWallParts(),
+      roads: TOY_CITY_ROADS,
+      style: "toys",
+    },
   ) {
-    const walls = toyWallParts();
-    TOY_SPACES.forEach((space, index) => {
+    const walls = layout.walls;
+    layout.spaces.forEach((space, index) => {
       const b = space.bounds;
       const floor = new THREE.Mesh(
         new THREE.PlaneGeometry(b.maxX - b.minX, b.maxZ - b.minZ),
         this.paint(space.floor),
       );
+      const texture = layout.floorTextures?.[index];
+      if (texture) {
+        (floor.material as THREE.MeshStandardMaterial).map = texture;
+        (floor.material as THREE.MeshStandardMaterial).color.set("#ffffff");
+      }
       floor.rotation.x = -Math.PI / 2;
       floor.position.set((b.minX + b.maxX) / 2, 0.001, (b.minZ + b.maxZ) / 2);
       floor.renderOrder =
-        GROUND_PAINT_RENDER_ORDER + 1 + TOY_SPACES.length - index;
+        GROUND_PAINT_RENDER_ORDER + 1 + layout.spaces.length - index;
       floor.name = `${space.id}-floor`;
       this.group.add(floor);
       if (!space.height) return;
@@ -89,7 +109,11 @@ export class ToyWorldScene {
           );
           const mesh = this.box(
             [width, wall.height, depth],
-            wall.space < 2 ? space.color : "#a67951",
+            layout.style === "egypt"
+              ? "#c0a05c"
+              : wall.space < 2
+                ? space.color
+                : "#a67951",
           );
           mesh.name = `${space.id}-door-surface`;
           mesh.position.set(
@@ -115,7 +139,7 @@ export class ToyWorldScene {
           mesh.name = wall.id;
           mesh.position.set(x - cx, wall.height / 2, z - cz);
           group.add(mesh);
-          if (index < 2) {
+          if (layout.style === "toys" && index < 2) {
             const rim = this.box(
               [
                 width + space.thickness * 0.2,
@@ -130,7 +154,7 @@ export class ToyWorldScene {
           }
         }
       }
-      if (index < 2) {
+      if (layout.style === "toys" && index < 2) {
         const lid = new THREE.Group();
         lid.position.set(b.minX - cx, space.height, b.minZ - cz);
         lid.rotation.x = -1.35;
@@ -144,7 +168,7 @@ export class ToyWorldScene {
         group.add(lid);
       }
       let roof: THREE.Mesh | undefined;
-      if (index === 3) {
+      if (layout.style === "toys" && index === 3) {
         roof = new THREE.Mesh(
           new THREE.ConeGeometry(Math.SQRT1_2, 1, 4).rotateY(Math.PI / 4),
           new THREE.MeshStandardMaterial({ color: "#bf7d6c", roughness: 0.9 }),
@@ -170,10 +194,12 @@ export class ToyWorldScene {
           part.userData.objectId = group.userData.objectId;
       });
     });
-    const roadMaterial = this.paint("#788b91");
+    const roadMaterial = this.paint(
+      layout.style === "egypt" ? "#c6a673" : "#788b91",
+    );
     const dashMaterial = this.paint("#f2e8cf");
     const markings: { x: number; z: number; vertical: boolean }[] = [];
-    for (const road of TOY_CITY_ROADS) {
+    for (const road of layout.roads) {
       const mesh = new THREE.Mesh(
         new THREE.PlaneGeometry(road.width, road.depth),
         roadMaterial,
@@ -185,7 +211,7 @@ export class ToyWorldScene {
       const vertical = road.depth > road.width;
       const length = vertical ? road.depth : road.width;
       const count = Math.floor(length / 30);
-      for (let i = 0; i < count; i++)
+      for (let i = 0; layout.style === "toys" && i < count; i++)
         markings.push({
           x:
             road.x + (vertical ? 0 : ((i + 0.5) * length) / count - length / 2),
@@ -210,44 +236,47 @@ export class ToyWorldScene {
       dashes.setMatrixAt(i, dummy.matrix);
     });
     this.group.add(dashes);
-    // The house is connected on one floor; these coloured patches identify its rooms.
-    for (const [x, z, width, depth, color] of [
-      [65, 6, 53, 56, "#e5dece"],
-      [64, 61, 55, 49, "#c5bfa3"],
-      [76, 96, 34, 18, "#aaa89e"],
-    ] as const) {
-      const patch = new THREE.Mesh(
-        new THREE.PlaneGeometry(width, depth),
-        this.paint(color),
-      );
-      patch.rotation.x = -Math.PI / 2;
-      patch.position.set(x, 0.001, z);
-      patch.renderOrder = GROUND_PAINT_RENDER_ORDER + 3;
-      this.group.add(patch);
-    }
-    // Floorboards provide familiar size references, without a repeating grid of props.
-    const seam = this.paint("#b6906b");
-    for (let row = 0; row < 36; row++) {
-      const z = -3.5 + row;
-      const spans =
-        z > -2.6 && z < 2.6
-          ? [
-              [-4.4, -3.3],
-              [3.3, 31.6],
-            ]
-          : [[-4.4, 31.6]];
-      for (const [left, right] of spans) {
-        const mesh = new THREE.Mesh(
-          new THREE.PlaneGeometry(right - left, 0.025),
-          seam,
+    if (layout.style === "toys") {
+      // The house is connected on one floor; these coloured patches identify its rooms.
+      for (const [x, z, width, depth, color] of [
+        [65, 6, 53, 56, "#e5dece"],
+        [64, 61, 55, 49, "#c5bfa3"],
+        [76, 96, 34, 18, "#aaa89e"],
+      ] as const) {
+        const patch = new THREE.Mesh(
+          new THREE.PlaneGeometry(width, depth),
+          this.paint(color),
         );
-        mesh.rotation.x = -Math.PI / 2;
-        mesh.position.set((left + right) / 2, 0.001, z);
-        mesh.renderOrder = GROUND_PAINT_RENDER_ORDER + 6;
-        this.group.add(mesh);
+        patch.rotation.x = -Math.PI / 2;
+        patch.position.set(x, 0.001, z);
+        patch.renderOrder = GROUND_PAINT_RENDER_ORDER + 3;
+        this.group.add(patch);
+      }
+      // Floorboards provide familiar size references, without a repeating grid of props.
+      const seam = this.paint("#b6906b");
+      for (let row = 0; row < 36; row++) {
+        const z = -3.5 + row;
+        const spans =
+          z > -2.6 && z < 2.6
+            ? [
+                [-4.4, -3.3],
+                [3.3, 31.6],
+              ]
+            : [[-4.4, 31.6]];
+        for (const [left, right] of spans) {
+          const mesh = new THREE.Mesh(
+            new THREE.PlaneGeometry(right - left, 0.025),
+            seam,
+          );
+          mesh.rotation.x = -Math.PI / 2;
+          mesh.position.set((left + right) / 2, 0.001, z);
+          mesh.renderOrder = GROUND_PAINT_RENDER_ORDER + 6;
+          this.group.add(mesh);
+        }
       }
     }
   }
+
   private box(size: [number, number, number], color: string) {
     return new THREE.Mesh(
       new THREE.BoxGeometry(...size),
@@ -294,7 +323,7 @@ export class ToyWorldScene {
       if (this.frames[door.wall.space].collected) continue;
       if (door.wall.space < area)
         door.amount = Math.min(1, door.amount + delta * 1.8);
-      const side = TOY_SPACES[door.wall.space].gate!.side;
+      const side = this.layout.spaces[door.wall.space].gate!.side;
       door.pivot.rotation.y =
         ((door.amount * Math.PI) / 2) * (side === "east" ? 1 : -1);
       door.collider.setEnabled(door.amount < 0.95);
@@ -305,7 +334,7 @@ export class ToyWorldScene {
         frame.previousPosition.copy(frame.body.translation());
         frame.previousRotation.copy(frame.body.rotation());
       }
-      const space = TOY_SPACES[index],
+      const space = this.layout.spaces[index],
         b = space.bounds;
       if (frame.roof)
         frame.roof.visible = level >= 9 && !insideToyRect(hole, b);
@@ -348,8 +377,8 @@ export class ToyWorldScene {
         this.belowFloor.delete(collider.handle);
       this.world.removeRigidBody(frame.body);
       collected.push({
-        id: `world-${TOY_SPACES[index].id}`,
-        value: 4 ** (TOY_SPACES[index].level - 1),
+        id: `world-${this.layout.spaces[index].id}`,
+        value: 4 ** (this.layout.spaces[index].level - 1),
       });
     }
     return collected;
@@ -371,7 +400,13 @@ export class ToyWorldScene {
     const openDoors = new Set(
       this.doors.filter((d) => d.amount >= 0.95).map((d) => d.wall.id),
     );
-    return toyBlockingWalls(this.openedArea, radius, openDoors);
+    return toyBlockingWalls(
+      this.openedArea,
+      radius,
+      openDoors,
+      this.layout.spaces,
+      this.layout.walls,
+    );
   }
   constrain(
     previous: { x: number; z: number },
@@ -387,7 +422,7 @@ export class ToyWorldScene {
         : [
             {
               object: frame.group,
-              footprint: toySpaceFootprint(TOY_SPACES[index]),
+              footprint: toySpaceFootprint(this.layout.spaces[index]),
               fadeSurfaces: true,
             },
           ],
@@ -395,7 +430,7 @@ export class ToyWorldScene {
   }
   guide(hole: { x: number; z: number; radius: number }) {
     const door = this.doors.find((d) => d.wall.space === this.openedArea);
-    const gate = TOY_SPACES[this.openedArea].gate;
+    const gate = this.layout.spaces[this.openedArea].gate;
     const position = door
       ? {
           x: (door.wall.minX + door.wall.maxX) / 2,
@@ -407,7 +442,7 @@ export class ToyWorldScene {
         !!position &&
         Math.hypot(position.x - hole.x, position.z - hole.z) < hole.radius * 4,
       label: gate
-        ? `レベル${gate.level}になると${this.openedArea < 2 ? "箱の側面" : this.openedArea === 2 ? "ドア" : "玄関"}が開きます`
+        ? `レベル${gate.level}になると${this.layout.gateLabels?.[this.openedArea] ?? (this.openedArea < 2 ? "箱の側面" : this.openedArea === 2 ? "ドア" : "玄関")}が開きます`
         : "",
       level: gate?.level ?? 0,
       posts: 0,
@@ -417,23 +452,23 @@ export class ToyWorldScene {
   }
   snapshot(hole: { x: number; z: number; radius: number }) {
     return {
-      label: TOY_SPACES[this.openedArea].label,
+      label: this.layout.spaces[this.openedArea].label,
       level: this.level,
       openedArea: this.openedArea,
-      spaces: TOY_SPACES,
+      spaces: this.layout.spaces,
       walls: this.walls(hole.radius),
       doors: this.doors.map((d) => ({
         id: d.wall.id,
-        requiredLevel: TOY_SPACES[d.wall.space].gate!.level,
+        requiredLevel: this.layout.spaces[d.wall.space].gate!.level,
         open: d.amount >= 0.95,
         amount: d.amount,
         x: (d.wall.minX + d.wall.maxX) / 2,
         z: (d.wall.minZ + d.wall.maxZ) / 2,
-        side: TOY_SPACES[d.wall.space].gate!.side,
-        width: TOY_SPACES[d.wall.space].gate!.width,
+        side: this.layout.spaces[d.wall.space].gate!.side,
+        width: this.layout.spaces[d.wall.space].gate!.width,
       })),
       frames: this.frames.map((f, i) => ({
-        id: TOY_SPACES[i].id,
+        id: this.layout.spaces[i].id,
         falling: f.falling,
         collected: f.collected,
         position: {
@@ -451,3 +486,5 @@ export class ToyWorldScene {
     };
   }
 }
+
+export { NestedWorldScene as ToyWorldScene };

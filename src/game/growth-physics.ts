@@ -2,7 +2,7 @@ import RAPIER from "@dimforge/rapier3d-compat";
 import { growthShapeParts, growthCollisionBounds } from "./growth-shape";
 import type { StageId } from "./stage";
 export { growthCollisionBounds } from "./growth-shape";
-import type { GrowthObject } from "./growth-stage";
+import { isEgyptGod, type GrowthObject } from "./growth-stage";
 
 export function createGrowthBody(
   world: RAPIER.World,
@@ -34,7 +34,7 @@ export function createGrowthBody(
     },
   );
   if (!["still", "moored"].includes(definition.behavior))
-    body.setEnabledRotations(false, true, false, true);
+    body.setEnabledRotations(false, !isEgyptGod(definition), false, true);
   return { body, collider: colliders[0], colliders };
 }
 
@@ -63,4 +63,27 @@ export function growthCollisionFootprint(
   stage: StageId = "plaza",
 ) {
   return growthCollisionBounds(definition, rotation, stage).footprint;
+}
+
+export function growthLosesSupport(
+  definition: GrowthObject,
+  position: { x: number; y: number; z: number },
+  rotation: { x: number; y: number; z: number; w: number },
+  hole: { x: number; z: number; radius: number },
+  stage: StageId,
+) {
+  const bottom =
+    position.y + growthCollisionBounds(definition, rotation, stage).bottom;
+  const overlaps = apertureOverlapsBase(definition, position, rotation, hole);
+  if (isEgyptGod(definition)) {
+    // A walking character balances on its remaining foot; contact with its outline is not a fall.
+    return overlaps && bottom < -Math.max(0.01, hole.radius * 0.03);
+  }
+  return (
+    (!["still", "moored"].includes(definition.behavior) && overlaps) ||
+    bottom < -Math.max(0.003, hole.radius * 0.03) ||
+    Math.hypot(position.x - hole.x, position.z - hole.z) +
+      Math.hypot(...definition.size) / 2 <
+      hole.radius * 0.96
+  );
 }

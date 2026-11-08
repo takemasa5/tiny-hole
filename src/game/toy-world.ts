@@ -108,9 +108,12 @@ export function insideToyRect(
     point.z <= rect.maxZ - margin
   );
 }
-export function toyWallParts(): ToyWall[] {
+export function toyWallParts(
+  spaces: readonly ToySpace[] = TOY_SPACES,
+  housePartitions = true,
+): ToyWall[] {
   const walls: ToyWall[] = [];
-  TOY_SPACES.forEach((space, index) => {
+  spaces.forEach((space, index) => {
     if (!space.height) return;
     const b = space.bounds,
       t = space.thickness;
@@ -152,22 +155,23 @@ export function toyWallParts(): ToyWall[] {
     }
   });
   // The bedroom is one preserved room of the larger house; these form kitchen/living/entry spaces.
-  for (const [id, x1, x2, z1, z2] of [
-    ["kitchen-a", 38, 54, 35, 35.7],
-    ["kitchen-b", 83, 95, 35, 35.7],
-    ["entry-a", 36, 56, 87, 87.7],
-  ] as const)
-    walls.push({
-      id,
-      minX: x1,
-      maxX: x2,
-      minZ: z1,
-      maxZ: z2,
-      space: 3,
-      height: 12,
-      color: "#e4d3af",
-      door: false,
-    });
+  if (housePartitions)
+    for (const [id, x1, x2, z1, z2] of [
+      ["kitchen-a", 38, 54, 35, 35.7],
+      ["kitchen-b", 83, 95, 35, 35.7],
+      ["entry-a", 36, 56, 87, 87.7],
+    ] as const)
+      walls.push({
+        id,
+        minX: x1,
+        maxX: x2,
+        minZ: z1,
+        maxZ: z2,
+        space: 3,
+        height: 12,
+        color: "#e4d3af",
+        door: false,
+      });
   return walls;
 }
 export function toySpaceFootprint(space: ToySpace) {
@@ -184,9 +188,11 @@ export function toyBlockingWalls(
   openDoors = new Set(
     TOY_SPACES.slice(0, openedArea).map((s) => `${s.id}-door`),
   ),
+  spaces: readonly ToySpace[] = TOY_SPACES,
+  walls: readonly ToyWall[] = toyWallParts(),
 ) {
-  return toyWallParts().filter((wall) => {
-    const space = TOY_SPACES[wall.space];
+  return walls.filter((wall) => {
+    const space = spaces[wall.space];
     if (radius > toySpaceFootprint(space)) return false;
     if (
       space.gate &&
@@ -201,8 +207,9 @@ export function clampToyDestination(
   point: { x: number; z: number },
   area: number,
   radius: number,
+  spaces: readonly ToySpace[] = TOY_SPACES,
 ) {
-  const b = TOY_SPACES[area].bounds;
+  const b = spaces[area].bounds;
   return {
     x: Math.max(b.minX + radius, Math.min(b.maxX - radius, point.x)),
     z: Math.max(b.minZ + radius, Math.min(b.maxZ - radius, point.z)),

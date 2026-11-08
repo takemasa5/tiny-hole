@@ -1,0 +1,18 @@
+{
+  "url": "http://192.168.40.191:5177/",
+  "results": {
+    "/": {
+      "status": 200,
+      "egyptCode": true
+    },
+    "src/game/egypt-world.ts": {
+      "status": 200,
+      "egyptCode": true
+    },
+    "src/game/egypt-visuals.ts": {
+      "status": 200,
+      "egyptCode": true
+    }
+  },
+  "iPhone": "未実施"
+}

@@ -1,0 +1,41 @@
+{
+  "changedFiles": {
+    "src/game/egypt-visuals.ts": "a9a4d94da6ffa60522677708e121e815c63c7791a25d0835c04934739b01119c",
+    "src/game/runtime.ts": "4ab9816b26a2779ca50bae98bf159a244d0f26e083398b924640bfaf32e7befe",
+    "src/game/egypt-stage.ts": "56590ec1c97eb576eed5b1ebac0f30dcfc5885f5841e2fb3da1e144fbab17aa6",
+    "tests/egypt-stage.test.ts": "1bd580d0383cb998010bec032616cb4d8c7be393ed45a24685ddc4d5da2adbb8",
+    "docs/README.md": "d7d394bacea462f378dc73903466ba46564cc14f27e9150f63b1f93a8d3772eb",
+    "docs/egypt-stage-implementation.md": "ffa1a026ca185df6ba67561b235b6c822398053fe3a6ef8bc5e86c54bf3d1303",
+    "checks/egypt-gods.mjs": "3e0b8a60b201f35187e3a99a6d038514463be3ded7ae1ae18721ec033617be8f",
+    "checks/egypt-flow.mjs": "aa756e895a6d6e933435396bad5686d1cabd9ca4c688f9f68d2cd2880fa0a468"
+  },
+  "unitTests": 378,
+  "pyramidPosition": [
+    170,
+    -100
+  ],
+  "cityGods": 3,
+  "iPhonePriorVersion": "オーナーがちらつきなしと確認",
+  "iPhoneAfterThisChange": "未実施",
+  "WebKit": "未実施",
+  "newPush": false,
+  "sourceHashesVerified": true,
+  "checks": {
+    "unitTests": 378,
+    "lint": true,
+    "build": true,
+    "formatChangedFiles": true,
+    "diffWhitespace": true,
+    "all12LevelsAndClear": true,
+    "nativeChromiumFleeing": [
+      "egypt-god-anubis"
+    ],
+    "mobileChromiumDelivery": true,
+    "lanHttp": {
+      "/": 200,
+      "src/game/egypt-stage.ts": 200,
+      "src/game/egypt-visuals.ts": 200
+    }
+  },
+  "serverUrl": "http://192.168.40.191:5177/"
+}

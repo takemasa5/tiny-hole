@@ -3,6 +3,7 @@ import { objectVisual } from "./visuals";
 import { type GrowthObject } from "./growth-stage";
 import { BoundaryGuide } from "./boundary-guide";
 import { STAGES, type StageId } from "./stage";
+import { egyptVisual } from "./egypt-visuals";
 import { toyVisual } from "./toy-visuals";
 import { GROUND_PAINT_RENDER_ORDER } from "./ground-geometry";
 
@@ -22,7 +23,10 @@ export function growthVisual(
   preview = false,
 ) {
   const group = new THREE.Group();
-  if (definition.model === "colossalRobot") {
+  if (definition.model === "egypt") {
+    if (!definition.egyptKind) throw new Error("エジプトの種類がありません。");
+    group.add(egyptVisual(definition.egyptKind));
+  } else if (definition.model === "colossalRobot") {
     const robot = objectVisual("giantRobot", stageId);
     robot.scale.set(1 / 6, 1 / 11, 1 / 6);
     group.add(robot);
@@ -190,6 +194,7 @@ export class GrowthScenery {
     const routes = new Map<string, GrowthObject>();
     for (const definition of definitions)
       if (
+        stageId !== "egypt" &&
         definition.route &&
         (stageId !== "toys" || ["route", "train"].includes(definition.behavior))
       )

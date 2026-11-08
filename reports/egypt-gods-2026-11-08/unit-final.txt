@@ -1,0 +1,17 @@
+
+> hole-prototype@0.1.0 test
+> vitest run --reporter=dot --maxWorkers=2
+
+
+ RUN  v5.0.4 /private/tmp/hole-egypt-gods-bhynk2yb
+
+··························································································································································································································································································································································································
+
+ Test Files  27 passed (27)
+      Tests  378 passed (378)
+   Start at  07:07:35
+   Duration  29.08s (tests 97%, import 3%)
+
+    Isolate  27 workers spawned · ~218ms startup each (spawn + environment, per file)
+             at least ~2.73s faster with isolate: false — reuses workers across files instead of one per file
+

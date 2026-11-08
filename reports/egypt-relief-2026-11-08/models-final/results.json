@@ -1,0 +1,90 @@
+{
+  "browser": "156.0.8078.4",
+  "fixture": "実モデルと行動関数を使う独立した描画・行動検査。通常プレイの通し検査とは別。",
+  "errors": [],
+  "iPhone": "今回の追加後は未実施",
+  "WebKit": "未実施",
+  "models": {
+    "rows": [
+      {
+        "id": "egypt-god-anubis",
+        "kind": "anubis",
+        "size": [48, 180, 3],
+        "normalPhase": "working",
+        "smallVelocity": { "x": 29.344494479373807, "z": 0 },
+        "escapePhase": "fleeing",
+        "fleeVelocity": { "x": 352.8, "z": 2.160276953695931e-14 }
+      },
+      {
+        "id": "egypt-god-horus",
+        "kind": "horus",
+        "size": [56, 220, 3.6],
+        "normalPhase": "working",
+        "smallVelocity": { "x": 35.75942377891457, "z": 0 },
+        "escapePhase": "fleeing",
+        "fleeVelocity": { "x": 352.8, "z": 2.160276953695931e-14 }
+      },
+      {
+        "id": "egypt-god-sobek",
+        "kind": "sobek",
+        "size": [80, 260, 4.2],
+        "normalPhase": "working",
+        "smallVelocity": { "x": 0, "z": 42.84973841518755 },
+        "escapePhase": "fleeing",
+        "fleeVelocity": { "x": 1175.9999908125, "z": 0.14699999885156112 }
+      }
+    ]
+  },
+  "pyramidView": [
+    {
+      "id": "north",
+      "x": 25,
+      "z": -135,
+      "actual": false,
+      "visiblePixels": 67025
+    },
+    {
+      "id": "east",
+      "x": 170,
+      "z": -100,
+      "actual": true,
+      "visiblePixels": 147649
+    },
+    {
+      "id": "exit-desktop-current",
+      "x": 170,
+      "z": -100,
+      "level": 9,
+      "width": 1280,
+      "height": 800,
+      "visiblePixels": 168875
+    },
+    {
+      "id": "exit-desktop-alternate",
+      "x": 110,
+      "z": -135,
+      "level": 9,
+      "width": 1280,
+      "height": 800,
+      "visiblePixels": 100121
+    },
+    {
+      "id": "exit-portrait-current",
+      "x": 170,
+      "z": -100,
+      "level": 9,
+      "width": 390,
+      "height": 844,
+      "visiblePixels": 75917
+    },
+    {
+      "id": "exit-portrait-alternate",
+      "x": 110,
+      "z": -135,
+      "level": 9,
+      "width": 390,
+      "height": 844,
+      "visiblePixels": 93909
+    }
+  ]
+}

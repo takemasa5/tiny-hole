@@ -1,0 +1,17 @@
+
+> hole-prototype@0.1.0 test
+> vitest run --reporter=dot --maxWorkers=2
+
+
+ RUN  v5.0.4 /private/tmp/hole-relief-ik83kxkl
+
+·······························································································································································································································································································································································································
+
+ Test Files  27 passed (27)
+      Tests  383 passed (383)
+   Start at  08:12:25
+   Duration  26.94s (tests 96%, import 3%, transform 1%)
+
+    Isolate  27 workers spawned · ~202ms startup each (spawn + environment, per file)
+             at least ~2.53s faster with isolate: false — reuses workers across files instead of one per file
+

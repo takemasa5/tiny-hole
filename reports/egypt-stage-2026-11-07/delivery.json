@@ -1,0 +1,49 @@
+{
+  "baselineCommit": "2f69fa7fe958d144e59088720743ae560018eccd",
+  "baselineRemoteBranch": "codex/stage-themes-baseline-20261107",
+  "workingBranch": "codex/egypt-theme-20261108",
+  "changedFiles": {
+    "src/game/egypt-floor.ts": "01c77353448f0160286744172d1f59e4d3e1246998bfca86f0ff9f90603aff5b",
+    "src/game/egypt-visuals.ts": "80ed3b027ce1415d2e6dcf98005c556db0d07a77d1f533e931b8f6e3f719a763",
+    "src/game/toy-world.ts": "69e949d99a23264f03d702bb304e9f0e38d501d11d87c50992d7ea6902c3910e",
+    "src/game/theme-behavior.ts": "d247c3fb4b7e6ab2ed6d93aaab1f79f09c36861c7456ec2e44bf6b97d6964fa1",
+    "src/game/egypt-world.ts": "4f655c85b5340f0e30c99c9e25e9ee5238b9a5a8d57f033b0f5426f6856ec613",
+    "src/game/growth-visuals.ts": "ce4c095ea46464e9868a9cc625e9cd647f0aae193e4d09411b7c12497fbbff36",
+    "src/game/runtime.ts": "a62821d379d20afa3408bce66f5aff05bb2fde890b0c4888f105ff3e72099fe9",
+    "src/game/growth-shape.ts": "206ee1ade5012063d42d0018bf2ada9ee5653f063d250a752f6f0e924ca02188",
+    "src/game/toy-world-scene.ts": "e68b41feb6e5fd8f66dd64d1e2d8362b838027fdc23d9b0f0399b75457ee6507",
+    "src/game/egypt-stage.ts": "77c1252c668f034209fbfa5f7940d5d7f61cf134094ce4c400e4d2166b0ee67a",
+    "src/game/growth-stage.ts": "71e66d5044d8f690e798e720166c4fc5ad66ee0ddbc05927437465f8a77778c3",
+    "tests/egypt-stage.test.ts": "8e872fa0bfbb30ceb4ab7ec611a16bd0a912cf5e5e78543c6c9d9fc74fa467f2",
+    "tests/growth-stage.test.ts": "59ae0aca9bc0e3da9887a720ded6bc46611e8afd859584e8c958c1868dcf2821",
+    "tests/ground-paint.test.ts": "e0c00277d9f17351c834af8a22f5d01bd128497eacbbec57cd07ec97d9d90159",
+    "docs/stages.md": "ffad55db83057b3b46c9ec0b05167688327cbd2de4e52bcce5fc5ee2ed688d12",
+    "docs/README.md": "df09803f6f2de5c7981bc67a4e47ee2eae5d0ba11858f84c7e66aea4734d875c",
+    "docs/game-spec.md": "9a93e28a274bfb28f1f409195d3b6b42d7f4595a3ae6a4fe22f526f7e0489274",
+    "docs/stage-theme-plan.md": "a37873af2e4fe47d966158374b0d3429e5613093ad581d91e24392aac9cbde0b",
+    "docs/egypt-stage-implementation.md": "7a14e1f67b925f86bf7e64eb192fdaa5270569931d09786a809ac3d13fbbf8ac",
+    "checks/egypt-mobile.mjs": "3b7185068dbc6d8775e85f9d2e980cb7054b3c7fe58b157c91f8aa960a727f01",
+    "checks/ground-before-objects.mjs": "e6dde17fc4c1ad0fe4610a3f7778b5b42d2e2fade1cf84e930a0b422eb9bdd64",
+    "checks/egypt-flow.mjs": "1be50a1d2453bd1728b09dce760d0da04fdf37e08e66200b9a0f988d74d4d504"
+  },
+  "reportsCopied": true,
+  "newImplementationPushed": false,
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "sourceHashesVerified": true,
+  "checks": {
+    "unitTests": 371,
+    "testFiles": 27,
+    "lint": true,
+    "build": true,
+    "formatChangedFiles": true,
+    "diffWhitespace": true,
+    "nativeChromiumAll12LevelsAndClear": true,
+    "nativeChromiumMobileDelivery": true,
+    "lanHttp": 200
+  },
+  "server": {
+    "url": "http://192.168.40.191:5177/",
+    "pid": 79274
+  }
+}

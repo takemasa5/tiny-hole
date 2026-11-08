@@ -1,0 +1,20 @@
+
+> hole-prototype@0.1.0 build
+> tsc --noEmit && vite build && node scripts/build-offline.mjs
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 58 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     0.83 kB │ gzip:     0.45 kB
+dist/assets/index-B7g_aRMj.css      4.50 kB │ gzip:     1.56 kB
+dist/assets/index-OxwBGogH.js   5,273.75 kB │ gzip: 1,934.24 kB
+
+✓ built in 274ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+Offline cache: 10 resources, version 1b2d7eb302e24166c14b

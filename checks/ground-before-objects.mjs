@@ -2,8 +2,12 @@ import { chromium } from "@playwright/test";
 import assert from "node:assert/strict";
 import { mkdir, writeFile } from "node:fs/promises";
 import { format } from "prettier";
+const stage = process.env.HOLE_STAGE === "egypt" ? "egypt" : "toys";
 const directory =
-  process.env.HOLE_REPORT_DIR || "reports/iphone-video-2026-11-07/ground-after";
+  process.env.HOLE_REPORT_DIR ||
+  (stage === "egypt"
+    ? "reports/egypt-stage-2026-11-07/ground-order"
+    : "reports/iphone-video-2026-11-07/ground-after");
 await mkdir(directory, { recursive: true });
 const browser = await chromium.launch({ headless: true, channel: "chromium" }),
   page = await browser.newPage({
@@ -14,6 +18,7 @@ const result = {
   browser: await browser.version(),
   fixture:
     "実際の床を使う描画確認。街の床だけの深度判定を止め、床が通過する場合を意図的に模擬。iPhoneの内部挙動の再現とは別。",
+  stage,
   errors: [],
   iPhoneAfterFix: "未実施",
   WebKit: "未実施",
@@ -29,7 +34,7 @@ try {
   await page.goto(
     `${process.env.HOLE_URL || "http://127.0.0.1:5178"}/ground-fixture`,
   );
-  const data = await page.evaluate(async () => {
+  const data = await page.evaluate(async (stage) => {
     const source = await (await fetch("/src/game/toy-world-scene.ts")).text(),
       threeURL = source.match(/from\s+["']([^"']+three[^"']*)["']/)[1],
       rapierURL = source.match(/import RAPIER from\s+["']([^"']+)["']/)[1];
@@ -53,7 +58,18 @@ try {
     sun.position.set(-15, 30, 20);
     scene.add(sun);
     const world = new RAPIER.World({ x: 0, y: -9.81, z: 0 }),
-      room = new ToyWorldScene(world, new Set()),
+      room =
+        stage === "egypt"
+          ? new ToyWorldScene(world, new Set(), {
+              spaces: (await import("/src/game/egypt-world.ts")).EGYPT_SPACES,
+              walls: (await import("/src/game/egypt-world.ts")).EGYPT_WALLS,
+              roads: (await import("/src/game/egypt-world.ts")).EGYPT_ROADS,
+              style: "egypt",
+              floorTextures: (
+                await import("/src/game/egypt-floor.ts")
+              ).egyptFloorTextures(),
+            })
+          : new ToyWorldScene(world, new Set()),
       hole = { x: 0, z: 0, radius: 0.08 };
     scene.add(room.group);
     room.update(1, 0, hole, 0);
@@ -133,7 +149,7 @@ try {
     world.free();
     renderer.dispose();
     return record;
-  });
+  }, stage);
   const { normal, fault, below, ...record } = data;
   result.measurement = record;
   for (const [label, url] of Object.entries({ normal, fault, below }))

@@ -1,5 +1,6 @@
+import { EGYPT_SPACES } from "./egypt-world";
 import type { GrowthObject } from "./growth-stage";
-import { footprintOf } from "./growth-stage";
+import { footprintOf, isEgyptGod } from "./growth-stage";
 
 export interface ThemeMotion {
   phase:
@@ -13,6 +14,7 @@ export interface ThemeMotion {
   waypoint: number;
   time: number;
   wait: number;
+  fleeTime: number;
   heading: number;
 }
 
@@ -30,6 +32,7 @@ export function createThemeMotion(definition: GrowthObject): ThemeMotion {
     waypoint,
     time: 0,
     wait: 0,
+    fleeTime: 0,
     heading: target
       ? Math.atan2(target.x - definition.x, target.z - definition.z)
       : definition.yaw,
@@ -74,14 +77,36 @@ export function themeVelocity(
   const distance = Math.hypot(position.x - hole.x, position.z - hole.z);
   const driving =
     definition.behavior === "route" || definition.behavior === "train";
-  if (!driving && footprint < hole.radius && distance < hole.radius * 2.5) {
+  const god = isEgyptGod(definition);
+  const alertRange = god ? (motion.phase === "fleeing" ? 6 : 4) : 2.5;
+  if (
+    !driving &&
+    footprint < hole.radius &&
+    distance < hole.radius * alertRange
+  ) {
     motion.phase = "fleeing";
+    motion.fleeTime += delta;
     const dx = position.x - hole.x || Math.sin(motion.heading) * 0.01;
     const dz = position.z - hole.z || Math.cos(motion.heading) * 0.01;
     const length = Math.hypot(dx, dz) || 1;
-    motion.heading = Math.atan2(dx, dz);
-    return { x: (dx / length) * speed * 1.8, z: (dz / length) * speed * 1.8 };
+    const escapeSpeed = god
+      ? hole.radius * 7 * (motion.fleeTime % 4 < 2.6 ? 1.05 : 0.78)
+      : speed * 1.8;
+    const direction = god
+      ? godEscapeDirection(
+          position,
+          { x: dx / length, z: dz / length },
+          footprint,
+          escapeSpeed,
+          hole.radius,
+          delta,
+          motion.heading,
+        )
+      : { x: dx / length, z: dz / length };
+    motion.heading = Math.atan2(direction.x, direction.z);
+    return { x: direction.x * escapeSpeed, z: direction.z * escapeSpeed };
   }
+  motion.fleeTime = 0;
   if (definition.behavior === "battle") {
     motion.phase = partner ? "fighting" : "searching";
     const target = partner ?? {
@@ -135,11 +160,49 @@ export function themeVelocity(
 }
 
 export function themeYaw(
-  definition: Pick<GrowthObject, "behavior">,
+  definition: Pick<GrowthObject, "behavior"> &
+    Partial<Pick<GrowthObject, "egyptKind" | "yaw">>,
   heading: number,
 ) {
+  if (definition.egyptKind?.startsWith("mural") || isEgyptGod(definition))
+    return definition.yaw ?? 0;
   return (
     heading -
     (["route", "train"].includes(definition.behavior) ? Math.PI / 2 : 0)
   );
+}
+
+function godEscapeDirection(
+  position: { x: number; z: number },
+  away: { x: number; z: number },
+  footprint: number,
+  speed: number,
+  radius: number,
+  delta: number,
+  previousHeading: number,
+) {
+  const limit = EGYPT_SPACES[3].extent - footprint - 4;
+  const lookAhead = Math.max(speed * delta * 3, footprint * 0.5, radius * 0.7);
+  const heading = Math.atan2(away.x, away.z);
+  let best = { x: -position.x, z: -position.z };
+  const length = Math.hypot(best.x, best.z) || 1;
+  best = { x: best.x / length, z: best.z / length };
+  let bestScore = -Infinity;
+  for (let i = 0; i < 16; i++) {
+    const angle = heading + (i * Math.PI) / 8;
+    const x = Math.sin(angle),
+      z = Math.cos(angle);
+    if (
+      Math.abs(position.x + x * lookAhead) > limit ||
+      Math.abs(position.z + z * lookAhead) > limit
+    )
+      continue;
+    const score =
+      x * away.x + z * away.z + 0.02 * Math.cos(angle - previousHeading);
+    if (score > bestScore) {
+      bestScore = score;
+      best = { x, z };
+    }
+  }
+  return best;
 }

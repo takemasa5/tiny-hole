@@ -38,7 +38,58 @@ function convexPart(points: THREE.Vector3[]): Part | undefined {
   };
 }
 
-function meshParts(geometry: THREE.BufferGeometry): THREE.Vector3[][] {
+function convexVolume(points: THREE.Vector3[]) {
+  const hull = new ConvexHull().setFromPoints(points);
+  const cross = new THREE.Vector3();
+  let volume = 0;
+  for (const face of hull.faces) {
+    const a = face.edge.head().point,
+      b = face.edge.next.head().point,
+      c = face.edge.next.next.head().point;
+    volume += a.dot(cross.crossVectors(b, c)) / 6;
+  }
+  return Math.abs(volume);
+}
+
+function mergePrisms(prisms: THREE.Vector3[][]) {
+  const parts = prisms.map((points) => ({
+    points,
+    cap: points.slice(0, 3),
+    volume: convexVolume(points),
+  }));
+  let merged = true;
+  while (merged) {
+    merged = false;
+    outer: for (let i = 0; i < parts.length; i++)
+      for (let j = i + 1; j < parts.length; j++) {
+        const a = parts[i],
+          b = parts[j];
+        if (a.cap.filter((p) => b.cap.some((q) => p.equals(q))).length < 2)
+          continue;
+        const points = [...a.points, ...b.points],
+          volume = a.volume + b.volume;
+        // Only merge if the convex hull adds no volume: concave gaps stay empty.
+        if (Math.abs(convexVolume(points) - volume) > volume * 1e-6) continue;
+        parts[i] = {
+          points,
+          cap: [
+            ...a.cap,
+            ...b.cap.filter((p) => !a.cap.some((q) => p.equals(q))),
+          ],
+          volume,
+        };
+        parts.splice(j, 1);
+        merged = true;
+        break outer;
+      }
+  }
+  return parts.map((p) => p.points);
+}
+
+function meshParts(
+  geometry: THREE.BufferGeometry,
+  mergeExtrusion = false,
+): THREE.Vector3[][] {
   const position = geometry.getAttribute("position");
   const point = (index: number) =>
     new THREE.Vector3().fromBufferAttribute(position, index);
@@ -57,7 +108,7 @@ function meshParts(geometry: THREE.BufferGeometry): THREE.Vector3[][] {
     if (geometry.parameters.options.bevelEnabled)
       throw new Error("面取りした押し出し形状の衝突分割が未対応です。");
     // Use the actual cap vertices: geometry transforms may already be baked in.
-    return geometry.groups
+    const prisms = geometry.groups
       .filter((group) => group.materialIndex === 0)
       .flatMap((group) => {
         const capCount = group.count / 2;
@@ -67,6 +118,7 @@ function meshParts(geometry: THREE.BufferGeometry): THREE.Vector3[][] {
           ),
         );
       });
+    return mergeExtrusion ? mergePrisms(prisms) : prisms;
   }
 
   return [Array.from({ length: position.count }, (_, index) => point(index))];
@@ -78,6 +130,7 @@ function template(definition: GrowthObject, stage: StageId) {
     definition.model,
     definition.kind,
     definition.toyKind,
+    definition.egyptKind,
   ].join(":");
   const cached = templates.get(key);
   if (cached) return cached;
@@ -90,7 +143,7 @@ function template(definition: GrowthObject, stage: StageId) {
     visual.updateMatrixWorld(true);
     visual.traverse((object) => {
       if (!(object instanceof THREE.Mesh)) return;
-      const localParts = meshParts(object.geometry);
+      const localParts = meshParts(object.geometry, stage === "egypt");
       const matrices = [object.matrixWorld];
       if (object instanceof THREE.InstancedMesh) {
         matrices.length = 0;
@@ -130,6 +183,7 @@ export function growthShapeParts(
     definition.model,
     definition.kind,
     definition.toyKind,
+    definition.egyptKind,
     ...scale,
   ].join(":");
   const cached = shapes.get(key);

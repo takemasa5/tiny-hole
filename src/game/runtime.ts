@@ -13,7 +13,7 @@ import { PHYSICS_STEP, STAGES, isHuman, type StageId } from "./stage";
 import { animateWalker, disposeScene } from "./visuals";
 import {
   createGrowthBody,
-  apertureOverlapsBase,
+  growthLosesSupport,
   growthCollisionFootprint,
   growthCollisionBounds,
 } from "./growth-physics";
@@ -26,12 +26,15 @@ import {
   areaForLevel,
   clampToArea,
   footprintOf,
+  isEgyptGod,
   canRetire,
   growthObjectExit,
   type GrowthObject,
 } from "./growth-stage";
 import { growthVisual, GrowthScenery } from "./growth-visuals";
-import { ToyWorldScene } from "./toy-world-scene";
+import { EGYPT_SPACES, EGYPT_WALLS, EGYPT_ROADS } from "./egypt-world";
+import { egyptFloorTextures } from "./egypt-floor";
+import { ToyWorldScene, NestedWorldScene } from "./toy-world-scene";
 import {
   createThemeMotion,
   themeVelocity,
@@ -157,7 +160,18 @@ export async function startGame(
   const scenery = new GrowthScenery(definitions, stageId);
   scene.add(scenery.group);
   const toyWorld =
-    stageId === "toys" ? new ToyWorldScene(world, belowFloor) : undefined;
+    stageId === "toys"
+      ? new ToyWorldScene(world, belowFloor)
+      : stageId === "egypt"
+        ? new NestedWorldScene(world, belowFloor, {
+            spaces: EGYPT_SPACES,
+            walls: EGYPT_WALLS,
+            roads: EGYPT_ROADS,
+            style: "egypt",
+            floorTextures: egyptFloorTextures(),
+            gateLabels: ["壁画の枠", "墓の扉", "神殿の門"],
+          })
+        : undefined;
   if (toyWorld) scene.add(toyWorld.group);
   if (diagnosticMode === "plain-floor") {
     for (const root of [scenery.group, toyWorld?.group])
@@ -352,8 +366,7 @@ export async function startGame(
       if (
         !(
           definition.level <= Math.min(12, progress.level + 1) ||
-          (stageId === "toys" &&
-            definition.area <= areaForLevel(progress.level, stageId))
+          (toyWorld && definition.area <= areaForLevel(progress.level, stageId))
         ) ||
         terminal.has(definition.id) ||
         entities.get(definition.id)?.detailed
@@ -392,9 +405,10 @@ export async function startGame(
       const footprint = footprintOf(d);
       const near = distance < radius * 12 + footprint * 2;
       // Distant city buildings remain visible without simulating the entire skyline.
-      const physicsNear = d.id.startsWith("city-block-")
-        ? distance < radius * 4 + footprint * 2
-        : near;
+      const physicsNear =
+        d.id.startsWith("city-block-") || d.id.startsWith("egypt-city-")
+          ? distance < radius * 4 + footprint * 2
+          : near;
       let touchingAnotherObject = false;
       if (entity.colliders && (!physicsNear || d.level <= progress.level - 6)) {
         for (const collider of entity.colliders)
@@ -437,11 +451,7 @@ export async function startGame(
         entity.mesh.quaternion.copy(entity.body.rotation());
         removeBody(entity);
       }
-      if (
-        !physicsNear ||
-        entity.falling ||
-        (stageId === "toys" && d.area > openedArea)
-      )
+      if (!physicsNear || entity.falling || (toyWorld && d.area > openedArea))
         continue;
       if (!entity.detailed) entity = createEntity(d, true);
       if (!entity.body) attachBody(entity);
@@ -756,12 +766,7 @@ export async function startGame(
       const at = body.translation();
       if (
         !entity.falling &&
-        ((!["still", "moored"].includes(d.behavior) &&
-          apertureOverlapsBase(d, at, body.rotation(), holeState())) ||
-          at.y + growthCollisionBounds(d, body.rotation(), stageId).bottom <
-            -Math.max(0.003, radius * 0.03) ||
-          Math.hypot(at.x - hole.x, at.z - hole.y) + Math.hypot(...d.size) / 2 <
-            radius * 0.96)
+        growthLosesSupport(d, at, body.rotation(), holeState(), stageId)
       ) {
         entity.falling = true;
         motion.phase = "falling";
@@ -807,7 +812,7 @@ export async function startGame(
         partnerPosition,
         blocked,
       );
-      if (d.route && motion.phase === "fleeing") {
+      if (d.route && motion.phase === "fleeing" && !isEgyptGod(d)) {
         const xs = d.route.map((p) => p.x),
           zs = d.route.map((p) => p.z);
         if (at.x < Math.min(...xs) || at.x > Math.max(...xs))
@@ -909,6 +914,8 @@ export async function startGame(
       definition.id === "monster" ||
       definition.id === "landmark" ||
       definition.id.startsWith("room-") ||
+      definition.id.startsWith("egypt-column-") ||
+      definition.id.startsWith("egypt-god-") ||
       (definition.level >= 3 && definition.id.endsWith("-23"))
     )
       createEntity(definition, false);
@@ -1029,7 +1036,9 @@ export async function startGame(
   const snapshot = () => ({
     seed,
     boundaryGuide: toyWorld?.guide(holeState()) ?? scenery.boundarySnapshot(),
-    toyWorld: toyWorld?.snapshot(holeState()),
+    toyWorld: stageId === "toys" ? toyWorld?.snapshot(holeState()) : undefined,
+    egyptWorld:
+      stageId === "egypt" ? toyWorld?.snapshot(holeState()) : undefined,
     stageId,
     levels: GROWTH_LEVELS,
     hole: holeState(),

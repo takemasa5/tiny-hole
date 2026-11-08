@@ -1,0 +1,38 @@
+{
+  "browser": "156.0.8078.4",
+  "fixture": "実モデルと行動関数を使う独立した描画・行動検査。通常プレイの通し検査とは別。",
+  "errors": [],
+  "iPhone": "今回の追加後は未実施",
+  "WebKit": "未実施",
+  "models": {
+    "rows": [
+      {
+        "id": "egypt-god-anubis",
+        "kind": "anubis",
+        "size": [48, 180, 42],
+        "normalPhase": "working",
+        "smallVelocity": { "x": 30.077139574766743, "z": 0 },
+        "escapePhase": "fleeing",
+        "fleeVelocity": { "x": 54.13885123458014, "z": 4.1438106796214565e-19 }
+      },
+      {
+        "id": "egypt-god-horus",
+        "kind": "horus",
+        "size": [56, 220, 48],
+        "normalPhase": "working",
+        "smallVelocity": { "x": 36.5454306309284, "z": 0 },
+        "escapePhase": "fleeing",
+        "fleeVelocity": { "x": 65.78177513567113, "z": 5.034965022633161e-19 }
+      },
+      {
+        "id": "egypt-god-sobek",
+        "kind": "sobek",
+        "size": [80, 260, 60],
+        "normalPhase": "working",
+        "smallVelocity": { "x": 0, "z": 43.87442307312998 },
+        "escapePhase": "fleeing",
+        "fleeVelocity": { "x": 78.9739609146499, "z": 0.009871745114331237 }
+      }
+    ]
+  }
+}

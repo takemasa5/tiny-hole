@@ -42,7 +42,9 @@ it.each(STAGE_IDS)(
       );
       for (const d of stock) {
         expect(
-          stage === "toys" ? footprintOf(d) : Math.hypot(...d.size) / 2,
+          ["toys", "egypt"].includes(stage)
+            ? footprintOf(d)
+            : Math.hypot(...d.size) / 2,
         ).toBeLessThan(radius * 0.95);
         expect(
           Math.max(Math.abs(d.x), Math.abs(d.z)) + footprintOf(d),
@@ -51,7 +53,9 @@ it.each(STAGE_IDS)(
     }
     const goal = definitions.find((d) => d.id === "goal")!;
     expect(
-      stage === "toys" ? footprintOf(goal) : Math.hypot(...goal.size) / 2,
+      ["toys", "egypt"].includes(stage)
+        ? footprintOf(goal)
+        : Math.hypot(...goal.size) / 2,
     ).toBeLessThan(GROWTH_LEVELS[11].radius);
     expect(goal.size[1]).toBeGreaterThan(30);
   },
