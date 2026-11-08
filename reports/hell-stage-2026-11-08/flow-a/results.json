@@ -1,0 +1,43 @@
+{
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "levels": [
+    {
+      "level": 1,
+      "area": 0,
+      "space": "賽の河原",
+      "score": 0,
+      "bodies": 32,
+      "colliders": 58,
+      "drawCalls": 36,
+      "frame": { "median": 16.699999999999932, "p95": 16.799999999999955 }
+    },
+    {
+      "level": 2,
+      "area": 0,
+      "space": "賽の河原",
+      "score": 14,
+      "bodies": 27,
+      "colliders": 55,
+      "drawCalls": 50,
+      "frame": { "median": 16.69999999999891, "p95": 16.700000000000728 }
+    },
+    {
+      "level": 3,
+      "area": 1,
+      "space": "小鬼の河原",
+      "score": 60,
+      "bodies": 37,
+      "colliders": 142,
+      "drawCalls": 83,
+      "frame": { "median": 16.69999999999709, "p95": 16.799999999999272 }
+    }
+  ],
+  "entered": ["riverbank", "small-oni"],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "seed": 42,
+  "fleeing": ["smallOni"],
+  "failure": "mouse.move: Target page, context or browser has been closed\n    at /private/tmp/hole-hell-xf2kw9ki/checks/hell-flow.mjs:361:22",
+  "lastState": null
+}

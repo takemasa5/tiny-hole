@@ -6,7 +6,7 @@
 
 [7ステージのコンセプトアートと生成プロンプト](../art/concepts/stage-themes-2026-11-07/README.md)を作成。画像はオーナー承認済みの構想図で、実装画面ではない。
 
-エジプトは先行試作を実装した。[配置・開放条件・物理・検証](egypt-stage-implementation.md)を参照。地獄と他5ステージは未実装。
+エジプトは先行試作を実装した。[配置・開放条件・物理・検証](egypt-stage-implementation.md)を参照。地獄も [追いかけっこの試作](hell-stage-implementation.md)を実装した。他5ステージは未改修。
 
 ## 採用したテーマ
 

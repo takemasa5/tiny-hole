@@ -32,6 +32,8 @@ import {
   type GrowthObject,
 } from "./growth-stage";
 import { growthVisual, GrowthScenery } from "./growth-visuals";
+import { HELL_SPACES, HELL_WALLS, isHellActor } from "./hell-world";
+import { hellFloorTextures } from "./hell-floor";
 import { EGYPT_SPACES, EGYPT_WALLS, EGYPT_ROADS } from "./egypt-world";
 import { egyptFloorTextures } from "./egypt-floor";
 import { ToyWorldScene, NestedWorldScene } from "./toy-world-scene";
@@ -93,7 +95,7 @@ export async function startGame(
   if (!Number.isInteger(seed) || seed < 0 || seed >= 4294967296)
     throw new Error("配置シードが不正です。");
   const definitions = createGrowthStage(seed, stageId);
-  const progress = new GrowthProgress();
+  const progress = new GrowthProgress(stageId);
   const entities = new Map<string, Entity>();
   const terminal = new Map<string, "collected" | "retired" | "lost">();
   const renderer = new THREE.WebGLRenderer({
@@ -171,7 +173,29 @@ export async function startGame(
             floorTextures: egyptFloorTextures(),
             gateLabels: ["壁画の枠", "墓の扉", "神殿の門"],
           })
-        : undefined;
+        : stageId === "hell"
+          ? new NestedWorldScene(world, belowFloor, {
+              spaces: HELL_SPACES,
+              walls: HELL_WALLS,
+              roads: [],
+              style: "hell",
+              floorTextures: hellFloorTextures(),
+              gateLabels: [
+                "河原の出口",
+                "小鬼の門",
+                "亡者の門",
+                "赤鬼の門",
+                "閻魔の大門",
+              ],
+              captureHints: [
+                "",
+                "小鬼を捕まえて成長。",
+                "亡者を捕まえて成長。",
+                "赤鬼を捕まえて成長。",
+                "青鬼を捕まえて成長。",
+              ],
+            })
+          : undefined;
   if (toyWorld) scene.add(toyWorld.group);
   if (diagnosticMode === "plain-floor") {
     for (const root of [scenery.group, toyWorld?.group])
@@ -406,7 +430,9 @@ export async function startGame(
       const near = distance < radius * 12 + footprint * 2;
       // Distant city buildings remain visible without simulating the entire skyline.
       const physicsNear =
-        d.id.startsWith("city-block-") || d.id.startsWith("egypt-city-")
+        d.id.startsWith("city-block-") ||
+        d.id.startsWith("egypt-city-") ||
+        d.id.startsWith("hell-scenery-")
           ? distance < radius * 4 + footprint * 2
           : near;
       let touchingAnotherObject = false;
@@ -623,10 +649,54 @@ export async function startGame(
     eventOptions,
   );
 
+  function replenishHell() {
+    const level = progress.level;
+    const candidates = definitions.filter((d) =>
+      d.id.startsWith(`growth-${level}-`),
+    );
+    const available = [...entities.values()].filter(
+      (e) =>
+        e.definition.level === level &&
+        !e.falling &&
+        (level <= 2
+          ? e.definition.hellKind === "pebble"
+          : isHellActor(e.definition)),
+    );
+    const needed = GROWTH_LEVELS[level].threshold - progress.score;
+    if (
+      available.reduce((sum, e) => sum + e.definition.value, 0) >=
+        needed * 1.5 ||
+      !candidates.length
+    )
+      return;
+    for (let attempt = 0; attempt < candidates.length; attempt++) {
+      const source = candidates[(supplySerial + attempt) % candidates.length];
+      const point = { x: source.x, z: source.z };
+      if (Math.hypot(point.x - hole.x, point.z - hole.y) < radius * 4) continue;
+      if (
+        [...entities.values()].some((e) => {
+          const at = e.body?.translation() ?? e.mesh.position;
+          return (
+            Math.hypot(point.x - at.x, point.z - at.z) <
+            footprintOf(source) + footprintOf(e.definition) + radius * 0.1
+          );
+        })
+      )
+        continue;
+      const d = { ...source, id: `hell-supply-${level}-${++supplySerial}` };
+      const entity = createEntity(d, true);
+      attachBody(entity);
+      return;
+    }
+  }
   function replenish() {
     supplyTimer += PHYSICS_STEP;
     if (supplyTimer < 2 || progress.level === 12) return;
     supplyTimer = 0;
+    if (stageId === "hell") {
+      replenishHell();
+      return;
+    }
     const needed = GROWTH_LEVELS[progress.level].threshold - progress.score;
     const available = [...entities.values()]
       .filter(
@@ -812,7 +882,12 @@ export async function startGame(
         partnerPosition,
         blocked,
       );
-      if (d.route && motion.phase === "fleeing" && !isEgyptGod(d)) {
+      if (
+        d.route &&
+        motion.phase === "fleeing" &&
+        !isEgyptGod(d) &&
+        !isHellActor(d)
+      ) {
         const xs = d.route.map((p) => p.x),
           zs = d.route.map((p) => p.z);
         if (at.x < Math.min(...xs) || at.x > Math.max(...xs))
@@ -916,6 +991,8 @@ export async function startGame(
       definition.id.startsWith("room-") ||
       definition.id.startsWith("egypt-column-") ||
       definition.id.startsWith("egypt-god-") ||
+      definition.id.startsWith("hell-landmark-") ||
+      definition.id === "hell-palace" ||
       (definition.level >= 3 && definition.id.endsWith("-23"))
     )
       createEntity(definition, false);
@@ -1039,6 +1116,7 @@ export async function startGame(
     toyWorld: stageId === "toys" ? toyWorld?.snapshot(holeState()) : undefined,
     egyptWorld:
       stageId === "egypt" ? toyWorld?.snapshot(holeState()) : undefined,
+    hellWorld: stageId === "hell" ? toyWorld?.snapshot(holeState()) : undefined,
     stageId,
     levels: GROWTH_LEVELS,
     hole: holeState(),

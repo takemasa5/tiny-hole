@@ -1,0 +1,19 @@
+{
+  "changedFiles": {
+    "src/game/hell-motion.ts": "93a68400f36a3a65b9695946c954d657ead080a8055ecfeeadf3bd9e379d6a2c",
+    "tests/hell-stage.test.ts": "0d5756fb2710ffece98182e3cb3bab7cb332c5dec389df4d3e69611c9307493e",
+    "docs/hell-stage-implementation.md": "de10d929fbe2f99ed09545bea2ed757e079792b612be292692a2677ed339354a"
+  },
+  "unitTests": 424,
+  "lint": "passed",
+  "format": "passed",
+  "nativeChromium": "390x844 direct pursuit, four small oni collected, level 4 reached",
+  "physicalCapture": "smallOni/redOni/blueOni: 150ms observation, support loss and fall passed",
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "buildAsset": "index-CNXawbGM.js",
+  "offlineCache": "39166a6629076ae48793",
+  "deliveredBuild": "passed",
+  "deliveredFormat": "passed",
+  "deliveredMobile": "passed: move/stop, gate, restart, stage switch"
+}

@@ -1,0 +1,17 @@
+
+> hole-prototype@0.1.0 test
+> vitest run --reporter=dot --maxWorkers=2
+
+
+ RUN  v5.0.4 /private/tmp/hole-hell-xf2kw9ki
+
+····························································································································································································································································································································································································································
+
+ Test Files  28 passed (28)
+      Tests  412 passed (412)
+   Start at  16:16:37
+   Duration  31.94s (tests 97%, import 3%)
+
+    Isolate  28 workers spawned · ~220ms startup each (spawn + environment, per file)
+             at least ~2.86s faster with isolate: false — reuses workers across files instead of one per file
+

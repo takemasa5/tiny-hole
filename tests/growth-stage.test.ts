@@ -19,9 +19,10 @@ import {
 import { growthVisual } from "../src/game/growth-visuals";
 import { disposeScene } from "../src/game/visuals";
 import * as THREE from "three";
+import { isHellActor } from "../src/game/hell-world";
 
 it.each(STAGE_IDS)(
-  "%s: 各段階の静止在庫が次の成長の1.5倍以上あり、現在の範囲で取れる",
+  "%s: 各段階に成長可能な在庫があり、現在の範囲で取れる",
   (stage) => {
     const definitions = createGrowthStage(123, stage);
     expect(new Set(definitions.map((d) => d.id)).size).toBe(definitions.length);
@@ -33,7 +34,11 @@ it.each(STAGE_IDS)(
         (d) =>
           d.level === level &&
           !d.sourceLevel &&
-          ["still", "moored"].includes(d.behavior),
+          (stage === "hell"
+            ? level <= 2
+              ? d.hellKind === "pebble"
+              : isHellActor(d)
+            : ["still", "moored"].includes(d.behavior)),
       );
       const needed =
         GROWTH_LEVELS[level].threshold - GROWTH_LEVELS[level - 1].threshold;
@@ -42,7 +47,7 @@ it.each(STAGE_IDS)(
       );
       for (const d of stock) {
         expect(
-          ["toys", "egypt"].includes(stage)
+          ["toys", "egypt", "hell"].includes(stage)
             ? footprintOf(d)
             : Math.hypot(...d.size) / 2,
         ).toBeLessThan(radius * 0.95);
@@ -53,7 +58,7 @@ it.each(STAGE_IDS)(
     }
     const goal = definitions.find((d) => d.id === "goal")!;
     expect(
-      ["toys", "egypt"].includes(stage)
+      ["toys", "egypt", "hell"].includes(stage)
         ? footprintOf(goal)
         : Math.hypot(...goal.size) / 2,
     ).toBeLessThan(GROWTH_LEVELS[11].radius);

@@ -3,6 +3,7 @@ import { objectVisual } from "./visuals";
 import { type GrowthObject } from "./growth-stage";
 import { BoundaryGuide } from "./boundary-guide";
 import { STAGES, type StageId } from "./stage";
+import { hellVisual } from "./hell-visuals";
 import { egyptVisual } from "./egypt-visuals";
 import { toyVisual } from "./toy-visuals";
 import { GROUND_PAINT_RENDER_ORDER } from "./ground-geometry";
@@ -23,7 +24,10 @@ export function growthVisual(
   preview = false,
 ) {
   const group = new THREE.Group();
-  if (definition.model === "egypt") {
+  if (definition.model === "hell") {
+    if (!definition.hellKind) throw new Error("地獄の種類がありません。");
+    group.add(hellVisual(definition.hellKind));
+  } else if (definition.model === "egypt") {
     if (!definition.egyptKind) throw new Error("エジプトの種類がありません。");
     group.add(egyptVisual(definition.egyptKind));
   } else if (definition.model === "colossalRobot") {
@@ -195,6 +199,7 @@ export class GrowthScenery {
     for (const definition of definitions)
       if (
         stageId !== "egypt" &&
+        stageId !== "hell" &&
         definition.route &&
         (stageId !== "toys" || ["route", "train"].includes(definition.behavior))
       )
@@ -289,7 +294,8 @@ export class GrowthScenery {
       quay.renderOrder = GROUND_PAINT_RENDER_ORDER + 2;
       this.group.add(quay);
     }
-    if (stageId !== "toys") this.group.add(this.boundary.group);
+    if (!["toys", "hell"].includes(stageId))
+      this.group.add(this.boundary.group);
   }
 
   update(hole: { x: number; z: number; radius: number }, area: number) {

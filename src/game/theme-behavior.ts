@@ -1,3 +1,5 @@
+import { hellVelocity } from "./hell-motion";
+import { isHellActor } from "./hell-world";
 import { EGYPT_SPACES } from "./egypt-world";
 import type { GrowthObject } from "./growth-stage";
 import { footprintOf, isEgyptGod } from "./growth-stage";
@@ -68,6 +70,8 @@ export function themeVelocity(
   partner?: { x: number; z: number },
   blocked = false,
 ) {
+  if (isHellActor(definition))
+    return hellVelocity(definition, motion, position, hole, delta);
   motion.time += delta;
   if (motion.phase === "falling") return { x: 0, z: 0 };
   const footprint = footprintOf(definition);

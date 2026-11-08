@@ -7,6 +7,9 @@ import {
   type StageId,
 } from "./stage";
 import { createToyStage, type ToyKind } from "./toy-stage";
+import { createHellStage } from "./hell-stage";
+import { HELL_SPACES, hellAreaForLevel, isHellActor } from "./hell-world";
+import type { HellKind } from "./hell-visuals";
 import { createEgyptStage } from "./egypt-stage";
 import { EGYPT_SPACES, egyptAreaForLevel } from "./egypt-world";
 import type { EgyptKind } from "./egypt-visuals";
@@ -26,6 +29,7 @@ export const GROWTH_AREAS = [
   { level: 10, extent: 1600, label: "巨大な世界" },
 ] as const;
 export type GrowthModel =
+  | "hell"
   | "egypt"
   | "colossalRobot"
   | "toy"
@@ -60,6 +64,7 @@ export interface GrowthObject {
   sourceLevel?: number;
   toyKind?: ToyKind;
   egyptKind?: EgyptKind;
+  hellKind?: HellKind;
   stationStop?: number;
   speedMultiplier?: number;
   stackY?: number;
@@ -204,12 +209,15 @@ export function areasForStage(stageId: StageId) {
     ? TOY_SPACES
     : stageId === "egypt"
       ? EGYPT_SPACES
-      : GROWTH_AREAS;
+      : stageId === "hell"
+        ? HELL_SPACES
+        : GROWTH_AREAS;
 }
 
 export function areaForLevel(level: number, stageId: StageId = "plaza") {
   if (stageId === "toys") return toyAreaForLevel(level);
   if (stageId === "egypt") return egyptAreaForLevel(level);
+  if (stageId === "hell") return hellAreaForLevel(level);
   return Math.min(3, Math.max(0, Math.floor((level - 1) / 3)));
 }
 
@@ -220,6 +228,13 @@ export function goalForGrowth(stageId: StageId): {
   size: [number, number, number];
 } {
   if (!isStageId(stageId)) throw new Error("ステージが見つかりません。");
+  if (stageId === "hell")
+    return {
+      kind: "enma",
+      model: "hell",
+      label: "逃げる閻魔大王",
+      size: [180, 450, 145],
+    };
   if (stageId === "harbor")
     return {
       kind: "dinghy",
@@ -415,7 +430,9 @@ export function createGrowthStage(
     ? createToyStage(definitions, GROWTH_RADII, random)
     : stageId === "egypt"
       ? createEgyptStage(definitions, random)
-      : definitions;
+      : stageId === "hell"
+        ? createHellStage(definitions, random)
+        : definitions;
 }
 
 export function isEgyptGod(definition: Pick<GrowthObject, "egyptKind">) {
@@ -436,9 +453,10 @@ export function canRetire(
   return (
     !protectedObject &&
     definition.id !== "goal" &&
-    definition.level <= level - 6 &&
-    Math.hypot(...definition.size) / radius < 0.025 &&
-    distance > radius * 8
+    definition.level <= level - (definition.model === "hell" ? 5 : 6) &&
+    Math.hypot(...definition.size) / radius <
+      (definition.model === "hell" ? 0.035 : 0.025) &&
+    (definition.model === "hell" || distance > radius * 8)
   );
 }
 
@@ -451,6 +469,8 @@ export function clampToArea(
   if (stageId === "toys") return clampToyDestination(point, area, radius);
   if (stageId === "egypt")
     return clampToyDestination(point, area, radius, EGYPT_SPACES);
+  if (stageId === "hell")
+    return clampToyDestination(point, area, radius, HELL_SPACES);
   const limit = Math.max(0, GROWTH_AREAS[area].extent - radius);
   return {
     x: Math.max(-limit, Math.min(limit, point.x)),
@@ -472,8 +492,12 @@ export class GrowthProgress {
   level = 1;
   cleared = false;
   readonly collected = new Set<string>();
+  constructor(private stageId: StageId = "plaza") {}
 
-  collect(definition: Pick<GrowthObject, "id" | "value">) {
+  collect(
+    definition: Pick<GrowthObject, "id" | "value"> &
+      Partial<Pick<GrowthObject, "hellKind">>,
+  ) {
     if (this.cleared || this.collected.has(definition.id)) return false;
     if (
       !definition.id ||
@@ -482,7 +506,14 @@ export class GrowthProgress {
     )
       throw new Error("成長ポイントが不正です。");
     this.collected.add(definition.id);
-    this.score += definition.value;
+    const credit =
+      this.stageId === "hell" && !isHellActor(definition)
+        ? Math.max(
+            0,
+            Math.min(definition.value, GROWTH_LEVELS[2].threshold - this.score),
+          )
+        : definition.value;
+    this.score += credit;
     while (
       this.level < GROWTH_LEVELS.length &&
       this.score >= GROWTH_LEVELS[this.level].threshold

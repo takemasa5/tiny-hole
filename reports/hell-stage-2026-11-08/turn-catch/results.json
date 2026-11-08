@@ -1,0 +1,43 @@
+{
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "levels": [
+    {
+      "level": 1,
+      "area": 0,
+      "space": "賽の河原",
+      "score": 0,
+      "bodies": 32,
+      "colliders": 58,
+      "drawCalls": 32,
+      "frame": { "median": 16.700000000000045, "p95": 16.700000000000045 }
+    },
+    {
+      "level": 2,
+      "area": 0,
+      "space": "賽の河原",
+      "score": 12,
+      "bodies": 43,
+      "colliders": 71,
+      "drawCalls": 49,
+      "frame": { "median": 16.699999999999818, "p95": 16.799999999999272 }
+    },
+    {
+      "level": 3,
+      "area": 1,
+      "space": "小鬼の河原",
+      "score": 60,
+      "bodies": 38,
+      "colliders": 143,
+      "drawCalls": 102,
+      "frame": { "median": 16.69999999999891, "p95": 16.700000000000728 }
+    }
+  ],
+  "entered": ["riverbank", "small-oni"],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "seed": 42,
+  "fleeing": ["smallOni"],
+  "final": { "level": 4, "score": 252, "moving": 4, "collected": 29 },
+  "input": "Ordinary arrow keys, direct pursuit without target-velocity prediction"
+}

@@ -2,6 +2,7 @@ import RAPIER from "@dimforge/rapier3d-compat";
 import { growthShapeParts, growthCollisionBounds } from "./growth-shape";
 import type { StageId } from "./stage";
 export { growthCollisionBounds } from "./growth-shape";
+import { isHellActor } from "./hell-world";
 import { isEgyptGod, type GrowthObject } from "./growth-stage";
 
 export function createGrowthBody(
@@ -75,7 +76,7 @@ export function growthLosesSupport(
   const bottom =
     position.y + growthCollisionBounds(definition, rotation, stage).bottom;
   const overlaps = apertureOverlapsBase(definition, position, rotation, hole);
-  if (isEgyptGod(definition)) {
+  if (isEgyptGod(definition) || isHellActor(definition)) {
     // A walking character balances on its remaining foot; contact with its outline is not a fall.
     return overlaps && bottom < -Math.max(0.01, hole.radius * 0.03);
   }

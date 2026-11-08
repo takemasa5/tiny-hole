@@ -1,0 +1,32 @@
+
+> hole-prototype@0.1.0 test
+> vitest run --reporter=dot --maxWorkers=2
+
+
+ RUN  v5.0.4 /private/tmp/hole-hell-xf2kw9ki
+
+·······x····················································································································································································································································································································································································································
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/growth-physics.test.ts > hell: 微小物から巨大目標まで実際の穴へ落下し、隣の物は床に支えられる
+AssertionError: expected 1.4244600679988053 to be less than 0
+ ❯ tests/growth-physics.test.ts:61:9
+     59|       expect(
+     60|         topOfBox(bodies[0].translation().y, bodies[0].rotation(), d.si…
+     61|       ).toBeLessThan(0);
+       |         ^
+     62|       const neighbor = growthCollisionBounds(d, bodies[1].rotation(), …
+     63|       // Curved and top-heavy shapes may settle on their side, still o…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 27 passed (28)
+      Tests  1 failed | 411 passed (412)
+   Start at  16:13:46
+   Duration  31.64s (tests 97%, import 2%)
+
+    Isolate  28 workers spawned · ~216ms startup each (spawn + environment, per file)
+             at least ~2.81s faster with isolate: false — reuses workers across files instead of one per file
+

@@ -34,7 +34,8 @@ export interface NestedWorldLayout {
   spaces: readonly ToySpace[];
   walls: readonly ToyWall[];
   roads: readonly { x: number; z: number; width: number; depth: number }[];
-  style: "toys" | "egypt";
+  style: "toys" | "egypt" | "hell";
+  captureHints?: readonly string[];
   floorTextures?: readonly THREE.Texture[];
   gateLabels?: readonly string[];
 }
@@ -109,11 +110,13 @@ export class NestedWorldScene {
           );
           const mesh = this.box(
             [width, wall.height, depth],
-            layout.style === "egypt"
-              ? "#c0a05c"
-              : wall.space < 2
-                ? space.color
-                : "#a67951",
+            layout.style === "hell"
+              ? "#aa514e"
+              : layout.style === "egypt"
+                ? "#c0a05c"
+                : wall.space < 2
+                  ? space.color
+                  : "#a67951",
           );
           mesh.name = `${space.id}-door-surface`;
           mesh.position.set(
@@ -442,7 +445,7 @@ export class NestedWorldScene {
         !!position &&
         Math.hypot(position.x - hole.x, position.z - hole.z) < hole.radius * 4,
       label: gate
-        ? `レベル${gate.level}になると${this.layout.gateLabels?.[this.openedArea] ?? (this.openedArea < 2 ? "箱の側面" : this.openedArea === 2 ? "ドア" : "玄関")}が開きます`
+        ? `${this.layout.captureHints?.[this.openedArea] ?? ""}レベル${gate.level}になると${this.layout.gateLabels?.[this.openedArea] ?? (this.openedArea < 2 ? "箱の側面" : this.openedArea === 2 ? "ドア" : "玄関")}が開きます`
         : "",
       level: gate?.level ?? 0,
       posts: 0,

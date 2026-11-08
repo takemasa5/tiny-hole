@@ -573,7 +573,7 @@ export const STAGES = {
     accent: "#6380a2",
   },
   hell: {
-    name: "鬼も歩く日本の地獄",
+    name: "追いかけっこの地獄",
     menuLabel: "地獄",
     goal: "enma",
     clearTitle: "閻魔大王まで、ひと飲み。",
@@ -595,7 +595,7 @@ export const STAGES = {
     },
     groundColor: "#6c626c",
     backgroundColor: "#423d52",
-    accent: "#d7775e",
+    accent: "#a77cdb",
   },
 } as const satisfies Record<StageId, StageDefinition>;
 

@@ -29,7 +29,11 @@ it.each(STAGE_IDS)(
         (d) =>
           d.level === level &&
           !d.sourceLevel &&
-          ["still", "moored"].includes(d.behavior),
+          (stage === "hell"
+            ? level === 12
+              ? d.id === "goal"
+              : d.id.startsWith(`growth-${level}-`)
+            : ["still", "moored"].includes(d.behavior)),
       )!;
       const radius = GROWTH_LEVELS[level - 1].radius;
       const world = new RAPIER.World({
