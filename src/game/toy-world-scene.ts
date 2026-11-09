@@ -34,7 +34,7 @@ export interface NestedWorldLayout {
   spaces: readonly ToySpace[];
   walls: readonly ToyWall[];
   roads: readonly { x: number; z: number; width: number; depth: number }[];
-  style: "toys" | "egypt" | "hell";
+  style: "toys" | "egypt" | "hell" | "plaza";
   captureHints?: readonly string[];
   floorTextures?: readonly THREE.Texture[];
   gateLabels?: readonly string[];
@@ -92,6 +92,65 @@ export class NestedWorldScene {
           depth = wall.maxZ - wall.minZ;
         const x = (wall.minX + wall.maxX) / 2,
           z = (wall.minZ + wall.maxZ) / 2;
+        if (layout.style === "plaza" && index > 0 && !wall.door) {
+          const alongX = width > depth,
+            length = alongX ? width : depth,
+            thickness = Math.min(width, depth),
+            count = Math.max(2, Math.ceil(length / (wall.height * 0.75)));
+          const posts = new THREE.InstancedMesh(
+            new THREE.BoxGeometry(thickness, wall.height, thickness),
+            new THREE.MeshStandardMaterial({
+              color: wall.color,
+              roughness: 0.9,
+            }),
+            count + 1,
+          );
+          const dummy = new THREE.Object3D();
+          for (let post = 0; post <= count; post++) {
+            const offset = (post / count - 0.5) * (length - thickness),
+              px = x - cx + (alongX ? offset : 0),
+              pz = z - cz + (alongX ? 0 : offset);
+            dummy.position.set(px, wall.height / 2, pz);
+            dummy.updateMatrix();
+            posts.setMatrixAt(post, dummy.matrix);
+            colliders.push(
+              world.createCollider(
+                RAPIER.ColliderDesc.cuboid(
+                  thickness / 2,
+                  wall.height / 2,
+                  thickness / 2,
+                )
+                  .setTranslation(px, wall.height / 2, pz)
+                  .setActiveHooks(RAPIER.ActiveHooks.FILTER_CONTACT_PAIRS),
+                body,
+              ),
+            );
+          }
+          posts.name = `${wall.id}-posts`;
+          group.add(posts);
+          for (const height of [wall.height * 0.32, wall.height * 0.8]) {
+            const size: [number, number, number] = alongX
+              ? [width, thickness, thickness]
+              : [thickness, thickness, depth];
+            const rail = this.box(size, wall.color);
+            rail.position.set(x - cx, height, z - cz);
+            rail.name = `${wall.id}-rail`;
+            group.add(rail);
+            colliders.push(
+              world.createCollider(
+                RAPIER.ColliderDesc.cuboid(
+                  size[0] / 2,
+                  size[1] / 2,
+                  size[2] / 2,
+                )
+                  .setTranslation(x - cx, height, z - cz)
+                  .setActiveHooks(RAPIER.ActiveHooks.FILTER_CONTACT_PAIRS),
+                body,
+              ),
+            );
+          }
+          continue;
+        }
         const collider = world.createCollider(
           RAPIER.ColliderDesc.cuboid(width / 2, wall.height / 2, depth / 2)
             .setTranslation(x - cx, wall.height / 2, z - cz)
@@ -110,13 +169,15 @@ export class NestedWorldScene {
           );
           const mesh = this.box(
             [width, wall.height, depth],
-            layout.style === "hell"
-              ? "#aa514e"
-              : layout.style === "egypt"
-                ? "#c0a05c"
-                : wall.space < 2
-                  ? space.color
-                  : "#a67951",
+            layout.style === "plaza"
+              ? "#738e70"
+              : layout.style === "hell"
+                ? "#aa514e"
+                : layout.style === "egypt"
+                  ? "#c0a05c"
+                  : wall.space < 2
+                    ? space.color
+                    : "#a67951",
           );
           mesh.name = `${space.id}-door-surface`;
           mesh.position.set(

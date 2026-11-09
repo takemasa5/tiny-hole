@@ -1,0 +1,16 @@
+
+> hole-prototype@0.1.0 test
+> vitest run --maxWorkers=2
+
+
+ RUN  v5.0.4 /private/tmp/hole-plaza-zzr7e6rg
+
+
+ Test Files  29 passed (29)
+      Tests  461 passed (461)
+   Start at  19:30:02
+   Duration  42.38s (tests 97%, import 2%)
+
+    Isolate  29 workers spawned · ~243ms startup each (spawn + environment, per file)
+             at least ~3.27s faster with isolate: false — reuses workers across files instead of one per file
+

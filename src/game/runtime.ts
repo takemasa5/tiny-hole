@@ -32,6 +32,8 @@ import {
   type GrowthObject,
 } from "./growth-stage";
 import { growthVisual, GrowthScenery } from "./growth-visuals";
+import { PLAZA_SPACES, PLAZA_WALLS } from "./plaza-world";
+import { plazaFloorTextures } from "./plaza-floor";
 import { HELL_SPACES, HELL_WALLS, isHellActor } from "./hell-world";
 import { hellFloorTextures } from "./hell-floor";
 import { EGYPT_SPACES, EGYPT_WALLS, EGYPT_ROADS } from "./egypt-world";
@@ -162,40 +164,49 @@ export async function startGame(
   const scenery = new GrowthScenery(definitions, stageId);
   scene.add(scenery.group);
   const toyWorld =
-    stageId === "toys"
-      ? new ToyWorldScene(world, belowFloor)
-      : stageId === "egypt"
-        ? new NestedWorldScene(world, belowFloor, {
-            spaces: EGYPT_SPACES,
-            walls: EGYPT_WALLS,
-            roads: EGYPT_ROADS,
-            style: "egypt",
-            floorTextures: egyptFloorTextures(),
-            gateLabels: ["壁画の枠", "墓の扉", "神殿の門"],
-          })
-        : stageId === "hell"
+    stageId === "plaza"
+      ? new NestedWorldScene(world, belowFloor, {
+          spaces: PLAZA_SPACES,
+          walls: PLAZA_WALLS,
+          roads: [],
+          style: "plaza",
+          floorTextures: plazaFloorTextures(),
+          gateLabels: ["花壇の出口", "遊び場の門", "公園の門", "記念広場の門"],
+        })
+      : stageId === "toys"
+        ? new ToyWorldScene(world, belowFloor)
+        : stageId === "egypt"
           ? new NestedWorldScene(world, belowFloor, {
-              spaces: HELL_SPACES,
-              walls: HELL_WALLS,
-              roads: [],
-              style: "hell",
-              floorTextures: hellFloorTextures(),
-              gateLabels: [
-                "河原の出口",
-                "小鬼の門",
-                "亡者の門",
-                "赤鬼の門",
-                "閻魔の大門",
-              ],
-              captureHints: [
-                "",
-                "小鬼を捕まえて成長。",
-                "亡者を捕まえて成長。",
-                "赤鬼を捕まえて成長。",
-                "青鬼を捕まえて成長。",
-              ],
+              spaces: EGYPT_SPACES,
+              walls: EGYPT_WALLS,
+              roads: EGYPT_ROADS,
+              style: "egypt",
+              floorTextures: egyptFloorTextures(),
+              gateLabels: ["壁画の枠", "墓の扉", "神殿の門"],
             })
-          : undefined;
+          : stageId === "hell"
+            ? new NestedWorldScene(world, belowFloor, {
+                spaces: HELL_SPACES,
+                walls: HELL_WALLS,
+                roads: [],
+                style: "hell",
+                floorTextures: hellFloorTextures(),
+                gateLabels: [
+                  "河原の出口",
+                  "小鬼の門",
+                  "亡者の門",
+                  "赤鬼の門",
+                  "閻魔の大門",
+                ],
+                captureHints: [
+                  "",
+                  "小鬼を捕まえて成長。",
+                  "亡者を捕まえて成長。",
+                  "赤鬼を捕まえて成長。",
+                  "青鬼を捕まえて成長。",
+                ],
+              })
+            : undefined;
   if (toyWorld) scene.add(toyWorld.group);
   if (diagnosticMode === "plain-floor") {
     for (const root of [scenery.group, toyWorld?.group])
@@ -432,7 +443,9 @@ export async function startGame(
       const physicsNear =
         d.id.startsWith("city-block-") ||
         d.id.startsWith("egypt-city-") ||
-        d.id.startsWith("hell-scenery-")
+        d.id.startsWith("hell-scenery-") ||
+        d.id.startsWith("plaza-city-") ||
+        d.id.startsWith("plaza-scenery-")
           ? distance < radius * 4 + footprint * 2
           : near;
       let touchingAnotherObject = false;
@@ -649,7 +662,7 @@ export async function startGame(
     eventOptions,
   );
 
-  function replenishHell() {
+  function replenishLocalStock() {
     const level = progress.level;
     const candidates = definitions.filter((d) =>
       d.id.startsWith(`growth-${level}-`),
@@ -658,9 +671,12 @@ export async function startGame(
       (e) =>
         e.definition.level === level &&
         !e.falling &&
-        (level <= 2
-          ? e.definition.hellKind === "pebble"
-          : isHellActor(e.definition)),
+        (stageId === "hell"
+          ? level <= 2
+            ? e.definition.hellKind === "pebble"
+            : isHellActor(e.definition)
+          : e.definition.id.startsWith("growth-") ||
+            e.definition.id.startsWith("plaza-supply-")),
     );
     const needed = GROWTH_LEVELS[level].threshold - progress.score;
     if (
@@ -683,7 +699,10 @@ export async function startGame(
         })
       )
         continue;
-      const d = { ...source, id: `hell-supply-${level}-${++supplySerial}` };
+      const d = {
+        ...source,
+        id: `${stageId}-supply-${level}-${++supplySerial}`,
+      };
       const entity = createEntity(d, true);
       attachBody(entity);
       return;
@@ -693,8 +712,8 @@ export async function startGame(
     supplyTimer += PHYSICS_STEP;
     if (supplyTimer < 2 || progress.level === 12) return;
     supplyTimer = 0;
-    if (stageId === "hell") {
-      replenishHell();
+    if (stageId === "hell" || stageId === "plaza") {
+      replenishLocalStock();
       return;
     }
     const needed = GROWTH_LEVELS[progress.level].threshold - progress.score;
@@ -886,7 +905,8 @@ export async function startGame(
         d.route &&
         motion.phase === "fleeing" &&
         !isEgyptGod(d) &&
-        !isHellActor(d)
+        !isHellActor(d) &&
+        !d.plazaKind
       ) {
         const xs = d.route.map((p) => p.x),
           zs = d.route.map((p) => p.z);
@@ -992,6 +1012,9 @@ export async function startGame(
       definition.id.startsWith("egypt-column-") ||
       definition.id.startsWith("egypt-god-") ||
       definition.id.startsWith("hell-landmark-") ||
+      definition.id.startsWith("plaza-landmark-") ||
+      (definition.id.startsWith("plaza-city-") &&
+        definition.id.endsWith("-0")) ||
       definition.id === "hell-palace" ||
       (definition.level >= 3 && definition.id.endsWith("-23"))
     )
@@ -1117,6 +1140,8 @@ export async function startGame(
     egyptWorld:
       stageId === "egypt" ? toyWorld?.snapshot(holeState()) : undefined,
     hellWorld: stageId === "hell" ? toyWorld?.snapshot(holeState()) : undefined,
+    plazaWorld:
+      stageId === "plaza" ? toyWorld?.snapshot(holeState()) : undefined,
     stageId,
     levels: GROWTH_LEVELS,
     hole: holeState(),

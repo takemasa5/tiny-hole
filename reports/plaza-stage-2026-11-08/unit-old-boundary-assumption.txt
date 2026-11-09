@@ -1,0 +1,40 @@
+
+> hole-prototype@0.1.0 test
+> vitest run --maxWorkers=2
+
+
+ RUN  v5.0.4 /private/tmp/hole-plaza-zzr7e6rg
+
+ ❯ tests/boundary-guide.test.ts (11 tests | 1 failed) 35ms
+   × レベル9の全方向で、エリア固定の尺度の柵と開放条件を出す 3ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/boundary-guide.test.ts > レベル9の全方向で、エリア固定の尺度の柵と開放条件を出す
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/boundary-guide.test.ts:25:40
+     23|     ]) {
+     24|       guide.update({ x, z, radius }, area);
+     25|       expect(guide.snapshot().visible).toBe(true);
+       |                                        ^
+     26|       expect(guide.snapshot().level).toBe(GROWTH_AREAS[area + 1].level…
+     27|       expect(guide.snapshot().posts).toBeGreaterThan(0);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 28 passed (29)
+      Tests  1 failed | 460 passed (461)
+   Start at  19:27:07
+   Duration  37.72s (tests 97%, import 2%)
+
+    Isolate  29 workers spawned · ~214ms startup each (spawn + environment, per file)
+             at least ~2.88s faster with isolate: false — reuses workers across files instead of one per file
+

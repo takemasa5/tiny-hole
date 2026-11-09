@@ -13,7 +13,7 @@ it.each([1, 2, 3, 4, 5, 6, 7, 8, 9])(
   (level) => {
     const guide = new BoundaryGuide();
     const radius = GROWTH_LEVELS[level - 1].radius;
-    const area = areaForLevel(level);
+    const area = areaForLevel(level, "america");
     const extent = GROWTH_AREAS[area].extent;
     for (const [x, z] of [
       [extent - radius, 0],

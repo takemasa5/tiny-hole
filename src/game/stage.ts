@@ -445,7 +445,7 @@ export interface StageDefinition {
 
 export const STAGES = {
   plaza: {
-    name: "はじまりの広場",
+    name: "花壇から広がる広場",
     menuLabel: "広場",
     goal: "monument",
     clearTitle: "広場を、ひと飲み。",

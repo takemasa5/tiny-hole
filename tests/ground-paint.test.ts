@@ -9,6 +9,7 @@ import {
   EGYPT_WALLS,
   EGYPT_ROADS,
 } from "../src/game/egypt-world";
+import { PLAZA_SPACES, PLAZA_WALLS } from "../src/game/plaza-world";
 import { HELL_SPACES, HELL_WALLS } from "../src/game/hell-world";
 import { NestedWorldScene, ToyWorldScene } from "../src/game/toy-world-scene";
 import { BASE_GROUND_RENDER_ORDER } from "../src/game/ground-geometry";
@@ -36,12 +37,22 @@ function checkPaint(root: THREE.Group) {
 it("全ステージの道路・水面と、おもちゃの床・模様は、物体を上書きしない背景として描く", () => {
   for (const stage of STAGE_IDS) {
     const scenery = new GrowthScenery(createGrowthStage(42, stage), stage);
-    if (stage === "egypt" || stage === "hell") {
+    if (stage === "egypt" || stage === "hell" || stage === "plaza") {
       const world = new RAPIER.World({ x: 0, y: -9.81, z: 0 });
       const egypt = new NestedWorldScene(world, new Set(), {
-        spaces: stage === "hell" ? HELL_SPACES : EGYPT_SPACES,
-        walls: stage === "hell" ? HELL_WALLS : EGYPT_WALLS,
-        roads: stage === "hell" ? [] : EGYPT_ROADS,
+        spaces:
+          stage === "plaza"
+            ? PLAZA_SPACES
+            : stage === "hell"
+              ? HELL_SPACES
+              : EGYPT_SPACES,
+        walls:
+          stage === "plaza"
+            ? PLAZA_WALLS
+            : stage === "hell"
+              ? HELL_WALLS
+              : EGYPT_WALLS,
+        roads: stage === "egypt" ? EGYPT_ROADS : [],
         style: stage,
       });
       checkPaint(egypt.group);

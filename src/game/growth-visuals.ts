@@ -3,6 +3,7 @@ import { objectVisual } from "./visuals";
 import { type GrowthObject } from "./growth-stage";
 import { BoundaryGuide } from "./boundary-guide";
 import { STAGES, type StageId } from "./stage";
+import { plazaVisual } from "./plaza-visuals";
 import { hellVisual } from "./hell-visuals";
 import { egyptVisual } from "./egypt-visuals";
 import { toyVisual } from "./toy-visuals";
@@ -24,7 +25,10 @@ export function growthVisual(
   preview = false,
 ) {
   const group = new THREE.Group();
-  if (definition.model === "hell") {
+  if (definition.model === "plaza") {
+    if (!definition.plazaKind) throw new Error("広場の種類がありません。");
+    group.add(plazaVisual(definition.plazaKind));
+  } else if (definition.model === "hell") {
     if (!definition.hellKind) throw new Error("地獄の種類がありません。");
     group.add(hellVisual(definition.hellKind));
   } else if (definition.model === "egypt") {
@@ -198,6 +202,7 @@ export class GrowthScenery {
     const routes = new Map<string, GrowthObject>();
     for (const definition of definitions)
       if (
+        stageId !== "plaza" &&
         stageId !== "egypt" &&
         stageId !== "hell" &&
         definition.route &&
@@ -294,7 +299,7 @@ export class GrowthScenery {
       quay.renderOrder = GROUND_PAINT_RENDER_ORDER + 2;
       this.group.add(quay);
     }
-    if (!["toys", "hell"].includes(stageId))
+    if (!["toys", "hell", "plaza"].includes(stageId))
       this.group.add(this.boundary.group);
   }
 

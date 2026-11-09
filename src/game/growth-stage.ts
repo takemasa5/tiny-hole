@@ -7,6 +7,9 @@ import {
   type StageId,
 } from "./stage";
 import { createToyStage, type ToyKind } from "./toy-stage";
+import { createPlazaStage } from "./plaza-stage";
+import { PLAZA_SPACES, plazaAreaForLevel } from "./plaza-world";
+import type { PlazaKind } from "./plaza-visuals";
 import { createHellStage } from "./hell-stage";
 import { HELL_SPACES, hellAreaForLevel, isHellActor } from "./hell-world";
 import type { HellKind } from "./hell-visuals";
@@ -29,6 +32,7 @@ export const GROWTH_AREAS = [
   { level: 10, extent: 1600, label: "巨大な世界" },
 ] as const;
 export type GrowthModel =
+  | "plaza"
   | "hell"
   | "egypt"
   | "colossalRobot"
@@ -65,6 +69,7 @@ export interface GrowthObject {
   toyKind?: ToyKind;
   egyptKind?: EgyptKind;
   hellKind?: HellKind;
+  plazaKind?: PlazaKind;
   stationStop?: number;
   speedMultiplier?: number;
   stackY?: number;
@@ -205,16 +210,19 @@ const WORKERS: readonly ObjectKind[] = [
 ];
 
 export function areasForStage(stageId: StageId) {
-  return stageId === "toys"
-    ? TOY_SPACES
-    : stageId === "egypt"
-      ? EGYPT_SPACES
-      : stageId === "hell"
-        ? HELL_SPACES
-        : GROWTH_AREAS;
+  return stageId === "plaza"
+    ? PLAZA_SPACES
+    : stageId === "toys"
+      ? TOY_SPACES
+      : stageId === "egypt"
+        ? EGYPT_SPACES
+        : stageId === "hell"
+          ? HELL_SPACES
+          : GROWTH_AREAS;
 }
 
 export function areaForLevel(level: number, stageId: StageId = "plaza") {
+  if (stageId === "plaza") return plazaAreaForLevel(level);
   if (stageId === "toys") return toyAreaForLevel(level);
   if (stageId === "egypt") return egyptAreaForLevel(level);
   if (stageId === "hell") return hellAreaForLevel(level);
@@ -228,6 +236,13 @@ export function goalForGrowth(stageId: StageId): {
   size: [number, number, number];
 } {
   if (!isStageId(stageId)) throw new Error("ステージが見つかりません。");
+  if (stageId === "plaza")
+    return {
+      kind: "monument",
+      model: "plaza",
+      label: "巨大な記念塔",
+      size: [190, 540, 190],
+    };
   if (stageId === "hell")
     return {
       kind: "enma",
@@ -426,13 +441,15 @@ export function createGrowthStage(
         ? goal.size[0] / OBJECT_TYPES[goal.kind].size[0]
         : 1,
   });
-  return stageId === "toys"
-    ? createToyStage(definitions, GROWTH_RADII, random)
-    : stageId === "egypt"
-      ? createEgyptStage(definitions, random)
-      : stageId === "hell"
-        ? createHellStage(definitions, random)
-        : definitions;
+  return stageId === "plaza"
+    ? createPlazaStage(definitions, random)
+    : stageId === "toys"
+      ? createToyStage(definitions, GROWTH_RADII, random)
+      : stageId === "egypt"
+        ? createEgyptStage(definitions, random)
+        : stageId === "hell"
+          ? createHellStage(definitions, random)
+          : definitions;
 }
 
 export function isEgyptGod(definition: Pick<GrowthObject, "egyptKind">) {
@@ -466,6 +483,8 @@ export function clampToArea(
   radius: number,
   stageId: StageId = "plaza",
 ) {
+  if (stageId === "plaza")
+    return clampToyDestination(point, area, radius, PLAZA_SPACES);
   if (stageId === "toys") return clampToyDestination(point, area, radius);
   if (stageId === "egypt")
     return clampToyDestination(point, area, radius, EGYPT_SPACES);

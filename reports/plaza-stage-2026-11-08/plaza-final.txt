@@ -1,0 +1,13 @@
+
+> hole-prototype@0.1.0 test
+> vitest run tests/plaza-stage.test.ts tests/boundary-guide.test.ts --maxWorkers=2
+
+
+ RUN  v5.0.4 /private/tmp/hole-plaza-zzr7e6rg
+
+
+ Test Files  2 passed (2)
+      Tests  48 passed (48)
+   Start at  19:28:48
+   Duration  12.42s (tests 98%, import 1%, transform 1%)
+

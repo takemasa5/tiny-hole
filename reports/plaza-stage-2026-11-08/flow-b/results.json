@@ -1,0 +1,146 @@
+{
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "levels": [
+    {
+      "level": 1,
+      "area": 0,
+      "space": "花壇の足元",
+      "score": 0,
+      "bodies": 49,
+      "colliders": 516,
+      "drawCalls": 97,
+      "frame": { "median": 16.699999999999932, "p95": 16.799999999999955 }
+    },
+    {
+      "level": 2,
+      "area": 0,
+      "space": "花壇の足元",
+      "score": 13,
+      "bodies": 58,
+      "colliders": 548,
+      "drawCalls": 136,
+      "frame": { "median": 16.69999999999891, "p95": 16.799999999999272 }
+    },
+    {
+      "level": 3,
+      "area": 0,
+      "space": "花壇の足元",
+      "score": 63,
+      "bodies": 53,
+      "colliders": 545,
+      "drawCalls": 189,
+      "frame": { "median": 16.700000000000728, "p95": 16.700000000000728 }
+    },
+    {
+      "level": 4,
+      "area": 1,
+      "space": "公園の遊び場",
+      "score": 260,
+      "bodies": 53,
+      "colliders": 569,
+      "drawCalls": 211,
+      "frame": { "median": 16.69999999999709, "p95": 16.799999999999272 }
+    },
+    {
+      "level": 5,
+      "area": 1,
+      "space": "公園の遊び場",
+      "score": 1036,
+      "bodies": 66,
+      "colliders": 683,
+      "drawCalls": 146,
+      "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 6,
+      "area": 1,
+      "space": "公園の遊び場",
+      "score": 4108,
+      "bodies": 81,
+      "colliders": 789,
+      "drawCalls": 331,
+      "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 7,
+      "area": 2,
+      "space": "公園全体",
+      "score": 17500,
+      "bodies": 103,
+      "colliders": 1000,
+      "drawCalls": 535,
+      "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 8,
+      "area": 2,
+      "space": "公園全体",
+      "score": 67036,
+      "bodies": 99,
+      "colliders": 995,
+      "drawCalls": 311,
+      "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 9,
+      "area": 3,
+      "space": "公園前の商店街",
+      "score": 267756,
+      "bodies": 147,
+      "colliders": 1362,
+      "drawCalls": 751,
+      "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 10,
+      "area": 3,
+      "space": "公園前の商店街",
+      "score": 1079568,
+      "bodies": 150,
+      "colliders": 1378,
+      "drawCalls": 1090,
+      "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 }
+    },
+    {
+      "level": 11,
+      "area": 4,
+      "space": "記念広場と街",
+      "score": 4292208,
+      "bodies": 156,
+      "colliders": 1406,
+      "drawCalls": 998,
+      "frame": { "median": 16.70000000001164, "p95": 33.399999999965075 }
+    },
+    {
+      "level": 12,
+      "area": 4,
+      "space": "記念広場と街",
+      "score": 17404794,
+      "bodies": 178,
+      "colliders": 1396,
+      "drawCalls": 279,
+      "frame": { "median": 16.699999999953434, "p95": 33.300000000046566 }
+    }
+  ],
+  "entered": ["flowerbed", "playground", "park", "shopping", "memorial"],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "seed": 42,
+  "fleeing": ["person"],
+  "activity": [
+    "person:working",
+    "person:fleeing",
+    "person:waiting",
+    "van:driving",
+    "van:working"
+  ],
+  "final": {
+    "level": 12,
+    "score": 44870842,
+    "cleared": true,
+    "collected": 301,
+    "moving": 22
+  },
+  "autoTransition": "mountain"
+}
