@@ -212,7 +212,7 @@ try {
         kinds: [...new Set(ds.map((d) => d.districtKind))],
         stock: ds.filter((d) => d.id.startsWith("growth-")).length,
         moving: ds.filter((d) => d.route).length,
-        groves: new Set(
+        cityBlocks: new Set(
           ds
             .filter((d) => d.id.startsWith("district-city-"))
             .map((d) => d.id.split("-").slice(2, 4).join("-")),
@@ -250,7 +250,8 @@ try {
     start = Date.now();
   let targetId,
     stalled = 0,
-    lastDistance = Infinity;
+    lastDistance = Infinity,
+    targetStarted = 0;
   for (let attempt = 0; attempt < 7000; attempt++) {
     let s = await snapshot();
     if ((s.stageId !== stage && clearedSnapshot) || s.cleared) break;
@@ -289,6 +290,21 @@ try {
     if (!report.entered.includes(locationId)) {
       report.entered.push(locationId);
       await page.screenshot({ path: `${directory}/entered-${locationId}.png` });
+    }
+    if (stage === "harbor") {
+      report.hoists ??= {};
+      for (const d of s.objects.filter(
+        (d) => d.behavior === "hoist" && d.physical && d.motion !== "falling",
+      )) {
+        const h = (report.hoists[d.id] ??= {
+          min: d.position.y,
+          max: d.position.y,
+          samples: 0,
+        });
+        h.min = Math.min(h.min, d.position.y);
+        h.max = Math.max(h.max, d.position.y);
+        h.samples++;
+      }
     }
     report.fleeing ??= [];
     for (const d of s.objects.filter(
@@ -349,6 +365,7 @@ try {
     }
     if (selected.id !== targetId) {
       targetId = selected.id;
+      targetStarted = Date.now();
       stalled = 0;
       lastDistance = Infinity;
     }
@@ -369,7 +386,10 @@ try {
       const predicted = plan(s, intercept);
       if (predicted) point = predicted[0];
     }
-    if (stalled > 70) {
+    if (
+      stalled > 70 ||
+      Date.now() - targetStarted > (selected.id === "goal" ? 30000 : 15000)
+    ) {
       skipUntil.set(targetId, Date.now() + 5000);
       targetId = undefined;
       stalled = 0;
@@ -378,8 +398,16 @@ try {
     }
     const dx = point.x - s.hole.x,
       dz = point.z - s.hole.z;
-    await steer(dx, dz);
-    await page.waitForTimeout(90);
+    const centered = path.length === 1 && distance < s.hole.radius * 0.22;
+    await steer(centered ? 0 : dx, centered ? 0 : dz);
+    await page.waitForTimeout(
+      centered
+        ? 120
+        : Math.min(
+            90,
+            Math.max(16, (Math.hypot(dx, dz) / (s.hole.radius * 7)) * 650),
+          ),
+    );
     if (attempt % 50 === 0) {
       const live = await snapshot();
       await writeFile(
@@ -434,6 +462,13 @@ try {
     report.activity.some((a) => a.endsWith(":driving")),
     "道路走行が未確認",
   );
+  if (stage === "harbor")
+    assert(
+      Object.values(report.hoists ?? {}).some(
+        (h) => h.max - h.min > 2 && h.samples > 10,
+      ),
+      "吊り荷の上下が未確認",
+    );
   assert.deepEqual(errors, []);
 } catch (error) {
   report.failure = error.stack;

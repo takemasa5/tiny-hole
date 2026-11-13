@@ -130,6 +130,31 @@ function layout(
     if (l.kind === "boat") d.behavior = "moored";
     add(d);
   });
+  if (profile.stageId === "harbor") {
+    for (const crane of placed.filter((d) => d.districtKind === "crane")) {
+      const d = object(
+        `district-hoist-${crane.id}`,
+        "hoistLoad",
+        [crane.size[0] * 0.2, crane.size[1] * 0.09, crane.size[2] * 0.2],
+        crane.level,
+        crane.area,
+      );
+      d.behavior = "hoist";
+      d.partnerId = crane.id;
+      d.x = crane.x;
+      d.z = crane.z + crane.size[2] * 0.43;
+      d.stackY = crane.size[1] * 0.42;
+      add(d);
+    }
+    // Separate crates rest on visible crates, and can fall independently.
+    for (let i = 0; i < 3; i++) {
+      const d = object(`district-stack-${i}`, "crate", [3, 2, 2.6], 7, 2);
+      d.x = 95;
+      d.z = -58;
+      d.stackY = i * 2;
+      add(d);
+    }
+  }
   const place = (d: GrowthObject, region = spaces[d.area].bounds) => {
     const s = spaces[d.area],
       r = foot(d),

@@ -1,3 +1,4 @@
+import { hoistFrame, HoistCable } from "../src/game/district-hoist";
 import { NestedWorldScene } from "../src/game/toy-world-scene";
 import { districtWalls } from "../src/game/district-world";
 import { GROWTH_LEVELS } from "../src/game/growth-stage";
@@ -244,3 +245,69 @@ for (const profile of profiles)
       }
     },
   );
+
+it("港のクレーンは吊り荷の実体とケーブル端を同じ位置で上下させる", () => {
+  const ds = createGrowthStage(42, "harbor"),
+    load = ds.find((d) => d.behavior === "hoist")!,
+    crane = ds.find((d) => d.id === load.partnerId)!;
+  expect(load.districtKind).toBe("hoistLoad");
+  expect(ds.filter((d) => d.id.startsWith("district-stack-"))).toHaveLength(3);
+  const position = { x: crane.x, y: crane.size[1] / 2, z: crane.z },
+    q = { x: 0, y: 0, z: 0, w: 1 };
+  const a = hoistFrame(crane, position, q, load.size[1], 0),
+    b = hoistFrame(crane, position, q, load.size[1], 2);
+  expect(Math.abs(a.load.y - b.load.y)).toBeGreaterThan(crane.size[1] * 0.1);
+  expect(a.anchor.y - a.load.y).toBeGreaterThan(load.size[1]);
+  const cable = new HoistCable();
+  cable.update(a.anchor, a.load, load.size[1]);
+  const points = cable.line.geometry.getAttribute("position");
+  expect(points.getY(1)).toBeCloseTo(a.load.y + load.size[1] / 2);
+  const world = new RAPIER.World({ x: 0, y: -9.81, z: 0 });
+  try {
+    const { body } = createGrowthBody(world, load, a.load, q, "harbor");
+    body.setBodyType(RAPIER.RigidBodyType.KinematicPositionBased, true);
+    body.setNextKinematicTranslation(b.load);
+    world.step();
+    expect(body.translation().y).toBeCloseTo(b.load.y);
+    body.setBodyType(RAPIER.RigidBodyType.Dynamic, true);
+    body.setEnabledRotations(true, true, true, true);
+    const start = body.translation().y;
+    for (let i = 0; i < 120; i++) world.step();
+    expect(body.translation().y).toBeLessThan(start - 1);
+  } finally {
+    world.free();
+    disposeScene(cable.line);
+  }
+});
+
+for (const [stage, kind, gap] of [
+  ["harbor", "nut", [0, 0, 0]],
+  ["harbor", "pallet", [0.2, -0.2, 0]],
+  ["harbor", "crane", [0, 0, 0]],
+  ["harbor", "forklift", [0.06, 0.2, 0]],
+  ["office", "headOffice", [0.2, -0.35, 0.33]],
+] as const)
+  if (DISTRICT_PROFILES[stage])
+    it(`${stage}:${kind}の見える隙間を不可視の形で埋めない`, () => {
+      const d = createGrowthStage(42, stage).find(
+          (d) => d.districtKind === kind,
+        )!,
+        world = new RAPIER.World({ x: 0, y: 0, z: 0 });
+      try {
+        const { colliders } = createGrowthBody(
+          world,
+          { ...d, size: [1, 1, 1] },
+          { x: 0, y: 0, z: 0 },
+          { x: 0, y: 0, z: 0, w: 1 },
+          stage,
+        );
+        expect(
+          colliders.some((c) =>
+            c.containsPoint({ x: gap[0], y: gap[1], z: gap[2] }),
+          ),
+        ).toBe(false);
+        expect(colliders.length).toBeGreaterThan(1);
+      } finally {
+        world.free();
+      }
+    });

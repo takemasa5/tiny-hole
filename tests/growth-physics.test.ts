@@ -29,7 +29,7 @@ it.each(STAGE_IDS)(
         (d) =>
           d.level === level &&
           !d.sourceLevel &&
-          (["hell", "plaza", "mountain", "america"].includes(stage)
+          (["hell", "plaza", "mountain", "america", "harbor"].includes(stage)
             ? level === 12
               ? d.id === "goal"
               : d.id.startsWith(`growth-${level}-`)
@@ -82,7 +82,7 @@ it.each([0.1, 1, 100])(
   "穴に収まらない次レベルの物も一部の支持を失うと自然に傾く（縮尺%s）",
   (scale) => {
     const template = createGrowthStage(1, "harbor").find(
-      (definition) => definition.model === "building",
+      (definition) => definition.districtKind === "warehouse",
     )!;
     const definition = {
       ...template,

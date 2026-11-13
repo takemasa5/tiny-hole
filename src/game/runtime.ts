@@ -37,6 +37,7 @@ import {
   districtSpaces,
   districtWalls,
 } from "./district-world";
+import { hoistFrame, HoistCable } from "./district-hoist";
 import { districtFloorTextures } from "./district-floor";
 import { MOUNTAIN_SPACES, MOUNTAIN_WALLS } from "./mountain-world";
 import { mountainFloorTextures } from "./mountain-floor";
@@ -76,6 +77,7 @@ interface Entity {
   mesh: THREE.Group;
   detailed: boolean;
   body?: RAPIER.RigidBody;
+  cable?: HoistCable;
   colliders?: RAPIER.Collider[];
   motion: ThemeMotion;
   falling: boolean;
@@ -378,6 +380,10 @@ export async function startGame(
   function removeEntity(id: string, reason: "collected" | "retired" | "lost") {
     const entity = entities.get(id);
     if (!entity) return;
+    if (entity.cable) {
+      disposeScene(entity.cable.line);
+      scene.remove(entity.cable.line);
+    }
     occlusion.remove(entity.mesh);
     removeBody(entity);
     disposeScene(entity.mesh);
@@ -389,6 +395,10 @@ export async function startGame(
     const previous = entities.get(definition.id);
     if (previous) {
       if (previous.detailed || !detailed) return previous;
+      if (previous.cable) {
+        disposeScene(previous.cable.line);
+        scene.remove(previous.cable.line);
+      }
       removeBody(previous);
       occlusion.remove(previous.mesh);
       disposeScene(previous.mesh);
@@ -414,6 +424,10 @@ export async function startGame(
       previousPosition: mesh.position.clone(),
       previousRotation: mesh.quaternion.clone(),
     };
+    if (detailed && definition.behavior === "hoist") {
+      entity.cable = new HoistCable();
+      scene.add(entity.cable.line);
+    }
     entities.set(definition.id, entity);
     return entity;
   }
@@ -427,6 +441,11 @@ export async function startGame(
       stageId,
     );
     entity.body = physical.body;
+    if (entity.definition.behavior === "hoist" && !entity.falling)
+      entity.body.setBodyType(
+        RAPIER.RigidBodyType.KinematicPositionBased,
+        true,
+      );
     entity.colliders = physical.colliders;
     entity.previousPosition.copy(entity.body.translation());
     entity.previousRotation.copy(entity.body.rotation());
@@ -898,6 +917,26 @@ export async function startGame(
       const { body, definition: d, motion } = entity;
       if (!body) continue;
       const at = body.translation();
+      if (d.behavior === "hoist" && !entity.falling) {
+        const parent = d.partnerId ? entities.get(d.partnerId) : undefined;
+        if (parent && !parent.falling) {
+          motion.time += PHYSICS_STEP;
+          const frame = hoistFrame(
+            parent.definition,
+            parent.body?.translation() ?? parent.mesh.position,
+            parent.body?.rotation() ?? parent.mesh.quaternion,
+            d.size[1],
+            motion.time,
+          );
+          body.setNextKinematicTranslation(frame.load);
+          continue;
+        }
+        entity.falling = true;
+        motion.phase = "falling";
+        body.setBodyType(RAPIER.RigidBodyType.Dynamic, true);
+        body.setEnabledRotations(true, true, true, true);
+        if (entity.cable) entity.cable.line.visible = false;
+      }
       if (
         !entity.falling &&
         growthLosesSupport(d, at, body.rotation(), holeState(), stageId)
@@ -1148,6 +1187,29 @@ export async function startGame(
           target.definition.size[1] / 2 + 15;
         marker.scale.setScalar(8);
         marker.rotation.y = time * 0.001;
+      }
+      for (const entity of entities.values()) {
+        if (!entity.cable || entity.falling) continue;
+        const parent = entity.definition.partnerId
+          ? entities.get(entity.definition.partnerId)
+          : undefined;
+        if (!parent) {
+          entity.cable.line.visible = false;
+          continue;
+        }
+        const frame = hoistFrame(
+          parent.definition,
+          parent.mesh.position,
+          parent.mesh.quaternion,
+          entity.definition.size[1],
+          entity.motion.time,
+        );
+        entity.cable.line.visible = entity.mesh.visible && parent.mesh.visible;
+        entity.cable.update(
+          frame.anchor,
+          entity.mesh.position,
+          entity.definition.size[1],
+        );
       }
       scene.updateMatrixWorld(true);
       const start = performance.now();

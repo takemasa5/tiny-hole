@@ -60,7 +60,14 @@ export type GrowthModel =
   | "bead"
   | "depot";
 export type GrowthBehavior =
-  "still" | "work" | "route" | "train" | "march" | "battle" | "moored";
+  | "still"
+  | "work"
+  | "route"
+  | "train"
+  | "march"
+  | "battle"
+  | "moored"
+  | "hoist";
 export interface GrowthObject {
   id: string;
   kind: ObjectKind;

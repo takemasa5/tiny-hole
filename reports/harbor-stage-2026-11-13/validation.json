@@ -1,0 +1,10 @@
+{
+  "tests": 603,
+  "build": "passed",
+  "lint": "passed",
+  "format": "passed",
+  "browser": "Chromium 156 full 12 levels, 5 spaces, tanker collected, auto transition",
+  "phoneWidth": "390x844 touch passed",
+  "iPhone": "not run",
+  "WebKit": "not run"
+}

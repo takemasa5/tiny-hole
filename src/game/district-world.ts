@@ -189,9 +189,174 @@ const america: DistrictProfile = {
   water: [{ minX: 760, maxX: 940, minZ: -180, maxZ: 180 }],
   goal: { kind: "liberty", size: [180, 500, 160] },
 };
+const harbor: DistrictProfile = {
+  stageId: "harbor",
+  ids: ["toolbox", "shed", "warehouseYard", "containers", "berth"],
+  labels: [
+    "工具箱",
+    "荷さばき小屋",
+    "倉庫ヤード",
+    "コンテナ埠頭",
+    "タンカーの岸壁",
+  ],
+  floors: ["#8d9ca1", "#beb9a6", "#a2a89e", "#a6afa9", "#9eafa9"],
+  walls: ["#647d8a", "#a29e8a", "#8c9b9b", "#7998a3", "#7197a7"],
+  heights: [0.2, 8, 6, 22, 0],
+  gateLabels: [
+    "工具箱の側面",
+    "小屋の搬入口",
+    "倉庫ヤードのゲート",
+    "埠頭のゲート",
+  ],
+  stock: [
+    ["nut", "washer", "bolt"],
+    ["bolt", "wrench", "screwdriver"],
+    ["rope", "buoy", "wrench"],
+    ["crate", "barrel", "pallet"],
+    ["workbench", "crate", "barrel"],
+    ["pallet", "container", "workbench"],
+    ["forklift", "container", "crate"],
+    ["warehouse", "container", "forklift"],
+    ["warehouse", "container", "crane"],
+    ["crane", "warehouse", "container"],
+    ["warehouse", "crane", "container"],
+  ],
+  landmarks: [
+    { kind: "boat", size: [35, 15, 14], area: 4, x: 850, z: 0, level: 11 },
+    {
+      kind: "workbench",
+      size: [0.6, 0.55, 0.5],
+      area: 0,
+      x: -1.1,
+      z: 0.7,
+      level: 3,
+    },
+    {
+      kind: "crate",
+      size: [0.55, 0.5, 0.55],
+      area: 0,
+      x: -1.1,
+      z: -0.7,
+      level: 3,
+    },
+    {
+      kind: "workbench",
+      size: [3.8, 2.4, 1.7],
+      area: 1,
+      x: 11,
+      z: -7,
+      level: 6,
+    },
+    { kind: "crate", size: [4, 3, 2.3], area: 1, x: 12, z: 7, level: 6 },
+    { kind: "warehouse", size: [15, 12, 13], area: 2, x: 77, z: 0, level: 8 },
+    { kind: "container", size: [8, 5, 4], area: 2, x: 75, z: -53, level: 8 },
+    {
+      kind: "warehouse",
+      size: [28, 38, 24],
+      area: 3,
+      x: 250,
+      z: -80,
+      level: 10,
+    },
+    { kind: "crane", size: [32, 50, 30], area: 3, x: 310, z: 80, level: 10 },
+    { kind: "crane", size: [65, 160, 70], area: 4, x: 650, z: -150, level: 11 },
+  ],
+  routes: [
+    {
+      area: 1,
+      kind: "dockWorker",
+      size: [0.55, 1.8, 0.45],
+      count: 6,
+      points: [
+        [-3.7, -3.3],
+        [3.7, -3.3],
+      ],
+    },
+    {
+      area: 2,
+      kind: "forklift",
+      size: [4, 3, 2],
+      count: 4,
+      points: [
+        [55, -40],
+        [105, -40],
+        [105, 40],
+        [55, 40],
+      ],
+      driving: true,
+    },
+    {
+      area: 2,
+      kind: "dockWorker",
+      size: [0.55, 1.8, 0.45],
+      count: 8,
+      points: [
+        [-16, -21],
+        [30, -21],
+      ],
+    },
+    {
+      area: 3,
+      kind: "deliveryVan",
+      size: [5, 3, 2.2],
+      count: 6,
+      points: [
+        [160, -120],
+        [370, -120],
+        [370, 120],
+        [160, 120],
+      ],
+      driving: true,
+    },
+    {
+      area: 3,
+      kind: "dockWorker",
+      size: [0.55, 1.8, 0.45],
+      count: 10,
+      points: [
+        [145, -165],
+        [385, -165],
+      ],
+    },
+    {
+      area: 4,
+      kind: "deliveryVan",
+      size: [5, 3, 2.2],
+      count: 12,
+      points: [
+        [-960, -960],
+        [960, -960],
+        [960, 960],
+        [-960, 960],
+      ],
+      driving: true,
+    },
+  ],
+  extras: [
+    ["crate", "barrel", "pallet", "workbench"],
+    ["container", "crate", "barrel", "pallet"],
+    ["container", "warehouse", "crane", "pallet"],
+  ],
+  skyline: [
+    "warehouse",
+    "warehouse",
+    "container",
+    "crane",
+    "container",
+    "barrel",
+    "buoy",
+    "pallet",
+  ],
+  water: [
+    { minX: 450, maxX: 760, minZ: -100, maxZ: 100 },
+    { minX: 800, maxX: 940, minZ: -150, maxZ: 150 },
+  ],
+  goal: { kind: "tanker", size: [250, 95, 120] },
+};
+
 export const DISTRICT_PROFILES: Partial<
   Record<DistrictStageId, DistrictProfile>
-> = { america };
+> = { america, harbor };
 export function districtProfile(stageId: StageId): DistrictProfile | undefined {
   return DISTRICT_PROFILES[stageId as DistrictStageId];
 }
