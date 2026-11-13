@@ -32,6 +32,12 @@ import {
   type GrowthObject,
 } from "./growth-stage";
 import { growthVisual, GrowthScenery } from "./growth-visuals";
+import {
+  districtProfile,
+  districtSpaces,
+  districtWalls,
+} from "./district-world";
+import { districtFloorTextures } from "./district-floor";
 import { MOUNTAIN_SPACES, MOUNTAIN_WALLS } from "./mountain-world";
 import { mountainFloorTextures } from "./mountain-floor";
 import { PLAZA_SPACES, PLAZA_WALLS } from "./plaza-world";
@@ -165,8 +171,17 @@ export async function startGame(
   scene.add(growthEffect.group);
   const scenery = new GrowthScenery(definitions, stageId);
   scene.add(scenery.group);
-  const toyWorld =
-    stageId === "mountain"
+  const district = districtProfile(stageId);
+  const toyWorld = district
+    ? new NestedWorldScene(world, belowFloor, {
+        spaces: districtSpaces(district),
+        walls: districtWalls(district),
+        roads: [],
+        style: district.stageId,
+        floorTextures: districtFloorTextures(district),
+        gateLabels: district.gateLabels,
+      })
+    : stageId === "mountain"
       ? new NestedWorldScene(world, belowFloor, {
           spaces: MOUNTAIN_SPACES,
           walls: MOUNTAIN_WALLS,
@@ -465,6 +480,8 @@ export async function startGame(
         d.id.startsWith("city-block-") ||
         d.id.startsWith("egypt-city-") ||
         d.id.startsWith("hell-scenery-") ||
+        d.id.startsWith("district-city-") ||
+        d.id.startsWith("district-scenery-") ||
         d.id.startsWith("plaza-city-") ||
         d.id.startsWith("plaza-scenery-") ||
         d.id.startsWith("mountain-grove-") ||
@@ -735,7 +752,12 @@ export async function startGame(
     supplyTimer += PHYSICS_STEP;
     if (supplyTimer < 2 || progress.level === 12) return;
     supplyTimer = 0;
-    if (stageId === "hell" || stageId === "plaza" || stageId === "mountain") {
+    if (
+      district ||
+      stageId === "hell" ||
+      stageId === "plaza" ||
+      stageId === "mountain"
+    ) {
       replenishLocalStock();
       return;
     }
@@ -930,7 +952,8 @@ export async function startGame(
         !isEgyptGod(d) &&
         !isHellActor(d) &&
         !d.plazaKind &&
-        !d.mountainKind
+        !d.mountainKind &&
+        !d.districtKind
       ) {
         const xs = d.route.map((p) => p.x),
           zs = d.route.map((p) => p.z);
@@ -1036,6 +1059,9 @@ export async function startGame(
       definition.id.startsWith("egypt-column-") ||
       definition.id.startsWith("egypt-god-") ||
       definition.id.startsWith("hell-landmark-") ||
+      definition.id.startsWith("district-landmark-") ||
+      (definition.id.startsWith("district-city-") &&
+        definition.id.endsWith("-0")) ||
       definition.id.startsWith("plaza-landmark-") ||
       definition.id.startsWith("mountain-landmark-") ||
       definition.id.startsWith("mountain-habitat-") ||
@@ -1168,6 +1194,7 @@ export async function startGame(
     egyptWorld:
       stageId === "egypt" ? toyWorld?.snapshot(holeState()) : undefined,
     hellWorld: stageId === "hell" ? toyWorld?.snapshot(holeState()) : undefined,
+    districtWorld: district ? toyWorld?.snapshot(holeState()) : undefined,
     plazaWorld:
       stageId === "plaza" ? toyWorld?.snapshot(holeState()) : undefined,
     mountainWorld:

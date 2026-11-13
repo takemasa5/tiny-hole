@@ -1,0 +1,11 @@
+{
+  "tests": 571,
+  "build": "passed",
+  "lint": "passed",
+  "format": "passed",
+  "diffCheck": "passed",
+  "browser": "Chromium 156",
+  "phoneWidth": "390x844 touch passed on root URL",
+  "iPhone": "not run",
+  "WebKit": "not run"
+}

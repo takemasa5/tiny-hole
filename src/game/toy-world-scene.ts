@@ -34,7 +34,15 @@ export interface NestedWorldLayout {
   spaces: readonly ToySpace[];
   walls: readonly ToyWall[];
   roads: readonly { x: number; z: number; width: number; depth: number }[];
-  style: "toys" | "egypt" | "hell" | "plaza" | "mountain";
+  style:
+    | "toys"
+    | "egypt"
+    | "hell"
+    | "plaza"
+    | "mountain"
+    | "america"
+    | "harbor"
+    | "office";
   captureHints?: readonly string[];
   floorTextures?: readonly THREE.Texture[];
   gateLabels?: readonly string[];
@@ -93,8 +101,9 @@ export class NestedWorldScene {
         const x = (wall.minX + wall.maxX) / 2,
           z = (wall.minZ + wall.maxZ) / 2;
         if (
-          ["plaza", "mountain"].includes(layout.style) &&
-          index > 0 &&
+          ((["plaza", "mountain"].includes(layout.style) && index > 0) ||
+            (["america", "harbor"].includes(layout.style) && index >= 2) ||
+            (layout.style === "office" && index >= 3)) &&
           !wall.door
         ) {
           const alongX = width > depth,
@@ -173,17 +182,23 @@ export class NestedWorldScene {
           );
           const mesh = this.box(
             [width, wall.height, depth],
-            layout.style === "mountain"
-              ? "#98774e"
-              : layout.style === "plaza"
-                ? "#738e70"
-                : layout.style === "hell"
-                  ? "#aa514e"
-                  : layout.style === "egypt"
-                    ? "#c0a05c"
-                    : wall.space < 2
-                      ? space.color
-                      : "#a67951",
+            layout.style === "america"
+              ? "#b76256"
+              : layout.style === "harbor"
+                ? "#668aa2"
+                : layout.style === "office"
+                  ? "#8b9696"
+                  : layout.style === "mountain"
+                    ? "#98774e"
+                    : layout.style === "plaza"
+                      ? "#738e70"
+                      : layout.style === "hell"
+                        ? "#aa514e"
+                        : layout.style === "egypt"
+                          ? "#c0a05c"
+                          : wall.space < 2
+                            ? space.color
+                            : "#a67951",
           );
           mesh.name = `${space.id}-door-surface`;
           mesh.position.set(

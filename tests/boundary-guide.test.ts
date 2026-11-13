@@ -1,11 +1,7 @@
 import { expect, it } from "vitest";
 import * as THREE from "three";
 import { BoundaryGuide } from "../src/game/boundary-guide";
-import {
-  GROWTH_AREAS,
-  GROWTH_LEVELS,
-  areaForLevel,
-} from "../src/game/growth-stage";
+import { GROWTH_AREAS, GROWTH_LEVELS } from "../src/game/growth-stage";
 import { disposeScene } from "../src/game/visuals";
 
 it.each([1, 2, 3, 4, 5, 6, 7, 8, 9])(
@@ -13,7 +9,7 @@ it.each([1, 2, 3, 4, 5, 6, 7, 8, 9])(
   (level) => {
     const guide = new BoundaryGuide();
     const radius = GROWTH_LEVELS[level - 1].radius;
-    const area = areaForLevel(level, "america");
+    const area = Math.min(3, Math.max(0, Math.floor((level - 1) / 3)));
     const extent = GROWTH_AREAS[area].extent;
     for (const [x, z] of [
       [extent - radius, 0],

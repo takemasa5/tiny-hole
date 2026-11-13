@@ -3,6 +3,8 @@ import { objectVisual } from "./visuals";
 import { type GrowthObject } from "./growth-stage";
 import { BoundaryGuide } from "./boundary-guide";
 import { STAGES, type StageId } from "./stage";
+import { districtVisual } from "./district-visuals";
+import { districtProfile } from "./district-world";
 import { mountainVisual } from "./mountain-visuals";
 import { plazaVisual } from "./plaza-visuals";
 import { hellVisual } from "./hell-visuals";
@@ -26,7 +28,10 @@ export function growthVisual(
   preview = false,
 ) {
   const group = new THREE.Group();
-  if (definition.model === "mountain") {
+  if (definition.model === "district") {
+    if (!definition.districtKind) throw new Error("テーマの種類がありません。");
+    group.add(districtVisual(definition.districtKind));
+  } else if (definition.model === "mountain") {
     if (!definition.mountainKind) throw new Error("山の種類がありません。");
     group.add(mountainVisual(definition.mountainKind));
   } else if (definition.model === "plaza") {
@@ -206,6 +211,7 @@ export class GrowthScenery {
     const routes = new Map<string, GrowthObject>();
     for (const definition of definitions)
       if (
+        !districtProfile(stageId) &&
         stageId !== "mountain" &&
         stageId !== "plaza" &&
         stageId !== "egypt" &&
@@ -289,7 +295,7 @@ export class GrowthScenery {
         }
       }
     }
-    if (stageId === "harbor") {
+    if (stageId === "harbor" && !districtProfile(stageId)) {
       const water = material.clone();
       water.color.set("#78aab6");
       water.onBeforeCompile = material.onBeforeCompile;
@@ -304,7 +310,10 @@ export class GrowthScenery {
       quay.renderOrder = GROUND_PAINT_RENDER_ORDER + 2;
       this.group.add(quay);
     }
-    if (!["toys", "hell", "plaza", "mountain"].includes(stageId))
+    if (
+      !districtProfile(stageId) &&
+      !["toys", "hell", "plaza", "mountain"].includes(stageId)
+    )
       this.group.add(this.boundary.group);
   }
 

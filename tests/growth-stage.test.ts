@@ -34,7 +34,7 @@ it.each(STAGE_IDS)(
         (d) =>
           d.level === level &&
           !d.sourceLevel &&
-          (["plaza", "mountain"].includes(stage)
+          (["plaza", "mountain", "america", "harbor", "office"].includes(stage)
             ? d.id.startsWith("growth-")
             : stage === "hell"
               ? level <= 2
@@ -49,7 +49,16 @@ it.each(STAGE_IDS)(
       );
       for (const d of stock) {
         expect(
-          ["toys", "egypt", "hell", "plaza", "mountain"].includes(stage)
+          [
+            "toys",
+            "egypt",
+            "hell",
+            "plaza",
+            "mountain",
+            "america",
+            "harbor",
+            "office",
+          ].includes(stage)
             ? footprintOf(d)
             : Math.hypot(...d.size) / 2,
         ).toBeLessThan(radius * 0.95);
@@ -60,7 +69,16 @@ it.each(STAGE_IDS)(
     }
     const goal = definitions.find((d) => d.id === "goal")!;
     expect(
-      ["toys", "egypt", "hell", "plaza", "mountain"].includes(stage)
+      [
+        "toys",
+        "egypt",
+        "hell",
+        "plaza",
+        "mountain",
+        "america",
+        "harbor",
+        "office",
+      ].includes(stage)
         ? footprintOf(goal)
         : Math.hypot(...goal.size) / 2,
     ).toBeLessThan(GROWTH_LEVELS[11].radius);
@@ -100,8 +118,8 @@ it("ゲート境界は穴の全径を含め、複数レベルの成長にも対�
   expect(areaForLevel(7)).toBe(2);
   expect(areaForLevel(10)).toBe(3);
   expect(clampToArea({ x: 100, z: -100 }, 0, 0.25, "america")).toEqual({
-    x: 2.15,
-    z: -2.15,
+    x: 1.45,
+    z: -1.05,
   });
   const progress = new GrowthProgress();
   progress.collect({ id: "large", value: GROWTH_LEVELS[9].threshold });

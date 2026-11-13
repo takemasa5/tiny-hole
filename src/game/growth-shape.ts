@@ -134,6 +134,7 @@ function template(definition: GrowthObject, stage: StageId) {
     definition.hellKind,
     definition.plazaKind,
     definition.mountainKind,
+    definition.districtKind,
   ].join(":");
   const cached = templates.get(key);
   if (cached) return cached;
@@ -190,6 +191,7 @@ export function growthShapeParts(
     definition.hellKind,
     definition.plazaKind,
     definition.mountainKind,
+    definition.districtKind,
     ...scale,
   ].join(":");
   const cached = shapes.get(key);

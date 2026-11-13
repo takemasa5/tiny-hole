@@ -58,7 +58,9 @@ it("ナットとタイヤの中央を凸形状で塞がない", () => {
   for (const [stage, d] of [
     [
       "america",
-      createGrowthStage(42, "america").find((d) => d.model === "nut"),
+      createGrowthStage(42, "harbor").find(
+        (d) => d.model === "nut" || d.districtKind === "nut",
+      ),
     ],
     [
       "america",

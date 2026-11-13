@@ -7,6 +7,13 @@ import {
   type StageId,
 } from "./stage";
 import { createToyStage, type ToyKind } from "./toy-stage";
+import { createDistrictStage } from "./district-stage";
+import {
+  districtProfile,
+  districtSpaces,
+  districtAreaForLevel,
+} from "./district-world";
+import { districtItem, type DistrictKind } from "./district-catalog";
 import { createMountainStage } from "./mountain-stage";
 import { MOUNTAIN_SPACES, mountainAreaForLevel } from "./mountain-world";
 import type { MountainKind } from "./mountain-visuals";
@@ -35,6 +42,7 @@ export const GROWTH_AREAS = [
   { level: 10, extent: 1600, label: "巨大な世界" },
 ] as const;
 export type GrowthModel =
+  | "district"
   | "mountain"
   | "plaza"
   | "hell"
@@ -75,6 +83,7 @@ export interface GrowthObject {
   hellKind?: HellKind;
   plazaKind?: PlazaKind;
   mountainKind?: MountainKind;
+  districtKind?: DistrictKind;
   stationStop?: number;
   speedMultiplier?: number;
   stackY?: number;
@@ -215,6 +224,8 @@ const WORKERS: readonly ObjectKind[] = [
 ];
 
 export function areasForStage(stageId: StageId) {
+  const profile = districtProfile(stageId);
+  if (profile) return districtSpaces(profile);
   return stageId === "mountain"
     ? MOUNTAIN_SPACES
     : stageId === "plaza"
@@ -229,6 +240,7 @@ export function areasForStage(stageId: StageId) {
 }
 
 export function areaForLevel(level: number, stageId: StageId = "plaza") {
+  if (districtProfile(stageId)) return districtAreaForLevel(level);
   if (stageId === "mountain") return mountainAreaForLevel(level);
   if (stageId === "plaza") return plazaAreaForLevel(level);
   if (stageId === "toys") return toyAreaForLevel(level);
@@ -244,6 +256,19 @@ export function goalForGrowth(stageId: StageId): {
   size: [number, number, number];
 } {
   if (!isStageId(stageId)) throw new Error("ステージが見つかりません。");
+  const profile = districtProfile(stageId);
+  if (profile)
+    return {
+      kind:
+        stageId === "america"
+          ? "liberty"
+          : stageId === "harbor"
+            ? "dinghy"
+            : "house",
+      model: "district",
+      label: districtItem(profile.goal.kind).label,
+      size: profile.goal.size,
+    };
   if (stageId === "mountain")
     return {
       kind: "greatTree",
@@ -456,6 +481,8 @@ export function createGrowthStage(
         ? goal.size[0] / OBJECT_TYPES[goal.kind].size[0]
         : 1,
   });
+  const profile = districtProfile(stageId);
+  if (profile) return createDistrictStage(definitions, random, profile);
   return stageId === "mountain"
     ? createMountainStage(definitions, random)
     : stageId === "plaza"
@@ -500,6 +527,9 @@ export function clampToArea(
   radius: number,
   stageId: StageId = "plaza",
 ) {
+  const profile = districtProfile(stageId);
+  if (profile)
+    return clampToyDestination(point, area, radius, districtSpaces(profile));
   if (stageId === "mountain")
     return clampToyDestination(point, area, radius, MOUNTAIN_SPACES);
   if (stageId === "plaza")

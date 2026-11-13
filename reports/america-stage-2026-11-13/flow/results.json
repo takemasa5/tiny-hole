@@ -1,0 +1,186 @@
+{
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "levels": [
+    {
+      "level": 1,
+      "area": 0,
+      "space": "持ち帰り用の紙箱",
+      "score": 0,
+      "bodies": 46,
+      "colliders": 653,
+      "drawCalls": 112,
+      "frame": { "median": 16.699999999999818, "p95": 16.700000000000045 }
+    },
+    {
+      "level": 2,
+      "area": 0,
+      "space": "持ち帰り用の紙箱",
+      "score": 12,
+      "bodies": 44,
+      "colliders": 684,
+      "drawCalls": 130,
+      "frame": { "median": 16.69999999999891, "p95": 16.700000000000728 }
+    },
+    {
+      "level": 3,
+      "area": 0,
+      "space": "持ち帰り用の紙箱",
+      "score": 61,
+      "bodies": 53,
+      "colliders": 707,
+      "drawCalls": 140,
+      "frame": { "median": 16.700000000000728, "p95": 16.700000000000728 }
+    },
+    {
+      "level": 4,
+      "area": 1,
+      "space": "ダイナー店内",
+      "score": 265,
+      "bodies": 52,
+      "colliders": 698,
+      "drawCalls": 251,
+      "frame": { "median": 16.69999999999709, "p95": 16.700000000004366 }
+    },
+    {
+      "level": 5,
+      "area": 1,
+      "space": "ダイナー店内",
+      "score": 1034,
+      "bodies": 70,
+      "colliders": 769,
+      "drawCalls": 114,
+      "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 6,
+      "area": 1,
+      "space": "ダイナー店内",
+      "score": 4106,
+      "bodies": 75,
+      "colliders": 823,
+      "drawCalls": 315,
+      "frame": { "median": 16.69999999999709, "p95": 16.79999999998836 }
+    },
+    {
+      "level": 7,
+      "area": 2,
+      "space": "ダイナーの駐車場",
+      "score": 16952,
+      "bodies": 83,
+      "colliders": 993,
+      "drawCalls": 305,
+      "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 }
+    },
+    {
+      "level": 8,
+      "area": 2,
+      "space": "ダイナーの駐車場",
+      "score": 68265,
+      "bodies": 76,
+      "colliders": 1037,
+      "drawCalls": 275,
+      "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 9,
+      "area": 3,
+      "space": "郊外の商業地区",
+      "score": 281529,
+      "bodies": 129,
+      "colliders": 1566,
+      "drawCalls": 469,
+      "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 10,
+      "area": 3,
+      "space": "郊外の商業地区",
+      "score": 1072377,
+      "bodies": 135,
+      "colliders": 1538,
+      "drawCalls": 269,
+      "frame": { "median": 16.70000000001164, "p95": 16.79999999998836 }
+    },
+    {
+      "level": 11,
+      "area": 4,
+      "space": "湾岸都市と自由の女神",
+      "score": 4320921,
+      "bodies": 155,
+      "colliders": 1699,
+      "drawCalls": 1343,
+      "frame": { "median": 16.70000000001164, "p95": 50 }
+    },
+    {
+      "level": 12,
+      "area": 4,
+      "space": "湾岸都市と自由の女神",
+      "score": 17297833,
+      "bodies": 185,
+      "colliders": 1635,
+      "drawCalls": 576,
+      "frame": { "median": 16.699999999953434, "p95": 33.300000000046566 }
+    }
+  ],
+  "entered": ["takeout", "diner", "parking", "suburbs", "waterfront"],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "seed": 42,
+  "source": {
+    "total": 664,
+    "kinds": [
+      "crumb",
+      "fries",
+      "wrapper",
+      "cap",
+      "burger",
+      "mug",
+      "hotdog",
+      "ketchup",
+      "stool",
+      "customer",
+      "booth",
+      "dinerTable",
+      "fridge",
+      "counter",
+      "griddle",
+      "car",
+      "tire",
+      "trafficCone",
+      "lamp",
+      "diner",
+      "deliveryVan",
+      "shop",
+      "construction",
+      "palm",
+      "apartment",
+      "boat",
+      "skyscraper",
+      "liberty"
+    ],
+    "stock": 264,
+    "moving": 46,
+    "groves": 32
+  },
+  "fleeing": ["customer"],
+  "activity": [
+    "customer:working",
+    "customer:waiting",
+    "customer:fleeing",
+    "car:working",
+    "deliveryVan:working",
+    "car:driving",
+    "car:waiting",
+    "deliveryVan:driving",
+    "deliveryVan:waiting"
+  ],
+  "final": {
+    "level": 12,
+    "score": 32548777,
+    "cleared": true,
+    "collected": 289,
+    "moving": 26
+  },
+  "autoTransition": "egypt"
+}

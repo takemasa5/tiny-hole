@@ -1,3 +1,8 @@
+import {
+  districtProfile,
+  districtSpaces,
+  districtWalls,
+} from "../src/game/district-world";
 import { beforeAll, expect, it } from "vitest";
 import * as THREE from "three";
 import RAPIER from "@dimforge/rapier3d-compat";
@@ -39,6 +44,7 @@ it("全ステージの道路・水面と、おもちゃの床・模様は、物�
   for (const stage of STAGE_IDS) {
     const scenery = new GrowthScenery(createGrowthStage(42, stage), stage);
     if (
+      districtProfile(stage) ||
       stage === "egypt" ||
       stage === "hell" ||
       stage === "plaza" ||
@@ -46,16 +52,18 @@ it("全ステージの道路・水面と、おもちゃの床・模様は、物�
     ) {
       const world = new RAPIER.World({ x: 0, y: -9.81, z: 0 });
       const egypt = new NestedWorldScene(world, new Set(), {
-        spaces:
-          stage === "mountain"
+        spaces: districtProfile(stage)
+          ? districtSpaces(districtProfile(stage)!)
+          : stage === "mountain"
             ? MOUNTAIN_SPACES
             : stage === "plaza"
               ? PLAZA_SPACES
               : stage === "hell"
                 ? HELL_SPACES
                 : EGYPT_SPACES,
-        walls:
-          stage === "mountain"
+        walls: districtProfile(stage)
+          ? districtWalls(districtProfile(stage)!)
+          : stage === "mountain"
             ? MOUNTAIN_WALLS
             : stage === "plaza"
               ? PLAZA_WALLS

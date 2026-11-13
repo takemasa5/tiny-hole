@@ -1,0 +1,16 @@
+{
+  "browser": "156.0.8078.4",
+  "viewport": "390x844",
+  "errors": [],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "touchMovesAndStops": true,
+  "gate": {
+    "text": "レベル4になると紙箱の側面が開きます",
+    "font": 16,
+    "bounds": { "x": 46.1953125, "y": 774, "width": 297.609375, "height": 46 },
+    "blocks": true
+  },
+  "restart": true,
+  "stageSwitch": true
+}
