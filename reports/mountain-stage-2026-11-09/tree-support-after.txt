@@ -1,0 +1,13 @@
+
+> hole-prototype@0.1.0 test
+> vitest run tests/mountain-tree-support.test.ts tests/mountain-stage.test.ts --maxWorkers=2
+
+
+ RUN  v5.0.4 /private/tmp/hole-mountain-m5he6wm2
+
+
+ Test Files  2 passed (2)
+      Tests  52 passed (52)
+   Start at  11:43:28
+   Duration  12.18s (tests 98%, import 1%, transform 1%)
+

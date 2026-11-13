@@ -34,7 +34,7 @@ it.each(STAGE_IDS)(
         (d) =>
           d.level === level &&
           !d.sourceLevel &&
-          (stage === "plaza"
+          (["plaza", "mountain"].includes(stage)
             ? d.id.startsWith("growth-")
             : stage === "hell"
               ? level <= 2
@@ -49,7 +49,7 @@ it.each(STAGE_IDS)(
       );
       for (const d of stock) {
         expect(
-          ["toys", "egypt", "hell", "plaza"].includes(stage)
+          ["toys", "egypt", "hell", "plaza", "mountain"].includes(stage)
             ? footprintOf(d)
             : Math.hypot(...d.size) / 2,
         ).toBeLessThan(radius * 0.95);
@@ -60,7 +60,7 @@ it.each(STAGE_IDS)(
     }
     const goal = definitions.find((d) => d.id === "goal")!;
     expect(
-      ["toys", "egypt", "hell", "plaza"].includes(stage)
+      ["toys", "egypt", "hell", "plaza", "mountain"].includes(stage)
         ? footprintOf(goal)
         : Math.hypot(...goal.size) / 2,
     ).toBeLessThan(GROWTH_LEVELS[11].radius);

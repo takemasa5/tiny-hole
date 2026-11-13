@@ -1,0 +1,225 @@
+
+> hole-prototype@0.1.0 test
+> vitest run tests/mountain-fern-support.test.ts
+
+
+ RUN  v5.0.4 /private/tmp/hole-fern-5e1sd60l
+
+ ❯ tests/mountain-fern-support.test.ts (17 tests | 16 failed) 1101ms
+   × growth-3-1 / yaw 0: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる 177ms
+   × growth-3-1 / yaw 0.39269908169872414: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる 81ms
+   × growth-3-1 / yaw 0.7853981633974483: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる 75ms
+   × growth-3-1 / yaw 1.5707963267948966: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる 76ms
+   × mountain-landmark-1 / yaw 0: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる 96ms
+   × mountain-landmark-1 / yaw 0.39269908169872414: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる 90ms
+   × mountain-landmark-1 / yaw 0.7853981633974483: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる 72ms
+   × mountain-landmark-1 / yaw 1.5707963267948966: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる 83ms
+   × mountain-scenery-3-3 / yaw 0: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる 38ms
+   × mountain-scenery-3-3 / yaw 0.39269908169872414: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる 38ms
+   × mountain-scenery-3-3 / yaw 0.7853981633974483: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる 39ms
+   × mountain-scenery-3-3 / yaw 1.5707963267948966: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる 38ms
+   × mountain-grove-0-0-7 / yaw 0: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる 38ms
+   × mountain-grove-0-0-7 / yaw 0.39269908169872414: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる 37ms
+   × mountain-grove-0-0-7 / yaw 0.7853981633974483: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる 39ms
+   × mountain-grove-0-0-7 / yaw 1.5707963267948966: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる 39ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 16 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/mountain-fern-support.test.ts > growth-3-1 / yaw 0: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる
+AssertionError: {"size":[0.275,0.425,0.2],"at":{"x":0.030096732079982758,"y":0.0510869100689888,"z":0.18964055180549622},"rotation":{"x":0.6243672966957092,"y":0.05676895007491112,"z":-0.045592620968818665,"w":0.7777302265167236}}: expected 0.19002899781273186 to be greater than 0.9961946980917455
+ ❯ tests/mountain-fern-support.test.ts:79:9
+     77|           rotation: body.rotation(),
+     78|         }),
+     79|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     80|       updateFloor(floor, 0, 0, r, r * 100);
+     81|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/16]⎯
+
+ FAIL  tests/mountain-fern-support.test.ts > growth-3-1 / yaw 0.39269908169872414: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる
+AssertionError: {"size":[0.275,0.425,0.2],"at":{"x":0.07334816455841064,"y":0.051089461892843246,"z":0.1747201383113861},"rotation":{"x":0.6136959791183472,"y":0.1539413183927536,"z":-0.12363313883543015,"w":0.7644569277763367}}: expected 0.20917064269325347 to be greater than 0.9961946980917455
+ ❯ tests/mountain-fern-support.test.ts:79:9
+     77|           rotation: body.rotation(),
+     78|         }),
+     79|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     80|       updateFloor(floor, 0, 0, r, r * 100);
+     81|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/16]⎯
+
+ FAIL  tests/mountain-fern-support.test.ts > growth-3-1 / yaw 0.7853981633974483: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる
+AssertionError: {"size":[0.275,0.425,0.2],"at":{"x":0.13639944791793823,"y":0.051183223724365234,"z":0.13933537900447845},"rotation":{"x":0.5799846649169922,"y":0.2930488884449005,"z":-0.23497344553470612,"w":0.7228607535362244}}: expected 0.20873641680891053 to be greater than 0.9961946980917455
+ ❯ tests/mountain-fern-support.test.ts:79:9
+     77|           rotation: body.rotation(),
+     78|         }),
+     79|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     80|       updateFloor(floor, 0, 0, r, r * 100);
+     81|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/16]⎯
+
+ FAIL  tests/mountain-fern-support.test.ts > growth-3-1 / yaw 1.5707963267948966: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる
+AssertionError: {"size":[0.275,0.425,0.2],"at":{"x":-0.11222244054079056,"y":0.051111504435539246,"z":-0.16863037645816803},"rotation":{"x":-0.60515958070755,"y":0.19934232532978058,"z":0.16003362834453583,"w":0.753945529460907}}: expected 0.1819715024226678 to be greater than 0.9961946980917455
+ ❯ tests/mountain-fern-support.test.ts:79:9
+     77|           rotation: body.rotation(),
+     78|         }),
+     79|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     80|       updateFloor(floor, 0, 0, r, r * 100);
+     81|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/16]⎯
+
+ FAIL  tests/mountain-fern-support.test.ts > mountain-landmark-1 / yaw 0: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる
+AssertionError: {"size":[0.6,1,0.6],"at":{"x":0.05703488737344742,"y":0.15257179737091064,"z":0.4513854384422302},"rotation":{"x":0.6007018685340881,"y":0.054664574563503265,"z":-0.04122309759259224,"w":0.7965360283851624}}: expected 0.26563073614961874 to be greater than 0.9961946980917455
+ ❯ tests/mountain-fern-support.test.ts:79:9
+     77|           rotation: body.rotation(),
+     78|         }),
+     79|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     80|       updateFloor(floor, 0, 0, r, r * 100);
+     81|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/16]⎯
+
+ FAIL  tests/mountain-fern-support.test.ts > mountain-landmark-1 / yaw 0.39269908169872414: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる
+AssertionError: {"size":[0.6,1,0.6],"at":{"x":0.034643761813640594,"y":0.14806503057479858,"z":0.476237416267395},"rotation":{"x":0.6051515340805054,"y":-0.16578727960586548,"z":-0.14050039649009705,"w":0.7658759355545044}}: expected 0.2280972677208406 to be greater than 0.9961946980917455
+ ❯ tests/mountain-fern-support.test.ts:79:9
+     77|           rotation: body.rotation(),
+     78|         }),
+     79|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     80|       updateFloor(floor, 0, 0, r, r * 100);
+     81|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/16]⎯
+
+ FAIL  tests/mountain-fern-support.test.ts > mountain-landmark-1 / yaw 0.7853981633974483: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる
+AssertionError: {"size":[0.6,1,0.6],"at":{"x":-0.33863675594329834,"y":0.14981424808502197,"z":0.34377866983413696},"rotation":{"x":0.3378506600856781,"y":0.14156056940555573,"z":0.5180312395095825,"w":0.7729562520980835}}: expected 0.23496725117430195 to be greater than 0.9961946980917455
+ ❯ tests/mountain-fern-support.test.ts:79:9
+     77|           rotation: body.rotation(),
+     78|         }),
+     79|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     80|       updateFloor(floor, 0, 0, r, r * 100);
+     81|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/16]⎯
+
+ FAIL  tests/mountain-fern-support.test.ts > mountain-landmark-1 / yaw 1.5707963267948966: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる
+AssertionError: {"size":[0.6,1,0.6],"at":{"x":-0.048864081501960754,"y":0.14981931447982788,"z":0.4699680805206299},"rotation":{"x":0.32180124521255493,"y":0.636476993560791,"z":0.5281453132629395,"w":0.46087267994880676}}: expected 0.23495143364320192 to be greater than 0.9961946980917455
+ ❯ tests/mountain-fern-support.test.ts:79:9
+     77|           rotation: body.rotation(),
+     78|         }),
+     79|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     80|       updateFloor(floor, 0, 0, r, r * 100);
+     81|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/16]⎯
+
+ FAIL  tests/mountain-fern-support.test.ts > mountain-scenery-3-3 / yaw 0: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる
+AssertionError: {"size":[13.200000000000001,20.4,9.600000000000001],"at":{"x":5.022024154663086,"y":2.4762344360351562,"z":8.326502799987793},"rotation":{"x":0.5997030138969421,"y":0.2198653668165207,"z":-0.17603586614131927,"w":0.7490172982215881}}: expected 0.18871890641599798 to be greater than 0.9961946980917455
+ ❯ tests/mountain-fern-support.test.ts:79:9
+     77|           rotation: body.rotation(),
+     78|         }),
+     79|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     80|       updateFloor(floor, 0, 0, r, r * 100);
+     81|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/16]⎯
+
+ FAIL  tests/mountain-fern-support.test.ts > mountain-scenery-3-3 / yaw 0.39269908169872414: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる
+AssertionError: {"size":[13.200000000000001,20.4,9.600000000000001],"at":{"x":1.1824862957000732,"y":2.4762353897094727,"z":9.522747993469238},"rotation":{"x":0.6242276430130005,"y":0.03893633186817169,"z":-0.031174350529909134,"w":0.7796485424041748}}: expected 0.20703391098592872 to be greater than 0.9961946980917455
+ ❯ tests/mountain-fern-support.test.ts:79:9
+     77|           rotation: body.rotation(),
+     78|         }),
+     79|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     80|       updateFloor(floor, 0, 0, r, r * 100);
+     81|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/16]⎯
+
+ FAIL  tests/mountain-fern-support.test.ts > mountain-scenery-3-3 / yaw 0.7853981633974483: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる
+AssertionError: {"size":[13.200000000000001,20.4,9.600000000000001],"at":{"x":6.8502197265625,"y":2.4762306213378906,"z":6.46760892868042},"rotation":{"x":0.5735536217689514,"y":0.31016474962234497,"z":-0.24833206832408905,"w":0.7163556218147278}}: expected 0.21639754701430824 to be greater than 0.9961946980917455
+ ❯ tests/mountain-fern-support.test.ts:79:9
+     77|           rotation: body.rotation(),
+     78|         }),
+     79|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     80|       updateFloor(floor, 0, 0, r, r * 100);
+     81|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/16]⎯
+
+ FAIL  tests/mountain-fern-support.test.ts > mountain-scenery-3-3 / yaw 1.5707963267948966: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる
+AssertionError: {"size":[13.200000000000001,20.4,9.600000000000001],"at":{"x":8.500473976135254,"y":2.476242780685425,"z":-4.712221145629883},"rotation":{"x":0.3060149550437927,"y":0.6806485652923584,"z":-0.5449645519256592,"w":0.38221225142478943}}: expected 0.1871983107846198 to be greater than 0.9961946980917455
+ ❯ tests/mountain-fern-support.test.ts:79:9
+     77|           rotation: body.rotation(),
+     78|         }),
+     79|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     80|       updateFloor(floor, 0, 0, r, r * 100);
+     81|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/16]⎯
+
+ FAIL  tests/mountain-fern-support.test.ts > mountain-grove-0-0-7 / yaw 0: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる
+AssertionError: {"size":[13.200000000000001,20.4,9.600000000000001],"at":{"x":5.401078701019287,"y":2.470916748046875,"z":8.25098991394043},"rotation":{"x":0.5948639512062073,"y":0.24004559218883514,"z":-0.19227522611618042,"w":0.7426609396934509}}: expected 0.18882771349430694 to be greater than 0.9961946980917455
+ ❯ tests/mountain-fern-support.test.ts:79:9
+     77|           rotation: body.rotation(),
+     78|         }),
+     79|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     80|       updateFloor(floor, 0, 0, r, r * 100);
+     81|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/16]⎯
+
+ FAIL  tests/mountain-fern-support.test.ts > mountain-grove-0-0-7 / yaw 0.39269908169872414: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる
+AssertionError: {"size":[13.200000000000001,20.4,9.600000000000001],"at":{"x":4.47144889831543,"y":2.470881462097168,"z":8.40947151184082},"rotation":{"x":0.605399489402771,"y":0.19472964107990265,"z":-0.1559724658727646,"w":0.7558071613311768}}: expected 0.18750722020283206 to be greater than 0.9961946980917455
+ ❯ tests/mountain-fern-support.test.ts:79:9
+     77|           rotation: body.rotation(),
+     78|         }),
+     79|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     80|       updateFloor(floor, 0, 0, r, r * 100);
+     81|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/16]⎯
+
+ FAIL  tests/mountain-fern-support.test.ts > mountain-grove-0-0-7 / yaw 0.7853981633974483: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる
+AssertionError: {"size":[13.200000000000001,20.4,9.600000000000001],"at":{"x":3.3112175464630127,"y":2.4708938598632812,"z":9.239693641662598},"rotation":{"x":0.6175017952919006,"y":0.12185123562812805,"z":-0.09760286659002304,"w":0.7709199786186218}}: expected 0.1860901834089006 to be greater than 0.9961946980917455
+ ❯ tests/mountain-fern-support.test.ts:79:9
+     77|           rotation: body.rotation(),
+     78|         }),
+     79|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     80|       updateFloor(floor, 0, 0, r, r * 100);
+     81|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/16]⎯
+
+ FAIL  tests/mountain-fern-support.test.ts > mountain-grove-0-0-7 / yaw 1.5707963267948966: 遠方の穴が移動しても平地で10秒直立し、足場を抜くと落ちる
+AssertionError: {"size":[13.200000000000001,20.4,9.600000000000001],"at":{"x":8.49327278137207,"y":2.4709157943725586,"z":-4.921886444091797},"rotation":{"x":0.30276745557785034,"y":0.6828532814979553,"z":-0.5469597578048706,"w":0.37799257040023804}}: expected 0.18882706482816047 to be greater than 0.9961946980917455
+ ❯ tests/mountain-fern-support.test.ts:79:9
+     77|           rotation: body.rotation(),
+     78|         }),
+     79|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     80|       updateFloor(floor, 0, 0, r, r * 100);
+     81|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/16]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  16 failed | 1 passed (17)
+   Start at  10:19:29
+   Duration  1.86s (tests 70%, import 17%, transform 12%)
+

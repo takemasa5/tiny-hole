@@ -133,6 +133,7 @@ function template(definition: GrowthObject, stage: StageId) {
     definition.egyptKind,
     definition.hellKind,
     definition.plazaKind,
+    definition.mountainKind,
   ].join(":");
   const cached = templates.get(key);
   if (cached) return cached;
@@ -188,6 +189,7 @@ export function growthShapeParts(
     definition.egyptKind,
     definition.hellKind,
     definition.plazaKind,
+    definition.mountainKind,
     ...scale,
   ].join(":");
   const cached = shapes.get(key);

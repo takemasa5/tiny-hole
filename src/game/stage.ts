@@ -457,7 +457,7 @@ export const STAGES = {
     accent: "#487bdf",
   },
   mountain: {
-    name: "花咲く山の森",
+    name: "木の根元と巨木の森",
     menuLabel: "山",
     goal: "greatTree",
     clearTitle: "大樹まで、ひと飲み。",

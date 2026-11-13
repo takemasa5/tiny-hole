@@ -7,6 +7,9 @@ import {
   type StageId,
 } from "./stage";
 import { createToyStage, type ToyKind } from "./toy-stage";
+import { createMountainStage } from "./mountain-stage";
+import { MOUNTAIN_SPACES, mountainAreaForLevel } from "./mountain-world";
+import type { MountainKind } from "./mountain-visuals";
 import { createPlazaStage } from "./plaza-stage";
 import { PLAZA_SPACES, plazaAreaForLevel } from "./plaza-world";
 import type { PlazaKind } from "./plaza-visuals";
@@ -32,6 +35,7 @@ export const GROWTH_AREAS = [
   { level: 10, extent: 1600, label: "巨大な世界" },
 ] as const;
 export type GrowthModel =
+  | "mountain"
   | "plaza"
   | "hell"
   | "egypt"
@@ -70,6 +74,7 @@ export interface GrowthObject {
   egyptKind?: EgyptKind;
   hellKind?: HellKind;
   plazaKind?: PlazaKind;
+  mountainKind?: MountainKind;
   stationStop?: number;
   speedMultiplier?: number;
   stackY?: number;
@@ -210,18 +215,21 @@ const WORKERS: readonly ObjectKind[] = [
 ];
 
 export function areasForStage(stageId: StageId) {
-  return stageId === "plaza"
-    ? PLAZA_SPACES
-    : stageId === "toys"
-      ? TOY_SPACES
-      : stageId === "egypt"
-        ? EGYPT_SPACES
-        : stageId === "hell"
-          ? HELL_SPACES
-          : GROWTH_AREAS;
+  return stageId === "mountain"
+    ? MOUNTAIN_SPACES
+    : stageId === "plaza"
+      ? PLAZA_SPACES
+      : stageId === "toys"
+        ? TOY_SPACES
+        : stageId === "egypt"
+          ? EGYPT_SPACES
+          : stageId === "hell"
+            ? HELL_SPACES
+            : GROWTH_AREAS;
 }
 
 export function areaForLevel(level: number, stageId: StageId = "plaza") {
+  if (stageId === "mountain") return mountainAreaForLevel(level);
   if (stageId === "plaza") return plazaAreaForLevel(level);
   if (stageId === "toys") return toyAreaForLevel(level);
   if (stageId === "egypt") return egyptAreaForLevel(level);
@@ -236,6 +244,13 @@ export function goalForGrowth(stageId: StageId): {
   size: [number, number, number];
 } {
   if (!isStageId(stageId)) throw new Error("ステージが見つかりません。");
+  if (stageId === "mountain")
+    return {
+      kind: "greatTree",
+      model: "mountain",
+      label: "森の大樹",
+      size: [200, 680, 200],
+    };
   if (stageId === "plaza")
     return {
       kind: "monument",
@@ -441,15 +456,17 @@ export function createGrowthStage(
         ? goal.size[0] / OBJECT_TYPES[goal.kind].size[0]
         : 1,
   });
-  return stageId === "plaza"
-    ? createPlazaStage(definitions, random)
-    : stageId === "toys"
-      ? createToyStage(definitions, GROWTH_RADII, random)
-      : stageId === "egypt"
-        ? createEgyptStage(definitions, random)
-        : stageId === "hell"
-          ? createHellStage(definitions, random)
-          : definitions;
+  return stageId === "mountain"
+    ? createMountainStage(definitions, random)
+    : stageId === "plaza"
+      ? createPlazaStage(definitions, random)
+      : stageId === "toys"
+        ? createToyStage(definitions, GROWTH_RADII, random)
+        : stageId === "egypt"
+          ? createEgyptStage(definitions, random)
+          : stageId === "hell"
+            ? createHellStage(definitions, random)
+            : definitions;
 }
 
 export function isEgyptGod(definition: Pick<GrowthObject, "egyptKind">) {
@@ -483,6 +500,8 @@ export function clampToArea(
   radius: number,
   stageId: StageId = "plaza",
 ) {
+  if (stageId === "mountain")
+    return clampToyDestination(point, area, radius, MOUNTAIN_SPACES);
   if (stageId === "plaza")
     return clampToyDestination(point, area, radius, PLAZA_SPACES);
   if (stageId === "toys") return clampToyDestination(point, area, radius);

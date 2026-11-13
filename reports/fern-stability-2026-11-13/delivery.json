@@ -1,0 +1,29 @@
+{
+  "changedFiles": {
+    "src/game/mountain-visuals.ts": "a46eed3bbd4817d1c8f8a8d9b37a0067428d269df78bb0b94c420eb9f391b476",
+    "tests/mountain-fern-support.test.ts": "c52af25189fcd3829a3640921d18d2137fe297ce91c1ed046f9fba8613848c18",
+    "docs/README.md": "38d2ebb3c9dcf88a379f3da58ca31cd444973013ac31dad4ff7d86e6656ce690",
+    "docs/mountain-stage-implementation.md": "6cb5bc1b8e25421412eee1e852a6ab67aa6f9502f2c98a25995b0249d4258d7f"
+  },
+  "unitTests": 534,
+  "grassColliders": 8,
+  "newCollisionShapes": 0,
+  "rotationLocksAdded": false,
+  "browser": "10 seconds idle: eight ferns stable; eight ferns physically swallowed; level 4 reached",
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "fullStageRerun": false,
+  "finalChecks": {
+    "sourceHashesMatchTestedStage": true,
+    "unitTests": 534,
+    "stabilityAndFallCases": 21,
+    "build": "passed",
+    "lint": "passed",
+    "format": "passed",
+    "diffCheck": "passed",
+    "deliveryMobile": "passed",
+    "LAN": "http://192.168.40.191:5177/ HTTP 200",
+    "buildAsset": "index-QJldW8HT.js",
+    "offlineCache": "f1ba3cadded849ff3870"
+  }
+}

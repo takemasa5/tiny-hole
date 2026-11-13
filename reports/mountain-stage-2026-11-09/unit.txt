@@ -1,0 +1,16 @@
+
+> hole-prototype@0.1.0 test
+> vitest run --maxWorkers=2
+
+
+ RUN  v5.0.4 /private/tmp/hole-mountain-m5he6wm2
+
+
+ Test Files  31 passed (31)
+      Tests  513 passed (513)
+   Start at  11:44:37
+   Duration  46.76s (tests 98%, import 2%)
+
+    Isolate  31 workers spawned · ~216ms startup each (spawn + environment, per file)
+             at least ~3.13s faster with isolate: false — reuses workers across files instead of one per file
+

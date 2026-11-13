@@ -1,0 +1,7 @@
+
+> hole-prototype@0.1.0 build
+> tsc --noEmit && vite build && node scripts/build-offline.mjs
+
+tests/mountain-fern-support.test.ts(34,3): error TS2345: Argument of type '{ name: string; d: GrowthObject; yaw: number; radius: number; }' is not assignable to parameter of type '{ name: string; d: GrowthObject; yaw: number; radius: 6 | 0.08 | 24 | 12 | 3 | 0.45 | 0.8 | 0.25 | 1.5 | 0.14 | 160 | 48; }'.
+  Types of property 'radius' are incompatible.
+    Type 'number' is not assignable to type '6 | 0.08 | 24 | 12 | 3 | 0.45 | 0.8 | 0.25 | 1.5 | 0.14 | 160 | 48'.

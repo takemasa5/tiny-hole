@@ -1,0 +1,13 @@
+
+> hole-prototype@0.1.0 test
+> vitest run tests/mountain-fern-support.test.ts
+
+
+ RUN  v5.0.4 /private/tmp/hole-fern-5e1sd60l
+
+
+ Test Files  1 passed (1)
+      Tests  21 passed (21)
+   Start at  10:24:37
+   Duration  1.37s (tests 88%, import 8%, transform 5%)
+

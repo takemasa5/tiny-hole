@@ -1,0 +1,97 @@
+{
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "levels": [
+    {
+      "level": 1,
+      "area": 0,
+      "space": "木の根元の草むら",
+      "score": 0,
+      "bodies": 49,
+      "colliders": 538,
+      "drawCalls": 149,
+      "frame": { "median": 16.69999999999891, "p95": 16.799999999999272 }
+    },
+    {
+      "level": 2,
+      "area": 0,
+      "space": "木の根元の草むら",
+      "score": 25,
+      "bodies": 57,
+      "colliders": 595,
+      "drawCalls": 107,
+      "frame": { "median": 16.700000000000728, "p95": 16.799999999999272 }
+    },
+    {
+      "level": 3,
+      "area": 0,
+      "space": "木の根元の草むら",
+      "score": 61,
+      "bodies": 58,
+      "colliders": 543,
+      "drawCalls": 219,
+      "frame": { "median": 16.69999999999709, "p95": 16.700000000004366 }
+    }
+  ],
+  "entered": ["roots"],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "seed": 42,
+  "source": {
+    "total": 691,
+    "kinds": [
+      "acorn",
+      "twig",
+      "pebble",
+      "mushroom",
+      "pinecone",
+      "leaf",
+      "stump",
+      "fern",
+      "burrow",
+      "berries",
+      "lantern",
+      "kettle",
+      "stool",
+      "tanuki",
+      "firewood",
+      "tent",
+      "cooler",
+      "campTable",
+      "log",
+      "logRack",
+      "deer",
+      "truck",
+      "cabin",
+      "pine",
+      "oak",
+      "rock",
+      "fox",
+      "torii",
+      "shrine",
+      "ancientTree",
+      "greatTree"
+    ],
+    "stock": 264,
+    "moving": 40,
+    "groves": 32,
+    "stackedLogs": 24
+  },
+  "stationary": { "seconds": 10, "ferns": 8, "worstUp": 0.9999999995241237 },
+  "fleeing": [],
+  "activity": [],
+  "final": {
+    "level": 4,
+    "score": 264,
+    "swallowedFerns": [
+      "growth-3-10",
+      "growth-3-19",
+      "growth-3-7",
+      "growth-3-16",
+      "growth-3-1",
+      "growth-3-4",
+      "growth-3-13",
+      "growth-3-22"
+    ]
+  }
+}

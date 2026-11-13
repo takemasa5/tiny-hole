@@ -1,0 +1,56 @@
+
+> hole-prototype@0.1.0 test
+> vitest run tests/mountain-tree-support.test.ts
+
+
+ RUN  v5.0.4 /private/tmp/hole-mountain-m5he6wm2
+
+ ❯ tests/mountain-tree-support.test.ts (3 tests | 3 failed) 249ms
+   × oakは穴に触れていない平地で直立を保ち、足場を抜くと落下する 122ms
+   × ancientTreeは穴に触れていない平地で直立を保ち、足場を抜くと落下する 48ms
+   × greatTreeは穴に触れていない平地で直立を保ち、足場を抜くと落下する 38ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/mountain-tree-support.test.ts > oakは穴に触れていない平地で直立を保ち、足場を抜くと落下する
+AssertionError: {"kind":"oak","at":{"x":3.2755446434020996,"y":4.186446189880371,"z":-20.01141929626465},"rotation":{"x":-0.7059972286224365,"y":-0.36906948685646057,"z":0.08349008113145828,"w":0.5986527800559998}}: expected -0.010805360939796782 to be greater than 0.9961946980917455
+ ❯ tests/mountain-tree-support.test.ts:45:9
+     43|           rotation: body.rotation(),
+     44|         }),
+     45|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     46|       updateFloor(floor, 0, 0, radius, 10000);
+     47|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  tests/mountain-tree-support.test.ts > ancientTreeは穴に触れていない平地で直立を保ち、足場を抜くと落下する
+AssertionError: {"kind":"ancientTree","at":{"x":-29.806642532348633,"y":15.927828788757324,"z":-74.93984985351562},"rotation":{"x":-0.5977327823638916,"y":-0.3391164243221283,"z":0.26531538367271423,"w":0.6762568354606628}}: expected 0.14464653614824208 to be greater than 0.9961946980917455
+ ❯ tests/mountain-tree-support.test.ts:45:9
+     43|           rotation: body.rotation(),
+     44|         }),
+     45|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     46|       updateFloor(floor, 0, 0, radius, 10000);
+     47|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ FAIL  tests/mountain-tree-support.test.ts > greatTreeは穴に触れていない平地で直立を保ち、足場を抜くと落下する
+AssertionError: {"kind":"greatTree","at":{"x":-22.918336868286133,"y":250.57119750976562,"z":-192.6986846923828},"rotation":{"x":-0.3156600594520569,"y":-0.030261816456913948,"z":0.04888742417097092,"w":0.9471287727355957}}: expected 0.795937493249303 to be greater than 0.9961946980917455
+ ❯ tests/mountain-tree-support.test.ts:45:9
+     43|           rotation: body.rotation(),
+     44|         }),
+     45|       ).toBeGreaterThan(Math.cos(Math.PI / 36));
+       |         ^
+     46|       updateFloor(floor, 0, 0, radius, 10000);
+     47|       body.wakeUp();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  3 failed (3)
+   Start at  11:42:37
+   Duration  606ms (tests 66%, import 18%, transform 15%, worker 1%)
+

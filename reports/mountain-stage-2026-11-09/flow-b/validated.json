@@ -1,0 +1,231 @@
+{
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "seed": 42,
+  "source": {
+    "total": 691,
+    "kinds": [
+      "acorn",
+      "twig",
+      "pebble",
+      "mushroom",
+      "pinecone",
+      "leaf",
+      "stump",
+      "fern",
+      "burrow",
+      "berries",
+      "lantern",
+      "kettle",
+      "stool",
+      "tanuki",
+      "firewood",
+      "tent",
+      "cooler",
+      "campTable",
+      "log",
+      "logRack",
+      "deer",
+      "truck",
+      "cabin",
+      "pine",
+      "oak",
+      "rock",
+      "fox",
+      "torii",
+      "shrine",
+      "ancientTree",
+      "greatTree"
+    ],
+    "stock": 264,
+    "moving": 40,
+    "groves": 32,
+    "stackedLogs": 24
+  },
+  "levels": [
+    {
+      "level": 1,
+      "area": 0,
+      "space": "木の根元の草むら",
+      "score": 0,
+      "bodies": 49,
+      "colliders": 538,
+      "drawCalls": 149,
+      "frame": {
+        "median": 16.699999999999932,
+        "p95": 16.799999999999955
+      }
+    },
+    {
+      "level": 2,
+      "area": 0,
+      "space": "木の根元の草むら",
+      "score": 12,
+      "bodies": 49,
+      "colliders": 556,
+      "drawCalls": 73,
+      "frame": {
+        "median": 16.69999999999891,
+        "p95": 16.700000000000728
+      }
+    },
+    {
+      "level": 3,
+      "area": 0,
+      "space": "木の根元の草むら",
+      "score": 62,
+      "bodies": 50,
+      "colliders": 504,
+      "drawCalls": 203,
+      "frame": {
+        "median": 16.700000000000728,
+        "p95": 16.700000000000728
+      }
+    },
+    {
+      "level": 4,
+      "area": 1,
+      "space": "森のキャンプ場",
+      "score": 313,
+      "bodies": 53,
+      "colliders": 669,
+      "drawCalls": 208,
+      "frame": {
+        "median": 16.69999999999709,
+        "p95": 16.700000000004366
+      }
+    },
+    {
+      "level": 5,
+      "area": 1,
+      "space": "森のキャンプ場",
+      "score": 1026,
+      "bodies": 53,
+      "colliders": 689,
+      "drawCalls": 129,
+      "frame": {
+        "median": 16.69999999999709,
+        "p95": 16.80000000000291
+      }
+    },
+    {
+      "level": 6,
+      "area": 1,
+      "space": "森のキャンプ場",
+      "score": 4226,
+      "bodies": 81,
+      "colliders": 871,
+      "drawCalls": 386,
+      "frame": {
+        "median": 16.69999999999709,
+        "p95": 16.79999999998836
+      }
+    },
+    {
+      "level": 7,
+      "area": 2,
+      "space": "山里と林業ヤード",
+      "score": 17029,
+      "bodies": 75,
+      "colliders": 852,
+      "drawCalls": 525,
+      "frame": {
+        "median": 16.69999999999709,
+        "p95": 16.70000000001164
+      }
+    },
+    {
+      "level": 8,
+      "area": 2,
+      "space": "山里と林業ヤード",
+      "score": 66469,
+      "bodies": 98,
+      "colliders": 895,
+      "drawCalls": 106,
+      "frame": {
+        "median": 16.699999999982538,
+        "p95": 16.70000000001164
+      }
+    },
+    {
+      "level": 9,
+      "area": 3,
+      "space": "深い森",
+      "score": 287653,
+      "bodies": 117,
+      "colliders": 1122,
+      "drawCalls": 144,
+      "frame": {
+        "median": 16.699999999982538,
+        "p95": 16.70000000001164
+      }
+    },
+    {
+      "level": 10,
+      "area": 3,
+      "space": "深い森",
+      "score": 1082293,
+      "bodies": 122,
+      "colliders": 1145,
+      "drawCalls": 692,
+      "frame": {
+        "median": 16.699999999982538,
+        "p95": 16.79999999998836
+      }
+    },
+    {
+      "level": 11,
+      "area": 4,
+      "space": "巨木の聖域",
+      "score": 4322869,
+      "bodies": 156,
+      "colliders": 1364,
+      "drawCalls": 545,
+      "frame": {
+        "median": 16.70000000001164,
+        "p95": 33.300000000046566
+      }
+    },
+    {
+      "level": 12,
+      "area": 4,
+      "space": "巨木の聖域",
+      "score": 17364789,
+      "bodies": 201,
+      "colliders": 1739,
+      "drawCalls": 1671,
+      "frame": {
+        "median": 16.70000000001164,
+        "p95": 33.300000000046566
+      }
+    }
+  ],
+  "entered": ["roots", "camp", "lumberyard", "deepForest", "sanctuary"],
+  "activity": [
+    "tanuki:working",
+    "tanuki:waiting",
+    "tanuki:fleeing",
+    "deer:working",
+    "truck:working",
+    "deer:waiting",
+    "truck:driving",
+    "truck:waiting",
+    "fox:working",
+    "fox:fleeing",
+    "deer:fleeing"
+  ],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "sourceReport": "results.json",
+  "validationMethod": "Preserved run snapshots checked against the corrected mountain area IDs",
+  "rawScriptAssertion": "Wrong plaza area IDs remained in the post-clear check",
+  "final": {
+    "level": 12,
+    "score": 33844085,
+    "cleared": true,
+    "collected": 281,
+    "moving": 19,
+    "goalCollected": true
+  },
+  "automaticTransitionObserved": false
+}
