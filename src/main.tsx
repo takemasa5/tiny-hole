@@ -12,6 +12,8 @@ function App() {
   const canvas = useRef<HTMLCanvasElement>(null);
   const controls = useRef<GameControls | null>(null);
   const soundPreference = useRef(true);
+  const musicPreference = useRef(true);
+  const [musicEnabled, setMusicEnabled] = useState(true);
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [stageId, setStageId] = useState<StageId>("plaza");
   const stage = STAGES[stageId];
@@ -52,6 +54,7 @@ function App() {
           if (cancelled) controller.dispose();
           else {
             controls.current = controller;
+            controller.setMusicEnabled(musicPreference.current);
             dispose = controller.dispose;
           }
         })
@@ -118,6 +121,20 @@ function App() {
               }}
             >
               {soundEnabled ? "音 ON" : "音 OFF"}
+            </button>
+            <button
+              aria-label={musicEnabled ? "BGMを消す" : "BGMをつける"}
+              aria-pressed={musicEnabled}
+              onClick={() => {
+                const enabled = !musicPreference.current;
+                musicPreference.current = enabled;
+                setMusicEnabled(enabled);
+                controls.current?.setMusicEnabled(enabled);
+                if (enabled)
+                  controls.current?.setSoundEnabled(soundPreference.current);
+              }}
+            >
+              {musicEnabled ? "BGM ON" : "BGM OFF"}
             </button>
             <button
               aria-label="最初から遊ぶ"

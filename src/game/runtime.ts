@@ -8,6 +8,8 @@ import {
 import { isTap, moveGesture, type PointerGesture } from "./gesture";
 import { isMovementKey, keyboardDirection } from "./keyboard";
 import { GameSounds } from "./sound";
+import { RewardEffects } from "./reward-effects";
+import { PickupCombo, objectFeedback } from "./object-feedback";
 import { GrowthEffect } from "./growth-effect";
 import { PHYSICS_STEP, STAGES, isHuman, type StageId } from "./stage";
 import { animateWalker, disposeScene } from "./visuals";
@@ -66,6 +68,7 @@ export interface GameStatus {
 export interface GameControls {
   dispose: () => void;
   setSoundEnabled: (enabled: boolean) => void;
+  setMusicEnabled: (enabled: boolean) => void;
 }
 export type RenderDiagnosticMode =
   "normal" | "no-occlusion" | "precise-depth" | "no-antialias" | "plain-floor";
@@ -87,6 +90,7 @@ interface Entity {
   enteredHole: boolean;
   previousPosition: THREE.Vector3;
   previousRotation: THREE.Quaternion;
+  lastFleeEffect?: number;
 }
 
 export async function startGame(
@@ -178,6 +182,10 @@ export async function startGame(
   scene.add(marker);
   const growthEffect = new GrowthEffect();
   scene.add(growthEffect.group);
+  const rewardEffects = new RewardEffects();
+  scene.add(rewardEffects.group);
+  const pickupCombo = new PickupCombo();
+  let feedbackTime = 0;
   const scenery = new GrowthScenery(definitions, stageId);
   scene.add(scenery.group);
   const district = districtProfile(stageId);
@@ -293,6 +301,7 @@ export async function startGame(
       notify();
     },
     stageId === "america",
+    stageId,
   );
   let pointer: PointerGesture | undefined;
   const heldKeys = new Set<string>();
@@ -504,6 +513,13 @@ export async function startGame(
       )
         break;
       openedArea++;
+      const door = toyWorld
+        ?.snapshot(holeState())
+        .doors.find((entry) => entry.requiredLevel === entryLevel);
+      if (door) {
+        sounds.play("doorOpen", progress.level);
+        rewardEffects.emit("door", door.x, door.z, radius, "#9bffff");
+      }
       updateGround();
     }
   }
@@ -885,6 +901,7 @@ export async function startGame(
     }
   }
   function physicsStep() {
+    feedbackTime += PHYSICS_STEP;
     previousHole.copy(hole);
     for (const entity of entities.values()) {
       if (!entity.body) continue;
@@ -973,6 +990,7 @@ export async function startGame(
             progress.level,
           );
         else if (d.kind === "tanuki") sounds.play("tanukiCry", progress.level);
+        else sounds.playObject("fall", d);
       }
       if (entity.falling || ["still", "moored"].includes(d.behavior)) continue;
       const partner = d.partnerId ? entities.get(d.partnerId) : undefined;
@@ -999,6 +1017,7 @@ export async function startGame(
             other.body.translation(),
           );
         });
+      const previousPhase = motion.phase;
       const velocity = themeVelocity(
         d,
         motion,
@@ -1008,6 +1027,21 @@ export async function startGame(
         partnerPosition,
         blocked,
       );
+      if (motion.phase === "fleeing" && previousPhase !== "fleeing") {
+        sounds.playObject("flee", d);
+        if (feedbackTime - (entity.lastFleeEffect ?? -Infinity) > 2.5) {
+          rewardEffects.emit(
+            "flee",
+            at.x,
+            at.z,
+            Math.min(radius, d.size[1]) * 0.3,
+            "#82e6ff",
+            1,
+            at.y + d.size[1] * 0.4,
+          );
+          entity.lastFleeEffect = feedbackTime;
+        }
+      }
       if (
         d.route &&
         motion.phase === "fleeing" &&
@@ -1041,6 +1075,8 @@ export async function startGame(
     physicsMilliseconds = performance.now() - start;
     const previousLevel = progress.level;
     let picked = false;
+    let pickupAmount = 0;
+    let pickupObject: GrowthObject | undefined;
     for (const [id, entity] of entities) {
       if (!entity.body) continue;
       const position = entity.body.translation();
@@ -1069,6 +1105,9 @@ export async function startGame(
           exit === "collected" && progress.collect(entity.definition);
         if (collected) {
           picked = true;
+          pickupAmount++;
+          if (!pickupObject || entity.definition.value > pickupObject.value)
+            pickupObject = entity.definition;
           if (entity.definition.behavior !== "still") collectedMoving++;
         }
         removeEntity(id, exit);
@@ -1081,8 +1120,23 @@ export async function startGame(
         removeEntity(id, "lost");
     }
     for (const definition of toyWorld?.afterStep(radius) ?? [])
-      if (progress.collect(definition)) picked = true;
-    if (picked) sounds.play("pickup", progress.level);
+      if (progress.collect(definition)) {
+        picked = true;
+        pickupAmount++;
+      }
+    if (picked) {
+      const combo = pickupCombo.collect(feedbackTime, pickupAmount);
+      if (pickupObject) sounds.playObject("pickup", pickupObject, combo);
+      else sounds.play("pickup", progress.level);
+      rewardEffects.emit(
+        "pickup",
+        hole.x,
+        hole.y,
+        radius,
+        pickupObject ? objectFeedback(pickupObject).color : "#ffe38f",
+        combo,
+      );
+    }
     if (previousLevel !== progress.level) {
       radius = GROWTH_LEVELS[progress.level - 1].radius;
       openReadyAreas();
@@ -1106,6 +1160,7 @@ export async function startGame(
       stopInput();
       marker.visible = false;
       sounds.play("clear", progress.level);
+      rewardEffects.emit("clear", hole.x, hole.y, radius, "#ffe668");
     } else replenish();
     if (picked) notify();
   }
@@ -1195,6 +1250,12 @@ export async function startGame(
       toyWorld?.render(renderHoleState(), alpha);
       cameraUpdate();
       growthEffect.update(
+        document.hidden ? 0 : elapsed,
+        renderHole.x,
+        renderHole.y,
+        radius,
+      );
+      rewardEffects.update(
         document.hidden ? 0 : elapsed,
         renderHole.x,
         renderHole.y,
@@ -1327,6 +1388,8 @@ export async function startGame(
     },
     growthEvents,
     growthEffect: growthEffect.snapshot(),
+    rewardEffects: rewardEffects.snapshot(),
+    pickupCombo: pickupCombo.value(feedbackTime),
     audio: sounds.snapshot(),
     resets,
     collectedMoving,
@@ -1376,6 +1439,7 @@ export async function startGame(
   if (import.meta.env.DEV) Object.assign(window, { __hole: { snapshot } });
   return {
     setSoundEnabled: (enabled) => sounds.setEnabled(enabled),
+    setMusicEnabled: (enabled) => sounds.setMusicEnabled(enabled),
     dispose: () => {
       disposed = true;
       cancelAnimationFrame(frame);

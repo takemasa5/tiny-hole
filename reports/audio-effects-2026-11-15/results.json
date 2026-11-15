@@ -1,0 +1,269 @@
+{
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "music": [
+    {
+      "stage": "plaza",
+      "enabled": true,
+      "active": true,
+      "title": "ごきげんホール・パレード",
+      "tempo": 126,
+      "voices": 3,
+      "bars": 0,
+      "starts": 1,
+      "notesScheduled": 14
+    },
+    {
+      "stage": "mountain",
+      "enabled": true,
+      "active": true,
+      "title": "木漏れ日のピクニック",
+      "tempo": 108,
+      "voices": 8,
+      "bars": 0,
+      "starts": 1,
+      "notesScheduled": 13
+    },
+    {
+      "stage": "america",
+      "enabled": true,
+      "active": true,
+      "title": "ミッドナイト・ダイナー",
+      "tempo": 128,
+      "voices": 2,
+      "bars": 0,
+      "starts": 1,
+      "notesScheduled": 14
+    },
+    {
+      "stage": "egypt",
+      "enabled": true,
+      "active": true,
+      "title": "砂漠のネオン・ラウンジ",
+      "tempo": 112,
+      "voices": 7,
+      "bars": 0,
+      "starts": 1,
+      "notesScheduled": 13
+    },
+    {
+      "stage": "harbor",
+      "enabled": true,
+      "active": true,
+      "title": "波止場のブラス・ステップ",
+      "tempo": 118,
+      "voices": 3,
+      "bars": 0,
+      "starts": 1,
+      "notesScheduled": 14
+    },
+    {
+      "stage": "toys",
+      "enabled": true,
+      "active": true,
+      "title": "夜ふかしのおもちゃ楽団",
+      "tempo": 100,
+      "voices": 8,
+      "bars": 0,
+      "starts": 1,
+      "notesScheduled": 14
+    },
+    {
+      "stage": "office",
+      "enabled": true,
+      "active": true,
+      "title": "定時すぎのエレベーター",
+      "tempo": 104,
+      "voices": 8,
+      "bars": 0,
+      "starts": 1,
+      "notesScheduled": 13
+    },
+    {
+      "stage": "hell",
+      "enabled": true,
+      "active": true,
+      "title": "鬼たちのハイカラ行進曲",
+      "tempo": 138,
+      "voices": 6,
+      "bars": 0,
+      "starts": 1,
+      "notesScheduled": 19
+    }
+  ],
+  "WebKit": "未実施",
+  "iPhone": "未実施",
+  "controls": {
+    "firstGesture": true,
+    "independentBGM": true,
+    "musicPreferenceSurvivesRestart": true,
+    "allMuteStopsSources": true,
+    "syntheticVisibilityPauseResume": true
+  },
+  "audition": {
+    "enabled": true,
+    "state": "running",
+    "voices": 0,
+    "error": "",
+    "played": {
+      "pickup": 5,
+      "growth": 1,
+      "clear": 1,
+      "personCry": 0,
+      "americanCry": 0,
+      "shot": 0,
+      "tanukiCry": 0,
+      "doorOpen": 1,
+      "flee": 7,
+      "objectPickup": 5,
+      "objectFall": 0
+    },
+    "materials": {
+      "paper": 1,
+      "wood": 1,
+      "metal": 1,
+      "glass": 1,
+      "stone": 1
+    },
+    "music": {
+      "enabled": false,
+      "active": false,
+      "title": "鬼たちのハイカラ行進曲",
+      "tempo": 138,
+      "voices": 0,
+      "bars": 0,
+      "starts": 1,
+      "notesScheduled": 19
+    }
+  },
+  "offlineVoices": [
+    {
+      "kind": "human",
+      "peak": 0.038433630019426346,
+      "rms": 0.005417961831180856,
+      "tail": 0,
+      "finite": true
+    },
+    {
+      "kind": "hero",
+      "peak": 0.0402127243578434,
+      "rms": 0.005557370939461162,
+      "tail": 0,
+      "finite": true
+    },
+    {
+      "kind": "monster",
+      "peak": 0.0581086203455925,
+      "rms": 0.007902385687684341,
+      "tail": 0,
+      "finite": true
+    },
+    {
+      "kind": "robot",
+      "peak": 0.04644712433218956,
+      "rms": 0.007280886312177859,
+      "tail": 0,
+      "finite": true
+    },
+    {
+      "kind": "animal",
+      "peak": 0.03294771537184715,
+      "rms": 0.005875941451681122,
+      "tail": 0,
+      "finite": true
+    },
+    {
+      "kind": "ghost",
+      "peak": 0.05264340341091156,
+      "rms": 0.011743505216546865,
+      "tail": 0,
+      "finite": true
+    },
+    {
+      "kind": "demon",
+      "peak": 0.036556780338287354,
+      "rms": 0.0051071430401997886,
+      "tail": 0,
+      "finite": true
+    }
+  ],
+  "realToyFlee": {
+    "audio": {
+      "enabled": true,
+      "state": "running",
+      "voices": 2,
+      "error": "",
+      "played": {
+        "pickup": 0,
+        "growth": 0,
+        "clear": 0,
+        "personCry": 0,
+        "americanCry": 0,
+        "shot": 0,
+        "tanukiCry": 0,
+        "doorOpen": 0,
+        "flee": 2,
+        "objectPickup": 0,
+        "objectFall": 0
+      },
+      "materials": {},
+      "music": {
+        "enabled": true,
+        "active": true,
+        "title": "夜ふかしのおもちゃ楽団",
+        "tempo": 100,
+        "voices": 7,
+        "bars": 0,
+        "starts": 1,
+        "notesScheduled": 7
+      }
+    },
+    "effects": {
+      "counts": {
+        "pickup": 0,
+        "flee": 2,
+        "door": 0,
+        "clear": 0
+      },
+      "activeParticles": 16,
+      "capacity": 384,
+      "reducedMotion": false
+    }
+  },
+  "particlePool": {
+    "active": {
+      "counts": {
+        "pickup": 0,
+        "flee": 0,
+        "door": 0,
+        "clear": 100
+      },
+      "activeParticles": 384,
+      "capacity": 384,
+      "reducedMotion": false
+    },
+    "expired": {
+      "counts": {
+        "pickup": 0,
+        "flee": 0,
+        "door": 0,
+        "clear": 100
+      },
+      "activeParticles": 0,
+      "capacity": 384,
+      "reducedMotion": false
+    }
+  },
+  "reducedMotion": {
+    "counts": {
+      "pickup": 0,
+      "flee": 0,
+      "door": 0,
+      "clear": 1
+    },
+    "activeParticles": 0,
+    "capacity": 384,
+    "reducedMotion": true
+  },
+  "passed": true
+}

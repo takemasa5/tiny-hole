@@ -1,7 +1,7 @@
 import * as THREE from "three";
 
-const DURATION = 1.15;
-const PARTICLES = 28;
+const DURATION = 1.35;
+const PARTICLES = 96;
 
 export class GrowthEffect {
   readonly group = new THREE.Group();
@@ -14,7 +14,7 @@ export class GrowthEffect {
     .matches;
 
   constructor() {
-    this.rings = ["#ffd36b", "#8ae8ff"].map((color) => {
+    this.rings = ["#ffd36b", "#8ae8ff", "#ff8cda", "#ffffff"].map((color) => {
       const ring = new THREE.Mesh(
         new THREE.RingGeometry(1.04, 1.13, 64),
         new THREE.MeshBasicMaterial({
@@ -22,6 +22,7 @@ export class GrowthEffect {
           transparent: true,
           depthWrite: false,
           side: THREE.DoubleSide,
+          blending: THREE.AdditiveBlending,
         }),
       );
       ring.rotation.x = -Math.PI / 2;
@@ -29,14 +30,20 @@ export class GrowthEffect {
       return ring;
     });
     this.particles = new THREE.InstancedMesh(
-      new THREE.OctahedronGeometry(0.055),
-      new THREE.MeshBasicMaterial({ transparent: true, depthWrite: false }),
+      new THREE.OctahedronGeometry(0.075),
+      new THREE.MeshBasicMaterial({
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+      }),
       PARTICLES,
     );
     for (let index = 0; index < PARTICLES; index++)
       this.particles.setColorAt(
         index,
-        new THREE.Color(index % 2 ? "#fff2b1" : "#ffc65c"),
+        new THREE.Color(
+          ["#fff2b1", "#ffc65c", "#ff95cf", "#9df6ff"][index % 4],
+        ),
       );
     this.particles.frustumCulled = false;
     this.group.add(this.particles);
@@ -58,7 +65,7 @@ export class GrowthEffect {
     this.rings.forEach((ring, index) => {
       ring.position.y = index * 0.01;
       ring.scale.setScalar(
-        this.reducedMotion ? 1.1 : 1 + progress * (0.65 + index * 0.5),
+        this.reducedMotion ? 1.1 : 1 + progress * (1.1 + index * 0.6),
       );
       ring.material.opacity = (1 - progress) * (index ? 0.65 : 0.95);
     });
@@ -66,10 +73,10 @@ export class GrowthEffect {
     (this.particles.material as THREE.MeshBasicMaterial).opacity = 1 - progress;
     for (let index = 0; index < PARTICLES; index++) {
       const angle = (index / PARTICLES) * Math.PI * 2;
-      const reach = 1.1 + progress * (0.4 + (index % 3) * 0.25);
+      const reach = 1.1 + progress * (1.2 + (index % 3) * 0.45);
       this.matrix.position.set(
         Math.cos(angle) * reach,
-        Math.sin(progress * Math.PI) * (0.35 + (index % 4) * 0.1),
+        Math.sin(progress * Math.PI) * (0.8 + (index % 4) * 0.3),
         Math.sin(angle) * reach,
       );
       this.matrix.rotation.set(

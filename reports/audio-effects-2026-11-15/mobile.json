@@ -1,0 +1,40 @@
+{
+  "browser": "156.0.8078.4",
+  "viewport": "390x844",
+  "firstTouchStartsMusic": true,
+  "musicPreferenceSurvivesStageChange": true,
+  "buttonsWorkWithTouch": true,
+  "audio": {
+    "enabled": true,
+    "state": "running",
+    "voices": 0,
+    "error": "",
+    "played": {
+      "pickup": 0,
+      "growth": 0,
+      "clear": 0,
+      "personCry": 0,
+      "americanCry": 0,
+      "shot": 0,
+      "tanukiCry": 0,
+      "doorOpen": 0,
+      "flee": 0,
+      "objectPickup": 0,
+      "objectFall": 0
+    },
+    "materials": {},
+    "music": {
+      "enabled": true,
+      "active": true,
+      "title": "夜ふかしのおもちゃ楽団",
+      "tempo": 100,
+      "voices": 8,
+      "bars": 0,
+      "starts": 1,
+      "notesScheduled": 6
+    }
+  },
+  "errors": [],
+  "iPhone": "未実施",
+  "WebKit": "未実施"
+}

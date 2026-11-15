@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>HOLE 音の試聴</title>
+  </head>
+  <body>
+    <main>
+      <h1>音の試聴</h1>
+      <p>
+        専用ブランチの試作です。BGMはオリジナルのインスト曲、声は合成したコミカルな鳴き声です。
+      </p>
+      <label
+        >ステージ
+        <select id="stage"></select></label
+      ><button id="start">BGMを再生</button
+      ><button id="stop">すべて停止</button>
+      <h2>回収・逃走・開放</h2>
+      <p>効果音のボタンではBGMを止めて試聴します。</p>
+      <div id="effects"></div>
+      <p id="state" role="status">ボタンを押すと音が有効になります。</p>
+      <p>
+        <a href="/">ゲームへ</a> ·
+        <a href="/checks/toy-battle.html?level=11&sound=on"
+          >おもちゃの逃走を音付きで確認</a
+        >
+      </p>
+    </main>
+    <script type="module" src="./audio-effects.ts"></script>
+  </body>
+</html>

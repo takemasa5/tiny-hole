@@ -41,7 +41,7 @@ async function restart() {
       (message) => {
         state.textContent = message;
       },
-      false,
+      parameters.get("sound") === "on",
       "toys",
       { mode: "normal", seed, scenario: "toy-battle", battleLevel },
     );

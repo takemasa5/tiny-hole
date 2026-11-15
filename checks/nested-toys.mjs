@@ -7,6 +7,15 @@ const directory =
 await mkdir(directory, { recursive: true });
 const browser = await chromium.launch({ headless: true, channel: "chromium" });
 const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
+// Freeze the loaded game during this long playthrough; editor hot reload interrupts input.
+await page.routeWebSocket(/.*/, (socket) => {
+  const server = socket.connectToServer();
+  server.onMessage((message) => {
+    const event = JSON.parse(message.toString());
+    if (!["update", "full-reload", "prune"].includes(event.type))
+      socket.send(message);
+  });
+});
 if (process.env.HOLE_SEED) {
   const seed = Number(process.env.HOLE_SEED);
   assert(Number.isInteger(seed) && seed >= 0 && seed < 4294967296);
@@ -211,6 +220,7 @@ async function moveTo(point) {
 try {
   await page.goto(process.env.HOLE_URL || "http://127.0.0.1:5176/");
   await page.waitForFunction(() => window.__hole);
+  assert.deepEqual(errors, []);
   await page
     .getByRole("combobox", { name: "ステージ", exact: true })
     .selectOption("toys");
@@ -412,6 +422,8 @@ try {
     bodies: final.rigidBodies,
     collected: final.collectedIds.length,
     doors: final.toyWorld.doors,
+    audio: final.audio,
+    rewardEffects: final.rewardEffects,
   };
   await page.screenshot({ path: `${directory}/clear.png` });
   await page.waitForFunction(
