@@ -147,19 +147,10 @@ export class RewardEffects {
       ring.mesh.position.set(x, radius * 0.03, z);
       ring.mesh.material.color.set(color);
     }
-    if (
-      kind === "clear" ||
-      kind === "door" ||
-      (kind === "pickup" && combo >= 3)
-    ) {
+    if (kind === "clear" || kind === "door") {
       const context = this.canvas.getContext("2d");
       if (context) {
-        const text =
-          kind === "clear"
-            ? "CLEAR!"
-            : kind === "door"
-              ? "OPEN!"
-              : `${combo}連続!`;
+        const text = kind === "clear" ? "CLEAR!" : "OPEN!";
         context.clearRect(0, 0, 512, 192);
         context.font = "900 78px sans-serif";
         context.textAlign = "center";
@@ -167,7 +158,7 @@ export class RewardEffects {
         context.lineWidth = 12;
         context.strokeStyle = "#663368";
         context.strokeText(text, 256, 96);
-        context.fillStyle = kind === "pickup" ? "#ffe86b" : "#ffffff";
+        context.fillStyle = "#ffffff";
         context.fillText(text, 256, 96);
         this.caption.material.map!.needsUpdate = true;
         this.captionAge = 0;
