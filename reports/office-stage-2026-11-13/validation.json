@@ -1,0 +1,12 @@
+{
+  "tests": 638,
+  "build": "passed",
+  "lint": "passed",
+  "format": "passed",
+  "browser": "Chromium 156 full 12 levels, 5 spaces, HQ collected, auto transition",
+  "phoneWidth": "390x844 touch passed",
+  "iPhone": "not run",
+  "WebKit": "not run",
+  "goalRecovery": "One successful tap on the goal; harness time limit extended. Game state was not directly changed.",
+  "rootReview": "All three stage touch/gate/restart checks passed"
+}

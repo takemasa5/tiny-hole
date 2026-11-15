@@ -29,7 +29,14 @@ it.each(STAGE_IDS)(
         (d) =>
           d.level === level &&
           !d.sourceLevel &&
-          (["hell", "plaza", "mountain", "america", "harbor"].includes(stage)
+          ([
+            "hell",
+            "plaza",
+            "mountain",
+            "america",
+            "harbor",
+            "office",
+          ].includes(stage)
             ? level === 12
               ? d.id === "goal"
               : d.id.startsWith(`growth-${level}-`)

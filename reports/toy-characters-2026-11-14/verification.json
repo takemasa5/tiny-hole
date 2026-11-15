@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-14",
+  "blender": {
+    "version": "5.3.0",
+    "connection": "公式MCPアドオンのTCP 9191へ直接接続。HTTP MCPサーバーは経由しない",
+    "models": {
+      "hero": 43,
+      "monster": 71
+    },
+    "blend": "assets/blender/toy-characters.blend"
+  },
+  "relatedTests": {
+    "command": "npx vitest run tests/toy-characters.test.ts tests/growth-stage.test.ts tests/growth-shape.test.ts --maxWorkers=2",
+    "passed": 43,
+    "files": 3
+  },
+  "fullSuite": {
+    "command": "npm test -- --maxWorkers=2 --testTimeout=20000",
+    "passed": 637,
+    "timedOut": 5,
+    "total": 642,
+    "durationSeconds": 381.65,
+    "timeouts": [
+      "tests/toy-stage.test.ts:100シードの経路",
+      "tests/nested-toys.test.ts:1000シードの配置",
+      "tests/district-stage.test.ts:americaの1000シードの配置",
+      "tests/plaza-stage.test.ts:1000シードの配置",
+      "tests/mountain-stage.test.ts:1000シードの配置"
+    ],
+    "cause": "未確定。全件成功とは扱わない"
+  },
+  "build": {
+    "passed": true,
+    "offlineVersion": "21b59f5c4500125ceb2b"
+  },
+  "lint": {
+    "passed": true
+  },
+  "format": {
+    "changedFilesPassed": true
+  },
+  "diffCheck": {
+    "passed": true
+  },
+  "browserModels": "models.json",
+  "browserTouch": "mobile/results.json",
+  "browserFlow": {
+    "status": "passed",
+    "results": "flow-complete/results.json",
+    "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    "entered": ["notions", "chest", "bedroom", "house", "city"],
+    "errors": [],
+    "final": {
+      "level": 12,
+      "score": 35278260,
+      "cleared": true,
+      "bodies": 143,
+      "collected": 237,
+      "doors": [
+        {
+          "id": "notions-door",
+          "requiredLevel": 3,
+          "open": true,
+          "amount": 1,
+          "x": 0.75,
+          "z": 0,
+          "side": "east",
+          "width": 1.1
+        },
+        {
+          "id": "chest-door",
+          "requiredLevel": 5,
+          "open": true,
+          "amount": 1,
+          "x": 0,
+          "z": 2.6,
+          "side": "south",
+          "width": 2.7
+        },
+        {
+          "id": "bedroom-door",
+          "requiredLevel": 7,
+          "open": true,
+          "amount": 1,
+          "x": 31.6,
+          "z": 23,
+          "side": "east",
+          "width": 8.5
+        },
+        {
+          "id": "house-door",
+          "requiredLevel": 9,
+          "open": true,
+          "amount": 1,
+          "x": 95,
+          "z": 80,
+          "side": "east",
+          "width": 33
+        }
+      ]
+    },
+    "autoTransition": "office"
+  },
+  "WebKit": "未実施",
+  "iPhone": "未実施"
+}

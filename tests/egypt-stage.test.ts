@@ -442,8 +442,10 @@ it("神々の逃走は加速と息継ぎがあり、端で巡回位置へ引き�
   expect(Math.hypot(escape.x, escape.z)).toBeCloseTo(hole.radius * 7 * 1.05);
 });
 
-it("神以外の動く物は、従来通り穴の縁に掛かると姿勢を解放する", () => {
-  const d = createGrowthStage(42, "toys").find((d) => d.id === "hero")!;
+it("姿勢保持を個別に扱わない動く物は、従来通り穴の縁に掛かると姿勢を解放する", () => {
+  const d = createGrowthStage(42, "toys").find(
+    (d) => d.toyKind === "windupRobot",
+  )!;
   const rotation = { x: 0, y: 0, z: 0, w: 1 };
   const y = -growthCollisionBounds(d, rotation, "toys").bottom;
   expect(

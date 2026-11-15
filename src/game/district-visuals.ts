@@ -341,6 +341,7 @@ export function districtVisual(kind: DistrictKind) {
         panels.push([(x - 2) * 0.17, y * 0.085 - 0.22, 0.11, 0.05]);
     paint(g, panels, 0.341, "#507a90");
   } else throw new Error(`${kind}のモデルがありません`);
+  if (kind === "pushpin") g.rotation.z = Math.PI;
   g.updateMatrixWorld(true);
   const b = new THREE.Box3().setFromObject(g),
     size = b.getSize(new THREE.Vector3()),

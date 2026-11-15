@@ -354,9 +354,184 @@ const harbor: DistrictProfile = {
   goal: { kind: "tanker", size: [250, 95, 120] },
 };
 
+const office: DistrictProfile = {
+  stageId: "office",
+  ids: ["stationery", "annex", "meeting", "campus", "hq"],
+  labels: [
+    "床の文具トレー",
+    "別館の執務室",
+    "会議室と社長室",
+    "会社の敷地と駐車場",
+    "本社地区",
+  ],
+  floors: ["#c1c0b3", "#adb9ac", "#c1bcaa", "#b5bbae", "#acbba9"],
+  walls: ["#a3aaa4", "#c0c4b4", "#b9c4c3", "#8ea49c", "#8faaa3"],
+  heights: [0.18, 8, 12, 18, 0],
+  gateLabels: [
+    "文具トレーの側面",
+    "執務室のドア",
+    "会議室のドア",
+    "本社地区のゲート",
+  ],
+  stock: [
+    ["clip", "pushpin", "eraser"],
+    ["pencil", "tape", "stapler"],
+    ["documents", "eraser", "stapler"],
+    ["keyboard", "monitor", "officeChair"],
+    ["desk", "cabinet", "copier"],
+    ["desk", "sofa", "meetingTable"],
+    ["meetingTable", "cabinet", "meetingRoom"],
+    ["meetingRoom", "sofa", "desk"],
+    ["car", "deliveryVan", "officeAnnex"],
+    ["officeAnnex", "officeTower", "lamp"],
+    ["officeTower", "officeAnnex", "apartment"],
+  ],
+  landmarks: [
+    {
+      kind: "desk",
+      size: [1.3, 0.9, 0.8],
+      area: 1,
+      x: -3.7,
+      z: -5.3,
+      level: 5,
+    },
+    { kind: "copier", size: [1.1, 1.7, 1], area: 1, x: 3.7, z: -5.3, level: 5 },
+    {
+      kind: "desk",
+      size: [0.65, 0.5, 0.5],
+      area: 0,
+      x: -1.1,
+      z: 0.7,
+      level: 3,
+    },
+    {
+      kind: "copier",
+      size: [0.5, 0.7, 0.5],
+      area: 0,
+      x: -1.1,
+      z: -0.7,
+      level: 3,
+    },
+    { kind: "desk", size: [3.8, 2.4, 1.7], area: 1, x: 11, z: -7, level: 6 },
+    { kind: "copier", size: [3, 3.5, 2.3], area: 1, x: 12, z: 7, level: 6 },
+    {
+      kind: "meetingTable",
+      size: [15, 5, 8],
+      area: 2,
+      x: 75,
+      z: -10,
+      level: 8,
+    },
+    { kind: "desk", size: [12, 7, 8], area: 2, x: 75, z: -50, level: 8 },
+    { kind: "sofa", size: [9, 5, 5], area: 2, x: 55, z: -50, level: 8 },
+    {
+      kind: "officeAnnex",
+      size: [28, 38, 24],
+      area: 3,
+      x: 250,
+      z: -80,
+      level: 10,
+    },
+    {
+      kind: "officeTower",
+      size: [32, 50, 30],
+      area: 3,
+      x: 310,
+      z: 80,
+      level: 10,
+    },
+  ],
+  routes: [
+    {
+      area: 1,
+      kind: "officeWorker",
+      size: [0.55, 1.8, 0.45],
+      count: 6,
+      points: [
+        [-3.7, -3.3],
+        [3.7, -3.3],
+      ],
+    },
+    {
+      area: 2,
+      kind: "officeWorker",
+      size: [0.7, 2, 0.6],
+      count: 10,
+      points: [
+        [75, -25],
+        [75, -40],
+      ],
+    },
+    {
+      area: 2,
+      kind: "officeWorker",
+      size: [0.7, 2, 0.6],
+      count: 6,
+      points: [
+        [-16, -21],
+        [30, -21],
+      ],
+    },
+    {
+      area: 3,
+      kind: "deliveryVan",
+      size: [5, 3, 2.2],
+      count: 4,
+      points: [
+        [160, -120],
+        [370, -120],
+        [370, 120],
+        [160, 120],
+      ],
+      driving: true,
+    },
+    {
+      area: 3,
+      kind: "cart",
+      size: [2, 1.7, 1.2],
+      count: 5,
+      points: [
+        [145, -165],
+        [385, -165],
+      ],
+      driving: true,
+    },
+    {
+      area: 4,
+      kind: "car",
+      size: [4.5, 1.7, 2],
+      count: 12,
+      points: [
+        [-960, -960],
+        [960, -960],
+        [960, 960],
+        [-960, 960],
+      ],
+      driving: true,
+    },
+  ],
+  extras: [
+    ["officeChair", "desk", "cabinet", "copier"],
+    ["meetingTable", "sofa", "officeChair", "cabinet"],
+    ["car", "officeAnnex", "lamp", "palm"],
+  ],
+  skyline: [
+    "officeTower",
+    "officeTower",
+    "officeAnnex",
+    "apartment",
+    "palm",
+    "car",
+    "lamp",
+    "cart",
+  ],
+  water: [],
+  goal: { kind: "headOffice", size: [180, 560, 160] },
+};
+
 export const DISTRICT_PROFILES: Partial<
   Record<DistrictStageId, DistrictProfile>
-> = { america, harbor };
+> = { america, harbor, office };
 export function districtProfile(stageId: StageId): DistrictProfile | undefined {
   return DISTRICT_PROFILES[stageId as DistrictStageId];
 }
@@ -393,6 +568,23 @@ export function districtSpaces(profile: DistrictProfile): readonly ToySpace[] {
   }));
 }
 export function districtWalls(profile: DistrictProfile) {
-  return toyWallParts(districtSpaces(profile), false);
+  const walls = toyWallParts(districtSpaces(profile), false);
+  if (profile.stageId === "office")
+    for (const [index, minX, maxX] of [
+      [0, -20, 45],
+      [1, 85, 120],
+    ])
+      walls.push({
+        id: `office-ceo-partition-${index}`,
+        space: 2,
+        minX,
+        maxX,
+        minZ: -30.25,
+        maxZ: -29.75,
+        height: 12,
+        color: profile.walls[2],
+        door: false,
+      });
+  return walls;
 }
 export const DISTRICT_STREETS = [-1440, -960, -480, 0, 480, 960, 1440];

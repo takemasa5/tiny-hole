@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-14",
+  "tests": {
+    "command": "npm test -- --maxWorkers=4 --testTimeout=20000",
+    "passed": 649,
+    "files": 35,
+    "added": 7
+  },
+  "build": {
+    "passed": true,
+    "offlineVersion": "24879afa17fef78840e2"
+  },
+  "lint": {
+    "passed": true
+  },
+  "diagnosticTypeCheck": {
+    "passed": true
+  },
+  "productionBoundary": {
+    "diagnosticHtmlAbsent": true,
+    "diagnosticInitialStateAbsent": true
+  },
+  "browser": "results.json",
+  "video": "battle.webm",
+  "fullNormalPlaythroughThisRevision": "未実施",
+  "WebKit": "未実施",
+  "iPhone": "未実施"
+}

@@ -1,0 +1,188 @@
+{
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "levels": [
+    {
+      "level": 1,
+      "area": 0,
+      "space": "床の文具トレー",
+      "score": 0,
+      "bodies": 47,
+      "colliders": 372,
+      "drawCalls": 84,
+      "frame": { "median": 16.699999999999932, "p95": 16.799999999999955 }
+    },
+    {
+      "level": 2,
+      "area": 0,
+      "space": "床の文具トレー",
+      "score": 12,
+      "bodies": 64,
+      "colliders": 458,
+      "drawCalls": 99,
+      "frame": { "median": 16.69999999999891, "p95": 16.700000000000728 }
+    },
+    {
+      "level": 3,
+      "area": 0,
+      "space": "床の文具トレー",
+      "score": 62,
+      "bodies": 52,
+      "colliders": 400,
+      "drawCalls": 139,
+      "frame": { "median": 16.69999999999709, "p95": 16.799999999999272 }
+    },
+    {
+      "level": 4,
+      "area": 1,
+      "space": "別館の執務室",
+      "score": 254,
+      "bodies": 62,
+      "colliders": 510,
+      "drawCalls": 170,
+      "frame": { "median": 16.69999999999709, "p95": 16.700000000004366 }
+    },
+    {
+      "level": 5,
+      "area": 1,
+      "space": "別館の執務室",
+      "score": 1022,
+      "bodies": 78,
+      "colliders": 592,
+      "drawCalls": 59,
+      "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 6,
+      "area": 1,
+      "space": "別館の執務室",
+      "score": 4097,
+      "bodies": 99,
+      "colliders": 754,
+      "drawCalls": 384,
+      "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 7,
+      "area": 2,
+      "space": "会議室と社長室",
+      "score": 16424,
+      "bodies": 95,
+      "colliders": 781,
+      "drawCalls": 576,
+      "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 8,
+      "area": 2,
+      "space": "会議室と社長室",
+      "score": 69000,
+      "bodies": 112,
+      "colliders": 942,
+      "drawCalls": 622,
+      "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 9,
+      "area": 3,
+      "space": "会社の敷地と駐車場",
+      "score": 274044,
+      "bodies": 128,
+      "colliders": 1146,
+      "drawCalls": 301,
+      "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 10,
+      "area": 3,
+      "space": "会社の敷地と駐車場",
+      "score": 1085052,
+      "bodies": 138,
+      "colliders": 1125,
+      "drawCalls": 399,
+      "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 11,
+      "area": 4,
+      "space": "本社地区",
+      "score": 4272800,
+      "bodies": 133,
+      "colliders": 1072,
+      "drawCalls": 1128,
+      "frame": { "median": 16.70000000001164, "p95": 33.300000000046566 }
+    },
+    {
+      "level": 12,
+      "area": 4,
+      "space": "本社地区",
+      "score": 17709568,
+      "bodies": 171,
+      "colliders": 1249,
+      "drawCalls": 1532,
+      "frame": { "median": 16.699999999953434, "p95": 33.300000000046566 }
+    }
+  ],
+  "entered": ["stationery", "annex", "meeting", "campus", "hq"],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "seed": 42,
+  "source": {
+    "total": 663,
+    "kinds": [
+      "clip",
+      "pushpin",
+      "eraser",
+      "pencil",
+      "tape",
+      "stapler",
+      "desk",
+      "copier",
+      "documents",
+      "keyboard",
+      "monitor",
+      "officeChair",
+      "officeWorker",
+      "cabinet",
+      "sofa",
+      "meetingTable",
+      "meetingRoom",
+      "car",
+      "deliveryVan",
+      "officeAnnex",
+      "cart",
+      "lamp",
+      "palm",
+      "officeTower",
+      "apartment",
+      "headOffice"
+    ],
+    "stock": 264,
+    "moving": 43,
+    "cityBlocks": 32
+  },
+  "fleeing": ["officeWorker"],
+  "activity": [
+    "officeWorker:working",
+    "officeWorker:waiting",
+    "officeWorker:fleeing",
+    "deliveryVan:driving",
+    "cart:driving",
+    "car:working",
+    "deliveryVan:working",
+    "cart:waiting",
+    "deliveryVan:waiting",
+    "car:driving",
+    "cart:working"
+  ],
+  "goalResetTap": { "before": 0, "after": 1 },
+  "extendedForGoalRecovery": true,
+  "final": {
+    "level": 12,
+    "score": 64113237,
+    "cleared": true,
+    "collected": 453,
+    "moving": 36
+  },
+  "autoTransition": "hell"
+}

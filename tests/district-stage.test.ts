@@ -311,3 +311,38 @@ for (const [stage, kind, gap] of [
         world.free();
       }
     });
+
+it("会社は社長室を可視の壁と通れる開口で分け、社員の往復先に机と複合機がある", () => {
+  const profile = DISTRICT_PROFILES.office!,
+    walls = districtWalls(profile).filter((w) =>
+      w.id.startsWith("office-ceo-partition-"),
+    );
+  expect(walls).toHaveLength(2);
+  expect(walls.every((w) => w.maxX <= 45 || w.minX >= 85)).toBe(true);
+  const ds = createGrowthStage(42, "office");
+  expect(
+    ds.some(
+      (d) =>
+        d.area === 1 &&
+        d.districtKind === "desk" &&
+        d.x === -3.7 &&
+        d.z === -5.3,
+    ),
+  ).toBe(true);
+  expect(
+    ds.some(
+      (d) =>
+        d.area === 1 &&
+        d.districtKind === "copier" &&
+        d.x === 3.7 &&
+        d.z === -5.3,
+    ),
+  ).toBe(true);
+  expect(
+    ds.some(
+      (d) =>
+        d.districtKind === "officeWorker" &&
+        d.route?.some((p) => p.x === 75 && p.z === -40),
+    ),
+  ).toBe(true);
+});

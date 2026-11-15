@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-14",
+  "tests": {
+    "total": 653,
+    "files": 35,
+    "fullRun": {
+      "passed": 652,
+      "timeout": 1,
+      "timeoutCase": "office:1000シード",
+      "durationSeconds": 105.89
+    },
+    "isolatedRetry": {
+      "passed": 1,
+      "durationSeconds": 13.36
+    },
+    "assertionFailures": 0
+  },
+  "build": {
+    "passed": true,
+    "offlineVersion": "0a5c48bd1ad8df3c3282"
+  },
+  "lint": {
+    "passed": true
+  },
+  "format": {
+    "passed": true
+  },
+  "typeCheck": {
+    "passed": true
+  },
+  "browser": "results.json",
+  "video": "battle.webm",
+  "motion": {
+    "hero": {
+      "maximumPlanarDrift": 0.0,
+      "rightArmRange": [-2.24931503602427, -0.8574492273636328],
+      "leftArmRange": [-2.2425507726363674, -0.85068496397573]
+    },
+    "monster": {
+      "maximumPlanarDrift": 0.0,
+      "rightArmRange": [-2.24931503602427, -0.8574492273636328],
+      "leftArmRange": [-2.2425507726363674, -0.85068496397573]
+    }
+  },
+  "normalFullPlaythrough": "今回未実施",
+  "WebKit": "未実施",
+  "iPhone": "未実施"
+}

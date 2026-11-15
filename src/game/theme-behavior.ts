@@ -3,6 +3,7 @@ import { isHellActor } from "./hell-world";
 import { EGYPT_SPACES } from "./egypt-world";
 import type { GrowthObject } from "./growth-stage";
 import { footprintOf, isEgyptGod } from "./growth-stage";
+import { growthCollisionBounds } from "./growth-shape";
 
 export interface ThemeMotion {
   phase:
@@ -74,7 +75,12 @@ export function themeVelocity(
     return hellVelocity(definition, motion, position, hole, delta);
   motion.time += delta;
   if (motion.phase === "falling") return { x: 0, z: 0 };
-  const footprint = footprintOf(definition);
+  // The long tail leaves the box's corners empty; escape uses the actual model.
+  const footprint =
+    definition.model === "hero" || definition.model === "monster"
+      ? growthCollisionBounds(definition, { x: 0, y: 0, z: 0, w: 1 }, "toys")
+          .footprint
+      : footprintOf(definition);
   const speed =
     Math.max(0.08, Math.hypot(...definition.size) * 0.35) *
     (definition.speedMultiplier ?? 1);
@@ -113,20 +119,18 @@ export function themeVelocity(
   motion.fleeTime = 0;
   if (definition.behavior === "battle") {
     motion.phase = partner ? "fighting" : "searching";
-    const target = partner ?? {
+    if (partner) {
+      const dx = partner.x - position.x;
+      const dz = partner.z - position.z;
+      if (Math.hypot(dx, dz) > 0.001) motion.heading = Math.atan2(dx, dz);
+      return { x: 0, z: 0 };
+    }
+    const target = {
       x: definition.x + Math.sin(motion.time * 0.35) * 12,
       z: definition.z + Math.cos(motion.time * 0.35) * 12,
     };
     motion.heading = Math.atan2(target.x - position.x, target.z - position.z);
-    const beat = motion.time % 6;
-    const movement = partner
-      ? beat < 1.5
-        ? 0.6
-        : beat > 4.5
-          ? -0.35
-          : 0
-      : 0.3;
-    // Keep the encounter within its plaza even after one participant disappears.
+    // Keep the remaining character's search within its plaza.
     const home = Math.hypot(
       position.x - definition.x,
       position.z - definition.z,
@@ -137,8 +141,8 @@ export function themeVelocity(
         definition.z - position.z,
       );
     return {
-      x: Math.sin(motion.heading) * speed * (home > 25 ? 0.6 : movement),
-      z: Math.cos(motion.heading) * speed * (home > 25 ? 0.6 : movement),
+      x: Math.sin(motion.heading) * speed * (home > 25 ? 0.6 : 0.3),
+      z: Math.cos(motion.heading) * speed * (home > 25 ? 0.6 : 0.3),
     };
   }
   if (!definition.route) return { x: 0, z: 0 };

@@ -24,7 +24,7 @@ const result = {
   WebKit: "未実施",
 };
 try {
-  await page.goto(process.env.HOLE_URL || "http://127.0.0.1:5176/");
+  await page.goto(process.env.HOLE_URL || "http://127.0.0.1:5173/");
   await page.waitForFunction(() => window.__hole);
   await page
     .getByRole("combobox", { name: "ステージ", exact: true })

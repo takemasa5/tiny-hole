@@ -191,7 +191,7 @@ function location(s) {
   )?.id;
 }
 try {
-  await page.goto(process.env.HOLE_URL || "http://127.0.0.1:5178/");
+  await page.goto(process.env.HOLE_URL || "http://127.0.0.1:5173/");
   await page.waitForFunction(() => window.__hole);
   await page
     .getByRole("combobox", { name: "ステージ", exact: true })
@@ -254,6 +254,7 @@ try {
     targetStarted = 0;
   for (let attempt = 0; attempt < 7000; attempt++) {
     let s = await snapshot();
+    if (Date.now() - start > 720000) throw new Error("12分でクリアできません");
     if ((s.stageId !== stage && clearedSnapshot) || s.cleared) break;
     if (!seen.has(s.level)) {
       seen.add(s.level);
@@ -331,18 +332,40 @@ try {
       const key = `${d.districtKind}:${d.motion}`;
       if (!report.activity.includes(key)) report.activity.push(key);
     }
+    const goal = s.objects.find((d) => d.id === "goal");
+    if (
+      s.level === 12 &&
+      goal &&
+      goal.collisionFootprint >= s.hole.radius * 0.98 &&
+      Math.hypot(goal.position.x - s.hole.x, goal.position.z - s.hole.z) <
+        s.hole.radius * 0.1 &&
+      goal.screen.x > 20 &&
+      goal.screen.x < 1260 &&
+      goal.screen.y > 70 &&
+      goal.screen.y < 780
+    ) {
+      await steer(0, 0);
+      await page.mouse.click(goal.screen.x, goal.screen.y);
+      await page.waitForTimeout(200);
+      const after = await snapshot();
+      report.goalResetTap = { before: s.resets, after: after.resets };
+      continue;
+    }
     const candidates = s.objects.filter(
       (d) =>
         (skipUntil.get(d.id) ?? 0) < Date.now() &&
         d.detailed &&
         (d.id === "goal" || d.id.startsWith("growth-")) &&
         d.level <= s.level &&
-        d.collisionFootprint < s.hole.radius * 0.98,
+        (d.collisionFootprint < s.hole.radius * 0.98 ||
+          (d.id === "goal" && s.level === 12)),
     );
     candidates.sort(
       (a, b) =>
         (b.id === "goal") - (a.id === "goal") ||
         b.level - a.level ||
+        Math.max(0, a.size[1] / s.hole.radius - 1.2) -
+          Math.max(0, b.size[1] / s.hole.radius - 1.2) ||
         Math.hypot(a.position.x - s.hole.x, a.position.z - s.hole.z) -
           Math.hypot(b.position.x - s.hole.x, b.position.z - s.hole.z),
     );
@@ -398,7 +421,13 @@ try {
     }
     const dx = point.x - s.hole.x,
       dz = point.z - s.hole.z;
-    const centered = path.length === 1 && distance < s.hole.radius * 0.22;
+    const margin = Math.max(
+      s.hole.radius * 0.03,
+      s.hole.radius - selected.collisionFootprint,
+    );
+    const centered =
+      path.length === 1 &&
+      distance < Math.min(s.hole.radius * 0.22, margin * 0.6);
     await steer(centered ? 0 : dx, centered ? 0 : dz);
     await page.waitForTimeout(
       centered

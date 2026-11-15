@@ -1,5 +1,7 @@
 # 技術構成と実装方針
 
+2026-11-13: アメリカ・港・会社は、承認済みの5空間の構成を `district-world.ts` のステージ別データで定義し、配置・実形状モデル・床描画を共有する。既存の他ステージは作り替えない。港の吊り荷は `district-hoist.ts` の軌道に剛体・表示・ケーブル端を合わせ、クレーンの落下後は重力へ戻す。個別の仕様・検証は [アメリカ](america-theme-implementation.md)・[港](harbor-theme-implementation.md)・[会社](office-theme-implementation.md) を参照。
+
 2026-11-06: オーナー承認の成長・テーマ行動・段階配置の改修を実装。現在のローカル版は [scale-growth-implementation.md](scale-growth-implementation.md) を参照。以下の8段階・個数・供給などの記録は従来版の仕様・検証結果。
 
 更新日: 2026-10-31 / 状態: 推奨構成で8ステージを実装済み

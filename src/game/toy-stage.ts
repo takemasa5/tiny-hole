@@ -484,7 +484,7 @@ function createToyLayout(
       const hero = template.id === "hero";
       placed.push({
         ...template,
-        size: hero ? [48, 180, 42] : [56, 220, 48],
+        size: hero ? [48, 180, 42] : [80, 220, 88],
         area: 4,
         x: hero ? 470 : 590,
         z: hero ? -320 : -390,

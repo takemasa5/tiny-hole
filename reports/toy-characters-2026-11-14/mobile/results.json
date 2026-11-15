@@ -1,0 +1,16 @@
+{
+  "browser": "156.0.8078.4",
+  "viewport": "390x844",
+  "errors": [],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "touchMovesAndStops": true,
+  "gate": {
+    "text": "レベル3になると箱の側面が開きます",
+    "font": 16,
+    "bounds": { "x": 53.7265625, "y": 774, "width": 282.546875, "height": 46 },
+    "blocks": true
+  },
+  "restart": true,
+  "stageSwitch": true
+}

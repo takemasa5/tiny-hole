@@ -11,6 +11,7 @@ import { GameSounds } from "./sound";
 import { GrowthEffect } from "./growth-effect";
 import { PHYSICS_STEP, STAGES, isHuman, type StageId } from "./stage";
 import { animateWalker, disposeScene } from "./visuals";
+import { animateToyCharacter } from "./toy-character-visuals";
 import {
   createGrowthBody,
   growthLosesSupport,
@@ -71,6 +72,8 @@ export type RenderDiagnosticMode =
 export interface RenderDiagnostics {
   mode: RenderDiagnosticMode;
   seed: number;
+  scenario?: "toy-battle";
+  battleLevel?: 9 | 10 | 11;
 }
 interface Entity {
   definition: GrowthObject;
@@ -100,6 +103,10 @@ export async function startGame(
   const diagnosticMode = import.meta.env.DEV
     ? (diagnostics?.mode ?? "normal")
     : "normal";
+  const toyBattlePreview =
+    import.meta.env.DEV &&
+    stageId === "toys" &&
+    diagnostics?.scenario === "toy-battle";
   const seed =
     import.meta.env.DEV && diagnostics
       ? diagnostics.seed
@@ -265,6 +272,18 @@ export async function startGame(
     renderHole = new THREE.Vector2();
   let radius: number = GROWTH_LEVELS[0].radius;
   let openedArea = 0;
+  if (toyBattlePreview) {
+    progress.collect({
+      id: "diagnostic-toy-battle",
+      value: GROWTH_LEVELS[(diagnostics?.battleLevel ?? 10) - 1].threshold,
+    });
+    radius = GROWTH_LEVELS[progress.level - 1].radius;
+    openedArea = areaForLevel(progress.level, stageId);
+    hole.set(530, -160);
+    destination.copy(hole);
+    previousHole.copy(hole);
+    renderHole.copy(hole);
+  }
   let audioError = "";
   let boundaryHint = "";
   const sounds = new GameSounds(
@@ -323,6 +342,10 @@ export async function startGame(
     const scale = (radius * height) / Math.min(width, height);
     camera.position.set(renderHole.x, 7.6 * scale, renderHole.y + 6.8 * scale);
     camera.lookAt(renderHole.x, 0, renderHole.y);
+    if (toyBattlePreview) {
+      camera.position.set(800, 290, 70);
+      camera.lookAt(530, 90, -350);
+    }
     camera.near = Math.max(
       0.0005,
       radius * (diagnosticMode === "precise-depth" ? 0.4 : 0.015),
@@ -1165,12 +1188,8 @@ export async function startGame(
             motion.phase === "fleeing",
             entity.falling || motion.phase === "waiting",
           );
-        const arm = mesh.getObjectByName("attack-arm");
-        if (arm)
-          arm.rotation.x =
-            !entity.falling && motion.phase === "fighting"
-              ? -0.7 - Math.sin(motion.time * 3) * 0.65
-              : 0;
+        if (d.model === "hero" || d.model === "monster")
+          animateToyCharacter(mesh, motion, entity.falling);
       }
       toyWorld?.update(progress.level, openedArea, holeState(), 0);
       toyWorld?.render(renderHoleState(), alpha);
@@ -1340,6 +1359,12 @@ export async function startGame(
         top:
           mesh.position.y +
           growthCollisionBounds(definition, mesh.quaternion, stageId).top,
+        bottom:
+          mesh.position.y +
+          growthCollisionBounds(definition, mesh.quaternion, stageId).bottom,
+        battleArmAngle: mesh.getObjectByName("attack-arm")?.rotation.x,
+        battleOtherArmAngle: mesh.getObjectByName("other-arm")?.rotation.x,
+        battleTime: definition.behavior === "battle" ? motion.time : undefined,
         screen: project(mesh.position.clone()),
       }),
     ),

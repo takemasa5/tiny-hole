@@ -1,0 +1,227 @@
+{
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "levels": [
+    {
+      "level": 1,
+      "area": 0,
+      "space": "小物箱",
+      "bodies": 54,
+      "colliders": 382,
+      "drawCalls": 165,
+      "triangles": 8786,
+      "physicsMilliseconds": 2.199999988079071,
+      "occlusionMilliseconds": 1.0999999642372131,
+      "frame": { "median": 16.700000000000728, "p95": 133.29999999999927 },
+      "score": 0
+    },
+    {
+      "level": 2,
+      "area": 0,
+      "space": "小物箱",
+      "bodies": 45,
+      "colliders": 312,
+      "drawCalls": 302,
+      "triangles": 16504,
+      "physicsMilliseconds": 0.6000000238418579,
+      "occlusionMilliseconds": 1.399999976158142,
+      "frame": { "median": 16.69999999999709, "p95": 83.30000000000291 },
+      "score": 18
+    },
+    {
+      "level": 3,
+      "area": 1,
+      "space": "おもちゃ箱",
+      "bodies": 79,
+      "colliders": 677,
+      "drawCalls": 387,
+      "triangles": 21888,
+      "physicsMilliseconds": 7.400000035762787,
+      "occlusionMilliseconds": 1.9000000357627869,
+      "frame": { "median": 16.69999999999709, "p95": 50 },
+      "score": 68
+    },
+    {
+      "level": 4,
+      "area": 1,
+      "space": "おもちゃ箱",
+      "bodies": 69,
+      "colliders": 588,
+      "drawCalls": 196,
+      "triangles": 11528,
+      "physicsMilliseconds": 1.399999976158142,
+      "occlusionMilliseconds": 2.399999976158142,
+      "frame": { "median": 16.69999999999709, "p95": 100 },
+      "score": 316
+    },
+    {
+      "level": 5,
+      "area": 2,
+      "space": "子供部屋",
+      "bodies": 61,
+      "colliders": 487,
+      "drawCalls": 440,
+      "triangles": 23946,
+      "physicsMilliseconds": 1.600000023841858,
+      "occlusionMilliseconds": 1.699999988079071,
+      "frame": { "median": 16.69999999999709, "p95": 83.30000000000291 },
+      "score": 1164
+    },
+    {
+      "level": 6,
+      "area": 2,
+      "space": "子供部屋",
+      "bodies": 45,
+      "colliders": 366,
+      "drawCalls": 140,
+      "triangles": 7638,
+      "physicsMilliseconds": 1.800000011920929,
+      "occlusionMilliseconds": 1.199999988079071,
+      "frame": { "median": 16.70000000001164, "p95": 33.40000000002328 },
+      "score": 4252
+    },
+    {
+      "level": 7,
+      "area": 3,
+      "space": "家の中",
+      "bodies": 83,
+      "colliders": 653,
+      "drawCalls": 564,
+      "triangles": 25448,
+      "physicsMilliseconds": 4,
+      "occlusionMilliseconds": 1.2000000476837158,
+      "frame": { "median": 16.70000000001164, "p95": 83.30000000001746 },
+      "score": 17564
+    },
+    {
+      "level": 8,
+      "area": 3,
+      "space": "家の中",
+      "bodies": 97,
+      "colliders": 608,
+      "drawCalls": 104,
+      "triangles": 5470,
+      "physicsMilliseconds": 12.800000011920929,
+      "occlusionMilliseconds": 1.199999988079071,
+      "frame": { "median": 16.699999999982538, "p95": 33.300000000046566 },
+      "score": 68764
+    },
+    {
+      "level": 9,
+      "area": 4,
+      "space": "街",
+      "bodies": 104,
+      "colliders": 675,
+      "drawCalls": 599,
+      "triangles": 21026,
+      "physicsMilliseconds": 7.899999976158142,
+      "occlusionMilliseconds": 1.9000000357627869,
+      "frame": { "median": 16.70000000001164, "p95": 66.70000000001164 },
+      "score": 379804
+    },
+    {
+      "level": 10,
+      "area": 4,
+      "space": "街",
+      "bodies": 41,
+      "colliders": 336,
+      "drawCalls": 65,
+      "triangles": 5132,
+      "physicsMilliseconds": 3.600000023841858,
+      "occlusionMilliseconds": 2,
+      "frame": { "median": 16.70000000001164, "p95": 33.29999999998836 },
+      "score": 1068468
+    },
+    {
+      "level": 11,
+      "area": 4,
+      "space": "街",
+      "bodies": 45,
+      "colliders": 381,
+      "drawCalls": 158,
+      "triangles": 6842,
+      "physicsMilliseconds": 1.699999988079071,
+      "occlusionMilliseconds": 1.5999999642372131,
+      "frame": { "median": 16.70000000001164, "p95": 33.29999999998836 },
+      "score": 4345268
+    },
+    {
+      "level": 12,
+      "area": 4,
+      "space": "街",
+      "bodies": 174,
+      "colliders": 1504,
+      "drawCalls": 669,
+      "triangles": 13690,
+      "physicsMilliseconds": 9.199999988079071,
+      "occlusionMilliseconds": 1.100000023841858,
+      "frame": { "median": 16.70000000001164, "p95": 33.399999999965075 },
+      "score": 17583540
+    }
+  ],
+  "entered": ["notions", "chest", "bedroom", "house", "city"],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "seed": 42,
+  "initialBodies": 54,
+  "closedSideBlocks": true,
+  "traffic": [
+    { "behavior": "route", "moved": true },
+    { "behavior": "train", "moved": true }
+  ],
+  "giants": [
+    { "id": "hero", "size": [48, 180, 42], "phase": "fighting" },
+    { "id": "monster", "size": [80, 220, 88], "phase": "fighting" },
+    { "id": "goal", "size": [196, 700, 196], "phase": "working" }
+  ],
+  "final": {
+    "level": 12,
+    "score": 35278260,
+    "cleared": true,
+    "bodies": 143,
+    "collected": 237,
+    "doors": [
+      {
+        "id": "notions-door",
+        "requiredLevel": 3,
+        "open": true,
+        "amount": 1,
+        "x": 0.75,
+        "z": 0,
+        "side": "east",
+        "width": 1.1
+      },
+      {
+        "id": "chest-door",
+        "requiredLevel": 5,
+        "open": true,
+        "amount": 1,
+        "x": 0,
+        "z": 2.6,
+        "side": "south",
+        "width": 2.7
+      },
+      {
+        "id": "bedroom-door",
+        "requiredLevel": 7,
+        "open": true,
+        "amount": 1,
+        "x": 31.6,
+        "z": 23,
+        "side": "east",
+        "width": 8.5
+      },
+      {
+        "id": "house-door",
+        "requiredLevel": 9,
+        "open": true,
+        "amount": 1,
+        "x": 95,
+        "z": 80,
+        "side": "east",
+        "width": 33
+      }
+    ]
+  },
+  "autoTransition": "office"
+}

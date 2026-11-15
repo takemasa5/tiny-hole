@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ヒーローと怪獣の対戦確認</title>
+  </head>
+  <body>
+    <main class="game-shell">
+      <canvas
+        aria-label="ヒーローと怪獣の対戦を確認するおもちゃステージ"
+      ></canvas>
+      <section class="battle-panel">
+        <strong>ヒーローと怪獣の対戦確認</strong>
+        <p id="battle-description">
+          実際のおもちゃステージをレベル10から開始する開発用画面です。
+        </p>
+        <p id="battle-state" role="status">準備中…</p>
+        <button id="restart">同じ配置でやり直す</button>
+        <a href="./toy-battle.html">対戦を見る（レベル10）</a>
+        <a href="./toy-battle.html?level=11">逃げる動きを見る（レベル11）</a>
+        <a href="/">通常のゲームへ戻る</a>
+      </section>
+    </main>
+    <script type="module" src="./toy-battle.ts"></script>
+  </body>
+</html>

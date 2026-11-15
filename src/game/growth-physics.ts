@@ -76,7 +76,12 @@ export function growthLosesSupport(
   const bottom =
     position.y + growthCollisionBounds(definition, rotation, stage).bottom;
   const overlaps = apertureOverlapsBase(definition, position, rotation, hole);
-  if (isEgyptGod(definition) || isHellActor(definition)) {
+  if (
+    isEgyptGod(definition) ||
+    isHellActor(definition) ||
+    definition.model === "hero" ||
+    definition.model === "monster"
+  ) {
     // A walking character balances on its remaining foot; contact with its outline is not a fall.
     return overlaps && bottom < -Math.max(0.01, hole.radius * 0.03);
   }

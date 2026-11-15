@@ -10,6 +10,7 @@ import { plazaVisual } from "./plaza-visuals";
 import { hellVisual } from "./hell-visuals";
 import { egyptVisual } from "./egypt-visuals";
 import { toyVisual } from "./toy-visuals";
+import { toyCharacterVisual } from "./toy-character-visuals";
 import { GROUND_PAINT_RENDER_ORDER } from "./ground-geometry";
 
 function box(group: THREE.Group, size: number[], at: number[], color: string) {
@@ -116,28 +117,7 @@ export function growthVisual(
       box(group, [0.035, 0.04, 0.7], [x, 0.13, 0], "#7e8c91");
     }
   } else if (definition.model === "hero" || definition.model === "monster") {
-    const hero = definition.model === "hero";
-    const color = hero ? "#d1e2e9" : "#65916b";
-    box(group, [0.5, 0.4, 0.48], [0, 0.02, 0], color);
-    box(group, [0.42, 0.2, 0.42], [0, 0.4, 0.02], color);
-    box(
-      group,
-      [0.35, 0.05, 0.05],
-      [0, 0.42, 0.25],
-      hero ? "#fff1a0" : "#ffbf73",
-    );
-    if (hero) box(group, [0.27, 0.24, 0.03], [0, 0.05, 0.26], "#d76b5b");
-    else
-      for (const y of [-0.2, 0, 0.2])
-        box(group, [0.22, 0.08, 0.2], [0, y, -0.34], "#c2b581");
-    for (const side of [-1, 1]) {
-      box(group, [0.2, 0.35, 0.32], [side * 0.15, -0.325, 0], color);
-      const arm = new THREE.Group();
-      arm.name = side === 1 ? "attack-arm" : "other-arm";
-      arm.position.set(side * 0.35, 0.17, 0);
-      box(arm, [0.16, 0.3, 0.22], [0, -0.15, 0], color);
-      group.add(arm);
-    }
+    group.add(toyCharacterVisual(definition.model, definition.size));
   } else if (definition.model === "nut") {
     const nut = new THREE.Mesh(
       new THREE.TorusGeometry(0.32, 0.16, 6, 6),
