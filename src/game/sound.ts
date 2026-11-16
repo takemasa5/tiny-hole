@@ -10,6 +10,7 @@ import {
 import { scheduleCharacterVoice } from "./character-voice";
 import { GameMusic, MUSIC_STYLES } from "./music";
 import type { StageId } from "./stage";
+import { RecordedMusic, TOY_MUSIC_TITLE } from "./recorded-music";
 
 type ToneEvent =
   "pickup" | "growth" | "clear" | "shot" | "tanukiCry" | "doorOpen";
@@ -137,7 +138,7 @@ export class GameSounds {
   private lastTanukiCry = -Infinity;
   private lastFlee = new Map<ObjectVoice, number>();
   private fleeingVoices = new Set<AudioScheduledSourceNode>();
-  private music?: GameMusic;
+  private music?: GameMusic | RecordedMusic;
   private musicEnabled = true;
   private objectVoices = new Map<string, number>();
   private materials: Partial<Record<ObjectMaterial, number>> = {};
@@ -181,12 +182,14 @@ export class GameSounds {
         const compressor = this.context.createDynamicsCompressor();
         this.master.connect(compressor);
         compressor.connect(this.context.destination);
-        this.music = new GameMusic(
-          this.context,
-          this.master,
-          this.stageId,
-          (error) => this.report(error),
-        );
+        this.music =
+          this.stageId === "toys"
+            ? new RecordedMusic(this.context, this.master, (error) =>
+                this.report(error),
+              )
+            : new GameMusic(this.context, this.master, this.stageId, (error) =>
+                this.report(error),
+              );
       }
       if (this.usesAmericanVoice) void this.loadAmericanVoice();
       if (this.context.state !== "running")
@@ -459,8 +462,12 @@ export class GameSounds {
         : {
             enabled: this.musicEnabled,
             active: false,
-            title: MUSIC_STYLES[this.stageId].title,
-            tempo: MUSIC_STYLES[this.stageId].tempo,
+            title:
+              this.stageId === "toys"
+                ? TOY_MUSIC_TITLE
+                : MUSIC_STYLES[this.stageId].title,
+            tempo:
+              this.stageId === "toys" ? null : MUSIC_STYLES[this.stageId].tempo,
             voices: 0,
             bars: 0,
             starts: 0,

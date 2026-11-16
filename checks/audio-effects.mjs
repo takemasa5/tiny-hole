@@ -85,7 +85,9 @@ try {
     assert.equal(audio.error, "");
     assert(
       audio.music.active &&
-        audio.music.notesScheduled > 0 &&
+        (audio.music.source === "file"
+          ? audio.music.loaded && audio.music.duration > 0
+          : audio.music.notesScheduled > 0) &&
         audio.music.voices <= 64,
     );
     report.music.push({ stage, ...audio.music });

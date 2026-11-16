@@ -1,0 +1,46 @@
+{
+  "browser": "156.0.8078.4",
+  "viewport": "390x844",
+  "firstTouchStartsMusic": true,
+  "musicPreferenceSurvivesStageChange": true,
+  "buttonsWorkWithTouch": true,
+  "audio": {
+    "enabled": true,
+    "state": "running",
+    "voices": 0,
+    "error": "",
+    "played": {
+      "pickup": 0,
+      "growth": 0,
+      "clear": 0,
+      "personCry": 0,
+      "americanCry": 0,
+      "shot": 0,
+      "tanukiCry": 0,
+      "doorOpen": 0,
+      "flee": 0,
+      "objectPickup": 0,
+      "objectFall": 0
+    },
+    "materials": {},
+    "music": {
+      "enabled": true,
+      "active": true,
+      "source": "file",
+      "title": "おもちゃのよふかし",
+      "tempo": null,
+      "voices": 1,
+      "starts": 1,
+      "loaded": true,
+      "loading": false,
+      "duration": 178.04798185941044,
+      "position": 0.06385487528344669,
+      "loop": true,
+      "volume": 0.12,
+      "url": "/audio/toy-night.m4a"
+    }
+  },
+  "errors": [],
+  "iPhone": "未実施",
+  "WebKit": "未実施"
+}

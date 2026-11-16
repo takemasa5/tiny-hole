@@ -1,5 +1,6 @@
 import { GameSounds } from "../src/game/sound";
 import { MUSIC_STYLES } from "../src/game/music";
+import { TOY_MUSIC_TITLE } from "../src/game/recorded-music";
 import { createGrowthStage } from "../src/game/growth-stage";
 import { STAGE_IDS, STAGES, type StageId } from "../src/game/stage";
 import type { FeedbackObject } from "../src/game/object-feedback";
@@ -23,7 +24,10 @@ function reset() {
     stage === "america",
     stage,
   );
-  state.textContent = `${MUSIC_STYLES[stage].title} · ${MUSIC_STYLES[stage].tempo} BPM`;
+  state.textContent =
+    stage === "toys"
+      ? `${TOY_MUSIC_TITLE} · 提供された楽曲`
+      : `${MUSIC_STYLES[stage].title} · ${MUSIC_STYLES[stage].tempo} BPM`;
 }
 for (const id of STAGE_IDS) {
   const option = document.createElement("option");

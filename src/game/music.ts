@@ -321,6 +321,7 @@ export class GameMusic {
   snapshot() {
     return {
       enabled: this.enabled,
+      source: "synthesized" as const,
       active: !!this.timer,
       title: MUSIC_STYLES[this.stage].title,
       tempo: MUSIC_STYLES[this.stage].tempo,

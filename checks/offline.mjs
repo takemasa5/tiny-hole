@@ -53,6 +53,7 @@ async function serve(files, missingAudio = false) {
         ".png": "image/png",
         ".svg": "image/svg+xml",
         ".wav": "audio/wav",
+        ".m4a": "audio/mp4",
       }[extname(path)] || "application/octet-stream";
     response.writeHead(200, {
       "Content-Type": type,
@@ -84,7 +85,7 @@ const directory =
   Date.now();
 await mkdir(directory, { recursive: true });
 const report = {
-  date: "2026-11-06",
+  date: new Date().toLocaleDateString("sv-SE", { timeZone: "Asia/Tokyo" }),
   directory,
   iPhoneSafari: "未実施",
   WebKit: "未実施",
@@ -139,6 +140,7 @@ try {
     return (await cache.keys()).map((request) => new URL(request.url).pathname);
   });
   assert(report.initialCache.includes("/tiny-hole/audio/american-fall.wav"));
+  assert(report.initialCache.includes("/tiny-hole/audio/toy-night.m4a"));
   const manifest = JSON.parse(
     initialFiles.get("manifest.webmanifest").toString(),
   );
@@ -205,8 +207,14 @@ try {
     await offlinePage
       .getByRole("combobox", { name: "ステージ", exact: true })
       .selectOption(id);
-    await offlinePage.getByText("目標：" + goal, { exact: false }).waitFor();
+    await offlinePage
+      .locator(".goal-label")
+      .filter({ hasText: goal })
+      .waitFor();
     await offlinePage.locator(".loading-overlay").waitFor({ state: "hidden" });
+    const previousDecodes = await offlinePage.evaluate(
+      () => window.__offlineAudio.decodes,
+    );
     await offlinePage.keyboard.down("ArrowRight");
     await offlinePage.waitForTimeout(350);
     await offlinePage.keyboard.up("ArrowRight");
@@ -218,6 +226,14 @@ try {
         undefined,
         { timeout: 5000 },
       );
+    if (id === "toys") {
+      await offlinePage.waitForFunction(
+        (previous) => window.__offlineAudio.decodes > previous,
+        previousDecodes,
+        { timeout: 10000 },
+      );
+      report.toyMusicDecodedOffline = true;
+    }
     assert.equal(await offlinePage.locator(".audio-notice").count(), 0);
     report.stages.push(id);
   }
@@ -250,6 +266,11 @@ try {
     ),
   );
 
+  assert(
+    report.resourcesFromServiceWorker.includes(
+      "/tiny-hole/audio/toy-night.m4a",
+    ),
+  );
   const recoveryServer = await serve(initialFiles, true);
   servers.push(recoveryServer);
   const recoveryContext = await browser.newContext();

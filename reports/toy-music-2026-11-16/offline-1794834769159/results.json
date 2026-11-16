@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-06",
+  "directory": "reports/toy-music-2026-11-16/offline-1794834769159",
+  "iPhoneSafari": "未実施",
+  "WebKit": "未実施",
+  "initialCache": [
+    "/tiny-hole/",
+    "/tiny-hole/assets/index-B7g_aRMj.css",
+    "/tiny-hole/assets/index-RAPhS2Ug.js",
+    "/tiny-hole/audio/american-fall.wav",
+    "/tiny-hole/audio/toy-night.m4a",
+    "/tiny-hole/icons/apple-touch-icon.png",
+    "/tiny-hole/icons/hole-192.png",
+    "/tiny-hole/icons/hole-512.png",
+    "/tiny-hole/icons/hole.svg",
+    "/tiny-hole/index.html",
+    "/tiny-hole/manifest.webmanifest"
+  ],
+  "manifestAndIcons": true,
+  "updateWaitsForPlayerAndReplacesCache": true,
+  "serverStoppedAndHttpCacheCleared": true,
+  "coldOfflineLaunch": true,
+  "stages": [
+    "plaza",
+    "mountain",
+    "america",
+    "egypt",
+    "harbor",
+    "toys",
+    "office",
+    "hell"
+  ],
+  "toyMusicDecodedOffline": true,
+  "audio": {
+    "decodes": 2,
+    "tones": 67
+  },
+  "resourcesFromServiceWorker": [
+    "/tiny-hole/",
+    "/tiny-hole/assets/index-B7g_aRMj.css",
+    "/tiny-hole/assets/index-RAPhS2Ug.js",
+    "/tiny-hole/icons/hole.svg",
+    "/tiny-hole/audio/american-fall.wav",
+    "/tiny-hole/audio/toy-night.m4a"
+  ],
+  "incompleteDownloadRejectedAndRetrySucceeds": true,
+  "browser": "156.0.8078.4",
+  "errors": []
+}

@@ -1,0 +1,96 @@
+{
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "signal": {
+    "duration": 178.04798185941044,
+    "channels": 2,
+    "sampleRate": 44100,
+    "peak": 0.9952497482299805,
+    "rms": 0.15220624702016156
+  },
+  "pauseResume": {
+    "stoppedAt": 1.509297052154195,
+    "resumed": {
+      "enabled": true,
+      "active": true,
+      "source": "file",
+      "title": "おもちゃのよふかし",
+      "tempo": null,
+      "voices": 1,
+      "starts": 2,
+      "loaded": true,
+      "loading": false,
+      "duration": 178.04798185941044,
+      "position": 1.5209070294784583,
+      "loop": true,
+      "volume": 0.12,
+      "url": "/audio/toy-night.m4a"
+    }
+  },
+  "syntheticVisibilityPauseResume": true,
+  "globalMute": true,
+  "stageChangeStopsOldTrack": true,
+  "restartStartsAtBeginning": true,
+  "shortFixtureLoop": {
+    "enabled": true,
+    "active": true,
+    "source": "file",
+    "title": "おもちゃのよふかし",
+    "tempo": null,
+    "voices": 1,
+    "starts": 1,
+    "loaded": true,
+    "loading": false,
+    "duration": 0.25,
+    "position": 0.0626984126984127,
+    "loop": true,
+    "volume": 0.12,
+    "url": "/audio/toy-night.m4a",
+    "errors": []
+  },
+  "muteDuringLoadPreventsLatePlayback": true,
+  "final": {
+    "enabled": true,
+    "state": "running",
+    "voices": 0,
+    "error": "",
+    "played": {
+      "pickup": 0,
+      "growth": 0,
+      "clear": 0,
+      "personCry": 0,
+      "americanCry": 0,
+      "shot": 0,
+      "tanukiCry": 0,
+      "doorOpen": 0,
+      "flee": 0,
+      "objectPickup": 0,
+      "objectFall": 0
+    },
+    "materials": {},
+    "music": {
+      "enabled": true,
+      "active": true,
+      "source": "file",
+      "title": "おもちゃのよふかし",
+      "tempo": null,
+      "voices": 1,
+      "starts": 1,
+      "loaded": true,
+      "loading": false,
+      "duration": 178.04798185941044,
+      "position": 0.005804988662131527,
+      "loop": true,
+      "volume": 0.12,
+      "url": "/audio/toy-night.m4a"
+    }
+  },
+  "asset": {
+    "bytes": 2919359,
+    "sha256": "41b895a049308d07e3901bcf5795ada3e92aed08dd2e31708052cc131422aac1",
+    "originalPreserved": true
+  },
+  "passed": true
+}
