@@ -86,7 +86,32 @@ try {
   await page.waitForTimeout(150);
   assert(distance(await snapshot(), origin) < origin.hole.radius * 0.01);
   assert.equal(await page.locator(".touch-stick").isVisible(), false);
-  await move(142, 700);
+  await move(136, 700);
+  await page.waitForFunction(
+    () => window.__hole.snapshot().input.stick?.strength === 0.7,
+  );
+  assert.equal((await snapshot()).input.stick.strength, 0.7);
+  assert.equal(await page.locator(".touch-stick.at-full-speed").count(), 0);
+  const stickSize = await page.locator(".touch-stick").boundingBox();
+  assert.equal(stickSize.width, 96);
+  assert.equal(stickSize.height, 96);
+  await move(147, 700);
+  await page.waitForFunction(
+    () => window.__hole.snapshot().input.stick?.strength === 0.975,
+  );
+  assert.equal(await page.locator(".touch-stick.at-full-speed").count(), 0);
+  await move(148, 700);
+  await page.waitForFunction(
+    () => window.__hole.snapshot().input.stick?.strength === 1,
+  );
+  assert.equal((await snapshot()).input.stick.strength, 1);
+  assert(await page.locator(".touch-stick.at-full-speed").isVisible());
+  report.sensitivity = {
+    diameter: stickSize.width,
+    speedAt36px: 0.7,
+    fullSpeedAt: 48,
+  };
+  await move(154, 700);
   await page.waitForTimeout(100);
   const a = await snapshot();
   await page.waitForFunction(
@@ -117,12 +142,18 @@ try {
   const centered = await snapshot();
   await page.waitForTimeout(150);
   assert(distance(await snapshot(), centered) < centered.hole.radius * 0.01);
-  await move(100, 736);
-  await page.waitForTimeout(120);
+  await move(100, 748);
+  await page.waitForFunction(
+    ({ z, radius }) => window.__hole.snapshot().hole.z > z + radius * 0.2,
+    centered.hole,
+  );
   const down = await snapshot();
   assert(down.hole.z > centered.hole.z + centered.hole.radius * 0.2);
-  await move(100, 664);
-  await page.waitForTimeout(120);
+  await move(100, 652);
+  await page.waitForFunction(
+    ({ z, radius }) => window.__hole.snapshot().hole.z < z - radius * 0.2,
+    down.hole,
+  );
   const up = await snapshot();
   assert(up.hole.z < down.hole.z - down.hole.radius * 0.2);
   await stop();

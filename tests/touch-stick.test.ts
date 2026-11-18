@@ -18,17 +18,17 @@ it("指の揺れでは動かず、スティックを戻すと停止し、タッ�
   moveGesture(pointer, 107, 101);
   expect(stickInput(pointer).strength).toBe(0);
   expect(isTap(pointer, 107, 101, 200)).toBe(true);
-  moveGesture(pointer, 136, 100);
+  moveGesture(pointer, 148, 100);
   expect(stickInput(pointer).x).toBe(1);
   moveGesture(pointer, 100, 100);
   expect(stickInput(pointer).strength).toBe(0);
   expect(isTap(pointer, 100, 100, 300)).toBe(false);
 });
 it.each([
-  [36, 0, 1, 0],
-  [-36, 0, -1, 0],
-  [0, 36, 0, 1],
-  [0, -36, 0, -1],
+  [48, 0, 1, 0],
+  [-48, 0, -1, 0],
+  [0, 48, 0, 1],
+  [0, -48, 0, -1],
 ])("入力(%s,%s)は対応する方向へ最高速を出す", (dx, dy, x, z) => {
   const pointer = gesture();
   moveGesture(pointer, pointer.startX + dx, pointer.startY + dy);
@@ -39,7 +39,7 @@ it.each([
 });
 it("中間の倒し具合で微速になり、指が動かなくても同じ入力を維持する", () => {
   const pointer = gesture();
-  moveGesture(pointer, 122, 100);
+  moveGesture(pointer, 128, 100);
   const first = stickInput(pointer);
   expect(first.x).toBeCloseTo(0.5);
   for (let frame = 0; frame < 600; frame++)
@@ -56,9 +56,22 @@ it.each([
     moveGesture(pointer, pointer.startX + dx, pointer.startY + dy);
     const input = stickInput(pointer);
     expect(Math.hypot(input.x, input.z)).toBeCloseTo(1);
-    expect(Math.hypot(input.knobX, input.knobY)).toBeLessThanOrEqual(36.000001);
+    expect(Math.hypot(input.knobX, input.knobY)).toBeLessThanOrEqual(48.000001);
     expect((input.z * (7.6 / Math.hypot(7.6, 6.8))) / input.x).toBeCloseTo(
       dy / dx,
     );
   },
 );
+it("小さく倒したときの感度を抑え、48px以上の入力で最大速度になる", () => {
+  const pointer = gesture();
+  for (const [distance, strength] of [
+    [22, 0.35],
+    [36, 0.7],
+    [47, 0.975],
+    [48, 1],
+    [80, 1],
+  ]) {
+    moveGesture(pointer, pointer.startX + distance, pointer.startY);
+    expect(stickInput(pointer).strength).toBeCloseTo(strength);
+  }
+});

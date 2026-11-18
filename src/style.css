@@ -318,10 +318,10 @@ canvas {
 .touch-stick {
   position: fixed;
   z-index: 4;
-  width: 72px;
-  height: 72px;
-  margin-left: -36px;
-  margin-top: -36px;
+  width: 96px;
+  height: 96px;
+  margin-left: -48px;
+  margin-top: -48px;
   border: 2px solid #ffffffaa;
   border-radius: 50%;
   background: #28395240;
@@ -335,9 +335,9 @@ canvas {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 26px;
-  height: 26px;
-  margin: -13px;
+  width: 32px;
+  height: 32px;
+  margin: -16px;
   border: 2px solid #fffdf4;
   border-radius: 50%;
   background: #ffffffb3;

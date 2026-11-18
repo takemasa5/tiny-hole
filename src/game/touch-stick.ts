@@ -2,7 +2,7 @@ import type { PointerGesture } from "./gesture";
 
 export type TouchControlMode = "stick" | "drag";
 export const STICK_DEAD_ZONE = 8;
-export const STICK_RADIUS = 36;
+export const STICK_RADIUS = 48;
 const GROUND_VERTICAL_PROJECTION = 7.6 / Math.hypot(7.6, 6.8);
 
 export function stickInput(gesture: PointerGesture) {

@@ -1,0 +1,3919 @@
+{
+  "browser": "156.0.8078.4",
+  "viewport": "390x844",
+  "errors": [],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0.975 !== 1\n",
+  "last": {
+    "seed": 42,
+    "boundaryGuide": {
+      "visible": false,
+      "label": "レベル3になると河原の出口が開きます",
+      "level": 3,
+      "posts": 0,
+      "radius": 0.08,
+      "anchors": []
+    },
+    "hellWorld": {
+      "label": "賽の河原",
+      "level": 1,
+      "openedArea": 0,
+      "spaces": [
+        {
+          "id": "riverbank",
+          "label": "賽の河原",
+          "level": 1,
+          "extent": 2.3,
+          "bounds": {
+            "minX": -1.7,
+            "maxX": 1.7,
+            "minZ": -1.3,
+            "maxZ": 1.3
+          },
+          "height": 0.16,
+          "thickness": 0.045,
+          "color": "#8d8581",
+          "floor": "#b6aea0",
+          "gate": {
+            "side": "east",
+            "along": 0,
+            "width": 0.9,
+            "level": 3
+          }
+        },
+        {
+          "id": "small-oni",
+          "label": "小鬼の河原",
+          "level": 3,
+          "extent": 15,
+          "bounds": {
+            "minX": -15,
+            "maxX": 15,
+            "minZ": -15,
+            "maxZ": 15
+          },
+          "height": 2,
+          "thickness": 0.3,
+          "color": "#776d70",
+          "floor": "#9c8580",
+          "gate": {
+            "side": "east",
+            "along": 0,
+            "width": 4,
+            "level": 5
+          }
+        },
+        {
+          "id": "ghosts",
+          "label": "亡者の道",
+          "level": 5,
+          "extent": 75,
+          "bounds": {
+            "minX": -75,
+            "maxX": 75,
+            "minZ": -75,
+            "maxZ": 75
+          },
+          "height": 9,
+          "thickness": 1.2,
+          "color": "#675b6b",
+          "floor": "#817783",
+          "gate": {
+            "side": "east",
+            "along": 0,
+            "width": 14,
+            "level": 7
+          }
+        },
+        {
+          "id": "red-oni",
+          "label": "赤鬼の火の広場",
+          "level": 7,
+          "extent": 260,
+          "bounds": {
+            "minX": -260,
+            "maxX": 260,
+            "minZ": -260,
+            "maxZ": 260
+          },
+          "height": 32,
+          "thickness": 4,
+          "color": "#71535a",
+          "floor": "#8b6565",
+          "gate": {
+            "side": "east",
+            "along": 0,
+            "width": 60,
+            "level": 9
+          }
+        },
+        {
+          "id": "blue-oni",
+          "label": "青鬼の大広場",
+          "level": 9,
+          "extent": 900,
+          "bounds": {
+            "minX": -900,
+            "maxX": 900,
+            "minZ": -900,
+            "maxZ": 900
+          },
+          "height": 120,
+          "thickness": 12,
+          "color": "#4d536a",
+          "floor": "#67657b",
+          "gate": {
+            "side": "east",
+            "along": 0,
+            "width": 440,
+            "level": 12
+          }
+        },
+        {
+          "id": "enma",
+          "label": "閻魔の大庭",
+          "level": 12,
+          "extent": 1600,
+          "bounds": {
+            "minX": -1600,
+            "maxX": 1600,
+            "minZ": -1600,
+            "maxZ": 1600
+          },
+          "height": 0,
+          "thickness": 0,
+          "color": "#53485e",
+          "floor": "#665768"
+        }
+      ],
+      "walls": [
+        {
+          "minX": -1.7225,
+          "maxX": -1.6775,
+          "minZ": -1.3,
+          "maxZ": 1.3,
+          "id": "riverbank-west",
+          "space": 0,
+          "height": 0.16,
+          "color": "#8d8581",
+          "door": false
+        },
+        {
+          "minX": 1.6775,
+          "maxX": 1.7225,
+          "minZ": -1.3,
+          "maxZ": -0.45,
+          "id": "riverbank-east-a",
+          "space": 0,
+          "height": 0.16,
+          "color": "#8d8581",
+          "door": false
+        },
+        {
+          "minX": 1.6775,
+          "maxX": 1.7225,
+          "minZ": 0.45,
+          "maxZ": 1.3,
+          "id": "riverbank-east-b",
+          "space": 0,
+          "height": 0.16,
+          "color": "#8d8581",
+          "door": false
+        },
+        {
+          "minX": 1.6775,
+          "maxX": 1.7225,
+          "minZ": -0.45,
+          "maxZ": 0.45,
+          "id": "riverbank-door",
+          "space": 0,
+          "height": 0.16,
+          "color": "#aa7953",
+          "door": true
+        },
+        {
+          "minX": -1.7,
+          "maxX": 1.7,
+          "minZ": -1.3225,
+          "maxZ": -1.2775,
+          "id": "riverbank-north",
+          "space": 0,
+          "height": 0.16,
+          "color": "#8d8581",
+          "door": false
+        },
+        {
+          "minX": -1.7,
+          "maxX": 1.7,
+          "minZ": 1.2775,
+          "maxZ": 1.3225,
+          "id": "riverbank-south",
+          "space": 0,
+          "height": 0.16,
+          "color": "#8d8581",
+          "door": false
+        },
+        {
+          "minX": -15.15,
+          "maxX": -14.85,
+          "minZ": -15,
+          "maxZ": 15,
+          "id": "small-oni-west",
+          "space": 1,
+          "height": 2,
+          "color": "#776d70",
+          "door": false
+        },
+        {
+          "minX": 14.85,
+          "maxX": 15.15,
+          "minZ": -15,
+          "maxZ": -2,
+          "id": "small-oni-east-a",
+          "space": 1,
+          "height": 2,
+          "color": "#776d70",
+          "door": false
+        },
+        {
+          "minX": 14.85,
+          "maxX": 15.15,
+          "minZ": 2,
+          "maxZ": 15,
+          "id": "small-oni-east-b",
+          "space": 1,
+          "height": 2,
+          "color": "#776d70",
+          "door": false
+        },
+        {
+          "minX": 14.85,
+          "maxX": 15.15,
+          "minZ": -2,
+          "maxZ": 2,
+          "id": "small-oni-door",
+          "space": 1,
+          "height": 2,
+          "color": "#aa7953",
+          "door": true
+        },
+        {
+          "minX": -15,
+          "maxX": 15,
+          "minZ": -15.15,
+          "maxZ": -14.85,
+          "id": "small-oni-north",
+          "space": 1,
+          "height": 2,
+          "color": "#776d70",
+          "door": false
+        },
+        {
+          "minX": -15,
+          "maxX": 15,
+          "minZ": 14.85,
+          "maxZ": 15.15,
+          "id": "small-oni-south",
+          "space": 1,
+          "height": 2,
+          "color": "#776d70",
+          "door": false
+        },
+        {
+          "minX": -75.6,
+          "maxX": -74.4,
+          "minZ": -75,
+          "maxZ": 75,
+          "id": "ghosts-west",
+          "space": 2,
+          "height": 9,
+          "color": "#675b6b",
+          "door": false
+        },
+        {
+          "minX": 74.4,
+          "maxX": 75.6,
+          "minZ": -75,
+          "maxZ": -7,
+          "id": "ghosts-east-a",
+          "space": 2,
+          "height": 9,
+          "color": "#675b6b",
+          "door": false
+        },
+        {
+          "minX": 74.4,
+          "maxX": 75.6,
+          "minZ": 7,
+          "maxZ": 75,
+          "id": "ghosts-east-b",
+          "space": 2,
+          "height": 9,
+          "color": "#675b6b",
+          "door": false
+        },
+        {
+          "minX": 74.4,
+          "maxX": 75.6,
+          "minZ": -7,
+          "maxZ": 7,
+          "id": "ghosts-door",
+          "space": 2,
+          "height": 9,
+          "color": "#aa7953",
+          "door": true
+        },
+        {
+          "minX": -75,
+          "maxX": 75,
+          "minZ": -75.6,
+          "maxZ": -74.4,
+          "id": "ghosts-north",
+          "space": 2,
+          "height": 9,
+          "color": "#675b6b",
+          "door": false
+        },
+        {
+          "minX": -75,
+          "maxX": 75,
+          "minZ": 74.4,
+          "maxZ": 75.6,
+          "id": "ghosts-south",
+          "space": 2,
+          "height": 9,
+          "color": "#675b6b",
+          "door": false
+        },
+        {
+          "minX": -262,
+          "maxX": -258,
+          "minZ": -260,
+          "maxZ": 260,
+          "id": "red-oni-west",
+          "space": 3,
+          "height": 32,
+          "color": "#71535a",
+          "door": false
+        },
+        {
+          "minX": 258,
+          "maxX": 262,
+          "minZ": -260,
+          "maxZ": -30,
+          "id": "red-oni-east-a",
+          "space": 3,
+          "height": 32,
+          "color": "#71535a",
+          "door": false
+        },
+        {
+          "minX": 258,
+          "maxX": 262,
+          "minZ": 30,
+          "maxZ": 260,
+          "id": "red-oni-east-b",
+          "space": 3,
+          "height": 32,
+          "color": "#71535a",
+          "door": false
+        },
+        {
+          "minX": 258,
+          "maxX": 262,
+          "minZ": -30,
+          "maxZ": 30,
+          "id": "red-oni-door",
+          "space": 3,
+          "height": 32,
+          "color": "#aa7953",
+          "door": true
+        },
+        {
+          "minX": -260,
+          "maxX": 260,
+          "minZ": -262,
+          "maxZ": -258,
+          "id": "red-oni-north",
+          "space": 3,
+          "height": 32,
+          "color": "#71535a",
+          "door": false
+        },
+        {
+          "minX": -260,
+          "maxX": 260,
+          "minZ": 258,
+          "maxZ": 262,
+          "id": "red-oni-south",
+          "space": 3,
+          "height": 32,
+          "color": "#71535a",
+          "door": false
+        },
+        {
+          "minX": -906,
+          "maxX": -894,
+          "minZ": -900,
+          "maxZ": 900,
+          "id": "blue-oni-west",
+          "space": 4,
+          "height": 120,
+          "color": "#4d536a",
+          "door": false
+        },
+        {
+          "minX": 894,
+          "maxX": 906,
+          "minZ": -900,
+          "maxZ": -220,
+          "id": "blue-oni-east-a",
+          "space": 4,
+          "height": 120,
+          "color": "#4d536a",
+          "door": false
+        },
+        {
+          "minX": 894,
+          "maxX": 906,
+          "minZ": 220,
+          "maxZ": 900,
+          "id": "blue-oni-east-b",
+          "space": 4,
+          "height": 120,
+          "color": "#4d536a",
+          "door": false
+        },
+        {
+          "minX": 894,
+          "maxX": 906,
+          "minZ": -220,
+          "maxZ": 220,
+          "id": "blue-oni-door",
+          "space": 4,
+          "height": 120,
+          "color": "#aa7953",
+          "door": true
+        },
+        {
+          "minX": -900,
+          "maxX": 900,
+          "minZ": -906,
+          "maxZ": -894,
+          "id": "blue-oni-north",
+          "space": 4,
+          "height": 120,
+          "color": "#4d536a",
+          "door": false
+        },
+        {
+          "minX": -900,
+          "maxX": 900,
+          "minZ": 894,
+          "maxZ": 906,
+          "id": "blue-oni-south",
+          "space": 4,
+          "height": 120,
+          "color": "#4d536a",
+          "door": false
+        }
+      ],
+      "doors": [
+        {
+          "id": "riverbank-door",
+          "requiredLevel": 3,
+          "open": false,
+          "amount": 0,
+          "x": 1.7,
+          "z": 0,
+          "side": "east",
+          "width": 0.9
+        },
+        {
+          "id": "small-oni-door",
+          "requiredLevel": 5,
+          "open": false,
+          "amount": 0,
+          "x": 15,
+          "z": 0,
+          "side": "east",
+          "width": 4
+        },
+        {
+          "id": "ghosts-door",
+          "requiredLevel": 7,
+          "open": false,
+          "amount": 0,
+          "x": 75,
+          "z": 0,
+          "side": "east",
+          "width": 14
+        },
+        {
+          "id": "red-oni-door",
+          "requiredLevel": 9,
+          "open": false,
+          "amount": 0,
+          "x": 260,
+          "z": 0,
+          "side": "east",
+          "width": 60
+        },
+        {
+          "id": "blue-oni-door",
+          "requiredLevel": 12,
+          "open": false,
+          "amount": 0,
+          "x": 900,
+          "z": 0,
+          "side": "east",
+          "width": 440
+        }
+      ],
+      "frames": [
+        {
+          "id": "riverbank",
+          "falling": false,
+          "collected": false,
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        {
+          "id": "small-oni",
+          "falling": false,
+          "collected": false,
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        {
+          "id": "ghosts",
+          "falling": false,
+          "collected": false,
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        {
+          "id": "red-oni",
+          "falling": false,
+          "collected": false,
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        {
+          "id": "blue-oni",
+          "falling": false,
+          "collected": false,
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        }
+      ]
+    },
+    "stageId": "hell",
+    "input": {
+      "touchControlMode": "stick",
+      "stickActive": true,
+      "stick": {
+        "x": 1,
+        "z": 0,
+        "strength": 1,
+        "knobX": 48,
+        "knobY": 0
+      }
+    },
+    "levels": [
+      {
+        "radius": 0.08,
+        "threshold": 0
+      },
+      {
+        "radius": 0.14,
+        "threshold": 12
+      },
+      {
+        "radius": 0.25,
+        "threshold": 60
+      },
+      {
+        "radius": 0.45,
+        "threshold": 252
+      },
+      {
+        "radius": 0.8,
+        "threshold": 1020
+      },
+      {
+        "radius": 1.5,
+        "threshold": 4092
+      },
+      {
+        "radius": 3,
+        "threshold": 16380
+      },
+      {
+        "radius": 6,
+        "threshold": 65532
+      },
+      {
+        "radius": 12,
+        "threshold": 262140
+      },
+      {
+        "radius": 24,
+        "threshold": 1048572
+      },
+      {
+        "radius": 48,
+        "threshold": 4194300
+      },
+      {
+        "radius": 160,
+        "threshold": 16777212
+      }
+    ],
+    "hole": {
+      "x": 0.05366666666666667,
+      "z": 0,
+      "radius": 0.08
+    },
+    "renderHole": {
+      "x": 0.05364800000000011,
+      "z": 0,
+      "radius": 0.08
+    },
+    "level": 1,
+    "score": 0,
+    "cleared": false,
+    "mapHalfSize": 1600,
+    "playableHalfSize": 2.3,
+    "openedArea": 0,
+    "areas": [
+      {
+        "id": "riverbank",
+        "label": "賽の河原",
+        "level": 1,
+        "extent": 2.3,
+        "bounds": {
+          "minX": -1.7,
+          "maxX": 1.7,
+          "minZ": -1.3,
+          "maxZ": 1.3
+        },
+        "height": 0.16,
+        "thickness": 0.045,
+        "color": "#8d8581",
+        "floor": "#b6aea0",
+        "gate": {
+          "side": "east",
+          "along": 0,
+          "width": 0.9,
+          "level": 3
+        }
+      },
+      {
+        "id": "small-oni",
+        "label": "小鬼の河原",
+        "level": 3,
+        "extent": 15,
+        "bounds": {
+          "minX": -15,
+          "maxX": 15,
+          "minZ": -15,
+          "maxZ": 15
+        },
+        "height": 2,
+        "thickness": 0.3,
+        "color": "#776d70",
+        "floor": "#9c8580",
+        "gate": {
+          "side": "east",
+          "along": 0,
+          "width": 4,
+          "level": 5
+        }
+      },
+      {
+        "id": "ghosts",
+        "label": "亡者の道",
+        "level": 5,
+        "extent": 75,
+        "bounds": {
+          "minX": -75,
+          "maxX": 75,
+          "minZ": -75,
+          "maxZ": 75
+        },
+        "height": 9,
+        "thickness": 1.2,
+        "color": "#675b6b",
+        "floor": "#817783",
+        "gate": {
+          "side": "east",
+          "along": 0,
+          "width": 14,
+          "level": 7
+        }
+      },
+      {
+        "id": "red-oni",
+        "label": "赤鬼の火の広場",
+        "level": 7,
+        "extent": 260,
+        "bounds": {
+          "minX": -260,
+          "maxX": 260,
+          "minZ": -260,
+          "maxZ": 260
+        },
+        "height": 32,
+        "thickness": 4,
+        "color": "#71535a",
+        "floor": "#8b6565",
+        "gate": {
+          "side": "east",
+          "along": 0,
+          "width": 60,
+          "level": 9
+        }
+      },
+      {
+        "id": "blue-oni",
+        "label": "青鬼の大広場",
+        "level": 9,
+        "extent": 900,
+        "bounds": {
+          "minX": -900,
+          "maxX": 900,
+          "minZ": -900,
+          "maxZ": 900
+        },
+        "height": 120,
+        "thickness": 12,
+        "color": "#4d536a",
+        "floor": "#67657b",
+        "gate": {
+          "side": "east",
+          "along": 0,
+          "width": 440,
+          "level": 12
+        }
+      },
+      {
+        "id": "enma",
+        "label": "閻魔の大庭",
+        "level": 12,
+        "extent": 1600,
+        "bounds": {
+          "minX": -1600,
+          "maxX": 1600,
+          "minZ": -1600,
+          "maxZ": 1600
+        },
+        "height": 0,
+        "thickness": 0,
+        "color": "#53485e",
+        "floor": "#665768"
+      }
+    ],
+    "collectedIds": [],
+    "retiredIds": [],
+    "pending": 317,
+    "previews": 9,
+    "rigidBodies": 30,
+    "colliders": 56,
+    "activeBodies": 25,
+    "physicsMilliseconds": 0.8000000715255737,
+    "floorMilliseconds": 0.19999992847442627,
+    "lifecycleMilliseconds": 1,
+    "occlusionMilliseconds": 0.20000004768371582,
+    "frameMilliseconds": {
+      "median": 16.699999999999818,
+      "p95": 83.29999999999995
+    },
+    "drawCalls": 33,
+    "triangles": 4712,
+    "memory": {
+      "geometries": 40,
+      "textures": 7
+    },
+    "occlusion": [],
+    "occlusionRendering": {
+      "samples": 4,
+      "mode": "coverage"
+    },
+    "renderDiagnostics": {
+      "mode": "normal",
+      "cameraNear": 0.0012,
+      "cameraFar": 16000
+    },
+    "growthEvents": 0,
+    "growthEffect": {
+      "active": false,
+      "triggers": 0,
+      "age": 2.0389
+    },
+    "rewardEffects": {
+      "counts": {
+        "pickup": 0,
+        "flee": 0,
+        "door": 0,
+        "clear": 0
+      },
+      "activeParticles": 0,
+      "capacity": 384,
+      "reducedMotion": false
+    },
+    "pickupCombo": 0,
+    "audio": {
+      "enabled": true,
+      "state": "running",
+      "voices": 0,
+      "error": "",
+      "played": {
+        "pickup": 0,
+        "growth": 0,
+        "clear": 0,
+        "personCry": 0,
+        "americanCry": 0,
+        "shot": 0,
+        "tanukiCry": 0,
+        "doorOpen": 0,
+        "flee": 0,
+        "objectPickup": 0,
+        "objectFall": 0
+      },
+      "materials": {},
+      "music": {
+        "enabled": true,
+        "source": "synthesized",
+        "active": true,
+        "title": "鬼たちのハイカラ行進曲",
+        "tempo": 138,
+        "voices": 7,
+        "bars": 0,
+        "starts": 1,
+        "notesScheduled": 6
+      }
+    },
+    "resets": 0,
+    "collectedMoving": 0,
+    "supply": {
+      "serial": 0
+    },
+    "objects": [
+      {
+        "id": "hell-landmark-0",
+        "kind": "stone",
+        "label": "地獄の鳥居",
+        "model": "hell",
+        "size": [
+          1.35,
+          1.5,
+          0.175
+        ],
+        "scale": 1,
+        "level": 3,
+        "area": 1,
+        "value": 1,
+        "x": 1.8399999999999999,
+        "z": 0,
+        "yaw": 1.5707963267948966,
+        "behavior": "still",
+        "hellKind": "torii",
+        "position": {
+          "x": 1.8399999999999999,
+          "y": 0.7505,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.7071067811865475,
+          "z": 0,
+          "w": 0.7071067811865476
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": false,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.6797487716139294,
+        "top": 1.5005,
+        "bottom": 0.0004999999999999449,
+        "screen": {
+          "x": 1741.775757523442,
+          "y": -11.31453373345055
+        }
+      },
+      {
+        "id": "hell-landmark-1",
+        "kind": "stone",
+        "label": "地獄の鳥居",
+        "model": "hell",
+        "size": [
+          6,
+          4.800000000000001,
+          0.5599999999999999
+        ],
+        "scale": 1,
+        "level": 5,
+        "area": 2,
+        "value": 1,
+        "x": 15.459999999999999,
+        "z": 0,
+        "yaw": 1.5707963267948966,
+        "behavior": "still",
+        "hellKind": "torii",
+        "position": {
+          "x": 15.459999999999999,
+          "y": 2.400500095367432,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.7071067811865475,
+          "z": 0,
+          "w": 0.7071067811865476
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": false,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 3.0109596102429026,
+        "top": 4.800500190734864,
+        "bottom": 0.000500000000000167,
+        "screen": {
+          "x": -687966.5116394749,
+          "y": 71918.45907808769
+        }
+      },
+      {
+        "id": "hell-landmark-2",
+        "kind": "stone",
+        "label": "地獄の鳥居",
+        "model": "hell",
+        "size": [
+          21,
+          18,
+          2.0999999999999996
+        ],
+        "scale": 1,
+        "level": 7,
+        "area": 3,
+        "value": 1,
+        "x": 76.67999999999999,
+        "z": 0,
+        "yaw": 1.5707963267948966,
+        "behavior": "still",
+        "hellKind": "torii",
+        "position": {
+          "x": 76.67999999999999,
+          "y": 9.0005,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.7071067811865475,
+          "z": 0,
+          "w": 0.7071067811865476
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": false,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 10.544022302652976,
+        "top": 18.000500000000002,
+        "bottom": 0.0005000000000006111,
+        "screen": {
+          "x": -15999.979057192906,
+          "y": 1690.4142711819522
+        }
+      },
+      {
+        "id": "hell-landmark-3",
+        "kind": "stone",
+        "label": "地獄の鳥居",
+        "model": "hell",
+        "size": [
+          90,
+          72,
+          8.399999999999999
+        ],
+        "scale": 1,
+        "level": 9,
+        "area": 4,
+        "value": 1,
+        "x": 266.22999999999996,
+        "z": 0,
+        "yaw": 1.5707963267948966,
+        "behavior": "still",
+        "hellKind": "torii",
+        "position": {
+          "x": 266.22999999999996,
+          "y": 36.0005,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.7071067811865475,
+          "z": 0,
+          "w": 0.7071067811865476
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": false,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 45.164394173967324,
+        "top": 72.0005,
+        "bottom": 0.0005000000000023874,
+        "screen": {
+          "x": -10897.53450962146,
+          "y": 1422.37330831236
+        }
+      },
+      {
+        "id": "hell-scenery-4-23",
+        "kind": "stone",
+        "label": "閻魔の御殿",
+        "model": "hell",
+        "size": [
+          55,
+          77,
+          44
+        ],
+        "scale": 1,
+        "level": 9,
+        "area": 4,
+        "value": 1,
+        "x": 356.766171718077,
+        "z": -587.6720436826463,
+        "yaw": 1.616684276520764,
+        "behavior": "still",
+        "hellKind": "palace",
+        "position": {
+          "x": 356.766171718077,
+          "y": 38.5005,
+          "z": -587.6720436826463
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.7231430864688276,
+          "z": 0,
+          "w": 0.6906982528516614
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": false,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 20.124106022836717,
+        "top": 77.0005,
+        "bottom": 0.0005000000000023874,
+        "screen": {
+          "x": 1215.9666641200804,
+          "y": -904.9794361594921
+        }
+      },
+      {
+        "id": "goal",
+        "kind": "enma",
+        "label": "逃げる閻魔大王",
+        "model": "hell",
+        "size": [
+          180,
+          450,
+          145
+        ],
+        "scale": 1,
+        "level": 12,
+        "area": 5,
+        "value": 4194304,
+        "x": 1140,
+        "z": -220,
+        "yaw": 0,
+        "behavior": "work",
+        "route": [
+          {
+            "x": 1140,
+            "z": -220
+          },
+          {
+            "x": 1380,
+            "z": -220
+          },
+          {
+            "x": 1380,
+            "z": 280
+          },
+          {
+            "x": 1100,
+            "z": 280
+          },
+          {
+            "x": 1100,
+            "z": -220
+          }
+        ],
+        "hellKind": "enma",
+        "position": {
+          "x": 1140,
+          "y": 225.0005,
+          "z": -220
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": false,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 112.1841361459181,
+        "top": 450.0005,
+        "bottom": 0.0004999999999881766,
+        "screen": {
+          "x": -61756.42541187877,
+          "y": 17485.652937143408
+        }
+      },
+      {
+        "id": "hell-landmark-4",
+        "kind": "stone",
+        "label": "地獄の鳥居",
+        "model": "hell",
+        "size": [
+          660,
+          960,
+          112
+        ],
+        "scale": 1,
+        "level": 12,
+        "area": 5,
+        "value": 1,
+        "x": 962.03,
+        "z": 0,
+        "yaw": 1.5707963267948966,
+        "behavior": "still",
+        "hellKind": "torii",
+        "position": {
+          "x": 962.03,
+          "y": 480.0005,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.7071067811865475,
+          "z": 0,
+          "w": 0.7071067811865476
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": false,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 333.9687281351444,
+        "top": 960.0005,
+        "bottom": 0.0004999999999881766,
+        "screen": {
+          "x": -2627.783163641449,
+          "y": 1361.1761498388832
+        }
+      },
+      {
+        "id": "hell-palace",
+        "kind": "stone",
+        "label": "閻魔の御殿",
+        "model": "hell",
+        "size": [
+          280,
+          190,
+          220
+        ],
+        "scale": 1,
+        "level": 12,
+        "area": 5,
+        "value": 1,
+        "x": 1220,
+        "z": -900,
+        "yaw": 0,
+        "behavior": "still",
+        "hellKind": "palace",
+        "position": {
+          "x": 1220,
+          "y": 95.0005,
+          "z": -900
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": false,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 101.73996734928744,
+        "top": 190.0005,
+        "bottom": 0.0005000000000023874,
+        "screen": {
+          "x": 2594.2832276578392,
+          "y": -1021.690623251155
+        }
+      },
+      {
+        "id": "hell-scenery-5-23",
+        "kind": "stone",
+        "label": "閻魔の御殿",
+        "model": "hell",
+        "size": [
+          90,
+          125.99999999999999,
+          72
+        ],
+        "scale": 1,
+        "level": 12,
+        "area": 5,
+        "value": 1,
+        "x": -1335.475774164913,
+        "z": -1229.054800794357,
+        "yaw": 6.0756044307514445,
+        "behavior": "still",
+        "hellKind": "palace",
+        "position": {
+          "x": -1335.475774164913,
+          "y": 63.0005,
+          "z": -1229.054800794357
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.10360419225339058,
+          "z": 0,
+          "w": -0.994618605972924
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": false,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 32.93035509345804,
+        "top": 126.0005,
+        "bottom": 0.0005000000000023874,
+        "screen": {
+          "x": -1606.4545324874555,
+          "y": -870.1503821497678
+        }
+      },
+      {
+        "id": "growth-1-0",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": -1.4424507283691448,
+        "z": 0.1601265316501299,
+        "yaw": 3.10967680329795,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -1.4424507283691448,
+          "y": 0.013299999676644803,
+          "z": 0.1601265316501299
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.9998726750145523,
+          "z": 0,
+          "w": 0.015957247859310224
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.03760597205543971,
+        "top": 0.026099999353289605,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": -752.704184023251,
+          "y": 491.9737927474227
+        }
+      },
+      {
+        "id": "growth-1-1",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": -0.18405855671867832,
+        "z": -0.07516231430268538,
+        "yaw": 4.736309291413087,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -0.18402692675590515,
+          "y": 0.012782738544046879,
+          "z": -0.07516079396009445
+        },
+        "rotation": {
+          "x": 0.0009874840034171939,
+          "y": 0.6985989212989807,
+          "z": 0.0009120911126956344,
+          "w": -0.715512216091156
+        },
+        "velocity": {
+          "x": 0.00025714290677569807,
+          "y": -0.000014419969375012442,
+          "z": -0.000014055997780815233
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.03760594976149662,
+        "top": 0.025584256811284085,
+        "bottom": -0.000018790928863546275,
+        "screen": {
+          "x": 57.55455693858083,
+          "y": 384.6791416304144
+        }
+      },
+      {
+        "id": "growth-1-2",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": -1.202042965805037,
+        "z": 0.510136374098419,
+        "yaw": 3.7389433347748025,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -1.202042965805037,
+          "y": 0.013299999676644803,
+          "z": 0.510136374098419
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.9557271144578643,
+          "z": 0,
+          "w": -0.2942544522858478
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.037605972055439696,
+        "top": 0.026099999353289605,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": -731.5646726206473,
+          "y": 695.9840753458019
+        }
+      },
+      {
+        "id": "growth-1-3",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": 1.4144516520494186,
+        "z": 0.7909643272074569,
+        "yaw": 3.011460992169473,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 1.4144516520494186,
+          "y": 0.013299999676644803,
+          "z": 0.7909643272074569
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.9978839655253684,
+          "z": 0,
+          "w": 0.06501993038573103
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.0376059720554397,
+        "top": 0.026099999353289605,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": 1352.212633082945,
+          "y": 915.7282093864668
+        }
+      },
+      {
+        "id": "growth-1-4",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": -1.560983761771031,
+        "z": 0.9746804690858335,
+        "yaw": 0.3910487272405509,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -1.560983761771031,
+          "y": 0.013299999676644803,
+          "z": 0.9746804690858335
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.1942809340077636,
+          "z": 0,
+          "w": 0.9809459305594121
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.0376059720554397,
+        "top": 0.026099999353289605,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": -1330.1816639511646,
+          "y": 1099.7542951110001
+        }
+      },
+      {
+        "id": "growth-1-5",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": 0.5773947827037214,
+        "z": 0.13096574266414773,
+        "yaw": 3.8334617331026237,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 0.5773992538452148,
+          "y": 0.012780849821865559,
+          "z": 0.13096590340137482
+        },
+        "rotation": {
+          "x": 0.000015993578927009366,
+          "y": 0.9407581090927124,
+          "z": 0.00014740975166205317,
+          "w": -0.33907848596572876
+        },
+        "velocity": {
+          "x": 0.00001201695795316482,
+          "y": -0.000012917626918351743,
+          "z": 0.000025831281163846143
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.03760597607846302,
+        "top": 0.025582320889454564,
+        "bottom": -0.00002061702869483005,
+        "screen": {
+          "x": 522.8276224606309,
+          "y": 477.7565350177862
+        }
+      },
+      {
+        "id": "growth-1-6",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": 1.1171596101313535,
+        "z": 0.39008931746026776,
+        "yaw": 6.18402753772905,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 1.1171596101313535,
+          "y": 0.013299999676644803,
+          "z": 0.39008931746026776
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.04955857586120994,
+          "z": 0,
+          "w": -0.9987712188277197
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.03760597205543971,
+        "top": 0.026099999353289605,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": 937.7541440466563,
+          "y": 618.8380384479511
+        }
+      },
+      {
+        "id": "growth-1-7",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": 1.5220261130940527,
+        "z": 1.1091364991109898,
+        "yaw": 5.099773564507544,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 1.5220261130940527,
+          "y": 0.013299999676644803,
+          "z": 1.1091364991109898
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.5577776906074572,
+          "z": 0,
+          "w": -0.8299903902218457
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.03760597205543971,
+        "top": 0.026099999353289605,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": 1704.4149029663654,
+          "y": 1262.5584137001053
+        }
+      },
+      {
+        "id": "growth-1-8",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": 1.5648291430801837,
+        "z": -1.104620988286518,
+        "yaw": 3.0860166312882447,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 1.5648291430801837,
+          "y": 0.013299999676644803,
+          "z": -1.104620988286518
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.9996139380613366,
+          "z": 0,
+          "w": 0.027784435094244088
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.037605972055439696,
+        "top": 0.026099999353289605,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": 828.3363623284916,
+          "y": 73.2761012811072
+        }
+      },
+      {
+        "id": "growth-1-9",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": 0.8764149731928375,
+        "z": -0.4092759729491495,
+        "yaw": 5.281576829594704,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 0.8764769434928894,
+          "y": 0.012777340598404408,
+          "z": -0.4093548357486725
+        },
+        "rotation": {
+          "x": 0.0035339724272489548,
+          "y": 0.4802093207836151,
+          "z": 0.0019416334107518196,
+          "w": -0.8771447539329529
+        },
+        "velocity": {
+          "x": 0.0006470439257100224,
+          "y": -0.000005579699973168317,
+          "z": -0.0004142381076235324
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.03760575314966021,
+        "top": 0.025577177916247647,
+        "bottom": -0.000022497095693151115,
+        "screen": {
+          "x": 618.5747240382645,
+          "y": 260.5716120156995
+        }
+      },
+      {
+        "id": "growth-1-10",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": 0.4943367690376954,
+        "z": -0.5923293375590312,
+        "yaw": 0.9810694690927366,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 0.49434319138526917,
+          "y": 0.012778365053236485,
+          "z": -0.5923530459403992
+        },
+        "rotation": {
+          "x": -0.00018867159087676555,
+          "y": 0.4711165428161621,
+          "z": 0.00008368830458493903,
+          "w": 0.8820709586143494
+        },
+        "velocity": {
+          "x": -0.000027193491405341774,
+          "y": -0.000002799352841975633,
+          "z": -0.000016463540305267088
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.037605971899357264,
+        "top": 0.025578998018318568,
+        "bottom": -0.00002226622801438337,
+        "screen": {
+          "x": 408.991298476691,
+          "y": 203.50676584728959
+        }
+      },
+      {
+        "id": "growth-1-11",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": -0.3985084440819806,
+        "z": 0.5333285007318975,
+        "yaw": 0.3166180286403392,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -0.39840927720069885,
+          "y": 0.012777606956660748,
+          "z": 0.5336971282958984
+        },
+        "rotation": {
+          "x": 0.01576234959065914,
+          "y": 0.15763434767723083,
+          "z": -0.002601542277261615,
+          "w": 0.9873682856559753
+        },
+        "velocity": {
+          "x": 0.0009522374602966011,
+          "y": -0.0000913254771148786,
+          "z": 0.002909483388066292
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.037602545544903304,
+        "top": 0.025574611087233533,
+        "bottom": -0.000019391444415560455,
+        "screen": {
+          "x": -142.21953078242274,
+          "y": 712.3398217706103
+        }
+      },
+      {
+        "id": "growth-1-12",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": -1.149056628623819,
+        "z": -0.6188170694794672,
+        "yaw": 3.901130948688499,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -1.149056628623819,
+          "y": 0.013299999676644803,
+          "z": -0.6188170694794672
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.9287502387295146,
+          "z": 0,
+          "w": -0.3707060750242296
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.03760597205543971,
+        "top": 0.026099999353289605,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": -384.35719894800627,
+          "y": 195.57783820149749
+        }
+      },
+      {
+        "id": "growth-1-13",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": -0.3991045691972699,
+        "z": 0.32155694515612443,
+        "yaw": 6.122712462932929,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -0.399109810590744,
+          "y": 0.01277937926352024,
+          "z": 0.32155829668045044
+        },
+        "rotation": {
+          "x": -0.00010349852527724579,
+          "y": 0.08014973998069763,
+          "z": -0.000022484329747385345,
+          "w": -0.9967828989028931
+        },
+        "velocity": {
+          "x": -0.00000740366340323817,
+          "y": -0.000007522496161982417,
+          "z": 0.0000188452577276621
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.03760597204543267,
+        "top": 0.025579973985114798,
+        "bottom": -0.00002121278331588053,
+        "screen": {
+          "x": -111.752701405328,
+          "y": 578.5867115207459
+        }
+      },
+      {
+        "id": "growth-1-14",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": -0.2871324338594605,
+        "z": 0.6946351494797294,
+        "yaw": 4.64627814852318,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -0.28703585267066956,
+          "y": 0.012769507244229317,
+          "z": 0.694611132144928
+        },
+        "rotation": {
+          "x": 0.002626003697514534,
+          "y": 0.7300636172294617,
+          "z": 0.002891629235818982,
+          "w": -0.6833680868148804
+        },
+        "velocity": {
+          "x": 0.000756553141400218,
+          "y": 0.000009068932740774471,
+          "z": 0.000042818832298507914
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.03760577913520533,
+        "top": 0.02557158892630133,
+        "bottom": -0.0000325836318591545,
+        "screen": {
+          "x": -80.22845608611948,
+          "y": 833.3177960865686
+        }
+      },
+      {
+        "id": "growth-1-15",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": 1.1912928830256044,
+        "z": -0.5832067110600722,
+        "yaw": 3.7223316805470117,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 1.1912928830256044,
+          "y": 0.013299999676644803,
+          "z": -0.5832067110600722
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.9581381468942775,
+          "z": 0,
+          "w": -0.2863062896025861
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.037605972055439696,
+        "top": 0.026099999353289605,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": 749.0849163478471,
+          "y": 205.9962055948645
+        }
+      },
+      {
+        "id": "growth-1-16",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": -0.3766868490529667,
+        "z": 0.8119341219817982,
+        "yaw": 3.9657858259607988,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -0.3767431080341339,
+          "y": 0.012780428864061832,
+          "z": 0.8119158148765564
+        },
+        "rotation": {
+          "x": -0.0009057947318069637,
+          "y": 0.9162852168083191,
+          "z": -0.0021341966930776834,
+          "w": -0.4005199372768402
+        },
+        "velocity": {
+          "x": -0.0003358239191584289,
+          "y": -0.0000017159460412585759,
+          "z": -0.00030034882365725935
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.03760591380328561,
+        "top": 0.025581330163217172,
+        "bottom": -0.00002047780323682566,
+        "screen": {
+          "x": -175.09276037601143,
+          "y": 934.9736997200537
+        }
+      },
+      {
+        "id": "growth-1-17",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": -0.5869199057879206,
+        "z": -0.08402888218998439,
+        "yaw": 3.325998325591933,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -0.5869635939598083,
+          "y": 0.012777562253177166,
+          "z": -0.08411332964897156
+        },
+        "rotation": {
+          "x": -0.0003443908644840121,
+          "y": 0.9957478642463684,
+          "z": -0.0038074480835348368,
+          "w": -0.09204226732254028
+        },
+        "velocity": {
+          "x": -0.00012770257308147848,
+          "y": -0.0000037855124901398085,
+          "z": -0.0007034241571091115
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.037605788191736794,
+        "top": 0.02557750255551935,
+        "bottom": -0.00002237977024913823,
+        "screen": {
+          "x": -174.2392164994163,
+          "y": 380.9586308255618
+        }
+      },
+      {
+        "id": "growth-1-18",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": 1.5740178352480099,
+        "z": -0.7771870718697298,
+        "yaw": 3.735680481789593,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 1.5740178352480099,
+          "y": 0.013299999676644803,
+          "z": -0.7771870718697298
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.9562058968953261,
+          "z": 0,
+          "w": -0.2926948628565335
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.0376059720554397,
+        "top": 0.026099999353289605,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": 893.3681729753284,
+          "y": 151.87981094492605
+        }
+      },
+      {
+        "id": "growth-1-19",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": 0.3058783281266346,
+        "z": 0.7949678689676412,
+        "yaw": 2.462456843760184,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 0.3058609068393707,
+          "y": 0.01277884840965271,
+          "z": 0.7949512600898743
+        },
+        "rotation": {
+          "x": 0.000027333750040270388,
+          "y": 0.942888081073761,
+          "z": -0.00010792402463266626,
+          "w": 0.3331097364425659
+        },
+        "velocity": {
+          "x": 0.000013357886018638965,
+          "y": 8.387596608372405e-7,
+          "z": -0.000015601783161400817
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.037605974776876515,
+        "top": 0.025579275183908803,
+        "bottom": -0.000021579053782085425,
+        "screen": {
+          "x": 409.8762551047608,
+          "y": 919.4698599876434
+        }
+      },
+      {
+        "id": "growth-1-20",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": 0.28201488083448556,
+        "z": -0.7858715473308944,
+        "yaw": 6.135712865846179,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 0.28198787569999695,
+          "y": 0.012784149497747421,
+          "z": -0.7858753800392151
+        },
+        "rotation": {
+          "x": -0.00004035075107822195,
+          "y": 0.07370071113109589,
+          "z": 0.00007876423478592187,
+          "w": -0.997280478477478
+        },
+        "velocity": {
+          "x": -0.0000026206694201391656,
+          "y": -0.0000029665836791537004,
+          "z": 0.000006526449396915268
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.03760597185718359,
+        "top": 0.025587577217360186,
+        "bottom": -0.000019278549690889338,
+        "screen": {
+          "x": 299.60167752572204,
+          "y": 149.80314134532463
+        }
+      },
+      {
+        "id": "growth-1-21",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": 0.1479006566939669,
+        "z": 0.30923778864187557,
+        "yaw": 5.630242616924258,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 0.14909866452217102,
+          "y": 0.01262844167649746,
+          "z": 0.30769461393356323
+        },
+        "rotation": {
+          "x": 0.07439520210027695,
+          "y": 0.3203728497028351,
+          "z": 0.025321241468191147,
+          "w": -0.9440262913703918
+        },
+        "velocity": {
+          "x": 0.009150838479399681,
+          "y": -0.00213043880648911,
+          "z": -0.011940007098019123
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.03752191230833087,
+        "top": 0.025273408411541777,
+        "bottom": -0.000016394997486667354,
+        "screen": {
+          "x": 259.2794677526034,
+          "y": 570.7522558936686
+        }
+      },
+      {
+        "id": "growth-1-22",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": 0.8620798374481589,
+        "z": -1.186854600946693,
+        "yaw": 0.37950798448800604,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 0.8620798374481589,
+          "y": 0.013299999676644803,
+          "z": -1.186854600946693
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.18861730860582382,
+          "z": 0,
+          "w": 0.9820506661543973
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.03760597205543971,
+        "top": 0.026099999353289605,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": 526.519958760427,
+          "y": 55.65229027353184
+        }
+      },
+      {
+        "id": "growth-1-23",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.068,
+          0.0256,
+          0.052000000000000005
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": -1.2838380220741086,
+        "z": 0.9725267619474098,
+        "yaw": 0.00041358010727153945,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -1.2838380220741086,
+          "y": 0.013299999676644803,
+          "z": 0.9725267619474098
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.00020679005216197268,
+          "z": 0,
+          "w": 0.999999978618937
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.03760597205543971,
+        "top": 0.026099999353289605,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": -1066.7510185542087,
+          "y": 1097.36105963588
+        }
+      },
+      {
+        "id": "hell-scenery-0-0",
+        "kind": "stone",
+        "label": "積み石",
+        "model": "hell",
+        "size": [
+          0.11,
+          0.154,
+          0.08800000000000001
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": -1.3803066645265085,
+        "z": 0.5684208800744457,
+        "yaw": 3.983743623758015,
+        "behavior": "still",
+        "hellKind": "cairn",
+        "position": {
+          "x": -1.3803066645265085,
+          "y": 0.07749999958276749,
+          "z": 0.5684208800744457
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.9126498720412891,
+          "z": 0,
+          "w": -0.4087422305842871
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.061355407999780946,
+        "top": 0.15449999916553497,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": -932.1490595230453,
+          "y": 714.3559622595524
+        }
+      },
+      {
+        "id": "hell-scenery-0-1",
+        "kind": "stone",
+        "label": "積み石",
+        "model": "hell",
+        "size": [
+          0.11,
+          0.154,
+          0.08800000000000001
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": -1.554432696698207,
+        "z": -0.21866245001045304,
+        "yaw": 5.189890383194762,
+        "behavior": "still",
+        "hellKind": "cairn",
+        "position": {
+          "x": -1.554432696698207,
+          "y": 0.07749999958276749,
+          "z": -0.21866245001045304
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.5198261760503287,
+          "z": 0,
+          "w": -0.8542720566031016
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.06135540799978095,
+        "top": 0.15449999916553497,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": -711.131442326726,
+          "y": 301.0573053214819
+        }
+      },
+      {
+        "id": "hell-scenery-0-2",
+        "kind": "stone",
+        "label": "積み石",
+        "model": "hell",
+        "size": [
+          0.11,
+          0.154,
+          0.08800000000000001
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": 0.7567108780189737,
+        "z": 0.3540413516855163,
+        "yaw": 0.3136228896636358,
+        "behavior": "still",
+        "hellKind": "cairn",
+        "position": {
+          "x": 0.7567108780189737,
+          "y": 0.07749999958276749,
+          "z": 0.3540413516855163
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.15616957340741883,
+          "z": 0,
+          "w": 0.9877302588975113
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.06135540799978095,
+        "top": 0.15449999916553497,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": 693.9605988968375,
+          "y": 572.5758507127566
+        }
+      },
+      {
+        "id": "hell-scenery-0-3",
+        "kind": "stone",
+        "label": "積み石",
+        "model": "hell",
+        "size": [
+          0.11,
+          0.154,
+          0.08800000000000001
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": -0.9525616665687332,
+        "z": -0.8460936360500886,
+        "yaw": 4.444101731818193,
+        "behavior": "still",
+        "hellKind": "cairn",
+        "position": {
+          "x": -0.9525616665687332,
+          "y": 0.07749999958276749,
+          "z": -0.8460936360500886
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.7953239422653521,
+          "z": 0,
+          "w": -0.6061846474957105
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.06135540799978095,
+        "top": 0.15449999916553497,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": -267.57943932636414,
+          "y": 108.36636815188497
+        }
+      },
+      {
+        "id": "hell-scenery-0-4",
+        "kind": "stone",
+        "label": "積み石",
+        "model": "hell",
+        "size": [
+          0.11,
+          0.154,
+          0.08800000000000001
+        ],
+        "scale": 1,
+        "level": 1,
+        "area": 0,
+        "value": 1,
+        "x": 0.7255768575548307,
+        "z": -0.5057166731176961,
+        "yaw": 5.8012703902432206,
+        "behavior": "still",
+        "hellKind": "cairn",
+        "position": {
+          "x": 0.7255768575548307,
+          "y": 0.07749999958276749,
+          "z": -0.5057166731176961
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.2386325331003633,
+          "z": 0,
+          "w": -0.9711099392685176
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.06135540799978097,
+        "top": 0.15449999916553497,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": 538.1850482483009,
+          "y": 203.11589503084613
+        }
+      },
+      {
+        "id": "growth-2-0",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": -1.125553323737341,
+        "z": -0.9645250626011715,
+        "yaw": 4.854102264340361,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -1.125553323737341,
+          "y": 0.02289999920129776,
+          "z": -0.9645250626011715
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.6552711537257335,
+          "z": 0,
+          "w": -0.7553937483822236
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.06581044861707919,
+        "top": 0.04529999840259552,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": -319.98500807519656,
+          "y": 101.41279128933446
+        }
+      },
+      {
+        "id": "growth-2-1",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": -0.21265215520710523,
+        "z": 0.8556276993207059,
+        "yaw": 4.977043172842674,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -0.2126632034778595,
+          "y": 0.022385679185390472,
+          "z": 0.8556105494499207
+        },
+        "rotation": {
+          "x": -0.00017369913985021412,
+          "y": 0.6076353788375854,
+          "z": -0.00003066818317165598,
+          "w": -0.7942160964012146
+        },
+        "velocity": {
+          "x": -0.00003482590909698047,
+          "y": -0.000009107822734222282,
+          "z": 0.000004312471446610289
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.0658104482475274,
+        "top": 0.044791641335313714,
+        "bottom": -0.000020290057485494728,
+        "screen": {
+          "x": -41.053864371747956,
+          "y": 973.9596027519656
+        }
+      },
+      {
+        "id": "growth-2-2",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": -0.02012467775010829,
+        "z": 1.0432455783251626,
+        "yaw": 1.102179180129753,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -0.019044097512960434,
+          "y": 0.022342471405863762,
+          "z": 1.0438191890716553
+        },
+        "rotation": {
+          "x": 0.024791672825813293,
+          "y": 0.5234410166740417,
+          "z": -0.015172820538282394,
+          "w": 0.8515660166740417
+        },
+        "velocity": {
+          "x": 0.005688853561878204,
+          "y": -0.00036703943624161184,
+          "z": 0.002884565619751811
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.06579032667772036,
+        "top": 0.04470879115614569,
+        "bottom": -0.000023823191258074555,
+        "screen": {
+          "x": 122.888887827007,
+          "y": 1178.8992157344344
+        }
+      },
+      {
+        "id": "growth-2-3",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": -1.1025690638301946,
+        "z": 0.12040389465376711,
+        "yaw": 4.238754475286428,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -1.1025753021240234,
+          "y": 0.022381020709872246,
+          "z": 0.12040963023900986
+        },
+        "rotation": {
+          "x": -0.000035217908589402214,
+          "y": 0.8532665371894836,
+          "z": -0.00009742761176312342,
+          "w": -0.5214750170707703
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.06581044735380133,
+        "top": 0.04478254593738415,
+        "bottom": -0.000020504517639657882,
+        "screen": {
+          "x": -528.7561488973562,
+          "y": 468.8289218846571
+        }
+      },
+      {
+        "id": "growth-2-4",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": -0.9126505480296068,
+        "z": 0.6241327359749704,
+        "yaw": 1.5161177959574699,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -0.9126566052436829,
+          "y": 0.022382117807865143,
+          "z": 0.6241220831871033
+        },
+        "rotation": {
+          "x": -0.0001588982268003747,
+          "y": 0.6875131130218506,
+          "z": 0.00009090598177863285,
+          "w": 0.7261719703674316
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.06581045121465574,
+        "top": 0.044785294994082014,
+        "bottom": -0.000021059378351728775,
+        "screen": {
+          "x": -562.3137457378831,
+          "y": 774.8293113471058
+        }
+      },
+      {
+        "id": "growth-2-5",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": -1.1352231220708684,
+        "z": 0.36936976962170065,
+        "yaw": 3.7874286809212276,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -1.1352231220708684,
+          "y": 0.02289999920129776,
+          "z": 0.36936976962170065
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.9483134685886386,
+          "z": 0,
+          "w": -0.31733509937191806
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.0658104486170792,
+        "top": 0.04529999840259552,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": -631.6230556927221,
+          "y": 602.77821826338
+        }
+      },
+      {
+        "id": "growth-2-6",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": 0.17239960983343017,
+        "z": -0.6807414633324038,
+        "yaw": 5.793308400080086,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 0.17238999903202057,
+          "y": 0.022387076169252396,
+          "z": -0.680749237537384
+        },
+        "rotation": {
+          "x": 0.00005734139995183796,
+          "y": 0.2424870878458023,
+          "z": 0.00006940660387044773,
+          "w": -0.9701547026634216
+        },
+        "velocity": {
+          "x": 0.000007616308721480891,
+          "y": -0.0000015476882708753692,
+          "z": -0.000013893755749450065
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.06581044968402448,
+        "top": 0.04479101045157091,
+        "bottom": -0.000016854827360076458,
+        "screen": {
+          "x": 251.30296846691675,
+          "y": 174.36876546455076
+        }
+      },
+      {
+        "id": "growth-2-7",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": 0.06767570573563808,
+        "z": 0.5662623149575341,
+        "yaw": 0.31321120110944073,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 0.06768520176410675,
+          "y": 0.02238321676850319,
+          "z": 0.5662593841552734
+        },
+        "rotation": {
+          "x": 0.000007639245268364903,
+          "y": 0.1559699922800064,
+          "z": -0.000024492630473105237,
+          "w": 0.9877618551254272
+        },
+        "velocity": {
+          "x": 6.582062042070902e-7,
+          "y": -8.829465514281765e-8,
+          "z": 0.000003294983798696194
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.06581044897296083,
+        "top": 0.044784894828683364,
+        "bottom": -0.000018471424466603298,
+        "screen": {
+          "x": 205.6917373977599,
+          "y": 732.0573576640057
+        }
+      },
+      {
+        "id": "growth-2-8",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": -0.6719718662665191,
+        "z": -1.0463645886146906,
+        "yaw": 2.0500262243694283,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -0.6719718662665191,
+          "y": 0.02289999920129776,
+          "z": -1.0463645886146906
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.8547209959211071,
+          "z": 0,
+          "w": 0.5190876796184156
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.06581044861707919,
+        "top": 0.04529999840259552,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": -114.82598778200789,
+          "y": 82.52279639747303
+        }
+      },
+      {
+        "id": "growth-2-9",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": 0.6592103455410823,
+        "z": 0.6029640338500846,
+        "yaw": 1.577302793929655,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 0.6592057347297668,
+          "y": 0.02238389104604721,
+          "z": 0.6029477715492249
+        },
+        "rotation": {
+          "x": -0.00012357468949630857,
+          "y": 0.7093976736068726,
+          "z": 0.00006209639832377434,
+          "w": 0.7048084139823914
+        },
+        "velocity": {
+          "x": -0.000030110199077171274,
+          "y": -0.00001520629484730307,
+          "z": -0.000010417381417937577
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.06581044718201914,
+        "top": 0.044787113088907884,
+        "bottom": -0.000019342001321007857,
+        "screen": {
+          "x": 664.6140169463105,
+          "y": 758.8925730391069
+        }
+      },
+      {
+        "id": "growth-2-10",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": 1.0963409079551263,
+        "z": -0.9530469890476542,
+        "yaw": 0.856697087935271,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 1.0963409079551263,
+          "y": 0.02289999920129776,
+          "z": -0.9530469890476542
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.41536911767382667,
+          "z": 0,
+          "w": 0.9096529536492842
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.0658104486170792,
+        "top": 0.04529999840259552,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": 651.830473851956,
+          "y": 104.131281084906
+        }
+      },
+      {
+        "id": "growth-2-11",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": 0.37207613971890074,
+        "z": -0.03572768604261434,
+        "yaw": 4.2365410480482995,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 0.3720706105232239,
+          "y": 0.02238738164305687,
+          "z": -0.03573712334036827
+        },
+        "rotation": {
+          "x": -0.0001449580304324627,
+          "y": 0.8538420796394348,
+          "z": -0.0001721221924526617,
+          "w": -0.5205323100090027
+        },
+        "velocity": {
+          "x": -0.00004460945274331607,
+          "y": -0.0000029266213914524997,
+          "z": -0.000020775958546437323
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.0658104704687828,
+        "top": 0.044789892440406584,
+        "bottom": -0.000015132983891278512,
+        "screen": {
+          "x": 382.6152935761895,
+          "y": 397.5124220230542
+        }
+      },
+      {
+        "id": "growth-2-12",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": -1.0625705395577754,
+        "z": 1.1066767483383022,
+        "yaw": 5.210235461414648,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -1.0625705395577754,
+          "y": 0.02289999920129776,
+          "z": 1.1066767483383022
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.5111093143016857,
+          "z": 0,
+          "w": -0.8595157176189745
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.06581044861707919,
+        "top": 0.04529999840259552,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": -958.6743361286104,
+          "y": 1258.6342381631084
+        }
+      },
+      {
+        "id": "growth-2-13",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": -0.47803205767174295,
+        "z": -0.6817949959502696,
+        "yaw": 3.2553583988354418,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -0.47805026173591614,
+          "y": 0.0223869439214468,
+          "z": -0.6817943453788757
+        },
+        "rotation": {
+          "x": 0.00009208067785948515,
+          "y": 0.9983835816383362,
+          "z": -0.00006027214112691581,
+          "w": -0.05683671310544014
+        },
+        "velocity": {
+          "x": -0.0000031226334158418467,
+          "y": -8.518576919414045e-7,
+          "z": -0.00002138231138815172
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.06581047435825814,
+        "top": 0.04479394750692235,
+        "bottom": -0.00002006653346406373,
+        "screen": {
+          "x": -57.03147864497131,
+          "y": 174.0779474555398
+        }
+      },
+      {
+        "id": "growth-2-14",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": 0.8155153833039477,
+        "z": -0.12483187267521623,
+        "yaw": 3.0484658312152675,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 0.815487265586853,
+          "y": 0.022376950830221176,
+          "z": -0.12483420222997665
+        },
+        "rotation": {
+          "x": -4.03118178837758e-7,
+          "y": 0.9989176988601685,
+          "z": 0.000009390686500410084,
+          "w": 0.04651434347033501
+        },
+        "velocity": {
+          "x": -2.0806355394142884e-7,
+          "y": -2.886034877747079e-8,
+          "z": 0.0000020561212750180857
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.06581046875313976,
+        "top": 0.04477695253709324,
+        "bottom": -0.000023050876650883984,
+        "screen": {
+          "x": 629.3199500584469,
+          "y": 360.4569675534514
+        }
+      },
+      {
+        "id": "growth-2-15",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": -0.7707508759765107,
+        "z": -0.001524433774350742,
+        "yaw": 0.2187650548426365,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -0.7707607746124268,
+          "y": 0.022377852350473404,
+          "z": -0.0015199828194454312
+        },
+        "rotation": {
+          "x": 0.00005270660403766669,
+          "y": 0.10916192829608917,
+          "z": 0.000005903322289668722,
+          "w": 0.9940240383148193
+        },
+        "velocity": {
+          "x": -4.628224985481211e-7,
+          "y": -0.00000384254235541448,
+          "z": 0.0000076025289672543295
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.06581044878466627,
+        "top": 0.04477870735197622,
+        "bottom": -0.00002300174205857597,
+        "screen": {
+          "x": -297.07474402378307,
+          "y": 412.4175424135526
+        }
+      },
+      {
+        "id": "growth-2-16",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": 1.1249377426090428,
+        "z": -0.31510752550937027,
+        "yaw": 2.676837838869135,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 1.1249377426090428,
+          "y": 0.02289999920129776,
+          "z": -0.31510752550937027
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.9731216484615492,
+          "z": 0,
+          "w": 0.2302916787369378
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.06581044861707919,
+        "top": 0.04529999840259552,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": 766.2956695843194,
+          "y": 288.62667569069816
+        }
+      },
+      {
+        "id": "growth-2-17",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": -1.427636061563117,
+        "z": 0.38315239891367114,
+        "yaw": 0.40692419720331174,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -1.427636061563117,
+          "y": 0.02289999920129776,
+          "z": 0.38315239891367114
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.20206122050871175,
+          "z": 0,
+          "w": 0.9793728928077037
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.06581044861707919,
+        "top": 0.04529999840259552,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": -841.2777333918975,
+          "y": 611.076650581075
+        }
+      },
+      {
+        "id": "growth-2-18",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": 1.2476398901071342,
+        "z": 0.608014964180565,
+        "yaw": 4.133830443065045,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 1.2476398901071342,
+          "y": 0.02289999920129776,
+          "z": 0.608014964180565
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.8794366487047464,
+          "z": 0,
+          "w": -0.4760159460721505
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.06581044861707917,
+        "top": 0.04529999840259552,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": 1123.5431566310713,
+          "y": 762.5056742890491
+        }
+      },
+      {
+        "id": "growth-2-19",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": 0.2695706351092688,
+        "z": 0.11303474257036972,
+        "yaw": 3.0262810413468646,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 0.26956674456596375,
+          "y": 0.022383669391274452,
+          "z": 0.11304082721471786
+        },
+        "rotation": {
+          "x": 0.000017739468603394926,
+          "y": 0.9983384013175964,
+          "z": 0.0001589167513884604,
+          "w": 0.057624030858278275
+        },
+        "velocity": {
+          "x": -0.000014659024600405246,
+          "y": -0.000014298187124950346,
+          "z": 0.00004859190812567249
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.06581046385884354,
+        "top": 0.04478564987585475,
+        "bottom": -0.00001830153421094119,
+        "screen": {
+          "x": 329.7610647626542,
+          "y": 465.262956140882
+        }
+      },
+      {
+        "id": "growth-2-20",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": -0.15382480288866152,
+        "z": 0.17831679235724351,
+        "yaw": 0.10241072579493922,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -0.15383049845695496,
+          "y": 0.02237841673195362,
+          "z": 0.17831645905971527
+        },
+        "rotation": {
+          "x": -0.000015095358321559615,
+          "y": 0.051186081022024155,
+          "z": 0.000013392186701821629,
+          "w": 0.9986891746520996
+        },
+        "velocity": {
+          "x": -3.4609558952070074e-7,
+          "y": -5.441738153422193e-7,
+          "z": -0.000004555156465357868
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.06581044864279811,
+        "top": 0.04477934302769744,
+        "bottom": -0.000022508639918202705,
+        "screen": {
+          "x": 62.04920118539855,
+          "y": 497.59243090189267
+        }
+      },
+      {
+        "id": "growth-2-21",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": 0.6478013550589679,
+        "z": -1.1465361545950472,
+        "yaw": 4.342313205563219,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 0.6478013550589679,
+          "y": 0.02289999920129776,
+          "z": -1.1465361545950472
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.8251321342260567,
+          "z": 0,
+          "w": -0.56493978534668
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion": "working",
+        "behaviorActive": false,
+        "detailed": true,
+        "physical": false,
+        "visible": true,
+        "collisionFootprint": 0.06581044861707919,
+        "top": 0.04529999840259552,
+        "bottom": 0.0005000000000000004,
+        "screen": {
+          "x": 441.94931295722887,
+          "y": 60.51807682323075
+        }
+      },
+      {
+        "id": "growth-2-22",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": -0.9852090716383504,
+        "z": -0.3026361989030262,
+        "yaw": 4.560162353728952,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": -0.9852091073989868,
+          "y": 0.02238728478550911,
+          "z": -0.30262595415115356
+        },
+        "rotation": {
+          "x": 0.000026708470613812096,
+          "y": 0.7588268518447876,
+          "z": 0.000054380143410526216,
+          "w": -0.6512925624847412
+        },
+        "velocity": {
+          "x": 0.000017402326193405315,
+          "y": -0.000005477027116285171,
+          "z": 0.0000058215318858856335
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.06581046350784013,
+        "top": 0.044788396259784355,
+        "bottom": -0.000013828394949094713,
+        "screen": {
+          "x": -361.255198266388,
+          "y": 293.2474458365769
+        }
+      },
+      {
+        "id": "growth-2-23",
+        "kind": "stone",
+        "label": "賽の小石",
+        "model": "hell",
+        "size": [
+          0.11900000000000001,
+          0.044800000000000006,
+          0.09100000000000001
+        ],
+        "scale": 1,
+        "level": 2,
+        "area": 0,
+        "value": 4,
+        "x": 0.36732613861785124,
+        "z": 0.9301325091114956,
+        "yaw": 2.903589140519579,
+        "behavior": "still",
+        "hellKind": "pebble",
+        "position": {
+          "x": 0.3673417270183563,
+          "y": 0.02237815409898758,
+          "z": 0.9301286935806274
+        },
+        "rotation": {
+          "x": 0.000006275048235693248,
+          "y": 0.9929283261299133,
+          "z": -0.00019288284238427877,
+          "w": 0.11871517449617386
+        },
+        "velocity": {
+          "x": 0.000010858489076781552,
+          "y": -0.000005255695668893168,
+          "z": -0.000057935892982641235
+        },
+        "motion": "working",
+        "behaviorActive": true,
+        "detailed": true,
+        "physical": true,
+        "visible": true,
+        "collisionFootprint": 0.06581044682181164,
+        "top": 0.04477937908050132,
+        "bottom": -0.000023063998189694346,
+        "screen": {
+          "x": 485.2923410355577,
+          "y": 1049.6516973264354
+        }
+      }
+    ],
+    "aperture": [
+      {
+        "x": 147.67306438722505,
+        "y": 422.0000000000001
+      },
+      {
+        "x": 242.32693561277495,
+        "y": 422.0000000000001
+      }
+    ]
+  }
+}

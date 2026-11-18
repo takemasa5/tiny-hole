@@ -250,7 +250,7 @@ try {
       const radius = (await snapshot()).hole.radius;
       const strength = Math.min(1, length / (radius * 7 * 0.12));
       const screenLength = Math.hypot(dx, dz * (7.6 / Math.hypot(7.6, 6.8)));
-      const reach = 8 + strength * 28;
+      const reach = 8 + strength * 40;
       await touch.send("Input.dispatchTouchEvent", {
         type: "touchMove",
         touchPoints: [
