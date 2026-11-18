@@ -314,3 +314,57 @@ canvas {
   text-align: center;
   pointer-events: none;
 }
+
+.touch-stick {
+  position: fixed;
+  z-index: 4;
+  width: 72px;
+  height: 72px;
+  margin-left: -36px;
+  margin-top: -36px;
+  border: 2px solid #ffffffaa;
+  border-radius: 50%;
+  background: #28395240;
+  box-shadow: 0 0 0 1px #26374b66;
+  pointer-events: none;
+}
+.touch-stick[hidden] {
+  display: none;
+}
+.touch-stick span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 26px;
+  height: 26px;
+  margin: -13px;
+  border: 2px solid #fffdf4;
+  border-radius: 50%;
+  background: #ffffffb3;
+}
+.touch-stick.at-full-speed {
+  border-color: #ffe596;
+}
+.touch-stick.at-full-speed span {
+  background: #ffe596d9;
+}
+.touch-control-option {
+  display: grid;
+  gap: 7px;
+  font-size: 14px;
+}
+.touch-control-option select {
+  width: 100%;
+  min-height: 42px;
+  font: inherit;
+  font-size: 16px;
+  border: 1px solid #b4bfbd;
+  border-radius: 8px;
+  padding: 7px;
+  background: #fffdf6;
+  color: #293c50;
+}
+.touch-control-option small {
+  font-size: 12px;
+  line-height: 1.5;
+}

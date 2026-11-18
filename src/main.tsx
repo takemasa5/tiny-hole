@@ -6,12 +6,16 @@ import "./style.css";
 import { nextStageId, STAGE_TRANSITION_DELAY } from "./game/stage-flow";
 import { OfflinePanel } from "./offline/OfflinePanel";
 import { goalForGrowth } from "./game/growth-stage";
+import type { TouchControlMode } from "./game/touch-stick";
 
 function App() {
   const shell = useRef<HTMLElement>(null);
   const canvas = useRef<HTMLCanvasElement>(null);
   const controls = useRef<GameControls | null>(null);
   const soundPreference = useRef(true);
+  const touchPreference = useRef<TouchControlMode>("stick");
+  const [touchControlMode, setTouchControlMode] =
+    useState<TouchControlMode>("stick");
   const musicPreference = useRef(true);
   const [musicEnabled, setMusicEnabled] = useState(true);
   const [soundEnabled, setSoundEnabled] = useState(true);
@@ -55,6 +59,7 @@ function App() {
           else {
             controls.current = controller;
             controller.setMusicEnabled(musicPreference.current);
+            controller.setTouchControlMode(touchPreference.current);
             dispose = controller.dispose;
           }
         })
@@ -84,7 +89,7 @@ function App() {
     <main ref={shell} className="game-shell">
       <canvas
         ref={canvas}
-        aria-label="ドラッグ・WASD・矢印キーで穴を動かす3Dゲーム"
+        aria-label="タッチスティック・ドラッグ・WASD・矢印キーで穴を動かす3Dゲーム"
       />
       <header className="play-header">
         <section className="stage-controls">
@@ -107,9 +112,37 @@ function App() {
             <span aria-hidden="true">◇</span> 目標：{goalLabel}
           </p>
         </section>
-        <details className="game-options">
+        <details
+          className="game-options"
+          onToggle={(event) => {
+            if (event.currentTarget.open) controls.current?.stopMoving();
+          }}
+        >
           <summary aria-label="メニュー">⋯</summary>
           <div className="options-panel">
+            <label className="touch-control-option">
+              タッチ操作
+              <select
+                aria-label="タッチ操作"
+                value={touchControlMode}
+                onChange={(event) => {
+                  const mode = event.target.value;
+                  if (mode !== "stick" && mode !== "drag") return;
+                  touchPreference.current = mode;
+                  setTouchControlMode(mode);
+                  controls.current?.setTouchControlMode(mode);
+                  event.target.blur();
+                }}
+              >
+                <option value="stick">仮想スティック</option>
+                <option value="drag">ドラッグ</option>
+              </select>
+              <small>
+                {touchControlMode === "stick"
+                  ? "少しずらして保持すると移動。離すと停止。"
+                  : "指を動かした分だけ移動。離すと停止。"}
+              </small>
+            </label>
             <button
               aria-label={soundEnabled ? "効果音を消す" : "効果音をつける"}
               aria-pressed={soundEnabled}

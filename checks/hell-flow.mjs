@@ -6,7 +6,25 @@ const directory =
   process.env.HOLE_REPORT_DIR || "reports/hell-stage-2026-11-08/flow";
 await mkdir(directory, { recursive: true });
 const browser = await chromium.launch({ headless: true, channel: "chromium" });
-const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
+const touchInput = process.env.HOLE_TOUCH === "1";
+const page = await browser.newPage({
+  viewport: touchInput
+    ? { width: 390, height: 844 }
+    : { width: 1280, height: 800 },
+  hasTouch: touchInput,
+});
+// Keep the loaded game fixed while a long playthrough runs beside editor work.
+await page.routeWebSocket(/.*/, (socket) => {
+  const server = socket.connectToServer();
+  server.onMessage((message) => {
+    if (
+      !["update", "full-reload", "prune"].includes(
+        JSON.parse(message.toString()).type,
+      )
+    )
+      socket.send(message);
+  });
+});
 if (process.env.HOLE_SEED) {
   const seed = Number(process.env.HOLE_SEED);
   assert(Number.isInteger(seed) && seed >= 0 && seed < 4294967296);
@@ -32,6 +50,9 @@ const snapshot = async () => {
 const report = {
   browser: await browser.version(),
   errors,
+  input: touchInput
+    ? "仮想スティックのネイティブタッチ入力（既存の経路計画・先読みあり）"
+    : "方向キー",
   levels: [],
   entered: [],
   iPhone: "未実施",
@@ -203,7 +224,47 @@ try {
   assert(initial.objects.some((d) => d.id === "goal" && d.visible));
   await page.screenshot({ path: `${directory}/start.png` });
   const held = new Set();
+  const touch = touchInput
+    ? await page.context().newCDPSession(page)
+    : undefined;
+  let touching = false;
   const steer = async (dx, dz) => {
+    if (touch) {
+      const length = Math.hypot(dx, dz);
+      if (length < 0.0001) {
+        if (touching)
+          await touch.send("Input.dispatchTouchEvent", {
+            type: "touchEnd",
+            touchPoints: [],
+          });
+        touching = false;
+        return;
+      }
+      if (!touching) {
+        await touch.send("Input.dispatchTouchEvent", {
+          type: "touchStart",
+          touchPoints: [{ x: 90, y: 700, id: 1 }],
+        });
+        touching = true;
+      }
+      const radius = (await snapshot()).hole.radius;
+      const strength = Math.min(1, length / (radius * 7 * 0.12));
+      const screenLength = Math.hypot(dx, dz * (7.6 / Math.hypot(7.6, 6.8)));
+      const reach = 8 + strength * 28;
+      await touch.send("Input.dispatchTouchEvent", {
+        type: "touchMove",
+        touchPoints: [
+          {
+            x: 90 + (dx / screenLength) * reach,
+            y:
+              700 +
+              ((dz * (7.6 / Math.hypot(7.6, 6.8))) / screenLength) * reach,
+            id: 1,
+          },
+        ],
+      });
+      return;
+    }
     const desired = new Set();
     const length = Math.hypot(dx, dz);
     if (length > 0.0001) {

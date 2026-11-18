@@ -1,0 +1,73 @@
+{
+  "browser": "156.0.8078.4",
+  "viewport": "390x844",
+  "errors": [],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "stationaryFingerKeepsMoving": [
+    {
+      "hole": {
+        "x": 0.07466666666666666,
+        "z": 0,
+        "radius": 0.08
+      },
+      "input": {
+        "touchControlMode": "stick",
+        "stickActive": true,
+        "stick": {
+          "x": 1,
+          "z": 0,
+          "strength": 1,
+          "knobX": 36,
+          "knobY": 0
+        }
+      }
+    },
+    {
+      "hole": {
+        "x": 0.13066666666666665,
+        "z": 0,
+        "radius": 0.08
+      },
+      "input": {
+        "touchControlMode": "stick",
+        "stickActive": true,
+        "stick": {
+          "x": 1,
+          "z": 0,
+          "strength": 1,
+          "knobX": 36,
+          "knobY": 0
+        }
+      }
+    },
+    {
+      "hole": {
+        "x": 0.17733333333333332,
+        "z": 0,
+        "radius": 0.08
+      },
+      "input": {
+        "touchControlMode": "stick",
+        "stickActive": true,
+        "stick": {
+          "x": 1,
+          "z": 0,
+          "strength": 1,
+          "knobX": 36,
+          "knobY": 0
+        }
+      }
+    }
+  ],
+  "centerReleaseAndDirection": true,
+  "secondFingerDoesNotCancelFirst": true,
+  "pointerCancelStops": true,
+  "lostCaptureStops": true,
+  "syntheticVisibilityStops": true,
+  "syntheticBlurStops": true,
+  "openingMenuStops": true,
+  "legacyDragAndRestartPreference": true,
+  "stageChangeKeyboardAndMouse": true,
+  "passed": true
+}

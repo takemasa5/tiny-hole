@@ -1,0 +1,147 @@
+{
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "input": "仮想スティックのネイティブタッチ入力（既存の経路計画・先読みあり）",
+  "levels": [
+    {
+      "level": 1,
+      "area": 0,
+      "space": "賽の河原",
+      "score": 0,
+      "bodies": 32,
+      "colliders": 58,
+      "drawCalls": 33,
+      "frame": { "median": 16.700000000000045, "p95": 16.800000000000068 }
+    },
+    {
+      "level": 2,
+      "area": 0,
+      "space": "賽の河原",
+      "score": 12,
+      "bodies": 42,
+      "colliders": 70,
+      "drawCalls": 55,
+      "frame": { "median": 16.699999999999818, "p95": 16.700000000000728 }
+    },
+    {
+      "level": 3,
+      "area": 1,
+      "space": "小鬼の河原",
+      "score": 60,
+      "bodies": 42,
+      "colliders": 177,
+      "drawCalls": 115,
+      "frame": { "median": 16.69999999999891, "p95": 16.700000000000728 }
+    },
+    {
+      "level": 4,
+      "area": 1,
+      "space": "小鬼の河原",
+      "score": 252,
+      "bodies": 53,
+      "colliders": 362,
+      "drawCalls": 316,
+      "frame": { "median": 16.69999999999709, "p95": 16.799999999995634 }
+    },
+    {
+      "level": 5,
+      "area": 2,
+      "space": "亡者の道",
+      "score": 1020,
+      "bodies": 56,
+      "colliders": 385,
+      "drawCalls": 167,
+      "frame": { "median": 16.69999999999709, "p95": 16.799999999995634 }
+    },
+    {
+      "level": 6,
+      "area": 2,
+      "space": "亡者の道",
+      "score": 4092,
+      "bodies": 30,
+      "colliders": 254,
+      "drawCalls": 113,
+      "frame": { "median": 16.69999999999709, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 7,
+      "area": 3,
+      "space": "赤鬼の火の広場",
+      "score": 17148,
+      "bodies": 62,
+      "colliders": 512,
+      "drawCalls": 187,
+      "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 8,
+      "area": 3,
+      "space": "赤鬼の火の広場",
+      "score": 67068,
+      "bodies": 36,
+      "colliders": 268,
+      "drawCalls": 103,
+      "frame": { "median": 16.699999999982538, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 9,
+      "area": 4,
+      "space": "青鬼の大広場",
+      "score": 263676,
+      "bodies": 89,
+      "colliders": 912,
+      "drawCalls": 538,
+      "frame": { "median": 16.699999999982538, "p95": 16.79999999998836 }
+    },
+    {
+      "level": 10,
+      "area": 4,
+      "space": "青鬼の大広場",
+      "score": 1050108,
+      "bodies": 33,
+      "colliders": 371,
+      "drawCalls": 227,
+      "frame": { "median": 16.70000000001164, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 11,
+      "area": 4,
+      "space": "青鬼の大広場",
+      "score": 4195836,
+      "bodies": 74,
+      "colliders": 823,
+      "drawCalls": 117,
+      "frame": { "median": 16.70000000001164, "p95": 16.70000000001164 }
+    },
+    {
+      "level": 12,
+      "area": 5,
+      "space": "閻魔の大庭",
+      "score": 16778748,
+      "bodies": 115,
+      "colliders": 1205,
+      "drawCalls": 1676,
+      "frame": { "median": 16.70000000001164, "p95": 16.70000000001164 }
+    }
+  ],
+  "entered": [
+    "riverbank",
+    "small-oni",
+    "ghosts",
+    "red-oni",
+    "blue-oni",
+    "enma"
+  ],
+  "iPhone": "未実施",
+  "WebKit": "未実施",
+  "seed": 42,
+  "fleeing": ["smallOni", "ghost", "redOni", "blueOni", "enma"],
+  "final": {
+    "level": 12,
+    "score": 70007596,
+    "cleared": true,
+    "collected": 186,
+    "moving": 95
+  },
+  "autoTransition": "plaza"
+}

@@ -7,6 +7,11 @@ import {
 } from "./ground-geometry";
 import { isTap, moveGesture, type PointerGesture } from "./gesture";
 import { isMovementKey, keyboardDirection } from "./keyboard";
+import {
+  stickInput,
+  TouchStickVisual,
+  type TouchControlMode,
+} from "./touch-stick";
 import { GameSounds } from "./sound";
 import { RewardEffects } from "./reward-effects";
 import { PickupCombo, objectFeedback } from "./object-feedback";
@@ -69,6 +74,8 @@ export interface GameControls {
   dispose: () => void;
   setSoundEnabled: (enabled: boolean) => void;
   setMusicEnabled: (enabled: boolean) => void;
+  setTouchControlMode: (mode: TouchControlMode) => void;
+  stopMoving: () => void;
 }
 export type RenderDiagnosticMode =
   "normal" | "no-occlusion" | "precise-depth" | "no-antialias" | "plain-floor";
@@ -304,6 +311,9 @@ export async function startGame(
     stageId,
   );
   let pointer: PointerGesture | undefined;
+  let touchControlMode: TouchControlMode = "stick";
+  let stickPointer = false;
+  const touchStick = new TouchStickVisual(canvas);
   const heldKeys = new Set<string>();
   const abort = new AbortController();
   const eventOptions = { signal: abort.signal };
@@ -384,10 +394,13 @@ export async function startGame(
     cameraUpdate();
   }
   function releasePointer() {
-    if (pointer && canvas.hasPointerCapture(pointer.id))
-      canvas.releasePointerCapture(pointer.id);
+    const id = pointer?.id;
     pointer = undefined;
+    stickPointer = false;
+    touchStick.hide();
     destination.copy(hole);
+    if (id !== undefined && canvas.hasPointerCapture(id))
+      canvas.releasePointerCapture(id);
   }
   function stopInput() {
     heldKeys.clear();
@@ -691,6 +704,8 @@ export async function startGame(
       if (pointer || progress.cleared || event.button !== 0) return;
       event.preventDefault();
       sounds.unlock();
+      stickPointer =
+        event.pointerType === "touch" && touchControlMode === "stick";
       pointer = {
         id: event.pointerId,
         startX: event.clientX,
@@ -709,6 +724,10 @@ export async function startGame(
     (event) => {
       if (!pointer || pointer.id !== event.pointerId) return;
       const movement = moveGesture(pointer, event.clientX, event.clientY);
+      if (stickPointer) {
+        touchStick.update(pointer);
+        return;
+      }
       if (!pointer.dragging) return;
       const distance = camera.position.distanceTo(
         new THREE.Vector3(hole.x, 0, hole.y),
@@ -737,8 +756,11 @@ export async function startGame(
     },
     eventOptions,
   );
-  canvas.addEventListener("pointercancel", releasePointer, eventOptions);
-  canvas.addEventListener("lostpointercapture", releasePointer, eventOptions);
+  const cancelPointer = (event: PointerEvent) => {
+    if (pointer?.id === event.pointerId) releasePointer();
+  };
+  canvas.addEventListener("pointercancel", cancelPointer, eventOptions);
+  canvas.addEventListener("lostpointercapture", cancelPointer, eventOptions);
   window.addEventListener("blur", stopInput, eventOptions);
   document.addEventListener(
     "visibilitychange",
@@ -912,8 +934,14 @@ export async function startGame(
       oldZ = hole.y;
     toyWorld?.update(progress.level, openedArea, holeState(), PHYSICS_STEP);
     const maximum = radius * 7 * PHYSICS_STEP;
-    const direction = keyboardDirection(heldKeys);
-    if (direction.x || direction.z) {
+    const keyboard = keyboardDirection(heldKeys);
+    const direction =
+      keyboard.x || keyboard.z
+        ? keyboard
+        : stickPointer && pointer
+          ? stickInput(pointer)
+          : keyboard;
+    if (direction.x || direction.z || stickPointer) {
       destination.set(
         hole.x + direction.x * maximum,
         hole.y + direction.z * maximum,
@@ -1342,6 +1370,11 @@ export async function startGame(
     mountainWorld:
       stageId === "mountain" ? toyWorld?.snapshot(holeState()) : undefined,
     stageId,
+    input: {
+      touchControlMode,
+      stickActive: stickPointer && !!pointer?.dragging,
+      stick: stickPointer && pointer ? stickInput(pointer) : undefined,
+    },
     levels: GROWTH_LEVELS,
     hole: holeState(),
     renderHole: renderHoleState(),
@@ -1440,10 +1473,16 @@ export async function startGame(
   return {
     setSoundEnabled: (enabled) => sounds.setEnabled(enabled),
     setMusicEnabled: (enabled) => sounds.setMusicEnabled(enabled),
+    setTouchControlMode: (mode) => {
+      stopInput();
+      touchControlMode = mode;
+    },
+    stopMoving: stopInput,
     dispose: () => {
       disposed = true;
       cancelAnimationFrame(frame);
       stopInput();
+      touchStick.dispose();
       abort.abort();
       observer.disconnect();
       sounds.dispose();
